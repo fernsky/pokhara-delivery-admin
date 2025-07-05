@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const wardData =
       await api.profile.demographics.wardWiseDemographicSummary.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalPopulation = wardData.reduce(
@@ -113,24 +113,24 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city ward-wise population",
-      "Khajura metropolitan city ward details",
-      "Khajura demographics statistics",
-      "Khajura household details",
-      `Khajura total population ${totalPopulation.toLocaleString()}`,
-      `Khajura total households ${totalHouseholds.toLocaleString()}`,
-      "Khajura gender ratio",
-      "Khajura ward analysis",
-      `Khajura Ward ${highestWardNumber} population ${highestPopulation.toLocaleString()}`,
-      `Khajura male population ${malePopulation.toLocaleString()}`,
-      `Khajura female population ${femalePopulation.toLocaleString()}`,
-      `Khajura average family size ${averageHouseholdSize}`,
+      "Pokhara Metropolitan City ward-wise population",
+      "Pokhara Metropolitan City ward details",
+      "Pokhara demographics statistics",
+      "Pokhara household details",
+      `Pokhara total population ${totalPopulation.toLocaleString()}`,
+      `Pokhara total households ${totalHouseholds.toLocaleString()}`,
+      "Pokhara gender ratio",
+      "Pokhara ward analysis",
+      `Pokhara Ward ${highestWardNumber} population ${highestPopulation.toLocaleString()}`,
+      `Pokhara male population ${malePopulation.toLocaleString()}`,
+      `Pokhara female population ${femalePopulation.toLocaleString()}`,
+      `Pokhara average family size ${averageHouseholdSize}`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकाको वडागत जनसांख्यिकी सारांश। कुल जनसंख्या ${localizeNumber(totalPopulation, "ne")} (पुरुष: ${localizeNumber(malePopulation, "ne")}, महिला: ${localizeNumber(femalePopulation, "ne")}) र कुल घरधुरी ${localizeNumber(totalHouseholds, "ne")} रहेको छ। पोखरा महानगरपालिकाका ${localizeNumber(wardCount, "ne")} वडाहरूमध्ये वडा ${localizeNumber(highestWardNumber, "ne")} मा सबैभन्दा बढी जनसंख्या (${localizeNumber(highestPopulation, "ne")}) रहेको छ। पोखरा महानगरपालिकाको समग्र लैङ्गिक अनुपात ${localizeNumber(overallSexRatio, "ne")} र औसत परिवार संख्या ${localizeNumber(averageHouseholdSize, "ne")} रहेको छ। सबै वडाहरूको जनसंख्या वितरण, लैङ्गिक अनुपात, घरधुरी र परिवार संख्याको विस्तृत विश्लेषण प्रस्तुत गरिएको छ।`;
 
-    const descriptionEN = `Ward-wise demographic summary for Khajura metropolitan city. Total population of ${totalPopulation.toLocaleString()} (Male: ${malePopulation.toLocaleString()}, Female: ${femalePopulation.toLocaleString()}) and total households of ${totalHouseholds.toLocaleString()}. Among ${wardCount} wards of Khajura, Ward ${highestWardNumber} has the highest population (${highestPopulation.toLocaleString()}). The Khajura municipality's overall gender ratio is ${overallSexRatio} and average family size is ${averageHouseholdSize}. Detailed analysis of population distribution, gender ratio, households and family size across all wards of Khajura metropolitan city.`;
+    const descriptionEN = `Ward-wise demographic summary for Pokhara Metropolitan City. Total population of ${totalPopulation.toLocaleString()} (Male: ${malePopulation.toLocaleString()}, Female: ${femalePopulation.toLocaleString()}) and total households of ${totalHouseholds.toLocaleString()}. Among ${wardCount} wards of Pokhara, Ward ${highestWardNumber} has the highest population (${highestPopulation.toLocaleString()}). The Pokhara municipality's overall gender ratio is ${overallSexRatio} and average family size is ${averageHouseholdSize}. Detailed analysis of population distribution, gender ratio, households and family size across all wards of Pokhara Metropolitan City.`;
 
     return {
       title: `पोखरा महानगरपालिका | वडागत जनसांख्यिकी सारांश | डिजिटल प्रोफाइल`,
@@ -321,7 +321,7 @@ export default async function WardWiseSummaryPage() {
               src="/images/ward-demographics.svg"
               width={1200}
               height={400}
-              alt="पोखरा महानगरपालिका | वडागत जनसांख्यिकी सारांश (Khajura metropolitan city Ward Demographics Summary)"
+              alt="पोखरा महानगरपालिका | वडागत जनसांख्यिकी सारांश (Pokhara Metropolitan City Ward Demographics Summary)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

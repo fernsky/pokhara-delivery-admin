@@ -40,7 +40,7 @@ export const setupPDFHeader = async (doc: jsPDF, details: HeaderDetails) => {
 
   // Set title and main header - slightly smaller font sizes
   doc.setFontSize(14);
-  doc.text("product metropolitan city", doc.internal.pageSize.width / 2, 15, {
+  doc.text("product Metropolitan City", doc.internal.pageSize.width / 2, 15, {
     align: "center",
   });
   doc.setFontSize(10);

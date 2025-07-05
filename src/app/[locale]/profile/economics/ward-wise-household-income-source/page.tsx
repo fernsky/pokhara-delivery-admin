@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const incomeSourceData =
       await api.profile.economics.wardWiseHouseholdIncomeSource.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalHouseholds = incomeSourceData.reduce(
@@ -67,17 +67,17 @@ export async function generateMetadata(): Promise<Metadata> {
       `पोखरा कुल घरपरिवार संख्या ${localizeNumber(totalHouseholds.toString(), "ne")}`,
     ];
     const keywordsEN = [
-      "Khajura metropolitan city household income sources",
-      "Khajura economic activities",
-      `Khajura ${incomeSourceLabels[topIncomeSources[0] as keyof typeof incomeSourceLabels]}`,
+      "Pokhara Metropolitan City household income sources",
+      "Pokhara economic activities",
+      `Pokhara ${incomeSourceLabels[topIncomeSources[0] as keyof typeof incomeSourceLabels]}`,
       ...topIncomeSources.map(
         (r) =>
-          `${incomeSourceLabels[r as keyof typeof incomeSourceLabels]} households in Khajura`,
+          `${incomeSourceLabels[r as keyof typeof incomeSourceLabels]} households in Pokhara`,
       ),
       "Ward-wise household income sources",
       "Economic activity statistics",
-      "Income source survey Khajura",
-      `Khajura total households ${totalHouseholds}`,
+      "Income source survey Pokhara",
+      `Pokhara total households ${totalHouseholds}`,
     ];
 
     // Create detailed description with actual data
@@ -101,7 +101,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "ne",
     )})। विभिन्न आय स्रोतहरूको विस्तृत तथ्याङ्क र विजुअलाइजेसन।`;
 
-    const descriptionEN = `Ward-wise household income source distribution, trends and analysis for Khajura metropolitan city. Out of a total of ${totalHouseholds} households, ${
+    const descriptionEN = `Ward-wise household income source distribution, trends and analysis for Pokhara Metropolitan City. Out of a total of ${totalHouseholds} households, ${
       incomeSourceLabels[topIncomeSources[0] as keyof typeof incomeSourceLabels]
     } (${incomeSourceCounts[topIncomeSources[0]]}) is the largest group, followed by ${
       incomeSourceLabels[topIncomeSources[1] as keyof typeof incomeSourceLabels]
@@ -283,7 +283,7 @@ export default async function WardWiseHouseholdIncomeSourcePage() {
               src="/images/income-sources.svg"
               width={1200}
               height={400}
-              alt="घरपरिवारको आय स्रोत - पोखरा महानगरपालिका (Household Income Sources - Khajura metropolitan city)"
+              alt="घरपरिवारको आय स्रोत - पोखरा महानगरपालिका (Household Income Sources - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

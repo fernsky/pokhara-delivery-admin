@@ -49,7 +49,7 @@ export async function generateMetadata(): Promise<Metadata> {
   try {
     const timeToHealthOrganizationData =
       await api.profile.health.wardWiseTimeToHealthOrganization.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Group by ward number
     const wardGroups = timeToHealthOrganizationData.reduce(
@@ -99,7 +99,7 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city healthcare access",
+      "Pokhara Metropolitan City healthcare access",
       "Healthcare facility access",
       "Ward-wise healthcare distance",
       "Time to reach health organizations",
@@ -110,7 +110,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create description
     const descriptionNP = `पोखरा महानगरपालिकामा स्वास्थ्य संस्थासम्म पुग्ने समय सम्बन्धी विश्लेषण। कुल ${localizeNumber(totalHouseholds.toLocaleString(), "ne")} घरधुरी मध्ये ${localizeNumber(under15MinPercentage, "ne")}% (${localizeNumber(under15MinHouseholds.toLocaleString(), "ne")}) घरधुरीले १५ मिनेटभित्र स्वास्थ्य संस्था पुग्न सक्छन्।`;
 
-    const descriptionEN = `Analysis of time taken to reach healthcare facilities in Khajura metropolitan city. Out of a total of ${totalHouseholds.toLocaleString()} households, ${under15MinPercentage}% (${under15MinHouseholds.toLocaleString()}) can reach a health facility within 15 minutes.`;
+    const descriptionEN = `Analysis of time taken to reach healthcare facilities in Pokhara Metropolitan City. Out of a total of ${totalHouseholds.toLocaleString()} households, ${under15MinPercentage}% (${under15MinHouseholds.toLocaleString()}) can reach a health facility within 15 minutes.`;
 
     return {
       title: `स्वास्थ्य संस्था पुग्न लाग्ने समय | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -329,7 +329,7 @@ export default async function WardWiseTimeToHealthOrganizationPage() {
               src="/images/health-facility-access.svg"
               width={1200}
               height={400}
-              alt="स्वास्थ्य संस्था पुग्न लाग्ने समय - पोखरा महानगरपालिका (Time to Health Organization - Khajura metropolitan city)"
+              alt="स्वास्थ्य संस्था पुग्न लाग्ने समय - पोखरा महानगरपालिका (Time to Health Organization - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

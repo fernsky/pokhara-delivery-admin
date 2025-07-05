@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
                 (
                     "municipality_name_english",
                     models.CharField(
-                        default="pokhara metropolitan city", max_length=200
+                        default="pokhara Metropolitan City", max_length=200
                     ),
                 ),
                 (

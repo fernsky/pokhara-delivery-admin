@@ -63,7 +63,7 @@ export default function WardWiseTimeToPublicTransportCharts({
       >
         <meta
           itemProp="name"
-          content="Time to Public Transport Distribution in Khajura metropolitan city"
+          content="Time to Public Transport Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
@@ -186,11 +186,11 @@ export default function WardWiseTimeToPublicTransportCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Time to Public Transport in Khajura metropolitan city"
+          content="Ward-wise Time to Public Transport in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Distribution of time to public transport across wards in Khajura"
+          content="Distribution of time to public transport across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -220,11 +220,11 @@ export default function WardWiseTimeToPublicTransportCharts({
       >
         <meta
           itemProp="name"
-          content="Quick Access to Public Transport Comparison Across Wards in Khajura metropolitan city"
+          content="Quick Access to Public Transport Comparison Across Wards in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Comparison of quick access to public transport across wards in Khajura"
+          content="Comparison of quick access to public transport across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -257,11 +257,11 @@ export default function WardWiseTimeToPublicTransportCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Public Transport Access Analysis in Khajura metropolitan city"
+          content="Ward-wise Public Transport Access Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Detailed analysis of time to public transport by ward in Khajura"
+          content="Detailed analysis of time to public transport by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

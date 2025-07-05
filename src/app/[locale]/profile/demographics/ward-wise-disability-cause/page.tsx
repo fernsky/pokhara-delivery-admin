@@ -47,7 +47,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const disabilityData =
       await api.profile.demographics.wardWiseDisabilityCause.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalPopulationWithDisability = disabilityData.reduce(
@@ -90,19 +90,19 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city disability causes",
-      "Khajura disability distribution",
+      "Pokhara Metropolitan City disability causes",
+      "Pokhara disability distribution",
       "Ward-wise disability causes",
       "Disability cause details",
-      "Congenital disabilities in Khajura",
+      "Congenital disabilities in Pokhara",
       "Accident-related disabilities",
-      `Khajura disability population ${totalPopulationWithDisability}`,
+      `Pokhara disability population ${totalPopulationWithDisability}`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकाको वडा अनुसार अपाङ्गताको कारणको वितरण र विश्लेषण। कुल अपाङ्गता भएका जनसंख्या ${localizeNumber(totalPopulationWithDisability.toString(), "ne")} मध्ये ${localizeNumber(mostCommonPercentage, "ne")}% (${localizeNumber(mostCommonCount.toString(), "ne")}) ${DISABILITY_CAUSE_NAMES[mostCommonCause] || mostCommonCause} कारणबाट हुने देखिन्छ। विभिन्न वडाहरूमा अपाङ्गताको कारणहरूको विस्तृत विश्लेषण।`;
 
-    const descriptionEN = `Ward-wise distribution and analysis of disability causes in Khajura metropolitan city. Out of a total population with disabilities of ${totalPopulationWithDisability}, ${mostCommonPercentage}% (${mostCommonCount}) are due to ${DISABILITY_CAUSE_NAMES_EN[mostCommonCause] || mostCommonCause}. Detailed analysis of disability causes across various wards.`;
+    const descriptionEN = `Ward-wise distribution and analysis of disability causes in Pokhara Metropolitan City. Out of a total population with disabilities of ${totalPopulationWithDisability}, ${mostCommonPercentage}% (${mostCommonCount}) are due to ${DISABILITY_CAUSE_NAMES_EN[mostCommonCause] || mostCommonCause}. Detailed analysis of disability causes across various wards.`;
 
     return {
       title: `अपाङ्गताको कारणहरू | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -275,7 +275,7 @@ export default async function WardWiseDisabilityCausePage() {
               src="/images/disability-causes.svg"
               width={1200}
               height={400}
-              alt="अपाङ्गताका कारणहरू - पोखरा महानगरपालिका (Disability Causes - Khajura metropolitan city)"
+              alt="अपाङ्गताका कारणहरू - पोखरा महानगरपालिका (Disability Causes - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

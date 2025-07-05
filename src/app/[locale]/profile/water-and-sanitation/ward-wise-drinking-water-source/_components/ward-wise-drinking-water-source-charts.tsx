@@ -64,7 +64,7 @@ export default function WardWiseDrinkingWaterSourceCharts({
       >
         <meta
           itemProp="name"
-          content="Drinking Water Source Distribution in Khajura metropolitan city"
+          content="Drinking Water Source Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
@@ -185,11 +185,11 @@ export default function WardWiseDrinkingWaterSourceCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Drinking Water Sources in Khajura metropolitan city"
+          content="Ward-wise Drinking Water Sources in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Distribution of drinking water sources across wards in Khajura"
+          content="Distribution of drinking water sources across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -220,11 +220,11 @@ export default function WardWiseDrinkingWaterSourceCharts({
       >
         <meta
           itemProp="name"
-          content="Piped Water Access Comparison Across Wards in Khajura metropolitan city"
+          content="Piped Water Access Comparison Across Wards in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Comparison of piped water access rates across wards in Khajura"
+          content="Comparison of piped water access rates across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -256,11 +256,11 @@ export default function WardWiseDrinkingWaterSourceCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Drinking Water Source Analysis in Khajura metropolitan city"
+          content="Ward-wise Drinking Water Source Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Detailed analysis of drinking water sources by ward in Khajura"
+          content="Detailed analysis of drinking water sources by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

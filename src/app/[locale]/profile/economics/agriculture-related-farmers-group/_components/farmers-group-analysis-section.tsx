@@ -83,7 +83,7 @@ export default function FarmersGroupAnalysisSection({
 
   // SEO attributes to include in JSX
   const seoAttributes = {
-    "data-municipality": "Khajura metropolitan city / पोखरा महानगरपालिका",
+    "data-municipality": "Pokhara Metropolitan City / पोखरा महानगरपालिका",
     "data-total-groups": totalGroups.toString(),
     "data-most-common-group": primaryGroup?.type || "",
     "data-ward-distribution": farmsByWard
@@ -223,7 +223,7 @@ export default function FarmersGroupAnalysisSection({
         <h3 className="text-xl font-medium mb-6">
           कृषि सम्बन्धित समूहहरूको विस्तृत विश्लेषण
           <span className="sr-only">
-            Detailed Agriculture Related Groups Analysis of Khajura
+            Detailed Agriculture Related Groups Analysis of Pokhara
           </span>
         </h3>
 
@@ -232,7 +232,7 @@ export default function FarmersGroupAnalysisSection({
             <h4 className="font-medium mb-2">
               प्रमुख समूह प्रकार
               <span className="sr-only">
-                Main Group Types in Khajura metropolitan city
+                Main Group Types in Pokhara Metropolitan City
               </span>
             </h4>
             {primaryGroup && (

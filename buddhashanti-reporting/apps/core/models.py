@@ -58,7 +58,7 @@ class WardModel(BaseModel):
         verbose_name=_("वडा नं"),  # Ward Number
         help_text=_(
             "पोखरा महानगरपालिकाको वडा नम्बर (१-८)"
-        ),  # Ward number of pokharametropolitan city (1-8)
+        ),  # Ward number of pokharaMetropolitan City (1-8)
     )
 
     class Meta:

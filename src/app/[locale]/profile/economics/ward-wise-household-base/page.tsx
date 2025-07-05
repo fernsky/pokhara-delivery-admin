@@ -45,7 +45,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const baseData =
       await api.profile.economics.wardWiseHouseholdBase.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalHouseholds = baseData.reduce(
@@ -87,19 +87,19 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city house foundation",
-      "Khajura house foundation distribution",
+      "Pokhara Metropolitan City house foundation",
+      "Pokhara house foundation distribution",
       "Ward-wise house foundation",
       "House foundation details",
-      "Concrete pillar construction in Khajura",
+      "Concrete pillar construction in Pokhara",
       "Mud-bonded foundation households",
-      `Khajura household foundation count ${totalHouseholds}`,
+      `Pokhara household foundation count ${totalHouseholds}`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकाको वडा अनुसार घरको जगको वितरण र विश्लेषण। कुल घरधुरी संख्या ${localizeNumber(totalHouseholds.toString(), "ne")} मध्ये ${localizeNumber(mostCommonPercentage, "ne")}% (${localizeNumber(mostCommonCount.toString(), "ne")}) ${BASE_TYPE_NAMES[mostCommonType] || mostCommonType} प्रकारको जग भएका घरहरू रहेका छन्। विभिन्न वडाहरूमा घरको जगको विस्तृत विश्लेषण।`;
 
-    const descriptionEN = `Ward-wise distribution and analysis of house foundation types in Khajura metropolitan city. Out of a total of ${totalHouseholds} households, ${mostCommonPercentage}% (${mostCommonCount}) have ${BASE_TYPE_NAMES_EN[mostCommonType] || mostCommonType} foundation. Detailed analysis of house foundation types across various wards.`;
+    const descriptionEN = `Ward-wise distribution and analysis of house foundation types in Pokhara Metropolitan City. Out of a total of ${totalHouseholds} households, ${mostCommonPercentage}% (${mostCommonCount}) have ${BASE_TYPE_NAMES_EN[mostCommonType] || mostCommonType} foundation. Detailed analysis of house foundation types across various wards.`;
 
     return {
       title: `घरको जगको वितरण | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -280,7 +280,7 @@ export default async function WardWiseHouseholdBasePage() {
               src="/images/house-foundation.svg"
               width={1200}
               height={400}
-              alt="घरको जगको वितरण - पोखरा महानगरपालिका (House Foundation Distribution - Khajura metropolitan city)"
+              alt="घरको जगको वितरण - पोखरा महानगरपालिका (House Foundation Distribution - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

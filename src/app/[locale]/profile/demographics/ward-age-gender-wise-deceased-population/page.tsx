@@ -80,7 +80,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const deceasedData =
       await api.profile.demographics.wardAgeGenderWiseDeceasedPopulation.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalDeceasedPopulation = deceasedData.reduce(
@@ -128,18 +128,18 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city mortality data",
-      "Khajura death statistics",
+      "Pokhara Metropolitan City mortality data",
+      "Pokhara death statistics",
       "Ward-wise age-gender mortality",
       "Age-gender wise deceased population",
-      "Khajura demographic analysis",
-      `Khajura mortality count ${totalDeceasedPopulation}`,
+      "Pokhara demographic analysis",
+      `Pokhara mortality count ${totalDeceasedPopulation}`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकाको वडा, उमेर र लिङ्ग अनुसार मृत्यु भएका जनसंख्याको वितरण र विश्लेषण। कुल मृत्यु संख्या ${localizeNumber(totalDeceasedPopulation.toString(), "ne")} मध्ये ${localizeNumber(mostAffectedPercentage, "ne")}% (${localizeNumber(mostAffectedCount.toString(), "ne")}) ${AGE_GROUP_NAMES[mostAffectedAgeGroup] || mostAffectedAgeGroup} उमेर समूहमा रहेका छन्। विभिन्न वडाहरूमा उमेर र लिङ्ग अनुसार मृत्युको विस्तृत विश्लेषण।`;
 
-    const descriptionEN = `Ward, age and gender-wise distribution and analysis of deceased population in Khajura metropolitan city. Out of a total deceased population of ${totalDeceasedPopulation}, ${mostAffectedPercentage}% (${mostAffectedCount}) are in the age group of ${AGE_GROUP_NAMES_EN[mostAffectedAgeGroup] || mostAffectedAgeGroup}. Detailed analysis of mortality across wards by age and gender.`;
+    const descriptionEN = `Ward, age and gender-wise distribution and analysis of deceased population in Pokhara Metropolitan City. Out of a total deceased population of ${totalDeceasedPopulation}, ${mostAffectedPercentage}% (${mostAffectedCount}) are in the age group of ${AGE_GROUP_NAMES_EN[mostAffectedAgeGroup] || mostAffectedAgeGroup}. Detailed analysis of mortality across wards by age and gender.`;
 
     return {
       title: `उमेर तथा लिङ्ग अनुसार मृत्यु विवरण | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -421,7 +421,7 @@ export default async function WardAgeGenderWiseDeceasedPopulationPage() {
               src="/images/deceased-population.svg"
               width={1200}
               height={400}
-              alt="उमेर तथा लिङ्ग अनुसार मृत्यु विवरण - पोखरा महानगरपालिका (Age and Gender Wise Deceased Population - Khajura metropolitan city)"
+              alt="उमेर तथा लिङ्ग अनुसार मृत्यु विवरण - पोखरा महानगरपालिका (Age and Gender Wise Deceased Population - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

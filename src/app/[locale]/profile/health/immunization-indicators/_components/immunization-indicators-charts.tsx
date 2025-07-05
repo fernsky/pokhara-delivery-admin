@@ -153,7 +153,7 @@ export default function ImmunizationIndicatorsCharts({
       >
         <meta
           itemProp="name"
-          content={`Immunization Coverage Rates in Khajura for ${fiscalYearLabels[currentFiscalYear]}`}
+          content={`Immunization Coverage Rates in Pokhara for ${fiscalYearLabels[currentFiscalYear]}`}
         />
         <meta
           itemProp="description"
@@ -230,7 +230,7 @@ export default function ImmunizationIndicatorsCharts({
       >
         <meta
           itemProp="name"
-          content="Immunization Coverage Trends in Khajura metropolitan city"
+          content="Immunization Coverage Trends in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
@@ -282,7 +282,7 @@ export default function ImmunizationIndicatorsCharts({
         >
           <meta
             itemProp="name"
-            content="Immunization Session Indicators in Khajura"
+            content="Immunization Session Indicators in Pokhara"
           />
 
           <div className="border-b px-4 py-3">
@@ -335,7 +335,7 @@ export default function ImmunizationIndicatorsCharts({
         >
           <meta
             itemProp="name"
-            content="Immunization Coverage for Pregnant Women in Khajura"
+            content="Immunization Coverage for Pregnant Women in Pokhara"
           />
 
           <div className="border-b px-4 py-3">
@@ -388,7 +388,7 @@ export default function ImmunizationIndicatorsCharts({
       >
         <meta
           itemProp="name"
-          content="Vaccine Dropout Rates in Khajura metropolitan city"
+          content="Vaccine Dropout Rates in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
@@ -423,7 +423,7 @@ export default function ImmunizationIndicatorsCharts({
       >
         <meta
           itemProp="name"
-          content="Vaccine Wastage Rates in Khajura metropolitan city"
+          content="Vaccine Wastage Rates in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"

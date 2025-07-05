@@ -32,7 +32,7 @@ export default function HouseholdChoresSEO({
     // Convert time spent category stats to structured data format
     const timeSpentStats = overallSummary.map((item) => ({
       "@type": "Observation",
-      name: `${TIME_SPENT_NAMES_EN[item.timeSpent] || item.timeSpent} spent on household chores in Khajura metropolitan city`,
+      name: `${TIME_SPENT_NAMES_EN[item.timeSpent] || item.timeSpent} spent on household chores in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -40,16 +40,16 @@ export default function HouseholdChoresSEO({
         unitText: "people",
       },
       measuredValue: item.population,
-      description: `${item.population.toLocaleString()} people in Khajura metropolitan city spend ${TIME_SPENT_NAMES_EN[item.timeSpent] || item.timeSpent} on household chores (${((item.population / totalPopulation) * 100).toFixed(2)}% of total population)`,
+      description: `${item.population.toLocaleString()} people in Pokhara Metropolitan City spend ${TIME_SPENT_NAMES_EN[item.timeSpent] || item.timeSpent} on household chores (${((item.population / totalPopulation) * 100).toFixed(2)}% of total population)`,
     }));
 
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Household Chores Time Distribution in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Time spent on household chores distribution data across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalPopulation.toLocaleString()} people surveyed.`,
+      name: "Household Chores Time Distribution in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Time spent on household chores distribution data across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalPopulation.toLocaleString()} people surveyed.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Household chores",
         "Time spent on household work",
@@ -67,13 +67,13 @@ export default function HouseholdChoresSEO({
       url: "https://digital.pokharamun.gov.np/profile/economics/ward-household-chores",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

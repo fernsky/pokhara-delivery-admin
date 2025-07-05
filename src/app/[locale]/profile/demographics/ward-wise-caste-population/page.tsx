@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const casteData =
       await api.profile.demographics.wardWiseCastePopulation.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalPopulation = casteData.reduce(
@@ -129,20 +129,20 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city caste population",
-      "Khajura caste diversity",
-      `Khajura ${CASTE_NAMES_EN[topCastes[0]]} population`,
-      ...topCastes.map((c) => `${CASTE_NAMES_EN[c]} population in Khajura`),
+      "Pokhara Metropolitan City caste population",
+      "Pokhara caste diversity",
+      `Pokhara ${CASTE_NAMES_EN[topCastes[0]]} population`,
+      ...topCastes.map((c) => `${CASTE_NAMES_EN[c]} population in Pokhara`),
       "Ward-wise caste demographics",
       "Caste diversity statistics",
-      "Caste census Khajura",
-      `Khajura total population ${totalPopulation}`,
+      "Caste census Pokhara",
+      `Pokhara total population ${totalPopulation}`,
     ];
 
     // Create detailed description with actual data using localized numbers
     const descriptionNP = `पोखरा महानगरपालिकाको वडा अनुसार जातिगत जनसंख्या वितरण, प्रवृत्ति र विश्लेषण। कुल जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")} मध्ये ${CASTE_NAMES_NP[topCastes[0]]} (${localizeNumber(casteCounts[topCastes[0]].toString(), "ne")}) सबैभन्दा ठूलो जातिगत समूह हो, त्यसपछि ${CASTE_NAMES_NP[topCastes[1]]} (${localizeNumber(casteCounts[topCastes[1]].toString(), "ne")}) र ${CASTE_NAMES_NP[topCastes[2]]} (${localizeNumber(casteCounts[topCastes[2]].toString(), "ne")})। विभिन्न जातिहरूको विस्तृत तथ्याङ्क र विजुअलाइजेसन।`;
 
-    const descriptionEN = `Ward-wise caste population distribution, trends and analysis for Khajura metropolitan city. Out of a total population of ${totalPopulation}, ${CASTE_NAMES_EN[topCastes[0]]} (${casteCounts[topCastes[0]]}) is the largest caste group, followed by ${CASTE_NAMES_EN[topCastes[1]]} (${casteCounts[topCastes[1]]}) and ${CASTE_NAMES_EN[topCastes[2]]} (${casteCounts[topCastes[2]]})। Detailed statistics and visualizations of various castes.`;
+    const descriptionEN = `Ward-wise caste population distribution, trends and analysis for Pokhara Metropolitan City. Out of a total population of ${totalPopulation}, ${CASTE_NAMES_EN[topCastes[0]]} (${casteCounts[topCastes[0]]}) is the largest caste group, followed by ${CASTE_NAMES_EN[topCastes[1]]} (${casteCounts[topCastes[1]]}) and ${CASTE_NAMES_EN[topCastes[2]]} (${casteCounts[topCastes[2]]})। Detailed statistics and visualizations of various castes.`;
 
     return {
       title: "पोखरा महानगरपालिका | जाति अनुसार जनसंख्या | डिजिटल प्रोफाइल",
@@ -336,7 +336,7 @@ export default async function WardWiseCastePopulationPage() {
               src="/images/caste-diversity.svg"
               width={1200}
               height={400}
-              alt="जातिगत विविधता - पोखरा महानगरपालिका (Caste Diversity - Khajura metropolitan city)"
+              alt="जातिगत विविधता - पोखरा महानगरपालिका (Caste Diversity - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

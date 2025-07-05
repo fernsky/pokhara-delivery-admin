@@ -34,7 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
   try {
     const waterPurificationData =
       await api.profile.waterAndSanitation.wardWiseWaterPurification.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalHouseholds = waterPurificationData.reduce(
@@ -81,18 +81,18 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city water purification",
+      "Pokhara Metropolitan City water purification",
       "Ward-wise water purification practices",
       "Water boiling households count",
       "Water filter usage rate",
       "Chemical treatment (Piyush) usage",
-      `Khajura water purification data ${totalHouseholds}`,
+      `Pokhara water purification data ${totalHouseholds}`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकामा वडा अनुसार पानी शुद्धिकरण विधिहरूको वितरण र विश्लेषण। कुल घरधुरी संख्या ${localizeNumber(totalHouseholds.toString(), "ne")} मध्ये ${localizeNumber(mostCommonPercentage, "ne")}% (${localizeNumber(mostCommonCount.toString(), "ne")}) ले ${mostCommonTypeName} विधि प्रयोग गर्दछन्। विभिन्न वडाहरूमा पानी शुद्धिकरण विधिहरूको विस्तृत विश्लेषण।`;
 
-    const descriptionEN = `Ward-wise distribution and analysis of water purification methods in Khajura metropolitan city. Out of a total of ${totalHouseholds} households, ${mostCommonPercentage}% (${mostCommonCount}) use ${mostCommonTypeName} method. Detailed analysis of water purification methods across various wards.`;
+    const descriptionEN = `Ward-wise distribution and analysis of water purification methods in Pokhara Metropolitan City. Out of a total of ${totalHouseholds} households, ${mostCommonPercentage}% (${mostCommonCount}) use ${mostCommonTypeName} method. Detailed analysis of water purification methods across various wards.`;
 
     return {
       title: `पानी शुद्धिकरण विधिहरू | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -358,7 +358,7 @@ export default async function WardWiseWaterPurificationPage() {
               src="/images/water-purification.svg"
               width={1200}
               height={400}
-              alt="पानी शुद्धिकरण विधिहरू - पोखरा महानगरपालिका (Water Purification Methods - Khajura metropolitan city)"
+              alt="पानी शुद्धिकरण विधिहरू - पोखरा महानगरपालिका (Water Purification Methods - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

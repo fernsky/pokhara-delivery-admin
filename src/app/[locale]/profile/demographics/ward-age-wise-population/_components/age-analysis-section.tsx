@@ -153,7 +153,7 @@ export default function AgeAnalysisSection({
     if (document && document.body) {
       document.body.setAttribute(
         "data-municipality",
-        "Khajura metropolitan city / पोखरा महानगरपालिका",
+        "Pokhara Metropolitan City / पोखरा महानगरपालिका",
       );
       document.body.setAttribute(
         "data-total-population",
@@ -318,7 +318,7 @@ export default function AgeAnalysisSection({
       >
         <h3 className="text-xl font-medium mb-4">
           जनसांख्यिकीय सूचकहरू
-          <span className="sr-only">Demographic Indicators of Khajura</span>
+          <span className="sr-only">Demographic Indicators of Pokhara</span>
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div

@@ -75,11 +75,11 @@ export default function ToiletTypeCharts({
       >
         <meta
           itemProp="name"
-          content="Toilet Types in Khajura metropolitan city"
+          content="Toilet Types in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content={`Toilet type distribution of Khajura with a total of ${totalHouseholds} households`}
+          content={`Toilet type distribution of Pokhara with a total of ${totalHouseholds} households`}
         />
 
         <div className="border-b px-4 py-3">
@@ -213,11 +213,11 @@ export default function ToiletTypeCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Toilet Types in Khajura metropolitan city"
+          content="Ward-wise Toilet Types in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Toilet types distribution across wards in Khajura"
+          content="Toilet types distribution across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -248,11 +248,11 @@ export default function ToiletTypeCharts({
       >
         <meta
           itemProp="name"
-          content="Sanitation Rate Comparison Across Wards in Khajura metropolitan city"
+          content="Sanitation Rate Comparison Across Wards in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Comparison of sanitation rates across wards in Khajura"
+          content="Comparison of sanitation rates across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -284,11 +284,11 @@ export default function ToiletTypeCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Toilet Type Analysis in Khajura metropolitan city"
+          content="Ward-wise Toilet Type Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Most common toilet types by ward in Khajura"
+          content="Most common toilet types by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

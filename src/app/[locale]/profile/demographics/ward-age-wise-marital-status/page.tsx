@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const maritalData =
       await api.profile.demographics.wardAgeWiseMaritalStatus.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalPopulation = maritalData.reduce(
@@ -82,22 +82,22 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city marital status population",
-      "Khajura marital status",
-      `Khajura ${MARITAL_STATUS_NAMES_EN[topMaritalStatuses[0]]} population`,
+      "Pokhara Metropolitan City marital status population",
+      "Pokhara marital status",
+      `Pokhara ${MARITAL_STATUS_NAMES_EN[topMaritalStatuses[0]]} population`,
       ...topMaritalStatuses.map(
-        (r) => `${MARITAL_STATUS_NAMES_EN[r]} population in Khajura`,
+        (r) => `${MARITAL_STATUS_NAMES_EN[r]} population in Pokhara`,
       ),
       "Ward-wise marital status demographics",
       "Age-wise marital status statistics",
-      "Marital status census Khajura",
-      `Khajura total population ${totalPopulation}`,
+      "Marital status census Pokhara",
+      `Pokhara total population ${totalPopulation}`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकाको वडा र उमेर अनुसार वैवाहिक स्थिति वितरण, प्रवृत्ति र विश्लेषण। कुल जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")} मध्ये ${MARITAL_STATUS_NAMES_NP[topMaritalStatuses[0]]} (${localizeNumber(maritalCounts[topMaritalStatuses[0]].toString(), "ne")}) सबैभन्दा ठूलो समूह हो, त्यसपछि ${MARITAL_STATUS_NAMES_NP[topMaritalStatuses[1]]} (${localizeNumber(maritalCounts[topMaritalStatuses[1]].toString(), "ne")}) र ${MARITAL_STATUS_NAMES_NP[topMaritalStatuses[2]]} (${localizeNumber(maritalCounts[topMaritalStatuses[2]].toString(), "ne")})। विभिन्न उमेर समूह र वैवाहिक स्थितिको विस्तृत तथ्याङ्क र विजुअलाइजेसन।`;
 
-    const descriptionEN = `Ward-wise and age-wise marital status distribution, trends and analysis for Khajura metropolitan city. Out of a total population of ${totalPopulation}, ${MARITAL_STATUS_NAMES_EN[topMaritalStatuses[0]]} (${maritalCounts[topMaritalStatuses[0]]}) is the largest group, followed by ${MARITAL_STATUS_NAMES_EN[topMaritalStatuses[1]]} (${maritalCounts[topMaritalStatuses[1]]}) and ${MARITAL_STATUS_NAMES_EN[topMaritalStatuses[2]]} (${maritalCounts[topMaritalStatuses[2]]})। Detailed statistics and visualizations of various marital status groups by age.`;
+    const descriptionEN = `Ward-wise and age-wise marital status distribution, trends and analysis for Pokhara Metropolitan City. Out of a total population of ${totalPopulation}, ${MARITAL_STATUS_NAMES_EN[topMaritalStatuses[0]]} (${maritalCounts[topMaritalStatuses[0]]}) is the largest group, followed by ${MARITAL_STATUS_NAMES_EN[topMaritalStatuses[1]]} (${maritalCounts[topMaritalStatuses[1]]}) and ${MARITAL_STATUS_NAMES_EN[topMaritalStatuses[2]]} (${maritalCounts[topMaritalStatuses[2]]})। Detailed statistics and visualizations of various marital status groups by age.`;
 
     return {
       title: `उमेर अनुसार वैवाहिक स्थिति | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -350,7 +350,7 @@ export default async function AgeWiseMaritalStatusPage({
               src="/images/marital-status.svg"
               width={1200}
               height={400}
-              alt="उमेर अनुसार वैवाहिक स्थिति - पोखरा महानगरपालिका (Age-wise Marital Status - Khajura metropolitan city)"
+              alt="उमेर अनुसार वैवाहिक स्थिति - पोखरा महानगरपालिका (Age-wise Marital Status - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

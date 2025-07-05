@@ -58,7 +58,7 @@ export default function AgricultureHouseholdsCharts({
       >
         <meta
           itemProp="name"
-          content="Agriculture Households Distribution in Khajura metropolitan city"
+          content="Agriculture Households Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
@@ -212,11 +212,11 @@ export default function AgricultureHouseholdsCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Agriculture Households in Khajura metropolitan city"
+          content="Ward-wise Agriculture Households in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Agricultural household distribution across wards in Khajura"
+          content="Agricultural household distribution across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -246,11 +246,11 @@ export default function AgricultureHouseholdsCharts({
       >
         <meta
           itemProp="name"
-          content="Agriculture Involvement Rate Comparison Across Wards in Khajura metropolitan city"
+          content="Agriculture Involvement Rate Comparison Across Wards in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Comparison of agriculture involvement rates across wards in Khajura"
+          content="Comparison of agriculture involvement rates across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -280,11 +280,11 @@ export default function AgricultureHouseholdsCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Agriculture Involvement Analysis in Khajura metropolitan city"
+          content="Ward-wise Agriculture Involvement Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Detailed analysis of agricultural involvement by ward in Khajura"
+          content="Detailed analysis of agricultural involvement by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

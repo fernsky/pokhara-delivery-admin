@@ -171,7 +171,7 @@ SIMPLE_JWT = {
 # API Documentation
 SPECTACULAR_SETTINGS = {
     "TITLE": "pokhara Digital Profile Report API",
-    "DESCRIPTION": "API for managing and generating digital profile reports for pokhara metropolitan city",
+    "DESCRIPTION": "API for managing and generating digital profile reports for pokhara Metropolitan City",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
     "COMPONENT_SPLIT_REQUEST": True,

@@ -103,7 +103,7 @@ export default function HouseholdOuterWallAnalysisSection({
 
   // SEO attributes to include directly in JSX
   const seoAttributes = {
-    "data-municipality": "Khajura metropolitan city / पोखरा महानगरपालिका",
+    "data-municipality": "Pokhara Metropolitan City / पोखरा महानगरपालिका",
     "data-total-households": totalHouseholds.toString(),
     "data-most-common-wall":
       overallSummary.length > 0
@@ -173,7 +173,7 @@ export default function HouseholdOuterWallAnalysisSection({
         <h3 className="text-xl font-medium mb-6">
           घरको बाहिरी गारोको विस्तृत विश्लेषण
           <span className="sr-only">
-            Detailed House Outer Wall Analysis of Khajura
+            Detailed House Outer Wall Analysis of Pokhara
           </span>
         </h3>
 
@@ -193,7 +193,7 @@ export default function HouseholdOuterWallAnalysisSection({
             <h4 className="font-medium mb-2">
               प्रमुख घरको बाहिरी गारोको प्रकार
               <span className="sr-only">
-                Most Common House Outer Wall Type in Khajura metropolitan city
+                Most Common House Outer Wall Type in Pokhara Metropolitan City
               </span>
             </h4>
             <div className="flex items-center gap-3">

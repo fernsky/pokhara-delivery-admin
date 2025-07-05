@@ -48,18 +48,18 @@ export default function FarmersGroupSEO({
     // Convert business stats to structured data format
     const businessTypeStats = businessSummary.map((item) => ({
       "@type": "Dataset",
-      name: `${BUSINESS_TYPES_EN[item.type] || item.type} Groups in Khajura metropolitan city`,
-      description: `There are ${item.count} ${BUSINESS_TYPES_EN[item.type] || item.type} groups operating in Khajura metropolitan city, representing ${item.percentage.toFixed(2)}% of total agricultural groups.`,
+      name: `${BUSINESS_TYPES_EN[item.type] || item.type} Groups in Pokhara Metropolitan City`,
+      description: `There are ${item.count} ${BUSINESS_TYPES_EN[item.type] || item.type} groups operating in Pokhara Metropolitan City, representing ${item.percentage.toFixed(2)}% of total agricultural groups.`,
       keywords: [
         item.type,
         BUSINESS_TYPES_EN[item.type],
         "agriculture",
         "farming",
-        "Khajura",
+        "Pokhara",
       ],
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
       },
       variableMeasured: [
         {
@@ -87,7 +87,7 @@ export default function FarmersGroupSEO({
         .join(", ")}${ward.farms.length > 3 ? " and others" : ""}.`,
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
       },
       variableMeasured: {
         "@type": "PropertyValue",
@@ -105,10 +105,10 @@ export default function FarmersGroupSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Commercial Agricultural and Animal Husbandry Farmers Groups in Khajura metropolitan city",
-      description: `Comprehensive analysis of ${totalGroups} commercial agricultural and animal husbandry farmers groups in Khajura metropolitan city. The most common type is ${mostCommonBusinessTypeEN} (${statistics.mostPopularBusinessTypePercentage.toFixed(1)}%), and Ward ${statistics.wardWithMostGroups} has the highest concentration with ${statistics.maximumGroupsInAWard} groups. This dataset covers all 9 wards of the municipality.`,
+      name: "Commercial Agricultural and Animal Husbandry Farmers Groups in Pokhara Metropolitan City",
+      description: `Comprehensive analysis of ${totalGroups} commercial agricultural and animal husbandry farmers groups in Pokhara Metropolitan City. The most common type is ${mostCommonBusinessTypeEN} (${statistics.mostPopularBusinessTypePercentage.toFixed(1)}%), and Ward ${statistics.wardWithMostGroups} has the highest concentration with ${statistics.maximumGroupsInAWard} groups. This dataset covers all 9 wards of the municipality.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Commercial Agriculture",
         "Animal Husbandry",
@@ -124,13 +124,13 @@ export default function FarmersGroupSEO({
       url: "https://digital.pokharamun.gov.np/profile/economics/commercial-agricultural-animal-husbandry-farmers-group",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",
@@ -185,7 +185,7 @@ export default function FarmersGroupSEO({
       ],
       isPartOf: {
         "@type": "Dataset",
-        name: "Khajura metropolitan city Digital Profile",
+        name: "Pokhara Metropolitan City Digital Profile",
         url: "https://digital.pokharamun.gov.np",
       },
     };

@@ -51,17 +51,17 @@ export default function CooperativesSEO({
     // Convert cooperative stats to structured data format
     const cooperativeTypeStats = cooperativeSummary.map((item) => ({
       "@type": "Dataset",
-      name: `${COOPERATIVE_TYPES_EN[item.type] || item.type} Cooperatives in Khajura metropolitan city`,
-      description: `There are ${item.count} ${COOPERATIVE_TYPES_EN[item.type] || item.type} cooperatives operating in Khajura metropolitan city, representing ${item.percentage.toFixed(2)}% of total cooperatives.`,
+      name: `${COOPERATIVE_TYPES_EN[item.type] || item.type} Cooperatives in Pokhara Metropolitan City`,
+      description: `There are ${item.count} ${COOPERATIVE_TYPES_EN[item.type] || item.type} cooperatives operating in Pokhara Metropolitan City, representing ${item.percentage.toFixed(2)}% of total cooperatives.`,
       keywords: [
         item.type,
         COOPERATIVE_TYPES_EN[item.type],
         "cooperative",
-        "Khajura",
+        "Pokhara",
       ],
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
       },
       variableMeasured: [
         {
@@ -89,7 +89,7 @@ export default function CooperativesSEO({
         .join(", ")}${ward.cooperatives.length > 3 ? " and others" : ""}.`,
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
       },
       variableMeasured: {
         "@type": "PropertyValue",
@@ -108,10 +108,10 @@ export default function CooperativesSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Cooperatives in Khajura metropolitan city",
-      description: `Comprehensive analysis of ${totalCooperatives} cooperatives in Khajura metropolitan city. The most common type is ${mostCommonCooperativeTypeEN} (${statistics.mostPopularCooperativeTypePercentage.toFixed(1)}%), and Ward ${statistics.wardWithMostCooperatives} has the highest concentration with ${statistics.maximumCooperativesInAWard} cooperatives. This dataset includes ${statistics.provinceLevelCooperatives} province-level cooperatives and covers all 9 wards of the municipality.`,
+      name: "Cooperatives in Pokhara Metropolitan City",
+      description: `Comprehensive analysis of ${totalCooperatives} cooperatives in Pokhara Metropolitan City. The most common type is ${mostCommonCooperativeTypeEN} (${statistics.mostPopularCooperativeTypePercentage.toFixed(1)}%), and Ward ${statistics.wardWithMostCooperatives} has the highest concentration with ${statistics.maximumCooperativesInAWard} cooperatives. This dataset includes ${statistics.provinceLevelCooperatives} province-level cooperatives and covers all 9 wards of the municipality.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Cooperatives",
         "सहकारी संस्था",
@@ -131,13 +131,13 @@ export default function CooperativesSEO({
       url: "https://digital.pokharamun.gov.np/profile/economics/cooperatives",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",
@@ -199,7 +199,7 @@ export default function CooperativesSEO({
       ],
       isPartOf: {
         "@type": "Dataset",
-        name: "Khajura metropolitan city Digital Profile",
+        name: "Pokhara Metropolitan City Digital Profile",
         url: "https://digital.pokharamun.gov.np",
       },
     };

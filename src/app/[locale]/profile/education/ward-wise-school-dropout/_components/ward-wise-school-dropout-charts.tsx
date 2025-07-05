@@ -64,7 +64,7 @@ export default function WardWiseSchoolDropoutCharts({
       >
         <meta
           itemProp="name"
-          content="School Dropout Causes Distribution in Khajura metropolitan city"
+          content="School Dropout Causes Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
@@ -188,11 +188,11 @@ export default function WardWiseSchoolDropoutCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise School Dropout Causes in Khajura metropolitan city"
+          content="Ward-wise School Dropout Causes in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Distribution of school dropout causes across wards in Khajura"
+          content="Distribution of school dropout causes across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -222,11 +222,11 @@ export default function WardWiseSchoolDropoutCharts({
       >
         <meta
           itemProp="name"
-          content="Economic-Related Dropout Comparison Across Wards in Khajura metropolitan city"
+          content="Economic-Related Dropout Comparison Across Wards in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Comparison of economic-related dropout rates across wards in Khajura"
+          content="Comparison of economic-related dropout rates across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -258,11 +258,11 @@ export default function WardWiseSchoolDropoutCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise School Dropout Analysis in Khajura metropolitan city"
+          content="Ward-wise School Dropout Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Detailed analysis of school dropout causes by ward in Khajura"
+          content="Detailed analysis of school dropout causes by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

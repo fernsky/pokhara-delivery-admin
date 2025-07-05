@@ -114,7 +114,7 @@ class GenerateFullReportPDFView(PDFGeneratorMixin, TemplateView):
 
         # Municipality name - make dynamic
         municipality_name = "पोखरा महानगरपालिका"
-        municipality_name_english = "pokhara metropolitan city"
+        municipality_name_english = "pokhara Metropolitan City"
 
         # Get publication settings (optional)
         publication_settings = (
@@ -185,7 +185,7 @@ class GenerateCategoryPDFView(PDFGeneratorMixin, TemplateView):
 
         # Municipality name - make dynamic
         municipality_name = "पोखरा महानगरपालिका"
-        municipality_name_english = "pokharametropolitan city"
+        municipality_name_english = "pokharaMetropolitan City"
 
         publication_settings = self.get_publication_settings()
         sections = category.sections.filter(is_published=True).prefetch_related(
@@ -229,7 +229,7 @@ class GenerateSectionPDFView(PDFGeneratorMixin, TemplateView):
 
         # Municipality name - make dynamic
         municipality_name = "पोखरा महानगरपालिका"
-        municipality_name_english = "pokharametropolitan city"
+        municipality_name_english = "pokharaMetropolitan City"
 
         publication_settings = self.get_publication_settings()
 

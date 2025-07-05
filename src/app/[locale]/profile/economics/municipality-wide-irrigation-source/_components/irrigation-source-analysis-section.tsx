@@ -51,7 +51,7 @@ export default function IrrigationSourceAnalysisSection({
 
   // SEO attributes to include directly in JSX
   const seoAttributes = {
-    "data-municipality": "Khajura metropolitan city / पोखरा महानगरपालिका",
+    "data-municipality": "Pokhara Metropolitan City / पोखरा महानगरपालिका",
     "data-total-coverage": totalCoverage.toString(),
     "data-most-common-source":
       overallSummary.length > 0
@@ -108,7 +108,7 @@ export default function IrrigationSourceAnalysisSection({
         <h3 className="text-xl font-medium mb-6">
           सिंचाई स्रोतको विस्तृत विश्लेषण
           <span className="sr-only">
-            Detailed Irrigation Source Analysis of Khajura
+            Detailed Irrigation Source Analysis of Pokhara
           </span>
         </h3>
 
@@ -127,7 +127,7 @@ export default function IrrigationSourceAnalysisSection({
             <h4 className="font-medium mb-2">
               प्रमुख सिंचाई स्रोत
               <span className="sr-only">
-                Main Irrigation Source in Khajura metropolitan city
+                Main Irrigation Source in Pokhara Metropolitan City
               </span>
             </h4>
             <div className="flex items-center gap-3">

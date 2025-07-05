@@ -61,11 +61,11 @@ export default function EconomicallyActivePopulationCharts({
       >
         <meta
           itemProp="name"
-          content="Age-wise Economically Active Population in Khajura metropolitan city"
+          content="Age-wise Economically Active Population in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content={`Age-wise population distribution of Khajura with a total population of ${totalPopulation}`}
+          content={`Age-wise population distribution of Pokhara with a total population of ${totalPopulation}`}
         />
 
         <div className="border-b px-4 py-3">
@@ -199,11 +199,11 @@ export default function EconomicallyActivePopulationCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Age Group Distribution in Khajura metropolitan city"
+          content="Ward-wise Age Group Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Age group distribution across wards in Khajura"
+          content="Age group distribution across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -234,11 +234,11 @@ export default function EconomicallyActivePopulationCharts({
       >
         <meta
           itemProp="name"
-          content="Dependency Ratio Analysis by Ward in Khajura metropolitan city"
+          content="Dependency Ratio Analysis by Ward in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Dependency ratio analysis for each ward in Khajura"
+          content="Dependency ratio analysis for each ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

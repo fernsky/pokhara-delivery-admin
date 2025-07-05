@@ -35,7 +35,7 @@ const HistoryTimeline = () => {
       year: 2017,
       title: "Municipality Formation",
       description:
-        "Official establishment of Likhu Pike metropolitan city under the new federal structure",
+        "Official establishment of Likhu Pike Metropolitan City under the new federal structure",
       icon: Building,
       color: "from-emerald-500 to-green-600",
       stats: [
@@ -84,7 +84,7 @@ const HistoryTimeline = () => {
             Our Journey Through Time
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Key milestones in the development of pokhara metropolitan city
+            Key milestones in the development of pokhara Metropolitan City
           </p>
         </div>
 

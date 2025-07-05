@@ -68,7 +68,7 @@ export default function WardWiseTimeToMarketCenterSEO({
 
         return {
           "@type": "Observation",
-          name: `Market Center Access Statistics in Ward ${wardNumber} of Khajura metropolitan city`,
+          name: `Market Center Access Statistics in Ward ${wardNumber} of Pokhara Metropolitan City`,
           observationDate: new Date().toISOString().split("T")[0],
           measuredProperty: {
             "@type": "PropertyValue",
@@ -76,7 +76,7 @@ export default function WardWiseTimeToMarketCenterSEO({
             unitText: "percentage",
           },
           measuredValue: parseFloat(quickAccessPercent),
-          description: `In Ward ${wardNumber} of Khajura metropolitan city, ${quickAccessHouseholds.toLocaleString()} households (${quickAccessPercent}%) can access market centers within 30 minutes out of a total of ${totalWardHouseholds.toLocaleString()} households.`,
+          description: `In Ward ${wardNumber} of Pokhara Metropolitan City, ${quickAccessHouseholds.toLocaleString()} households (${quickAccessPercent}%) can access market centers within 30 minutes out of a total of ${totalWardHouseholds.toLocaleString()} households.`,
         };
       })
       .filter(Boolean);
@@ -92,10 +92,10 @@ export default function WardWiseTimeToMarketCenterSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Time to Market Center in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Analysis of time taken to reach market centers across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalHouseholds.toLocaleString()} households. ${quickAccessTotal.toLocaleString()} households (${quickAccessPercentage}%) can reach market centers within 30 minutes. The best accessibility is in Ward ${bestAccessWard?.wardNumber || ""} with ${bestAccessWard?.percentage.toFixed(2) || ""}% quick access rate.`,
+      name: "Time to Market Center in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Analysis of time taken to reach market centers across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalHouseholds.toLocaleString()} households. ${quickAccessTotal.toLocaleString()} households (${quickAccessPercentage}%) can reach market centers within 30 minutes. The best accessibility is in Ward ${bestAccessWard?.wardNumber || ""} with ${bestAccessWard?.percentage.toFixed(2) || ""}% quick access rate.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Market center access",
         "Market accessibility",
@@ -111,13 +111,13 @@ export default function WardWiseTimeToMarketCenterSEO({
       url: "https://digital.pokharamun.gov.np/profile/physical/ward-wise-time-to-market-center",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",
@@ -180,10 +180,10 @@ export default function WardWiseTimeToMarketCenterSEO({
         name: "Municipality Infrastructure Survey",
         provider: {
           "@type": "GovernmentOrganization",
-          name: "Khajura metropolitan city",
+          name: "Pokhara Metropolitan City",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Khajura",
+            addressLocality: "Pokhara",
             addressRegion: "Banke",
             addressCountry: "Nepal",
           },

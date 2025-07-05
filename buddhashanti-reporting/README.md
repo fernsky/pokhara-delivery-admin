@@ -1,8 +1,8 @@
 # पोखरा महानगरपालिका डिजिटल प्रोफाइल प्रतिवेदन प्रणाली
 
-# pokhara metropolitan city Digital Profile Report System
+# pokhara Metropolitan City Digital Profile Report System
 
-A comprehensive Django-based system for creating and managing digital profile reports for pokhara metropolitan city (पोखरा महानगरपालिका), kaski District, Lumbini Province, Nepal.
+A comprehensive Django-based system for creating and managing digital profile reports for pokhara Metropolitan City (पोखरा महानगरपालिका), kaski District, Lumbini Province, Nepal.
 
 ## 🌟 Features
 
@@ -179,7 +179,7 @@ The system is primarily designed for Nepali language with:
 
 ## 📊 Data Models (Phase 2)
 
-Will implement comprehensive models based on Nepal's metropolitan city data standards:
+Will implement comprehensive models based on Nepal's Metropolitan City data standards:
 
 ### Demographics
 
@@ -212,7 +212,7 @@ Will implement comprehensive models based on Nepal's metropolitan city data stan
 
 ## 📄 License
 
-This project is developed for pokhara metropolitan city and follows appropriate licensing for government software projects.
+This project is developed for pokhara Metropolitan City and follows appropriate licensing for government software projects.
 
 ## 📞 Support
 
@@ -224,4 +224,4 @@ For technical support or questions about the system:
 ---
 
 **विकसित**: पोखरा महानगरपालिकाको लागि डिजिटल प्रोफाइल प्रतिवेदन प्रणाली  
-**Developed**: Digital Profile Report System for pokhara metropolitan city
+**Developed**: Digital Profile Report System for pokhara Metropolitan City

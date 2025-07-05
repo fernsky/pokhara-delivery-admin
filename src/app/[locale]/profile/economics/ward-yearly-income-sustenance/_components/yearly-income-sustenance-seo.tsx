@@ -31,7 +31,7 @@ export default function YearlyIncomeSustenanceSEO({
     // Convert income sustenance stats to structured data format
     const incomeSustenanceStats = overallSummary.map((item) => ({
       "@type": "Observation",
-      name: `${MONTHS_SUSTAINED_NAMES_EN[item.monthsSustained] || item.monthsSustained} income sufficiency in Khajura metropolitan city`,
+      name: `${MONTHS_SUSTAINED_NAMES_EN[item.monthsSustained] || item.monthsSustained} income sufficiency in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -39,16 +39,16 @@ export default function YearlyIncomeSustenanceSEO({
         unitText: "households",
       },
       measuredValue: item.households,
-      description: `${item.households.toLocaleString()} households in Khajura metropolitan city have income that is sufficient for ${MONTHS_SUSTAINED_NAMES_EN[item.monthsSustained] || item.monthsSustained} (${((item.households / totalHouseholds) * 100).toFixed(2)}% of total households)`,
+      description: `${item.households.toLocaleString()} households in Pokhara Metropolitan City have income that is sufficient for ${MONTHS_SUSTAINED_NAMES_EN[item.monthsSustained] || item.monthsSustained} (${((item.households / totalHouseholds) * 100).toFixed(2)}% of total households)`,
     }));
 
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Yearly Income Sustenance in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Yearly income sufficiency distribution data across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalHouseholds.toLocaleString()} households.`,
+      name: "Yearly Income Sustenance in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Yearly income sufficiency distribution data across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalHouseholds.toLocaleString()} households.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Yearly income sustenance",
         "Income sufficiency",
@@ -63,13 +63,13 @@ export default function YearlyIncomeSustenanceSEO({
       url: "https://pokhara-rm.gov.np/profile/economics/ward-yearly-income-sustenance",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://pokhara-rm.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

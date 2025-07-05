@@ -66,7 +66,7 @@ export default function WardWiseEducationalLevelCharts({
       >
         <meta
           itemProp="name"
-          content="Educational Level Distribution in Khajura metropolitan city"
+          content="Educational Level Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
@@ -188,11 +188,11 @@ export default function WardWiseEducationalLevelCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Educational Level in Khajura metropolitan city"
+          content="Ward-wise Educational Level in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Distribution of educational levels across wards in Khajura"
+          content="Distribution of educational levels across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -222,11 +222,11 @@ export default function WardWiseEducationalLevelCharts({
       >
         <meta
           itemProp="name"
-          content="Higher Education Comparison Across Wards in Khajura metropolitan city"
+          content="Higher Education Comparison Across Wards in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Comparison of higher education rates across wards in Khajura"
+          content="Comparison of higher education rates across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -258,11 +258,11 @@ export default function WardWiseEducationalLevelCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Educational Level Analysis in Khajura metropolitan city"
+          content="Ward-wise Educational Level Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Detailed analysis of educational levels by ward in Khajura"
+          content="Detailed analysis of educational levels by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

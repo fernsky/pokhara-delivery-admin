@@ -2,7 +2,7 @@
 
 ## Overview
 
-Successfully implemented the complete "Municipality Introduction" (२. गाउँपालिका/नगरपालिकाको चिनारी) section for the pokhara metropolitan city Digital Profile report system.
+Successfully implemented the complete "Municipality Introduction" (२. गाउँपालिका/नगरपालिकाको चिनारी) section for the pokhara Metropolitan City Digital Profile report system.
 
 ## Implemented Components
 

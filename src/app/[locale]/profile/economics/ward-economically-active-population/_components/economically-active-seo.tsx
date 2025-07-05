@@ -45,7 +45,7 @@ export default function EconomicallyActiveSEO({
     // Convert age group stats to structured data format
     const ageGroupStats = ageGroupSummary.map((item) => ({
       "@type": "Observation",
-      name: `${AGE_GROUP_NAMES_EN[item.ageGroup] || item.ageGroup} economically active population in Khajura metropolitan city`,
+      name: `${AGE_GROUP_NAMES_EN[item.ageGroup] || item.ageGroup} economically active population in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -53,13 +53,13 @@ export default function EconomicallyActiveSEO({
         unitText: "people",
       },
       measuredValue: item.population,
-      description: `${item.population.toLocaleString()} people in the ${AGE_GROUP_NAMES_EN[item.ageGroup] || item.ageGroup} age group are economically active in Khajura metropolitan city (${((item.population / totalPopulation) * 100).toFixed(2)}% of total economically active population)`,
+      description: `${item.population.toLocaleString()} people in the ${AGE_GROUP_NAMES_EN[item.ageGroup] || item.ageGroup} age group are economically active in Pokhara Metropolitan City (${((item.population / totalPopulation) * 100).toFixed(2)}% of total economically active population)`,
     }));
 
     // Convert gender stats to structured data format
     const genderStats = genderSummary.map((item) => ({
       "@type": "Observation",
-      name: `${GENDER_NAMES_EN[item.gender] || item.gender} economically active population in Khajura metropolitan city`,
+      name: `${GENDER_NAMES_EN[item.gender] || item.gender} economically active population in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -67,7 +67,7 @@ export default function EconomicallyActiveSEO({
         unitText: "people",
       },
       measuredValue: item.population,
-      description: `${item.population.toLocaleString()} ${GENDER_NAMES_EN[item.gender] || item.gender} people are economically active in Khajura metropolitan city (${((item.population / totalPopulation) * 100).toFixed(2)}% of total economically active population)`,
+      description: `${item.population.toLocaleString()} ${GENDER_NAMES_EN[item.gender] || item.gender} people are economically active in Pokhara Metropolitan City (${((item.population / totalPopulation) * 100).toFixed(2)}% of total economically active population)`,
     }));
 
     // Calculate working age population (15-59)
@@ -78,10 +78,10 @@ export default function EconomicallyActiveSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Economically Active Population of Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Economically active population distribution data across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalPopulation.toLocaleString()} people, categorized by age groups and gender.`,
+      name: "Economically Active Population of Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Economically active population distribution data across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalPopulation.toLocaleString()} people, categorized by age groups and gender.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Economically active population",
         "Working age population",
@@ -107,13 +107,13 @@ export default function EconomicallyActiveSEO({
       url: "https://digital.pokharamun.gov.np/profile/economics/ward-economically-active-population",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

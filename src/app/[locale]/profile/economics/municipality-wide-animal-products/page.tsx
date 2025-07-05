@@ -56,7 +56,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const animalProductData =
       await api.profile.economics.municipalityWideAnimalProducts.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalProduction = animalProductData.reduce(
@@ -110,20 +110,20 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city animal products",
-      "Khajura milk production",
+      "Pokhara Metropolitan City animal products",
+      "Pokhara milk production",
       "Municipality-wide animal product statistics",
-      "Milk production in Khajura",
+      "Milk production in Pokhara",
       "Meat production statistics",
       "Egg production data",
-      `Khajura animal product sales ${totalSales.toFixed(2)} tonnes`,
-      `Khajura animal product revenue ${(totalRevenue / 1000).toFixed(2)} thousand rupees`,
+      `Pokhara animal product sales ${totalSales.toFixed(2)} tonnes`,
+      `Pokhara animal product revenue ${(totalRevenue / 1000).toFixed(2)} thousand rupees`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकाको पशुपन्छीजन्य उत्पादन र बिक्री विश्लेषण। कुल ${localizeNumber(totalProduction.toFixed(2), "ne")} मेट्रिक टन पशुजन्य उत्पादन मध्ये ${localizeNumber(mostProducedPercentage, "ne")}% (${localizeNumber(mostProducedAmount.toFixed(2), "ne")} टन) ${ANIMAL_PRODUCT_TYPES[mostProducedProduct] || mostProducedProduct} रहेको छ। पालिका स्तरीय पशुपन्छीजन्य उत्पादन र बिक्रीको विस्तृत विश्लेषण।`;
 
-    const descriptionEN = `Analysis of animal product production and sales in Khajura metropolitan city. Out of total ${totalProduction.toFixed(2)} metric tonnes of animal products, ${mostProducedPercentage}% (${mostProducedAmount.toFixed(2)} tonnes) is ${ANIMAL_PRODUCT_TYPES_EN[mostProducedProduct] || mostProducedProduct}. Detailed analysis of municipality-wide animal product patterns.`;
+    const descriptionEN = `Analysis of animal product production and sales in Pokhara Metropolitan City. Out of total ${totalProduction.toFixed(2)} metric tonnes of animal products, ${mostProducedPercentage}% (${mostProducedAmount.toFixed(2)} tonnes) is ${ANIMAL_PRODUCT_TYPES_EN[mostProducedProduct] || mostProducedProduct}. Detailed analysis of municipality-wide animal product patterns.`;
 
     return {
       title: `पशुपन्छीजन्य वस्तुको प्रकार अनुसार उत्पादन र बिक्री | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -350,7 +350,7 @@ export default async function MunicipalityWideAnimalProductsPage() {
               src="/images/animal-products.svg"
               width={1200}
               height={400}
-              alt="पशुपन्छीजन्य वस्तुको प्रकार अनुसार उत्पादन र बिक्री - पोखरा महानगरपालिका (Animal Products by Production and Sales - Khajura metropolitan city)"
+              alt="पशुपन्छीजन्य वस्तुको प्रकार अनुसार उत्पादन र बिक्री - पोखरा महानगरपालिका (Animal Products by Production and Sales - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

@@ -59,7 +59,7 @@ export default function IrrigatedAreaAnalysisSection({
 
   // SEO attributes to include directly in JSX
   const seoAttributes = {
-    "data-municipality": "Khajura metropolitan city / पोखरा महानगरपालिका",
+    "data-municipality": "Pokhara Metropolitan City / पोखरा महानगरपालिका",
     "data-total-area": totalArea.toString(),
     "data-irrigated-area": totalIrrigatedArea.toString(),
     "data-irrigated-percentage": irrigatedPercentage,
@@ -105,7 +105,7 @@ export default function IrrigatedAreaAnalysisSection({
         <h3 className="text-xl font-medium mb-6">
           वडागत सिंचाई विश्लेषण
           <span className="sr-only">
-            Ward-wise Irrigation Analysis of Khajura
+            Ward-wise Irrigation Analysis of Pokhara
           </span>
         </h3>
 
@@ -117,7 +117,7 @@ export default function IrrigatedAreaAnalysisSection({
             <h4 className="font-medium mb-2">
               सबैभन्दा बढी सिंचित क्षेत्र भएको वडा
               <span className="sr-only">
-                Ward with highest irrigated area in Khajura metropolitan city
+                Ward with highest irrigated area in Pokhara Metropolitan City
               </span>
             </h4>
             {mostIrrigatedWard && (

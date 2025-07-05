@@ -69,11 +69,11 @@ export default function DisabilityCauseCharts({
       >
         <meta
           itemProp="name"
-          content="Disability Cause Distribution in Khajura metropolitan city"
+          content="Disability Cause Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content={`Disability cause composition of Khajura with a total population with disabilities of ${totalPopulationWithDisability}`}
+          content={`Disability cause composition of Pokhara with a total population with disabilities of ${totalPopulationWithDisability}`}
         />
 
         <div className="border-b px-4 py-3">
@@ -239,11 +239,11 @@ export default function DisabilityCauseCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Disability Cause Distribution in Khajura metropolitan city"
+          content="Ward-wise Disability Cause Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Disability cause distribution across wards in Khajura"
+          content="Disability cause distribution across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -274,11 +274,11 @@ export default function DisabilityCauseCharts({
       >
         <meta
           itemProp="name"
-          content="Detailed Disability Cause Analysis by Ward in Khajura metropolitan city"
+          content="Detailed Disability Cause Analysis by Ward in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Detailed disability cause composition of each ward in Khajura"
+          content="Detailed disability cause composition of each ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

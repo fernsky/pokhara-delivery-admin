@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const ageData =
       await api.profile.demographics.wardAgeWisePopulation.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalPopulation = ageData.reduce(
@@ -78,21 +78,21 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city age distribution",
-      "Khajura age demographics",
-      `Khajura children population ${childrenPct}%`,
-      `Khajura youth population ${youthPct}%`,
+      "Pokhara Metropolitan City age distribution",
+      "Pokhara age demographics",
+      `Pokhara children population ${childrenPct}%`,
+      `Pokhara youth population ${youthPct}%`,
       "Ward-wise age demographics",
       "Population pyramid",
       "Demographic dividend",
       "Dependency ratio",
-      `Khajura total population ${totalPopulation}`,
+      `Pokhara total population ${totalPopulation}`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकाको वडा अनुसार उमेर समूहको जनसंख्या वितरण, प्रवृत्ति र विश्लेषण। कुल जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")} मध्ये बाल जनसंख्या ${localizeNumber(childrenPct, "ne")}%, युवा जनसंख्या ${localizeNumber(youthPct, "ne")}% रहेको छ। उमेर समूह अनुसार विस्तृत तथ्याङ्क र विजुअलाइजेसन।`;
 
-    const descriptionEN = `Ward-wise age group population distribution, trends and analysis for Khajura metropolitan city. Out of a total population of ${totalPopulation}, children make up ${childrenPct}% and youth make up ${youthPct}%. Detailed statistics and visualizations of various age groups.`;
+    const descriptionEN = `Ward-wise age group population distribution, trends and analysis for Pokhara Metropolitan City. Out of a total population of ${totalPopulation}, children make up ${childrenPct}% and youth make up ${youthPct}%. Detailed statistics and visualizations of various age groups.`;
 
     return {
       title: `उमेर अनुसार जनसंख्या | पोखरा महानगरपालिका | डिजिटल प्रोफाइल`,

@@ -31,7 +31,7 @@ export default function SpiceSEO({
     // Convert spice stats to structured data format
     const spiceStats = overallSummary.map((item) => ({
       "@type": "Observation",
-      name: `${SPICE_TYPES_EN[item.type] || item.type} in Khajura metropolitan city`,
+      name: `${SPICE_TYPES_EN[item.type] || item.type} in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -39,7 +39,7 @@ export default function SpiceSEO({
         unitText: "tonnes",
       },
       measuredValue: item.production,
-      description: `${item.production.toFixed(2)} tonnes of ${SPICE_TYPES_EN[item.type] || item.type} produced in Khajura metropolitan city (${((item.production / totalProduction) * 100).toFixed(2)}% of total production). Sales volume: ${item.sales.toFixed(2)} tonnes. Revenue: NPR ${item.revenue.toLocaleString()}.`,
+      description: `${item.production.toFixed(2)} tonnes of ${SPICE_TYPES_EN[item.type] || item.type} produced in Pokhara Metropolitan City (${((item.production / totalProduction) * 100).toFixed(2)}% of total production). Sales volume: ${item.sales.toFixed(2)} tonnes. Revenue: NPR ${item.revenue.toLocaleString()}.`,
     }));
 
     // Find most produced spice
@@ -63,8 +63,8 @@ export default function SpiceSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Spice Types in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Spice production and sales statistics of Khajura metropolitan city with a total production of ${totalProduction.toFixed(
+      name: "Spice Types in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Spice production and sales statistics of Pokhara Metropolitan City with a total production of ${totalProduction.toFixed(
         2,
       )} tonnes and sales of ${totalSales.toFixed(2)} tonnes (${(
         (totalSales / totalProduction) *
@@ -75,7 +75,7 @@ export default function SpiceSEO({
         2,
       )} tonnes (${mostProducedPercentage}%). Self-consumption represents ${selfConsumptionPercentage}% of total production. Total revenue from spice sales is NPR ${totalRevenue.toLocaleString()}.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Spice production",
         "Spice sales",
@@ -92,13 +92,13 @@ export default function SpiceSEO({
       url: "https://digital.pokharamun.gov.np/profile/economics/municipality-wide-spices",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

@@ -71,7 +71,7 @@ export default function CasteSEO({
     // Convert caste stats to structured data format
     const casteStats = overallSummary.map((item) => ({
       "@type": "Observation",
-      name: `${CASTE_NAMES_EN[item.casteType] || item.casteType} population in Khajura metropolitan city`,
+      name: `${CASTE_NAMES_EN[item.casteType] || item.casteType} population in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -79,7 +79,7 @@ export default function CasteSEO({
         unitText: "people",
       },
       measuredValue: item.population,
-      description: `${item.population} people in Khajura metropolitan city belong to ${
+      description: `${item.population} people in Pokhara Metropolitan City belong to ${
         CASTE_NAMES_EN[item.casteType] || item.casteType
       } caste (${((item.population / totalPopulation) * 100).toFixed(2)}% of total population)`,
     }));
@@ -87,10 +87,10 @@ export default function CasteSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Caste Demographics of Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Caste distribution data across ${wardNumbers.length} wards of Khajura metropolitan city with a total population of ${totalPopulation.toLocaleString()} people. Main castes include ${topCastesDescription}.`,
+      name: "Caste Demographics of Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Caste distribution data across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total population of ${totalPopulation.toLocaleString()} people. Main castes include ${topCastesDescription}.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Caste demographics",
         "Ethnicity statistics",
@@ -102,13 +102,13 @@ export default function CasteSEO({
       url: "https://digital.pokharamun.gov.np/profile/demographics/ward-wise-caste-population",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

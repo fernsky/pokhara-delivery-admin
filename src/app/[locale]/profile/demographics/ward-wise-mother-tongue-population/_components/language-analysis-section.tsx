@@ -76,7 +76,7 @@ export default function LanguageAnalysisSection({
     if (document && document.body) {
       document.body.setAttribute(
         "data-municipality",
-        "Khajura metropolitan city / पोखरा महानगरपालिका",
+        "Pokhara Metropolitan City / पोखरा महानगरपालिका",
       );
       document.body.setAttribute(
         "data-total-population",
@@ -210,7 +210,7 @@ export default function LanguageAnalysisSection({
         <h3 className="text-xl font-medium mb-4">
           भाषिक विविधता विश्लेषण
           <span className="sr-only">
-            Linguistic Diversity Analysis of Khajura
+            Linguistic Diversity Analysis of Pokhara
           </span>
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -227,7 +227,7 @@ export default function LanguageAnalysisSection({
             <h4 className="font-medium mb-2">
               प्रमुख मातृभाषा
               <span className="sr-only">
-                Main Mother Tongue in Khajura metropolitan city
+                Main Mother Tongue in Pokhara Metropolitan City
               </span>
             </h4>
             <p className="text-3xl font-bold">
@@ -244,7 +244,7 @@ export default function LanguageAnalysisSection({
                 : ""}
               <span className="sr-only">
                 {topLanguage
-                  ? `${((topLanguage.population / totalPopulation) * 100).toFixed(2)}% of total population in Khajura metropolitan city`
+                  ? `${((topLanguage.population / totalPopulation) * 100).toFixed(2)}% of total population in Pokhara Metropolitan City`
                   : ""}
               </span>
             </p>
@@ -260,7 +260,7 @@ export default function LanguageAnalysisSection({
             <h4 className="font-medium mb-2">
               प्रमुख-दोस्रो मातृभाषा अनुपात
               <span className="sr-only">
-                Primary to Secondary Language Ratio in Khajura
+                Primary to Secondary Language Ratio in Pokhara
               </span>
             </h4>
             <p className="text-3xl font-bold">
@@ -272,7 +272,7 @@ export default function LanguageAnalysisSection({
                 : ""}
               <span className="sr-only">
                 {topLanguage && secondLanguage
-                  ? `For every ${topTwoLanguageRatio} ${topLanguage.language.toLowerCase()} speakers, there is 1 ${secondLanguage.language.toLowerCase()} speaker in Khajura metropolitan city`
+                  ? `For every ${topTwoLanguageRatio} ${topLanguage.language.toLowerCase()} speakers, there is 1 ${secondLanguage.language.toLowerCase()} speaker in Pokhara Metropolitan City`
                   : ""}
               </span>
             </p>

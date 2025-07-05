@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const birthCertificateData =
       await api.profile.demographics.wardWiseBirthCertificatePopulation.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Try to get summary data
     let totalWithCertificate = 0;
@@ -91,19 +91,19 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city birth registration",
+      "Pokhara Metropolitan City birth registration",
       "Children under five birth certificate",
       "Ward-wise birth registration data",
       "Birth certificate analysis",
-      "Birth certificate holders in Khajura",
-      `Khajura birth registration status: with certificate ${totalWithCertificate}, without certificate ${totalWithoutCertificate}`,
-      `Khajura total children under five years: ${totalPopulation}`,
+      "Birth certificate holders in Pokhara",
+      `Pokhara birth registration status: with certificate ${totalWithCertificate}, without certificate ${totalWithoutCertificate}`,
+      `Pokhara total children under five years: ${totalPopulation}`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकाको वडा अनुसार पाँच वर्षमुनिका बालबालिकाहरूको जन्मदर्ता प्रमाणपत्र वितरण र विश्लेषण। कुल ${localizeNumber(totalPopulation.toString(), "ne")} बालबालिकामध्ये ${localizeNumber(totalWithCertificate.toString(), "ne")} जनासँग जन्मदर्ता प्रमाणपत्र छ भने ${localizeNumber(totalWithoutCertificate.toString(), "ne")} जनासँग छैन।`;
 
-    const descriptionEN = `Ward-wise distribution and analysis of birth certificate holders among children under five in Khajura metropolitan city. Out of ${totalPopulation} total children, ${totalWithCertificate} have birth certificates and ${totalWithoutCertificate} do not have birth certificates.`;
+    const descriptionEN = `Ward-wise distribution and analysis of birth certificate holders among children under five in Pokhara Metropolitan City. Out of ${totalPopulation} total children, ${totalWithCertificate} have birth certificates and ${totalWithoutCertificate} do not have birth certificates.`;
 
     return {
       title: `पाँच वर्षमुनिका बालबालिका जन्मदर्ता | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -301,7 +301,7 @@ export default async function WardWiseBirthCertificatePopulationPage() {
               src="/images/birth-certificate.svg"
               width={1200}
               height={400}
-              alt="पाँच वर्षमुनिका बालबालिका जन्मदर्ता - पोखरा महानगरपालिका (Birth Certificates for Children Under Five - Khajura metropolitan city)"
+              alt="पाँच वर्षमुनिका बालबालिका जन्मदर्ता - पोखरा महानगरपालिका (Birth Certificates for Children Under Five - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

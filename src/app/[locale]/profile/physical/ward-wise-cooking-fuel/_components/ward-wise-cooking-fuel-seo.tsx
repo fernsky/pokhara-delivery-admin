@@ -70,7 +70,7 @@ export default function WardWiseCookingFuelSEO({
 
         return {
           "@type": "Observation",
-          name: `Cooking Fuel Usage Statistics in Ward ${wardNumber} of Khajura metropolitan city`,
+          name: `Cooking Fuel Usage Statistics in Ward ${wardNumber} of Pokhara Metropolitan City`,
           observationDate: new Date().toISOString().split("T")[0],
           measuredProperty: {
             "@type": "PropertyValue",
@@ -78,7 +78,7 @@ export default function WardWiseCookingFuelSEO({
             unitText: "percentage",
           },
           measuredValue: parseFloat(cleanFuelPercent),
-          description: `In Ward ${wardNumber} of Khajura metropolitan city, ${cleanFuelHouseholds.toLocaleString()} households (${cleanFuelPercent}%) use clean cooking fuels (LP Gas, Electricity, Biogas) out of a total of ${totalWardHouseholds.toLocaleString()} households.`,
+          description: `In Ward ${wardNumber} of Pokhara Metropolitan City, ${cleanFuelHouseholds.toLocaleString()} households (${cleanFuelPercent}%) use clean cooking fuels (LP Gas, Electricity, Biogas) out of a total of ${totalWardHouseholds.toLocaleString()} households.`,
         };
       })
       .filter(Boolean);
@@ -97,10 +97,10 @@ export default function WardWiseCookingFuelSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Cooking Fuel Usage in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Analysis of cooking fuel usage across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalHouseholds.toLocaleString()} households. ${cleanFuelTotal.toLocaleString()} households (${cleanFuelPercentageValue}%) use clean cooking fuels. The best adoption of clean fuel is in Ward ${bestWard?.wardNumber || ""} with ${bestWard?.percentage.toFixed(2) || ""}% clean fuel usage rate.`,
+      name: "Cooking Fuel Usage in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Analysis of cooking fuel usage across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalHouseholds.toLocaleString()} households. ${cleanFuelTotal.toLocaleString()} households (${cleanFuelPercentageValue}%) use clean cooking fuels. The best adoption of clean fuel is in Ward ${bestWard?.wardNumber || ""} with ${bestWard?.percentage.toFixed(2) || ""}% clean fuel usage rate.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Cooking fuel",
         "Clean energy",
@@ -116,13 +116,13 @@ export default function WardWiseCookingFuelSEO({
       url: "https://digital.pokharamun.gov.np/profile/physical/ward-wise-cooking-fuel",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",
@@ -197,10 +197,10 @@ export default function WardWiseCookingFuelSEO({
         name: "Municipality Household Survey",
         provider: {
           "@type": "GovernmentOrganization",
-          name: "Khajura metropolitan city",
+          name: "Pokhara Metropolitan City",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Khajura",
+            addressLocality: "Pokhara",
             addressRegion: "Banke",
             addressCountry: "Nepal",
           },

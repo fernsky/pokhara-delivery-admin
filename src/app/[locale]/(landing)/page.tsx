@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
     // SEO metadata setup - municipality name and details
     const municipalityName = "पोखरा महानगरपालिका";
-    const municipalityNameEn = "Khajura metropolitan city";
+    const municipalityNameEn = "Pokhara Metropolitan City";
     const districtName = "कास्की";
     const districtNameEn = "Banke";
     const provinceName = "गण्डकी प्रदेश";
@@ -126,7 +126,7 @@ export default async function Page({ params }: LanguageParams) {
 
   // SEO metadata setup - municipality name and details
   const municipalityName = "पोखरा महानगरपालिका";
-  const municipalityNameEn = "Khajura metropolitan city";
+  const municipalityNameEn = "Pokhara Metropolitan City";
   const districtName = "कास्की";
   const provinceNumber = 5;
   const provinceName = "गण्डकी प्रदेश";

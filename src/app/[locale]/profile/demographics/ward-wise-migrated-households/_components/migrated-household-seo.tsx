@@ -25,7 +25,7 @@ export default function MigratedHouseholdSEO({
     // Convert migration stats to structured data format
     const migrationStats = overallSummary.map((item) => ({
       "@type": "Observation",
-      name: `${MIGRATED_FROM_NAMES_EN[item.migratedFrom] || item.migratedFrom} in Khajura metropolitan city`,
+      name: `${MIGRATED_FROM_NAMES_EN[item.migratedFrom] || item.migratedFrom} in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -33,7 +33,7 @@ export default function MigratedHouseholdSEO({
         unitText: "households",
       },
       measuredValue: item.households,
-      description: `${item.households.toLocaleString()} households in Khajura metropolitan city are from ${MIGRATED_FROM_NAMES_EN[item.migratedFrom] || item.migratedFrom} (${((item.households / totalHouseholds) * 100).toFixed(2)}% of total migrated households)`,
+      description: `${item.households.toLocaleString()} households in Pokhara Metropolitan City are from ${MIGRATED_FROM_NAMES_EN[item.migratedFrom] || item.migratedFrom} (${((item.households / totalHouseholds) * 100).toFixed(2)}% of total migrated households)`,
     }));
 
     // Find most common migration origin
@@ -53,10 +53,10 @@ export default function MigratedHouseholdSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Migrated Households in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Migrated household data across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalHouseholds.toLocaleString()} migrated households. The most common origin is ${mostCommonMigratedFromEN} with ${mostCommonMigratedFrom?.households.toLocaleString()} households (${mostCommonMigratedFromPercentage}%).`,
+      name: "Migrated Households in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Migrated household data across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalHouseholds.toLocaleString()} migrated households. The most common origin is ${mostCommonMigratedFromEN} with ${mostCommonMigratedFrom?.households.toLocaleString()} households (${mostCommonMigratedFromPercentage}%).`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Migrated households",
         "Migration distribution",
@@ -73,13 +73,13 @@ export default function MigratedHouseholdSEO({
       url: "https://digital.pokharamun.gov.np/profile/demographics/ward-wise-migrated-households",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

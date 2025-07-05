@@ -54,7 +54,7 @@ export async function generateMetadata(): Promise<Metadata> {
   try {
     const cropDiseaseData =
       await api.profile.economics.municipalityWideCropDiseases.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalCrops = cropDiseaseData.length;
@@ -91,21 +91,21 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city crop diseases pests",
-      "Khajura agriculture problems",
+      "Pokhara Metropolitan City crop diseases pests",
+      "Pokhara agriculture problems",
       "Municipality-wide crop protection",
       "Rice diseases pests",
       "Wheat diseases pests",
       "Corn diseases pests",
       "Vegetable diseases pests",
       "Fruit diseases pests",
-      `Khajura crop protection ${totalCrops} types`,
+      `Pokhara crop protection ${totalCrops} types`,
     ];
 
     // Create description
     const descriptionNP = `पोखरा महानगरपालिकाको बाली रोग र कीटको विश्लेषण। ${localizeNumber(totalCrops.toString(), "ne")} प्रकारका बालीमा देखिने प्रमुख रोग र कीटहरूको विस्तृत अध्ययन। सबैभन्दा प्रभावित बाली ${CROP_TYPES[mostAffectedCrop] || mostAffectedCrop} रहेको छ। पालिका स्तरीय बाली संरक्षण योजना र रणनीतिको विश्लेषण।`;
 
-    const descriptionEN = `Analysis of crop diseases and pests in Khajura metropolitan city. Detailed study of major diseases and pests affecting ${totalCrops} types of crops. Most affected crop is ${CROP_TYPES_EN[mostAffectedCrop] || mostAffectedCrop}. Municipality-wide crop protection planning and strategy analysis.`;
+    const descriptionEN = `Analysis of crop diseases and pests in Pokhara Metropolitan City. Detailed study of major diseases and pests affecting ${totalCrops} types of crops. Most affected crop is ${CROP_TYPES_EN[mostAffectedCrop] || mostAffectedCrop}. Municipality-wide crop protection planning and strategy analysis.`;
 
     return {
       title: `बाली रोग र कीटपतंग | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -230,7 +230,7 @@ export default async function MunicipalityWideCropDiseasesPage() {
               src="/images/crop-diseases.svg"
               width={1200}
               height={400}
-              alt="बाली रोग र कीटपतंग - पोखरा महानगरपालिका (Crop Diseases and Pests - Khajura metropolitan city)"
+              alt="बाली रोग र कीटपतंग - पोखरा महानगरपालिका (Crop Diseases and Pests - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

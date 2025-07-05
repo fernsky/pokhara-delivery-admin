@@ -59,7 +59,7 @@ export default function HouseholdBaseAnalysisSection({
 
   // SEO attributes to include directly in JSX
   const seoAttributes = {
-    "data-municipality": "Khajura metropolitan city / पोखरा महानगरपालिका",
+    "data-municipality": "Pokhara Metropolitan City / पोखरा महानगरपालिका",
     "data-total-households": totalHouseholds.toString(),
     "data-most-common-foundation":
       overallSummary.length > 0
@@ -142,7 +142,7 @@ export default function HouseholdBaseAnalysisSection({
       <div className="bg-muted/50 p-4 rounded-lg mt-8">
         <h3 className="text-xl font-medium mb-4">
           घरको जग विश्लेषण
-          <span className="sr-only">House Foundation Analysis of Khajura</span>
+          <span className="sr-only">House Foundation Analysis of Pokhara</span>
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div
@@ -160,7 +160,7 @@ export default function HouseholdBaseAnalysisSection({
             <h4 className="font-medium mb-2">
               प्रमुख घरको जगको प्रकार
               <span className="sr-only">
-                Most Common House Foundation Type in Khajura metropolitan city
+                Most Common House Foundation Type in Pokhara Metropolitan City
               </span>
             </h4>
             <p className="text-3xl font-bold">
@@ -206,7 +206,7 @@ export default function HouseholdBaseAnalysisSection({
             <h4 className="font-medium mb-2">
               उच्च ढलान पिल्लर भएको वडा
               <span className="sr-only">
-                Ward with Highest Concrete Pillar Foundation in Khajura
+                Ward with Highest Concrete Pillar Foundation in Pokhara
               </span>
             </h4>
             <p className="text-3xl font-bold">

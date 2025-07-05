@@ -89,7 +89,7 @@ export default function LandOwnershipAnalysisSection({
 
   // SEO attributes to include directly in JSX
   const seoAttributes = {
-    "data-municipality": "Khajura metropolitan city / पोखरा महानगरपालिका",
+    "data-municipality": "Pokhara Metropolitan City / पोखरा महानगरपालिका",
     "data-total-households": totalHouseholds.toString(),
     "data-most-common-ownership":
       overallSummary.length > 0
@@ -155,7 +155,7 @@ export default function LandOwnershipAnalysisSection({
         <h3 className="text-xl font-medium mb-6">
           जग्गा स्वामित्वको विस्तृत विश्लेषण
           <span className="sr-only">
-            Detailed Land Ownership Analysis of Khajura
+            Detailed Land Ownership Analysis of Pokhara
           </span>
         </h3>
 
@@ -175,7 +175,7 @@ export default function LandOwnershipAnalysisSection({
             <h4 className="font-medium mb-2">
               प्रमुख जग्गा स्वामित्व प्रकार
               <span className="sr-only">
-                Main Land Ownership Type in Khajura metropolitan city
+                Main Land Ownership Type in Pokhara Metropolitan City
               </span>
             </h4>
             <div className="flex items-center gap-3">

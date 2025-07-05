@@ -37,7 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
   try {
     const agricultureHouseholdsData =
       await api.profile.economics.wardWiseHouseholdsInAgriculture.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Calculate summary statistics
     let totalHouseholds = 0;
@@ -85,19 +85,19 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city agriculture households",
-      "Khajura farming animal husbandry families",
+      "Pokhara Metropolitan City agriculture households",
+      "Pokhara farming animal husbandry families",
       "Ward-wise agriculture households",
       "Households involved in farming",
       "Agricultural population distribution",
-      `Khajura agriculture households ${totalInvolved}`,
-      "Khajura non-agricultural families",
+      `Pokhara agriculture households ${totalInvolved}`,
+      "Pokhara non-agricultural families",
     ];
 
     // Create description
     const descriptionNP = `पोखरा महानगरपालिकाको वडा अनुसार कृषि वा पशुपालनमा आबद्ध घरपरिवारको वितरण र विश्लेषण। कुल घरधुरी संख्या ${localizeNumber(totalHouseholds.toString(), "ne")} मध्ये ${localizeNumber(involvedPercentage, "ne")}% (${localizeNumber(totalInvolved.toString(), "ne")}) परिवार कृषि वा पशुपालनमा आबद्ध रहेका छन्। सबैभन्दा बढी वडा ${localizeNumber(highestInvolvementWard?.wardNumber.toString() || "", "ne")} मा ${localizeNumber(highestInvolvementWard?.percentage.toFixed(2) || "", "ne")}% कृषि परिवार रहेका छन्।`;
 
-    const descriptionEN = `Ward-wise distribution and analysis of households involved in agriculture or animal husbandry in Khajura metropolitan city. Out of a total of ${totalHouseholds} households, ${involvedPercentage}% (${totalInvolved}) families are involved in agriculture or animal husbandry. Ward ${highestInvolvementWard?.wardNumber || ""} has the highest percentage of agricultural households at ${highestInvolvementWard?.percentage.toFixed(2) || ""}%.`;
+    const descriptionEN = `Ward-wise distribution and analysis of households involved in agriculture or animal husbandry in Pokhara Metropolitan City. Out of a total of ${totalHouseholds} households, ${involvedPercentage}% (${totalInvolved}) families are involved in agriculture or animal husbandry. Ward ${highestInvolvementWard?.wardNumber || ""} has the highest percentage of agricultural households at ${highestInvolvementWard?.percentage.toFixed(2) || ""}%.`;
 
     return {
       title: `कृषि वा पशुपालनमा आबद्ध घरपरिवार | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -291,7 +291,7 @@ export default async function WardWiseHouseholdsInAgriculturePage() {
               src="/images/agriculture-households.svg"
               width={1200}
               height={400}
-              alt="कृषि वा पशुपालनमा आबद्ध घरपरिवार - पोखरा महानगरपालिका (Households Involved in Agriculture - Khajura metropolitan city)"
+              alt="कृषि वा पशुपालनमा आबद्ध घरपरिवार - पोखरा महानगरपालिका (Households Involved in Agriculture - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

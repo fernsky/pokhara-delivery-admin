@@ -62,7 +62,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const irrigationSourceData =
       await api.profile.economics.municipalityWideIrrigationSource.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalCoverage = irrigationSourceData.reduce(
@@ -113,20 +113,20 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city irrigation sources",
-      "Khajura irrigation source types",
+      "Pokhara Metropolitan City irrigation sources",
+      "Pokhara irrigation source types",
       "Municipality-wide irrigation sources",
       "Lake or reservoir irrigation",
-      "Irrigation canal statistics Khajura",
+      "Irrigation canal statistics Pokhara",
       "Rainwater collection irrigation",
       "Electric lift irrigation",
-      `Khajura irrigation coverage ${totalCoverage.toFixed(2)} hectares`,
+      `Pokhara irrigation coverage ${totalCoverage.toFixed(2)} hectares`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकाको सिंचाई स्रोतको वितरण र विश्लेषण। कुल ${localizeNumber(totalCoverage.toFixed(2), "ne")} हेक्टर क्षेत्रफल मध्ये ${localizeNumber(mostCommonPercentage, "ne")}% (${localizeNumber(mostCommonCoverage.toFixed(2), "ne")}) हेक्टर क्षेत्रफल ${IRRIGATION_SOURCE_TYPES[mostCommonType] || mostCommonType} मार्फत सिंचाई हुने गर्दछ। पालिका स्तरीय सिंचाई स्रोतको विस्तृत विश्लेषण।`;
 
-    const descriptionEN = `Distribution and analysis of irrigation sources in Khajura metropolitan city. Out of a total of ${totalCoverage.toFixed(2)} hectares coverage, ${mostCommonPercentage}% (${mostCommonCoverage.toFixed(2)}) hectares are irrigated through ${IRRIGATION_SOURCE_TYPES_EN[mostCommonType] || mostCommonType}. Detailed analysis of municipality-wide irrigation source patterns.`;
+    const descriptionEN = `Distribution and analysis of irrigation sources in Pokhara Metropolitan City. Out of a total of ${totalCoverage.toFixed(2)} hectares coverage, ${mostCommonPercentage}% (${mostCommonCoverage.toFixed(2)}) hectares are irrigated through ${IRRIGATION_SOURCE_TYPES_EN[mostCommonType] || mostCommonType}. Detailed analysis of municipality-wide irrigation source patterns.`;
 
     return {
       title: `सिंचाई स्रोतको प्रकार अनुसार क्षेत्रफल | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -329,7 +329,7 @@ export default async function MunicipalityWideIrrigationSourcePage() {
               src="/images/irrigation-sources.svg"
               width={1200}
               height={400}
-              alt="सिंचाई स्रोतको प्रकार अनुसार क्षेत्रफल - पोखरा महानगरपालिका (Irrigation Sources by Coverage Area - Khajura metropolitan city)"
+              alt="सिंचाई स्रोतको प्रकार अनुसार क्षेत्रफल - पोखरा महानगरपालिका (Irrigation Sources by Coverage Area - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

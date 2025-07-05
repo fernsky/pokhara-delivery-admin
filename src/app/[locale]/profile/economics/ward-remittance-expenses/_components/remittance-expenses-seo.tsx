@@ -24,7 +24,7 @@ export default function RemittanceExpensesSEO({
     // Convert remittance expense stats to structured data format
     const expenseStats = overallSummary.map((item) => ({
       "@type": "Observation",
-      name: `${EXPENSE_NAMES_EN[item.expense] || item.expense} in Khajura metropolitan city`,
+      name: `${EXPENSE_NAMES_EN[item.expense] || item.expense} in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -32,16 +32,16 @@ export default function RemittanceExpensesSEO({
         unitText: "households",
       },
       measuredValue: item.households,
-      description: `${item.households.toLocaleString()} households in Khajura metropolitan city spend their remittance on ${EXPENSE_NAMES_EN[item.expense] || item.expense} (${((item.households / totalHouseholds) * 100).toFixed(2)}% of total households receiving remittances)`,
+      description: `${item.households.toLocaleString()} households in Pokhara Metropolitan City spend their remittance on ${EXPENSE_NAMES_EN[item.expense] || item.expense} (${((item.households / totalHouseholds) * 100).toFixed(2)}% of total households receiving remittances)`,
     }));
 
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Remittance Expense Patterns of Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Remittance expense distribution data across ${wardNumbers.length} wards of Khajura metropolitan city with ${totalHouseholds.toLocaleString()} households receiving remittances.`,
+      name: "Remittance Expense Patterns of Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Remittance expense distribution data across ${wardNumbers.length} wards of Pokhara Metropolitan City with ${totalHouseholds.toLocaleString()} households receiving remittances.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Remittance expenses",
         "Remittance utilization",
@@ -56,13 +56,13 @@ export default function RemittanceExpensesSEO({
       url: "https://pokhara-rm.gov.np/profile/economics/ward-remittance-expenses",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://pokhara-rm.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

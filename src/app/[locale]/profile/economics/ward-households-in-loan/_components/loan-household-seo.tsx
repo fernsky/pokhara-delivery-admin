@@ -19,7 +19,7 @@ export default function LoanHouseholdSEO({
     // Convert loan statistics to structured data format
     const loanStats = loanData.map((item) => ({
       "@type": "Observation",
-      name: `Ward ${item.wardNumber} households with loans in Khajura metropolitan city`,
+      name: `Ward ${item.wardNumber} households with loans in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -27,16 +27,16 @@ export default function LoanHouseholdSEO({
         unitText: "households",
       },
       measuredValue: item.households,
-      description: `${item.households.toLocaleString()} households in Ward ${item.wardNumber} of Khajura metropolitan city have taken loans (${((item.households / totalHouseholdsOnLoan) * 100).toFixed(2)}% of total households with loans)`,
+      description: `${item.households.toLocaleString()} households in Ward ${item.wardNumber} of Pokhara Metropolitan City have taken loans (${((item.households / totalHouseholdsOnLoan) * 100).toFixed(2)}% of total households with loans)`,
     }));
 
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Households with Loans in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Distribution of households with loans across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalHouseholdsOnLoan.toLocaleString()} households having loans.`,
+      name: "Households with Loans in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Distribution of households with loans across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalHouseholdsOnLoan.toLocaleString()} households having loans.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Household loans",
         "Ward-wise loan data",
@@ -50,13 +50,13 @@ export default function LoanHouseholdSEO({
       url: "https://pokhara-rm.gov.np/profile/economics/ward-households-in-loan",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://pokhara-rm.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

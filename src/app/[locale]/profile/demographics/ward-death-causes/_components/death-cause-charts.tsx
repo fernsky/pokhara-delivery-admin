@@ -89,11 +89,11 @@ export default function DeathCauseCharts({
       >
         <meta
           itemProp="name"
-          content="Death Cause Distribution in Khajura metropolitan city"
+          content="Death Cause Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content={`Distribution of death causes in Khajura with a total of ${totalDeaths} deaths`}
+          content={`Distribution of death causes in Pokhara with a total of ${totalDeaths} deaths`}
         />
 
         <div className="border-b px-4 py-3">
@@ -229,11 +229,11 @@ export default function DeathCauseCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Death Cause Distribution in Khajura metropolitan city"
+          content="Ward-wise Death Cause Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Death cause distribution across wards in Khajura"
+          content="Death cause distribution across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -264,11 +264,11 @@ export default function DeathCauseCharts({
       >
         <meta
           itemProp="name"
-          content="Detailed Death Cause Analysis by Ward in Khajura metropolitan city"
+          content="Detailed Death Cause Analysis by Ward in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Detailed death cause composition of each ward in Khajura"
+          content="Detailed death cause composition of each ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

@@ -41,7 +41,7 @@ export default function ToiletTypeSEO({
     // Create English descriptions for SEO
     const toiletTypeStats = overallSummary.map((item) => ({
       "@type": "Observation",
-      name: `${item.toiletTypeName} toilet facilities in Khajura metropolitan city`,
+      name: `${item.toiletTypeName} toilet facilities in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -49,7 +49,7 @@ export default function ToiletTypeSEO({
         unitText: "households",
       },
       measuredValue: item.households,
-      description: `${item.households.toLocaleString()} households in Khajura metropolitan city use ${item.toiletTypeName} (${((item.households / totalHouseholds) * 100).toFixed(2)}% of total households)`,
+      description: `${item.households.toLocaleString()} households in Pokhara Metropolitan City use ${item.toiletTypeName} (${((item.households / totalHouseholds) * 100).toFixed(2)}% of total households)`,
     }));
 
     // Find most common toilet type
@@ -75,10 +75,10 @@ export default function ToiletTypeSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Toilet Types in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Analysis of toilet types across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalHouseholds.toLocaleString()} households. ${sanitizedPercentage}% of households have proper toilet facilities. The most common toilet type is ${mostCommonTypeName} with ${mostCommonType?.households.toLocaleString()} households (${mostCommonTypePercentage}%).`,
+      name: "Toilet Types in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Analysis of toilet types across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalHouseholds.toLocaleString()} households. ${sanitizedPercentage}% of households have proper toilet facilities. The most common toilet type is ${mostCommonTypeName} with ${mostCommonType?.households.toLocaleString()} households (${mostCommonTypePercentage}%).`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Toilet types",
         "Sanitation facilities",
@@ -94,13 +94,13 @@ export default function ToiletTypeSEO({
       url: "https://digital.pokharamun.gov.np/profile/water-and-sanitation/ward-wise-toilet-type",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",
@@ -149,7 +149,7 @@ export default function ToiletTypeSEO({
       isAccessibleForFree: true,
       isPartOf: {
         "@type": "WebSite",
-        name: "Khajura metropolitan city Digital Profile",
+        name: "Pokhara Metropolitan City Digital Profile",
         url: "https://digital.pokharamun.gov.np",
       },
     };

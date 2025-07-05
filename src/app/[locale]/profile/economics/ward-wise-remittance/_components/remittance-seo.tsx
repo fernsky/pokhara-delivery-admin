@@ -42,7 +42,7 @@ export default function RemittanceSEO({
     // Convert remittance stats to structured data format
     const remittanceStats = overallSummary.slice(0, 10).map((item) => ({
       "@type": "Observation",
-      name: `${item.amountGroupLabel} remittance from Khajura metropolitan city`,
+      name: `${item.amountGroupLabel} remittance from Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -50,7 +50,7 @@ export default function RemittanceSEO({
         unitText: "people",
       },
       measuredValue: item.sendingPopulation,
-      description: `${item.sendingPopulation.toLocaleString()} people from Khajura metropolitan city send remittance in the range of ${item.amountGroupLabel} (${((item.sendingPopulation / totalSendingPopulation) * 100).toFixed(2)}% of total remittance senders)`,
+      description: `${item.sendingPopulation.toLocaleString()} people from Pokhara Metropolitan City send remittance in the range of ${item.amountGroupLabel} (${((item.sendingPopulation / totalSendingPopulation) * 100).toFixed(2)}% of total remittance senders)`,
     }));
 
     // Find most common remittance amount group
@@ -81,10 +81,10 @@ export default function RemittanceSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Ward-wise Remittance Distribution from Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Remittance statistics across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalSendingPopulation.toLocaleString()} people sending remittances. The most common amount range is ${mostCommonGroup?.amountGroupLabel} with ${mostCommonGroup?.sendingPopulation.toLocaleString()} senders (${mostCommonGroupPercentage}%). High remittance senders (above Rs. 300,000) account for ${highRemittancePercentage}% of all remittance senders. The estimated annual remittance is NPR ${estimatedAnnualRemittanceCrores} crore with an average of NPR ${averageRemittance.toLocaleString()} per person.`,
+      name: "Ward-wise Remittance Distribution from Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Remittance statistics across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalSendingPopulation.toLocaleString()} people sending remittances. The most common amount range is ${mostCommonGroup?.amountGroupLabel} with ${mostCommonGroup?.sendingPopulation.toLocaleString()} senders (${mostCommonGroupPercentage}%). High remittance senders (above Rs. 300,000) account for ${highRemittancePercentage}% of all remittance senders. The estimated annual remittance is NPR ${estimatedAnnualRemittanceCrores} crore with an average of NPR ${averageRemittance.toLocaleString()} per person.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Remittance distribution",
         "Ward-wise remittance",
@@ -99,13 +99,13 @@ export default function RemittanceSEO({
       url: "https://digital.pokharamun.gov.np/profile/economics/ward-wise-remittance",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

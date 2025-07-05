@@ -69,7 +69,7 @@ export default function WardWiseLiteracyStatusCharts({
       >
         <meta
           itemProp="name"
-          content="Literacy Status Distribution in Khajura metropolitan city"
+          content="Literacy Status Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
@@ -275,11 +275,11 @@ export default function WardWiseLiteracyStatusCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Literacy Status in Khajura metropolitan city"
+          content="Ward-wise Literacy Status in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Distribution of literacy status across wards in Khajura"
+          content="Distribution of literacy status across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -309,11 +309,11 @@ export default function WardWiseLiteracyStatusCharts({
       >
         <meta
           itemProp="name"
-          content="Literacy Rate Comparison Across Wards in Khajura metropolitan city"
+          content="Literacy Rate Comparison Across Wards in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Comparison of literacy rates across wards in Khajura"
+          content="Comparison of literacy rates across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -343,11 +343,11 @@ export default function WardWiseLiteracyStatusCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Literacy Status Analysis in Khajura metropolitan city"
+          content="Ward-wise Literacy Status Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Detailed analysis of literacy status by ward in Khajura"
+          content="Detailed analysis of literacy status by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

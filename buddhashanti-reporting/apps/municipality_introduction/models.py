@@ -1,5 +1,5 @@
 """
-Municipality Introduction models for pokhara metropolitan city Digital Profile
+Municipality Introduction models for pokhara Metropolitan City Digital Profile
 
 This module contains models related to municipality introduction information.
 """

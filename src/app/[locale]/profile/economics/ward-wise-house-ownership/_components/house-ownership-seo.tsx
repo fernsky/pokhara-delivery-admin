@@ -25,7 +25,7 @@ export default function HouseOwnershipSEO({
     // Convert ownership type stats to structured data format
     const ownershipTypeStats = overallSummary.map((item) => ({
       "@type": "Observation",
-      name: `${OWNERSHIP_TYPE_NAMES_EN[item.ownershipType] || item.ownershipType} in Khajura metropolitan city`,
+      name: `${OWNERSHIP_TYPE_NAMES_EN[item.ownershipType] || item.ownershipType} in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -33,7 +33,7 @@ export default function HouseOwnershipSEO({
         unitText: "households",
       },
       measuredValue: item.households,
-      description: `${item.households.toLocaleString()} households in Khajura metropolitan city have ${OWNERSHIP_TYPE_NAMES_EN[item.ownershipType] || item.ownershipType} (${((item.households / totalHouseholds) * 100).toFixed(2)}% of total households)`,
+      description: `${item.households.toLocaleString()} households in Pokhara Metropolitan City have ${OWNERSHIP_TYPE_NAMES_EN[item.ownershipType] || item.ownershipType} (${((item.households / totalHouseholds) * 100).toFixed(2)}% of total households)`,
     }));
 
     // Find most common ownership type
@@ -50,10 +50,10 @@ export default function HouseOwnershipSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "House Ownership Types in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `House ownership data across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalHouseholds.toLocaleString()} households. The most common type is ${mostCommonTypeEN} with ${mostCommonType?.households.toLocaleString()} households (${mostCommonTypePercentage}%).`,
+      name: "House Ownership Types in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `House ownership data across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalHouseholds.toLocaleString()} households. The most common type is ${mostCommonTypeEN} with ${mostCommonType?.households.toLocaleString()} households (${mostCommonTypePercentage}%).`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "House ownership",
         "Ownership distribution",
@@ -70,13 +70,13 @@ export default function HouseOwnershipSEO({
       url: "https://digital.pokharamun.gov.np/profile/economics/ward-wise-house-ownership",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

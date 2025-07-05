@@ -56,7 +56,7 @@ export default function WardWiseHealthInsuredHouseholdsCharts({
       >
         <meta
           itemProp="name"
-          content="Health Insurance Distribution in Khajura metropolitan city"
+          content="Health Insurance Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
@@ -176,11 +176,11 @@ export default function WardWiseHealthInsuredHouseholdsCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Health Insurance Status in Khajura metropolitan city"
+          content="Ward-wise Health Insurance Status in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Distribution of health insured households across wards in Khajura"
+          content="Distribution of health insured households across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -207,11 +207,11 @@ export default function WardWiseHealthInsuredHouseholdsCharts({
       >
         <meta
           itemProp="name"
-          content="Health Insurance Coverage Comparison Across Wards in Khajura metropolitan city"
+          content="Health Insurance Coverage Comparison Across Wards in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Comparison of health insurance coverage across wards in Khajura"
+          content="Comparison of health insurance coverage across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -242,11 +242,11 @@ export default function WardWiseHealthInsuredHouseholdsCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Health Insurance Analysis in Khajura metropolitan city"
+          content="Ward-wise Health Insurance Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Detailed analysis of health insurance coverage by ward in Khajura"
+          content="Detailed analysis of health insurance coverage by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

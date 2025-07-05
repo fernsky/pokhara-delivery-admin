@@ -32,7 +32,7 @@ export default function AnimalProductSEO({
     // Convert animal product stats to structured data format
     const animalProductStats = overallSummary.map((item) => ({
       "@type": "Observation",
-      name: `${ANIMAL_PRODUCT_TYPES_EN[item.type] || item.type} in Khajura metropolitan city`,
+      name: `${ANIMAL_PRODUCT_TYPES_EN[item.type] || item.type} in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -40,7 +40,7 @@ export default function AnimalProductSEO({
         unitText: item.measurementUnit === "COUNT" ? "units" : "tonnes",
       },
       measuredValue: item.production,
-      description: `${item.production.toFixed(2)} ${item.measurementUnit === "COUNT" ? "units" : "tonnes"} of ${ANIMAL_PRODUCT_TYPES_EN[item.type] || item.type} produced in Khajura metropolitan city (${((item.production / totalProduction) * 100).toFixed(2)}% of total production). Sales volume: ${item.sales.toFixed(2)} ${item.measurementUnit === "COUNT" ? "units" : "tonnes"}. Revenue: NPR ${item.revenue.toLocaleString()}.`,
+      description: `${item.production.toFixed(2)} ${item.measurementUnit === "COUNT" ? "units" : "tonnes"} of ${ANIMAL_PRODUCT_TYPES_EN[item.type] || item.type} produced in Pokhara Metropolitan City (${((item.production / totalProduction) * 100).toFixed(2)}% of total production). Sales volume: ${item.sales.toFixed(2)} ${item.measurementUnit === "COUNT" ? "units" : "tonnes"}. Revenue: NPR ${item.revenue.toLocaleString()}.`,
     }));
 
     // Find most produced animal product
@@ -65,8 +65,8 @@ export default function AnimalProductSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Animal Products in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Animal product production and sales statistics of Khajura metropolitan city with a total production of ${totalProduction.toFixed(
+      name: "Animal Products in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Animal product production and sales statistics of Pokhara Metropolitan City with a total production of ${totalProduction.toFixed(
         2,
       )} tonnes/units and sales of ${totalSales.toFixed(2)} tonnes/units (${(
         (totalSales / totalProduction) *
@@ -77,7 +77,7 @@ export default function AnimalProductSEO({
         2,
       )} tonnes/units (${mostProducedPercentage}%). Self-consumption represents ${selfConsumptionPercentage}% of total production. Total revenue from animal product sales is NPR ${totalRevenue.toLocaleString()}.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Animal product production",
         "Animal product sales",
@@ -96,13 +96,13 @@ export default function AnimalProductSEO({
       url: "https://digital.pokharamun.gov.np/profile/economics/municipality-wide-animal-products",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

@@ -70,15 +70,15 @@ export default function BirthCertificateSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Birth Certificate Status for Children Under 5 Years in Khajura metropolitan city",
-      description: `Ward-wise distribution of birth certificate status for children under 5 years in Khajura metropolitan city. Total children: ${totalPopulation}, with certificates: ${totalWithCertificate}, without certificates: ${totalWithoutCertificate}`,
+      name: "Birth Certificate Status for Children Under 5 Years in Pokhara Metropolitan City",
+      description: `Ward-wise distribution of birth certificate status for children under 5 years in Pokhara Metropolitan City. Total children: ${totalPopulation}, with certificates: ${totalWithCertificate}, without certificates: ${totalWithoutCertificate}`,
       url: "https://pokhara.gov.np/profile/demographics/ward-wise-birth-certificate-population",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         address: {
           "@type": "PostalAddress",
-          addressLocality: "Khajura",
+          addressLocality: "Pokhara",
           addressRegion: "Lumbini Province",
           addressCountry: "NP",
         },
@@ -93,7 +93,7 @@ export default function BirthCertificateSEO({
         "birth certificate",
         "children under 5",
         "ward-wise data",
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "demographics",
         "birth registration",
       ],
@@ -115,12 +115,12 @@ export default function BirthCertificateSEO({
         ],
         spatialCoverage: {
           "@type": "Place",
-          name: `Ward ${ward.wardNumber}, Khajura metropolitan city`,
+          name: `Ward ${ward.wardNumber}, Pokhara Metropolitan City`,
         },
       })),
       mainEntity: {
         "@type": "StatisticalPopulation",
-        name: "Children Under 5 Years in Khajura metropolitan city",
+        name: "Children Under 5 Years in Pokhara Metropolitan City",
         populationType: "Children under 5 years",
         numConstraints: totalPopulation,
         additionalProperty: [

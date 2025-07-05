@@ -80,7 +80,7 @@ export default function EconomicallyActivePopulationAnalysisSection({
     if (document && document.body) {
       document.body.setAttribute(
         "data-municipality",
-        "Khajura metropolitan city / पोखरा महानगरपालिका",
+        "Pokhara Metropolitan City / पोखरा महानगरपालिका",
       );
       document.body.setAttribute(
         "data-total-population",
@@ -190,7 +190,7 @@ export default function EconomicallyActivePopulationAnalysisSection({
         <h3 className="text-xl font-medium mb-4">
           आर्थिक सक्रिय जनसंख्या विश्लेषण
           <span className="sr-only">
-            Economically Active Population Analysis of Khajura
+            Economically Active Population Analysis of Pokhara
           </span>
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -205,7 +205,7 @@ export default function EconomicallyActivePopulationAnalysisSection({
             <h4 className="font-medium mb-2">
               कार्य उमेर जनसंख्या (१५-५९ वर्ष)
               <span className="sr-only">
-                Working Age Population in Khajura metropolitan city
+                Working Age Population in Pokhara Metropolitan City
               </span>
             </h4>
             <p className="text-3xl font-bold">
@@ -232,7 +232,7 @@ export default function EconomicallyActivePopulationAnalysisSection({
           >
             <h4 className="font-medium mb-2">
               कुल निर्भरता अनुपात
-              <span className="sr-only">Dependency Ratio in Khajura</span>
+              <span className="sr-only">Dependency Ratio in Pokhara</span>
             </h4>
             <p className="text-3xl font-bold">
               {localizeNumber(dependencyRatio, "ne")}%

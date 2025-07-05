@@ -63,7 +63,7 @@ export default function WaterPurificationAnalysisSection({
 
   // SEO attributes to include directly in JSX
   const seoAttributes = {
-    "data-municipality": "Khajura metropolitan city / पोखरा महानगरपालिका",
+    "data-municipality": "Pokhara Metropolitan City / पोखरा महानगरपालिका",
     "data-total-households": totalHouseholds.toString(),
     "data-treating-percentage": treatingPercentage,
     "data-no-treatment-percentage": noTreatmentPercentage,
@@ -141,7 +141,7 @@ export default function WaterPurificationAnalysisSection({
         <h3 className="text-xl font-medium mb-6">
           पानी शुद्धिकरण विस्तृत विश्लेषण
           <span className="sr-only">
-            Detailed Water Purification Analysis of Khajura
+            Detailed Water Purification Analysis of Pokhara
           </span>
         </h3>
 
@@ -154,7 +154,7 @@ export default function WaterPurificationAnalysisSection({
             <h4 className="font-medium mb-2">
               पानी उपचार दर
               <span className="sr-only">
-                Water Treatment Rate in Khajura metropolitan city
+                Water Treatment Rate in Pokhara Metropolitan City
               </span>
             </h4>
             <div className="flex items-center gap-3">
@@ -206,7 +206,7 @@ export default function WaterPurificationAnalysisSection({
             <h4 className="font-medium mb-2">
               उच्च पानी उपचार दर भएको वडा
               <span className="sr-only">
-                Ward with Highest Water Treatment Rate in Khajura
+                Ward with Highest Water Treatment Rate in Pokhara
               </span>
             </h4>
             {highestTreatmentWard && (

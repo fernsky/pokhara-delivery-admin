@@ -25,7 +25,7 @@ export default function HouseholdOuterWallSEO({
     // Convert wall type stats to structured data format
     const wallTypeStats = overallSummary.map((item) => ({
       "@type": "Observation",
-      name: `${WALL_TYPE_NAMES_EN[item.wallType] || item.wallType} in Khajura metropolitan city`,
+      name: `${WALL_TYPE_NAMES_EN[item.wallType] || item.wallType} in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -33,7 +33,7 @@ export default function HouseholdOuterWallSEO({
         unitText: "households",
       },
       measuredValue: item.households,
-      description: `${item.households.toLocaleString()} households in Khajura metropolitan city have ${WALL_TYPE_NAMES_EN[item.wallType] || item.wallType} (${((item.households / totalHouseholds) * 100).toFixed(2)}% of total households)`,
+      description: `${item.households.toLocaleString()} households in Pokhara Metropolitan City have ${WALL_TYPE_NAMES_EN[item.wallType] || item.wallType} (${((item.households / totalHouseholds) * 100).toFixed(2)}% of total households)`,
     }));
 
     // Find most common wall type
@@ -62,10 +62,10 @@ export default function HouseholdOuterWallSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "House Outer Wall Types in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `House outer wall data across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalHouseholds.toLocaleString()} households. The most common type is ${mostCommonTypeEN} with ${mostCommonType?.households.toLocaleString()} households (${mostCommonTypePercentage}%). High quality walls account for ${highQualityPercentage}% of all households.`,
+      name: "House Outer Wall Types in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `House outer wall data across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalHouseholds.toLocaleString()} households. The most common type is ${mostCommonTypeEN} with ${mostCommonType?.households.toLocaleString()} households (${mostCommonTypePercentage}%). High quality walls account for ${highQualityPercentage}% of all households.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "House outer wall",
         "Wall distribution",
@@ -84,13 +84,13 @@ export default function HouseholdOuterWallSEO({
       url: "https://digital.pokharamun.gov.np/profile/economics/ward-wise-household-outer-wall",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

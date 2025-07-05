@@ -49,7 +49,7 @@ export default function ImmunizationIndicatorsSEO({
     const mainCoverageStats = [
       {
         "@type": "Observation",
-        name: "BCG Vaccination Coverage in Khajura metropolitan city",
+        name: "BCG Vaccination Coverage in Pokhara Metropolitan City",
         observationDate: `${fiscalYearLabel.replace("/", "-")}`,
         measuredProperty: {
           "@type": "PropertyValue",
@@ -57,11 +57,11 @@ export default function ImmunizationIndicatorsSEO({
           unitText: "percentage",
         },
         measuredValue: bcgCoverage,
-        description: `BCG vaccination coverage was ${bcgCoverage.toFixed(1)}% in fiscal year ${fiscalYearLabel} in Khajura metropolitan city.`,
+        description: `BCG vaccination coverage was ${bcgCoverage.toFixed(1)}% in fiscal year ${fiscalYearLabel} in Pokhara Metropolitan City.`,
       },
       {
         "@type": "Observation",
-        name: "DPT-HepB-Hib3 Vaccination Coverage in Khajura metropolitan city",
+        name: "DPT-HepB-Hib3 Vaccination Coverage in Pokhara Metropolitan City",
         observationDate: `${fiscalYearLabel.replace("/", "-")}`,
         measuredProperty: {
           "@type": "PropertyValue",
@@ -69,11 +69,11 @@ export default function ImmunizationIndicatorsSEO({
           unitText: "percentage",
         },
         measuredValue: dpt3Coverage,
-        description: `DPT-HepB-Hib3 vaccination coverage was ${dpt3Coverage.toFixed(1)}% in fiscal year ${fiscalYearLabel} in Khajura metropolitan city.`,
+        description: `DPT-HepB-Hib3 vaccination coverage was ${dpt3Coverage.toFixed(1)}% in fiscal year ${fiscalYearLabel} in Pokhara Metropolitan City.`,
       },
       {
         "@type": "Observation",
-        name: "Measles-Rubella Vaccination Coverage in Khajura metropolitan city",
+        name: "Measles-Rubella Vaccination Coverage in Pokhara Metropolitan City",
         observationDate: `${fiscalYearLabel.replace("/", "-")}`,
         measuredProperty: {
           "@type": "PropertyValue",
@@ -81,11 +81,11 @@ export default function ImmunizationIndicatorsSEO({
           unitText: "percentage",
         },
         measuredValue: measlesRubella1Coverage,
-        description: `Measles-Rubella vaccination coverage was ${measlesRubella1Coverage.toFixed(1)}% in fiscal year ${fiscalYearLabel} in Khajura metropolitan city.`,
+        description: `Measles-Rubella vaccination coverage was ${measlesRubella1Coverage.toFixed(1)}% in fiscal year ${fiscalYearLabel} in Pokhara Metropolitan City.`,
       },
       {
         "@type": "Observation",
-        name: "Full Immunization Coverage in Khajura metropolitan city",
+        name: "Full Immunization Coverage in Pokhara Metropolitan City",
         observationDate: `${fiscalYearLabel.replace("/", "-")}`,
         measuredProperty: {
           "@type": "PropertyValue",
@@ -93,17 +93,17 @@ export default function ImmunizationIndicatorsSEO({
           unitText: "percentage",
         },
         measuredValue: fullyImmunized,
-        description: `Full immunization coverage was ${fullyImmunized.toFixed(1)}% in fiscal year ${fiscalYearLabel} in Khajura metropolitan city.`,
+        description: `Full immunization coverage was ${fullyImmunized.toFixed(1)}% in fiscal year ${fiscalYearLabel} in Pokhara Metropolitan City.`,
       },
     ];
 
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Immunization Indicators in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Analysis of immunization coverage and indicators for fiscal year ${fiscalYearLabel} in Khajura metropolitan city. Key indicators include BCG coverage (${bcgCoverage.toFixed(1)}%), DPT-HepB-Hib3 coverage (${dpt3Coverage.toFixed(1)}%), Measles-Rubella coverage (${measlesRubella1Coverage.toFixed(1)}%), and full immunization rate (${fullyImmunized.toFixed(1)}%).`,
+      name: "Immunization Indicators in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Analysis of immunization coverage and indicators for fiscal year ${fiscalYearLabel} in Pokhara Metropolitan City. Key indicators include BCG coverage (${bcgCoverage.toFixed(1)}%), DPT-HepB-Hib3 coverage (${dpt3Coverage.toFixed(1)}%), Measles-Rubella coverage (${measlesRubella1Coverage.toFixed(1)}%), and full immunization rate (${fullyImmunized.toFixed(1)}%).`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Immunization coverage",
         "Vaccination program",
@@ -119,13 +119,13 @@ export default function ImmunizationIndicatorsSEO({
       url: "https://digital.pokharamun.gov.np/profile/health/immunization-indicators",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: fiscalYearLabel,
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",
@@ -182,10 +182,10 @@ export default function ImmunizationIndicatorsSEO({
         name: "National Immunization Program",
         provider: {
           "@type": "GovernmentOrganization",
-          name: "Khajura metropolitan city",
+          name: "Pokhara Metropolitan City",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Khajura",
+            addressLocality: "Pokhara",
             addressRegion: "Banke",
             addressCountry: "Nepal",
           },

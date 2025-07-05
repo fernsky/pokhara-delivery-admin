@@ -36,7 +36,7 @@ export default function LoanUsageSEO({
     // Convert loan use stats to structured data format
     const loanUseStats = overallSummary.map((item) => ({
       "@type": "Observation",
-      name: `${LOAN_USE_NAMES_EN[item.loanUse] || item.loanUse} loans in Khajura metropolitan city`,
+      name: `${LOAN_USE_NAMES_EN[item.loanUse] || item.loanUse} loans in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -44,16 +44,16 @@ export default function LoanUsageSEO({
         unitText: "households",
       },
       measuredValue: item.households,
-      description: `${item.households.toLocaleString()} households in Khajura metropolitan city have taken loans for ${LOAN_USE_NAMES_EN[item.loanUse] || item.loanUse} purposes (${((item.households / totalHouseholds) * 100).toFixed(2)}% of total households with loans)`,
+      description: `${item.households.toLocaleString()} households in Pokhara Metropolitan City have taken loans for ${LOAN_USE_NAMES_EN[item.loanUse] || item.loanUse} purposes (${((item.households / totalHouseholds) * 100).toFixed(2)}% of total households with loans)`,
     }));
 
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Loan Usage Patterns in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Loan usage purpose distribution data across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalHouseholds.toLocaleString()} households with loans.`,
+      name: "Loan Usage Patterns in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Loan usage purpose distribution data across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalHouseholds.toLocaleString()} households with loans.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Loan usage purposes",
         "Credit utilization",
@@ -66,13 +66,13 @@ export default function LoanUsageSEO({
       url: "https://pokhara-rm.gov.np/profile/economics/ward-households-loan-usage",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://pokhara-rm.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

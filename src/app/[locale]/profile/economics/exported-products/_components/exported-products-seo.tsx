@@ -28,7 +28,7 @@ export default function ExportedProductsSEO({
     // Convert category stats to structured data format
     const categoryStats = categoryDistribution.map((item) => ({
       "@type": "Observation",
-      name: `${CATEGORY_NAMES_EN[item.name] || item.name} exports from Khajura metropolitan city`,
+      name: `${CATEGORY_NAMES_EN[item.name] || item.name} exports from Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -38,16 +38,16 @@ export default function ExportedProductsSEO({
       measuredValue: item.value,
       description: `${item.value.toLocaleString()} products in ${
         CATEGORY_NAMES_EN[item.name] || item.name
-      } category are exported from Khajura metropolitan city (${item.percentage}% of total exports)`,
+      } category are exported from Pokhara Metropolitan City (${item.percentage}% of total exports)`,
     }));
 
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Exported Products Catalog of Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Comprehensive catalog of ${totalProducts.toLocaleString()} products exported from Khajura metropolitan city, categorized by type and market potential.`,
+      name: "Exported Products Catalog of Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Comprehensive catalog of ${totalProducts.toLocaleString()} products exported from Pokhara Metropolitan City, categorized by type and market potential.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Export catalog",
         "Economic profile",
@@ -59,13 +59,13 @@ export default function ExportedProductsSEO({
       url: "https://digital.pokharamun.gov.np/profile/economics/exported-products",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

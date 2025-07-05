@@ -96,7 +96,7 @@ const Statistics = ({
     url: "https://digital.pokharamun.gov.np",
     keywords: [
       "पोखरा महानगरपालिका जनसंख्या",
-      "Khajura metropolitan city demographics",
+      "Pokhara Metropolitan City demographics",
       "पोखरा जनगणना",
       "कास्की जनसंख्या",
       "नेपालको जनसंख्या",

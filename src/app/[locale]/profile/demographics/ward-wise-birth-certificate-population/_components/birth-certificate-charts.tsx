@@ -138,11 +138,11 @@ export default function BirthCertificateCharts({
       >
         <meta
           itemProp="name"
-          content="Birth Certificate Status for Children Under 5 Years in Khajura metropolitan city"
+          content="Birth Certificate Status for Children Under 5 Years in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content={`Birth certificate distribution of children under 5 years in Khajura showing both with and without certificates`}
+          content={`Birth certificate distribution of children under 5 years in Pokhara showing both with and without certificates`}
         />
 
         <div className="border-b px-4 py-3">
@@ -244,11 +244,11 @@ export default function BirthCertificateCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Birth Certificate Distribution in Khajura metropolitan city"
+          content="Ward-wise Birth Certificate Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Birth certificate distribution across wards in Khajura showing both with and without certificates"
+          content="Birth certificate distribution across wards in Pokhara showing both with and without certificates"
         />
 
         <div className="border-b px-4 py-3">
@@ -295,11 +295,11 @@ export default function BirthCertificateCharts({
       >
         <meta
           itemProp="name"
-          content="Birth Certificate Coverage by Ward in Khajura metropolitan city"
+          content="Birth Certificate Coverage by Ward in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Ward-wise coverage rates of birth certificates for children under 5 years in Khajura"
+          content="Ward-wise coverage rates of birth certificates for children under 5 years in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

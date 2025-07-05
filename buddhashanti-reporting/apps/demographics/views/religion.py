@@ -1,5 +1,5 @@
 """
-Religion Demographics Views for pokhara metropolitan city
+Religion Demographics Views for pokhara Metropolitan City
 
 This module provides views for religion-based population analysis including:
 - Ward-wise religion distribution

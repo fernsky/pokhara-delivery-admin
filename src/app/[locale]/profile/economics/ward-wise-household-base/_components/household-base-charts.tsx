@@ -59,11 +59,11 @@ export default function HouseholdBaseCharts({
       >
         <meta
           itemProp="name"
-          content="House Foundation Types in Khajura metropolitan city"
+          content="House Foundation Types in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content={`House foundation distribution of Khajura with a total of ${totalHouseholds} households`}
+          content={`House foundation distribution of Pokhara with a total of ${totalHouseholds} households`}
         />
 
         <div className="border-b px-4 py-3">
@@ -197,11 +197,11 @@ export default function HouseholdBaseCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise House Foundation in Khajura metropolitan city"
+          content="Ward-wise House Foundation in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="House foundation distribution across wards in Khajura"
+          content="House foundation distribution across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -232,11 +232,11 @@ export default function HouseholdBaseCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise House Foundation Analysis in Khajura metropolitan city"
+          content="Ward-wise House Foundation Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Most common house foundation types by ward in Khajura"
+          content="Most common house foundation types by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

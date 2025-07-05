@@ -27,7 +27,7 @@ export default function ForeignEmploymentSEO({
     // Convert country stats to structured data format
     const countryStats = overallSummary.slice(0, 10).map((item) => ({
       "@type": "Observation",
-      name: `${COUNTRY_NAMES_EN[item.country] || item.country} workers from Khajura metropolitan city`,
+      name: `${COUNTRY_NAMES_EN[item.country] || item.country} workers from Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -35,7 +35,7 @@ export default function ForeignEmploymentSEO({
         unitText: "people",
       },
       measuredValue: item.population,
-      description: `${item.population.toLocaleString()} people from Khajura metropolitan city work in ${COUNTRY_NAMES_EN[item.country] || item.country} (${((item.population / totalPopulation) * 100).toFixed(2)}% of total migrant workers)`,
+      description: `${item.population.toLocaleString()} people from Pokhara Metropolitan City work in ${COUNTRY_NAMES_EN[item.country] || item.country} (${((item.population / totalPopulation) * 100).toFixed(2)}% of total migrant workers)`,
     }));
 
     // Find most common destination country
@@ -73,10 +73,10 @@ export default function ForeignEmploymentSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Foreign Employment Destinations from Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Foreign employment statistics across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalPopulation.toLocaleString()} migrant workers. The most common destination is ${mostCommonCountryEN} with ${mostCommonCountry?.population.toLocaleString()} workers (${mostCommonCountryPercentage}%). Gulf countries account for ${gulfCountriesPercentage}% of all foreign employment. Estimated annual remittance is NPR ${remittanceCrores} crore.`,
+      name: "Foreign Employment Destinations from Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Foreign employment statistics across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalPopulation.toLocaleString()} migrant workers. The most common destination is ${mostCommonCountryEN} with ${mostCommonCountry?.population.toLocaleString()} workers (${mostCommonCountryPercentage}%). Gulf countries account for ${gulfCountriesPercentage}% of all foreign employment. Estimated annual remittance is NPR ${remittanceCrores} crore.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Foreign employment",
         "Migrant workers",
@@ -95,13 +95,13 @@ export default function ForeignEmploymentSEO({
       url: "https://digital.pokharamun.gov.np/profile/economics/ward-wise-foreign-employment-countries",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

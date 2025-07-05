@@ -25,7 +25,7 @@ export default function SkillsSEO({
     // Convert skills stats to structured data format
     const skillsStats = overallSummary.map((item) => ({
       "@type": "Observation",
-      name: `${SKILL_NAMES_EN[item.skill] || item.skill} in Khajura metropolitan city`,
+      name: `${SKILL_NAMES_EN[item.skill] || item.skill} in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -33,17 +33,17 @@ export default function SkillsSEO({
         unitText: "people",
       },
       measuredValue: item.population,
-      description: `${item.population.toLocaleString()} people in Khajura metropolitan city have skills in ${SKILL_NAMES_EN[item.skill] || item.skill} (${((item.population / totalPopulation) * 100).toFixed(2)}% of total skilled population)`,
+      description: `${item.population.toLocaleString()} people in Pokhara Metropolitan City have skills in ${SKILL_NAMES_EN[item.skill] || item.skill} (${((item.population / totalPopulation) * 100).toFixed(2)}% of total skilled population)`,
       alternateName: `${item.skillName} - ${localizeNumber(item.population.toString(), "ne")} व्यक्ति (${localizeNumber(((item.population / totalPopulation) * 100).toFixed(2), "ne")}%)`,
     }));
 
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Skills Distribution of Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Skills distribution data across ${wardNumbers.length} wards of Khajura metropolitan city with a total skilled population of ${totalPopulation.toLocaleString()} people (${localizeNumber(totalPopulation.toString(), "ne")} व्यक्ति).`,
+      name: "Skills Distribution of Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Skills distribution data across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total skilled population of ${totalPopulation.toLocaleString()} people (${localizeNumber(totalPopulation.toString(), "ne")} व्यक्ति).`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Skills distribution",
         "सीप वितरण",
@@ -61,14 +61,14 @@ export default function SkillsSEO({
       url: "https://pokhara-rm.gov.np/profile/economics/ward-main-skills",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         alternateName: "पोखरा महानगरपालिका",
         url: "https://pokhara-rm.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         alternateName: "पोखरा महानगरपालिका, कास्की, नेपाल",
         geo: {
           "@type": "GeoCoordinates",

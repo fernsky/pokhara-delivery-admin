@@ -47,7 +47,7 @@ export async function generateMetadata(): Promise<Metadata> {
   try {
     const timeToFinancialOrgData =
       await api.profile.economics.wardWiseTimeToFinancialOrganization.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Group by ward number
     const wardGroups = timeToFinancialOrgData.reduce((acc: any, curr: any) => {
@@ -138,7 +138,7 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city financial access",
+      "Pokhara Metropolitan City financial access",
       "Time to reach financial organizations",
       "Ward-wise financial access",
       "Time to reach banks",
@@ -150,7 +150,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create description
     const descriptionNP = `पोखरा महानगरपालिकाको वडा अनुसार वित्तीय संस्थासम्मको पहुँचको विश्लेषण। कुल ${localizeNumber(totalHouseholds.toLocaleString(), "ne")} घरधुरी मध्ये ${localizeNumber(under15MinPercentage, "ne")}% (${localizeNumber(under15MinTotal.toLocaleString(), "ne")}) घरधुरीले १५ मिनेटभित्र वित्तीय संस्था पुग्न सक्छन्। वडा ${localizeNumber(bestAccessWard, "ne")} मा सबैभन्दा राम्रो पहुँच छ, जहाँ ${localizeNumber(bestAccessPercentage.toFixed(2), "ne")}% घरधुरीले १५ मिनेट भित्र वित्तीय संस्था पुग्न सक्छन्।`;
 
-    const descriptionEN = `Analysis of access to financial organizations across wards in Khajura metropolitan city. Out of a total of ${totalHouseholds.toLocaleString()} households, ${under15MinPercentage}% (${under15MinTotal.toLocaleString()}) households can reach a financial institution within 15 minutes. Ward ${bestAccessWard} has the best access, where ${bestAccessPercentage.toFixed(2)}% households can reach a financial institution within 15 minutes.`;
+    const descriptionEN = `Analysis of access to financial organizations across wards in Pokhara Metropolitan City. Out of a total of ${totalHouseholds.toLocaleString()} households, ${under15MinPercentage}% (${under15MinTotal.toLocaleString()}) households can reach a financial institution within 15 minutes. Ward ${bestAccessWard} has the best access, where ${bestAccessPercentage.toFixed(2)}% households can reach a financial institution within 15 minutes.`;
 
     return {
       title: `वित्तीय संस्थामा पुग्न लाग्ने समय | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -421,7 +421,7 @@ export default async function WardWiseTimeToFinancialOrganizationPage() {
               src="/images/financial-access.svg"
               width={1200}
               height={400}
-              alt="वित्तीय संस्थामा पुग्न लाग्ने समय - पोखरा महानगरपालिका (Time to Financial Organizations - Khajura metropolitan city)"
+              alt="वित्तीय संस्थामा पुग्न लाग्ने समय - पोखरा महानगरपालिका (Time to Financial Organizations - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

@@ -81,7 +81,7 @@ export default function FinancialAccountsCharts({
       >
         <meta
           itemProp="name"
-          content="Financial Account Distribution in Khajura metropolitan city"
+          content="Financial Account Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
@@ -346,11 +346,11 @@ export default function FinancialAccountsCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Financial Accounts in Khajura metropolitan city"
+          content="Ward-wise Financial Accounts in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Distribution of financial accounts across wards in Khajura"
+          content="Distribution of financial accounts across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -380,11 +380,11 @@ export default function FinancialAccountsCharts({
       >
         <meta
           itemProp="name"
-          content="Financial Inclusion Rate Comparison Across Wards in Khajura metropolitan city"
+          content="Financial Inclusion Rate Comparison Across Wards in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Comparison of financial inclusion rates across wards in Khajura"
+          content="Comparison of financial inclusion rates across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -414,11 +414,11 @@ export default function FinancialAccountsCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Financial Accounts Analysis in Khajura metropolitan city"
+          content="Ward-wise Financial Accounts Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Detailed analysis of financial accounts by ward in Khajura"
+          content="Detailed analysis of financial accounts by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

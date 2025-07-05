@@ -51,7 +51,7 @@ export default function SafeMotherhoodIndicatorsSEO({
     const mainIndicatorStats = [
       {
         "@type": "Observation",
-        name: "Institutional Delivery Rate in Khajura metropolitan city",
+        name: "Institutional Delivery Rate in Pokhara Metropolitan City",
         observationDate: `${latestYear}`,
         measuredProperty: {
           "@type": "PropertyValue",
@@ -59,11 +59,11 @@ export default function SafeMotherhoodIndicatorsSEO({
           unitText: "percentage",
         },
         measuredValue: institutionalDeliveries,
-        description: `Institutional delivery rate was ${institutionalDeliveries.toFixed(1)}% in year ${latestYear} in Khajura metropolitan city.`,
+        description: `Institutional delivery rate was ${institutionalDeliveries.toFixed(1)}% in year ${latestYear} in Pokhara Metropolitan City.`,
       },
       {
         "@type": "Observation",
-        name: "ANC Checkup Protocol Adherence in Khajura metropolitan city",
+        name: "ANC Checkup Protocol Adherence in Pokhara Metropolitan City",
         observationDate: `${latestYear}`,
         measuredProperty: {
           "@type": "PropertyValue",
@@ -71,11 +71,11 @@ export default function SafeMotherhoodIndicatorsSEO({
           unitText: "percentage",
         },
         measuredValue: ancCheckups,
-        description: `Percentage of pregnant women who had four ANC checkups as per protocol was ${ancCheckups.toFixed(1)}% in year ${latestYear} in Khajura metropolitan city.`,
+        description: `Percentage of pregnant women who had four ANC checkups as per protocol was ${ancCheckups.toFixed(1)}% in year ${latestYear} in Pokhara Metropolitan City.`,
       },
       {
         "@type": "Observation",
-        name: "PNC Home Visits in Khajura metropolitan city",
+        name: "PNC Home Visits in Pokhara Metropolitan City",
         observationDate: `${latestYear}`,
         measuredProperty: {
           "@type": "PropertyValue",
@@ -83,11 +83,11 @@ export default function SafeMotherhoodIndicatorsSEO({
           unitText: "percentage",
         },
         measuredValue: pncVisits,
-        description: `Percentage of postpartum mothers receiving two PNC home visits was ${pncVisits.toFixed(1)}% in year ${latestYear} in Khajura metropolitan city.`,
+        description: `Percentage of postpartum mothers receiving two PNC home visits was ${pncVisits.toFixed(1)}% in year ${latestYear} in Pokhara Metropolitan City.`,
       },
       {
         "@type": "Observation",
-        name: "Newborn CHX Application in Khajura metropolitan city",
+        name: "Newborn CHX Application in Pokhara Metropolitan City",
         observationDate: `${latestYear}`,
         measuredProperty: {
           "@type": "PropertyValue",
@@ -95,17 +95,17 @@ export default function SafeMotherhoodIndicatorsSEO({
           unitText: "percentage",
         },
         measuredValue: newbornCare,
-        description: `Percentage of newborns who had CHX applied immediately after birth was ${newbornCare.toFixed(1)}% in year ${latestYear} in Khajura metropolitan city.`,
+        description: `Percentage of newborns who had CHX applied immediately after birth was ${newbornCare.toFixed(1)}% in year ${latestYear} in Pokhara Metropolitan City.`,
       },
     ];
 
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Safe Motherhood Indicators in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Analysis of safe motherhood services and indicators for year ${latestYear} in Khajura metropolitan city. Key indicators include institutional delivery rate (${institutionalDeliveries.toFixed(1)}%), ANC checkups as per protocol (${ancCheckups.toFixed(1)}%), PNC home visits (${pncVisits.toFixed(1)}%), and newborn care (${newbornCare.toFixed(1)}%).`,
+      name: "Safe Motherhood Indicators in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Analysis of safe motherhood services and indicators for year ${latestYear} in Pokhara Metropolitan City. Key indicators include institutional delivery rate (${institutionalDeliveries.toFixed(1)}%), ANC checkups as per protocol (${ancCheckups.toFixed(1)}%), PNC home visits (${pncVisits.toFixed(1)}%), and newborn care (${newbornCare.toFixed(1)}%).`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Safe motherhood",
         "Maternal health",
@@ -121,13 +121,13 @@ export default function SafeMotherhoodIndicatorsSEO({
       url: "https://digital.pokharamun.gov.np/profile/health/safe-motherhood-indicators",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: latestYear?.toString(),
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",
@@ -184,10 +184,10 @@ export default function SafeMotherhoodIndicatorsSEO({
         name: "Safe Motherhood Program",
         provider: {
           "@type": "GovernmentOrganization",
-          name: "Khajura metropolitan city",
+          name: "Pokhara Metropolitan City",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Khajura",
+            addressLocality: "Pokhara",
             addressRegion: "Banke",
             addressCountry: "Nepal",
           },

@@ -1,5 +1,5 @@
 """
-Infrastructure models for pokhara metropolitan city Digital Profile
+Infrastructure models for pokhara Metropolitan City Digital Profile
 
 This module contains models for Chapter 7 (भौतिक विकासको अवस्था) including:
 - 7.1 यातायात पूर्वाधार (Transportation Infrastructure)

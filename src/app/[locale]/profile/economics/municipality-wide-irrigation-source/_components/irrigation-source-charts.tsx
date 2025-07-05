@@ -148,11 +148,11 @@ export default function IrrigationSourceCharts({
       >
         <meta
           itemProp="name"
-          content="Irrigation Source Types in Khajura metropolitan city"
+          content="Irrigation Source Types in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content={`Irrigation source types of Khajura with a total coverage of ${totalCoverage.toFixed(
+          content={`Irrigation source types of Pokhara with a total coverage of ${totalCoverage.toFixed(
             2,
           )} hectares`}
         />
@@ -319,11 +319,11 @@ export default function IrrigationSourceCharts({
       >
         <meta
           itemProp="name"
-          content="Irrigation Source Distribution in Khajura metropolitan city"
+          content="Irrigation Source Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Distribution of traditional, modern and natural irrigation sources in Khajura"
+          content="Distribution of traditional, modern and natural irrigation sources in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

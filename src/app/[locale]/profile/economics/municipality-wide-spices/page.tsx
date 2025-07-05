@@ -69,7 +69,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const spiceData =
       await api.profile.economics.municipalityWideSpices.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalProduction = spiceData.reduce(
@@ -123,20 +123,20 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city spices",
-      "Khajura spice production",
+      "Pokhara Metropolitan City spices",
+      "Pokhara spice production",
       "Municipality-wide spice statistics",
-      "Garlic production in Khajura",
+      "Garlic production in Pokhara",
       "Chili pepper cultivation statistics",
       "Coriander production data",
-      `Khajura spice sales ${totalSales.toFixed(2)} tonnes`,
-      `Khajura spice revenue ${(totalRevenue / 1000).toFixed(2)} thousand rupees`,
+      `Pokhara spice sales ${totalSales.toFixed(2)} tonnes`,
+      `Pokhara spice revenue ${(totalRevenue / 1000).toFixed(2)} thousand rupees`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकाको मसलाबाली उत्पादन र बिक्री विश्लेषण। कुल ${localizeNumber(totalProduction.toFixed(2), "ne")} मेट्रिक टन मसलाबाली उत्पादन मध्ये ${localizeNumber(mostProducedPercentage, "ne")}% (${localizeNumber(mostProducedAmount.toFixed(2), "ne")} टन) ${SPICE_TYPES[mostProducedSpice] || mostProducedSpice} रहेको छ। पालिका स्तरीय मसलाबालीको विस्तृत विश्लेषण।`;
 
-    const descriptionEN = `Analysis of spice production and sales in Khajura metropolitan city. Out of total ${totalProduction.toFixed(2)} metric tonnes of spice production, ${mostProducedPercentage}% (${mostProducedAmount.toFixed(2)} tonnes) is ${SPICE_TYPES_EN[mostProducedSpice] || mostProducedSpice}. Detailed analysis of municipality-wide spice patterns.`;
+    const descriptionEN = `Analysis of spice production and sales in Pokhara Metropolitan City. Out of total ${totalProduction.toFixed(2)} metric tonnes of spice production, ${mostProducedPercentage}% (${mostProducedAmount.toFixed(2)} tonnes) is ${SPICE_TYPES_EN[mostProducedSpice] || mostProducedSpice}. Detailed analysis of municipality-wide spice patterns.`;
 
     return {
       title: `मसलाबालीको प्रकार अनुसार उत्पादन र बिक्री | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -343,7 +343,7 @@ export default async function MunicipalityWideSpicesPage() {
               src="/images/spices.svg"
               width={1200}
               height={400}
-              alt="मसलाबालीको प्रकार अनुसार उत्पादन र बिक्री - पोखरा महानगरपालिका (Spices by Production and Sales - Khajura metropolitan city)"
+              alt="मसलाबालीको प्रकार अनुसार उत्पादन र बिक्री - पोखरा महानगरपालिका (Spices by Production and Sales - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

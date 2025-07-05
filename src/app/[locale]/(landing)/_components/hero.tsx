@@ -40,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({
   // Extract data with proper fallbacks
   const totalArea = demographicData?.totalLandArea || "N/A";
 
-  // Get ward count data for Khajura metropolitan city
+  // Get ward count data for Pokhara Metropolitan City
   const wardCount = 8;
 
   // Calculate stats to display
@@ -71,7 +71,7 @@ const Hero: React.FC<HeroProps> = ({
             logo: "https://digital.pokharamun.gov.np/logo.png",
             areaServed: {
               "@type": "AdministrativeArea",
-              name: "Khajura",
+              name: "Pokhara",
               containedIn: "Banke District, Nepal",
               description: seoDescription,
               additionalProperty: [

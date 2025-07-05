@@ -141,7 +141,7 @@ const WardInfo: React.FC<WardInfoProps> = ({
     keywords: [
       `${municipalityName} वडा`,
       `${municipalityName} वडा विवरण`,
-      "Khajura metropolitan city wards",
+      "Pokhara Metropolitan City wards",
     ],
     variableMeasured: processedWards.map((ward) => ({
       "@type": "PropertyValue",

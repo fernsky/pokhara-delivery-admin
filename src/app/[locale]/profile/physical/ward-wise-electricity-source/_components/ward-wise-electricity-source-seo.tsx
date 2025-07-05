@@ -70,7 +70,7 @@ export default function WardWiseElectricitySourceSEO({
 
         return {
           "@type": "Observation",
-          name: `Electricity Source Usage Statistics in Ward ${wardNumber} of Khajura metropolitan city`,
+          name: `Electricity Source Usage Statistics in Ward ${wardNumber} of Pokhara Metropolitan City`,
           observationDate: new Date().toISOString().split("T")[0],
           measuredProperty: {
             "@type": "PropertyValue",
@@ -78,7 +78,7 @@ export default function WardWiseElectricitySourceSEO({
             unitText: "percentage",
           },
           measuredValue: parseFloat(modernSourcePercent),
-          description: `In Ward ${wardNumber} of Khajura metropolitan city, ${modernSourceHouseholds.toLocaleString()} households (${modernSourcePercent}%) use modern electricity sources (Grid, Solar) out of a total of ${totalWardHouseholds.toLocaleString()} households.`,
+          description: `In Ward ${wardNumber} of Pokhara Metropolitan City, ${modernSourceHouseholds.toLocaleString()} households (${modernSourcePercent}%) use modern electricity sources (Grid, Solar) out of a total of ${totalWardHouseholds.toLocaleString()} households.`,
         };
       })
       .filter(Boolean);
@@ -97,10 +97,10 @@ export default function WardWiseElectricitySourceSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Electricity Source Usage in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Analysis of electricity source usage across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalHouseholds.toLocaleString()} households. ${modernSourceTotal.toLocaleString()} households (${modernSourcePercentageValue}%) use modern electricity sources. The best adoption of modern sources is in Ward ${bestWard?.wardNumber || ""} with ${bestWard?.percentage.toFixed(2) || ""}% modern electricity source usage rate.`,
+      name: "Electricity Source Usage in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Analysis of electricity source usage across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalHouseholds.toLocaleString()} households. ${modernSourceTotal.toLocaleString()} households (${modernSourcePercentageValue}%) use modern electricity sources. The best adoption of modern sources is in Ward ${bestWard?.wardNumber || ""} with ${bestWard?.percentage.toFixed(2) || ""}% modern electricity source usage rate.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Electricity source",
         "Grid electricity",
@@ -116,13 +116,13 @@ export default function WardWiseElectricitySourceSEO({
       url: "https://digital.pokharamun.gov.np/profile/physical/ward-wise-electricity-source",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",
@@ -192,10 +192,10 @@ export default function WardWiseElectricitySourceSEO({
         name: "Municipality Household Survey",
         provider: {
           "@type": "GovernmentOrganization",
-          name: "Khajura metropolitan city",
+          name: "Pokhara Metropolitan City",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Khajura",
+            addressLocality: "Pokhara",
             addressRegion: "Banke",
             addressCountry: "Nepal",
           },

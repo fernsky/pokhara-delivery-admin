@@ -56,7 +56,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const landOwnershipData =
       await api.profile.economics.wardWiseLandOwnership.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalHouseholds = landOwnershipData.reduce(
@@ -100,20 +100,20 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city land ownership",
-      "Khajura land ownership types",
+      "Pokhara Metropolitan City land ownership",
+      "Pokhara land ownership types",
       "Ward-wise land ownership",
-      "Private land ownership statistics Khajura",
-      "Public land ownership Khajura",
+      "Private land ownership statistics Pokhara",
+      "Public land ownership Pokhara",
       "Guthi land ownership",
       "Village Block land ownership",
-      `Khajura households count ${totalHouseholds}`,
+      `Pokhara households count ${totalHouseholds}`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकाको वडा अनुसार जग्गा स्वामित्वको वितरण र विश्लेषण। कुल ${localizeNumber(totalHouseholds.toString(), "ne")} घरपरिवार मध्ये ${localizeNumber(mostCommonPercentage, "ne")}% (${localizeNumber(mostCommonCount.toString(), "ne")}) परिवार ${LAND_OWNERSHIP_TYPES[mostCommonType] || mostCommonType} जग्गामा बसोबास गर्दछन्। विभिन्न वडाहरूमा जग्गा स्वामित्वको विस्तृत विश्लेषण।`;
 
-    const descriptionEN = `Ward-wise distribution and analysis of land ownership in Khajura metropolitan city. Out of a total of ${totalHouseholds} households, ${mostCommonPercentage}% (${mostCommonCount}) live on ${LAND_OWNERSHIP_TYPES_EN[mostCommonType] || mostCommonType}. Detailed analysis of land ownership patterns across various wards.`;
+    const descriptionEN = `Ward-wise distribution and analysis of land ownership in Pokhara Metropolitan City. Out of a total of ${totalHouseholds} households, ${mostCommonPercentage}% (${mostCommonCount}) live on ${LAND_OWNERSHIP_TYPES_EN[mostCommonType] || mostCommonType}. Detailed analysis of land ownership patterns across various wards.`;
 
     return {
       title: `जग्गा स्वामित्वको प्रकार अनुसार घरपरिवार | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -390,7 +390,7 @@ export default async function WardWiseLandOwnershipPage() {
               src="/images/land-ownership.svg"
               width={1200}
               height={400}
-              alt="जग्गा स्वामित्वको प्रकार अनुसार घरपरिवार - पोखरा महानगरपालिका (Land Ownership Types by Households - Khajura metropolitan city)"
+              alt="जग्गा स्वामित्वको प्रकार अनुसार घरपरिवार - पोखरा महानगरपालिका (Land Ownership Types by Households - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

@@ -64,7 +64,7 @@ export async function generateMetadata(): Promise<Metadata> {
   try {
     const cookingFuelData =
       await api.profile.physical.wardWiseCookingFuel.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Group by cooking fuel type
     const fuelGroups = cookingFuelData.reduce((acc: any, curr: any) => {
@@ -112,7 +112,7 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city cooking fuel",
+      "Pokhara Metropolitan City cooking fuel",
       "Ward-wise cooking fuel usage",
       "Firewood usage rate",
       "LP Gas usage rate",
@@ -123,7 +123,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create description
     const descriptionNP = `पोखरा महानगरपालिकामा खाना पकाउने इन्धन प्रयोगको विश्लेषण। कुल ${localizeNumber(totalHouseholds.toLocaleString(), "ne")} घरधुरी मध्ये ${localizeNumber(cleanFuelPercentage, "ne")}% घरधुरीले स्वच्छ इन्धन (एल.पी. ग्याँस, विद्युत, गोबर ग्याँस) प्रयोग गर्दछन्।`;
 
-    const descriptionEN = `Analysis of cooking fuel usage in Khajura metropolitan city. Out of a total of ${totalHouseholds.toLocaleString()} households, ${cleanFuelPercentage}% use clean fuels (LP Gas, Electricity, Biogas).`;
+    const descriptionEN = `Analysis of cooking fuel usage in Pokhara Metropolitan City. Out of a total of ${totalHouseholds.toLocaleString()} households, ${cleanFuelPercentage}% use clean fuels (LP Gas, Electricity, Biogas).`;
 
     return {
       title: `खाना पकाउने इन्धन प्रयोगको अवस्था | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -364,7 +364,7 @@ export default async function WardWiseCookingFuelPage() {
               src="/images/cooking-fuel.svg"
               width={1200}
               height={400}
-              alt="खाना पकाउने इन्धनको प्रयोगको अवस्था - पोखरा महानगरपालिका (Cooking Fuel Usage - Khajura metropolitan city)"
+              alt="खाना पकाउने इन्धनको प्रयोगको अवस्था - पोखरा महानगरपालिका (Cooking Fuel Usage - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

@@ -12,7 +12,7 @@ class ReportSitemapView(TemplateView):
 
         # Municipality name - make dynamic
         municipality_name = "पोखरा महानगरपालिका"
-        municipality_name_english = "pokhara metropolitan city"
+        municipality_name_english = "pokhara Metropolitan City"
 
         # Get all published content
         categories = ReportCategory.objects.filter(is_active=True)

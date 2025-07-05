@@ -25,7 +25,7 @@ class HealthCheckView(APIView):
                 "status": "healthy",
                 "timestamp": timezone.now(),
                 "municipality": "पोखरा महानगरपालिका",
-                "municipality_english": "pokharametropolitan city",
+                "municipality_english": "pokharaMetropolitan City",
                 "system": "Digital Profile Report System",
                 "version": "1.0.0",
             }
@@ -49,7 +49,7 @@ class SystemInfoView(APIView):
                 "language_code": settings.LANGUAGE_CODE,
                 "municipality": {
                     "name_nepali": "पोखरा महानगरपालिका",
-                    "name_english": "pokharametropolitan city",
+                    "name_english": "pokharaMetropolitan City",
                     "district": "कपिलवस्तु",
                     "district_english": "Kapilvastu",
                     "province": "गण्डकी प्रदेश",
@@ -73,7 +73,7 @@ class MunicipalityInfoView(APIView):
             {
                 "municipality": {
                     "name_nepali": "पोखरा महानगरपालिका",
-                    "name_english": "pokharametropolitan city",
+                    "name_english": "pokharaMetropolitan City",
                     "district_nepali": "कपिलवस्तु",
                     "district_english": "Kapilvastu",
                     "province_nepali": "गण्डकी प्रदेश",
@@ -85,7 +85,7 @@ class MunicipalityInfoView(APIView):
                         "phone": "+977-76-550123",
                         "email": "info@pokharamun.gov.np",
                         "address_nepali": "पोखरा महानगरपालिका, कपिलवस्तु",
-                        "address_english": "pokharametropolitan city, Kapilvastu",
+                        "address_english": "pokharaMetropolitan City, Kapilvastu",
                     },
                     "coordinates": {"latitude": 27.5833, "longitude": 82.9167},
                 }

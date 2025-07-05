@@ -109,7 +109,7 @@ export default function WardWiseElectricitySourceCharts({
       >
         <meta
           itemProp="name"
-          content="Electricity Source Distribution in Khajura metropolitan city"
+          content="Electricity Source Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
@@ -230,11 +230,11 @@ export default function WardWiseElectricitySourceCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Electricity Source Usage in Khajura metropolitan city"
+          content="Ward-wise Electricity Source Usage in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Distribution of electricity source types across wards in Khajura"
+          content="Distribution of electricity source types across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -264,11 +264,11 @@ export default function WardWiseElectricitySourceCharts({
       >
         <meta
           itemProp="name"
-          content="Modern Electricity Source Usage Comparison Across Wards in Khajura metropolitan city"
+          content="Modern Electricity Source Usage Comparison Across Wards in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Comparison of modern electricity source usage across wards in Khajura"
+          content="Comparison of modern electricity source usage across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -302,11 +302,11 @@ export default function WardWiseElectricitySourceCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Electricity Source Analysis in Khajura metropolitan city"
+          content="Ward-wise Electricity Source Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Detailed analysis of electricity source usage by ward in Khajura"
+          content="Detailed analysis of electricity source usage by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

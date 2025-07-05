@@ -63,7 +63,7 @@ export default function WardWiseTimeToMarketCenterCharts({
       >
         <meta
           itemProp="name"
-          content="Time to Market Center Distribution in Khajura metropolitan city"
+          content="Time to Market Center Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
@@ -186,11 +186,11 @@ export default function WardWiseTimeToMarketCenterCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Time to Market Center in Khajura metropolitan city"
+          content="Ward-wise Time to Market Center in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Distribution of time to market center across wards in Khajura"
+          content="Distribution of time to market center across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -220,11 +220,11 @@ export default function WardWiseTimeToMarketCenterCharts({
       >
         <meta
           itemProp="name"
-          content="Quick Access to Market Center Comparison Across Wards in Khajura metropolitan city"
+          content="Quick Access to Market Center Comparison Across Wards in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Comparison of quick access to market centers across wards in Khajura"
+          content="Comparison of quick access to market centers across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -257,11 +257,11 @@ export default function WardWiseTimeToMarketCenterCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Market Center Access Analysis in Khajura metropolitan city"
+          content="Ward-wise Market Center Access Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Detailed analysis of time to market center by ward in Khajura"
+          content="Detailed analysis of time to market center by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

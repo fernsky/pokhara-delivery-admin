@@ -99,7 +99,7 @@ export default function RemittanceAnalysisSection({
 
   // SEO attributes to include directly in JSX
   const seoAttributes = {
-    "data-municipality": "Khajura metropolitan city / पोखरा महानगरपालिका",
+    "data-municipality": "Pokhara Metropolitan City / पोखरा महानगरपालिका",
     "data-total-sending-population": totalSendingPopulation.toString(),
     "data-most-common-amount":
       overallSummary.sort(
@@ -184,7 +184,7 @@ export default function RemittanceAnalysisSection({
         <h3 className="text-xl font-medium mb-6">
           विस्तृत वडागत विश्लेषण
           <span className="sr-only">
-            Detailed Ward-wise Remittance Analysis of Khajura
+            Detailed Ward-wise Remittance Analysis of Pokhara
           </span>
         </h3>
 
@@ -200,7 +200,7 @@ export default function RemittanceAnalysisSection({
             <h4 className="font-medium mb-2">
               उच्च रेमिट्यान्स वितरण
               <span className="sr-only">
-                High Remittance Distribution in Khajura metropolitan city
+                High Remittance Distribution in Pokhara Metropolitan City
               </span>
             </h4>
             <p className="text-sm mb-3">

@@ -99,11 +99,11 @@ export default function ForeignEmploymentCountriesCharts({
       >
         <meta
           itemProp="name"
-          content="Foreign Employment Countries in Khajura metropolitan city"
+          content="Foreign Employment Countries in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content={`Foreign employment destinations of Khajura with a total of ${totalPopulation} migrant workers`}
+          content={`Foreign employment destinations of Pokhara with a total of ${totalPopulation} migrant workers`}
         />
 
         <div className="border-b px-4 py-3">
@@ -236,11 +236,11 @@ export default function ForeignEmploymentCountriesCharts({
       >
         <meta
           itemProp="name"
-          content="Regional Distribution of Foreign Employment in Khajura metropolitan city"
+          content="Regional Distribution of Foreign Employment in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Regional analysis of foreign employment in Khajura"
+          content="Regional analysis of foreign employment in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -383,11 +383,11 @@ export default function ForeignEmploymentCountriesCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Foreign Employment in Khajura metropolitan city"
+          content="Ward-wise Foreign Employment in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Foreign employment distribution across wards in Khajura"
+          content="Foreign employment distribution across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -418,11 +418,11 @@ export default function ForeignEmploymentCountriesCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Foreign Employment Analysis in Khajura metropolitan city"
+          content="Ward-wise Foreign Employment Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Foreign employment patterns by ward in Khajura"
+          content="Foreign employment patterns by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

@@ -171,7 +171,7 @@ export default function RemittanceCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Remittance Distribution in Khajura metropolitan city"
+          content="Ward-wise Remittance Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"

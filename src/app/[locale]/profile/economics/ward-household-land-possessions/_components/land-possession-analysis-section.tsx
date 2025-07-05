@@ -58,7 +58,7 @@ export default function LandPossessionAnalysisSection({
     if (document && document.body) {
       document.body.setAttribute(
         "data-municipality",
-        "Khajura metropolitan city / पोखरा महानगरपालिका",
+        "Pokhara Metropolitan City / पोखरा महानगरपालिका",
       );
       document.body.setAttribute(
         "data-total-landowner-households",

@@ -38,7 +38,7 @@ export async function generateMetadata(): Promise<Metadata> {
         fiscalYear: latestFiscalYear,
       });
 
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
     const fiscalYearLabel =
       immunizationFiscalYearOptions.find(
         (opt) => opt.value === latestFiscalYear,
@@ -71,19 +71,19 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city immunization coverage",
+      "Pokhara Metropolitan City immunization coverage",
       "Child immunization program",
       "Basic vaccination service",
       `Full immunization coverage ${fullyImmunizedCoverage.toFixed(1)}%`,
       `DPT-HepB-Hib3 coverage ${dptHib3Coverage.toFixed(1)}%`,
-      "Vaccination services in Khajura",
+      "Vaccination services in Pokhara",
       "Immunization coverage analysis",
     ];
 
     // Create description
     const descriptionNP = `पोखरा महानगरपालिकामा आधारभूत खोप सेवाको विश्लेषण। आर्थिक वर्ष ${fiscalYearLabel} मा पूर्ण खोप कभरेज ${localizeNumber(fullyImmunizedCoverage.toFixed(1), "ne")}%, DPT-HepB-Hib3 कभरेज ${localizeNumber(dptHib3Coverage.toFixed(1), "ne")}%, र दादुरा-रुबेला कभरेज ${localizeNumber(measlesRubella1Coverage.toFixed(1), "ne")}% रहेको छ।`;
 
-    const descriptionEN = `Analysis of basic immunization services in Khajura metropolitan city. In fiscal year ${fiscalYearLabel}, full immunization coverage was ${fullyImmunizedCoverage.toFixed(1)}%, DPT-HepB-Hib3 coverage was ${dptHib3Coverage.toFixed(1)}%, and measles-rubella coverage was ${measlesRubella1Coverage.toFixed(1)}%.`;
+    const descriptionEN = `Analysis of basic immunization services in Pokhara Metropolitan City. In fiscal year ${fiscalYearLabel}, full immunization coverage was ${fullyImmunizedCoverage.toFixed(1)}%, DPT-HepB-Hib3 coverage was ${dptHib3Coverage.toFixed(1)}%, and measles-rubella coverage was ${measlesRubella1Coverage.toFixed(1)}%.`;
 
     return {
       title: `खोप सेवा र कभरेज | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -366,7 +366,7 @@ export default async function ImmunizationIndicatorsPage() {
               src="/images/immunization-services.svg"
               width={1200}
               height={400}
-              alt="खोप सेवा र कभरेज - पोखरा महानगरपालिका (Immunization Services and Coverage - Khajura metropolitan city)"
+              alt="खोप सेवा र कभरेज - पोखरा महानगरपालिका (Immunization Services and Coverage - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

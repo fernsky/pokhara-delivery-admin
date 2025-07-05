@@ -33,7 +33,7 @@ export default function IncomeSourcesSEO({
     // Convert income source stats to structured data format
     const incomeSourceStats = overallSummary.map((item) => ({
       "@type": "Observation",
-      name: `${INCOME_SOURCE_NAMES_EN[item.incomeSource] || item.incomeSource} households in Khajura metropolitan city`,
+      name: `${INCOME_SOURCE_NAMES_EN[item.incomeSource] || item.incomeSource} households in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -41,16 +41,16 @@ export default function IncomeSourcesSEO({
         unitText: "households",
       },
       measuredValue: item.households,
-      description: `${item.households.toLocaleString()} households in Khajura metropolitan city depend on ${INCOME_SOURCE_NAMES_EN[item.incomeSource] || item.incomeSource} (${((item.households / totalHouseholds) * 100).toFixed(2)}% of total households)`,
+      description: `${item.households.toLocaleString()} households in Pokhara Metropolitan City depend on ${INCOME_SOURCE_NAMES_EN[item.incomeSource] || item.incomeSource} (${((item.households / totalHouseholds) * 100).toFixed(2)}% of total households)`,
     }));
 
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Household Income Sources of Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Household income sources distribution data across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalHouseholds.toLocaleString()} households.`,
+      name: "Household Income Sources of Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Household income sources distribution data across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalHouseholds.toLocaleString()} households.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Income sources",
         "Household economics",
@@ -64,13 +64,13 @@ export default function IncomeSourcesSEO({
       url: "https://digital.pokharamun.gov.np/profile/economics/income-sources",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

@@ -33,7 +33,7 @@ export default function CropDiseaseSEO({
     // Convert crop disease stats to structured data format
     const cropDiseaseStats = cropSummary.map((item) => ({
       "@type": "Observation",
-      name: `${CROP_TYPES_EN[item.crop] || item.crop} Diseases and Pests in Khajura metropolitan city`,
+      name: `${CROP_TYPES_EN[item.crop] || item.crop} Diseases and Pests in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -41,7 +41,7 @@ export default function CropDiseaseSEO({
         unitText: "count",
       },
       measuredValue: item.totalIssues,
-      description: `${item.totalIssues} agricultural issues affecting ${CROP_TYPES_EN[item.crop] || item.crop} in Khajura metropolitan city: ${item.diseasesCount} diseases (${item.majorDiseases.slice(0, 3).join(", ")}) and ${item.pestsCount} pests (${item.majorPests.slice(0, 3).join(", ")}). This represents ${((item.totalIssues / (totalPests + totalDiseases)) * 100).toFixed(2)}% of all crop issues in the municipality.`,
+      description: `${item.totalIssues} agricultural issues affecting ${CROP_TYPES_EN[item.crop] || item.crop} in Pokhara Metropolitan City: ${item.diseasesCount} diseases (${item.majorDiseases.slice(0, 3).join(", ")}) and ${item.pestsCount} pests (${item.majorPests.slice(0, 3).join(", ")}). This represents ${((item.totalIssues / (totalPests + totalDiseases)) * 100).toFixed(2)}% of all crop issues in the municipality.`,
     }));
 
     // Find most problematic crop
@@ -63,10 +63,10 @@ export default function CropDiseaseSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Crop Diseases and Pests in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Comprehensive analysis of crop diseases and pests affecting agriculture in Khajura metropolitan city. The study covers ${totalCrops} different crop types with a total of ${totalDiseases + totalPests} identified issues: ${totalDiseases} diseases and ${totalPests} pests. The most affected crop is ${mostProblematicCropEN} with ${mostProblematicCrop?.totalIssues || 0} issues (${mostProblematicPercentage}% of all problems). Disease to pest ratio is ${(diseaseRatio * 100).toFixed(1)}% to ${(pestRatio * 100).toFixed(1)}%.`,
+      name: "Crop Diseases and Pests in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Comprehensive analysis of crop diseases and pests affecting agriculture in Pokhara Metropolitan City. The study covers ${totalCrops} different crop types with a total of ${totalDiseases + totalPests} identified issues: ${totalDiseases} diseases and ${totalPests} pests. The most affected crop is ${mostProblematicCropEN} with ${mostProblematicCrop?.totalIssues || 0} issues (${mostProblematicPercentage}% of all problems). Disease to pest ratio is ${(diseaseRatio * 100).toFixed(1)}% to ${(pestRatio * 100).toFixed(1)}%.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Crop diseases",
         "Agricultural pests",
@@ -85,13 +85,13 @@ export default function CropDiseaseSEO({
       url: "https://digital.pokharamun.gov.np/profile/economics/municipality-wide-crop-diseases",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",
@@ -162,10 +162,10 @@ export default function CropDiseaseSEO({
         name: "Municipality Agricultural Data Collection",
         provider: {
           "@type": "GovernmentOrganization",
-          name: "Khajura metropolitan city",
+          name: "Pokhara Metropolitan City",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Khajura",
+            addressLocality: "Pokhara",
             addressRegion: "Banke",
             addressCountry: "Nepal",
           },

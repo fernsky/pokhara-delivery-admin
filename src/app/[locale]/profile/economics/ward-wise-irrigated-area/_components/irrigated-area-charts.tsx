@@ -94,11 +94,11 @@ export default function IrrigatedAreaCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Irrigated Area in Khajura metropolitan city"
+          content="Ward-wise Irrigated Area in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content={`Ward-wise irrigated and unirrigated area in Khajura with a total area of ${totalArea.toFixed(2)} hectares`}
+          content={`Ward-wise irrigated and unirrigated area in Pokhara with a total area of ${totalArea.toFixed(2)} hectares`}
         />
 
         <div className="border-b px-4 py-3">
@@ -263,11 +263,11 @@ export default function IrrigatedAreaCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Irrigated and Unirrigated Area Distribution in Khajura"
+          content="Ward-wise Irrigated and Unirrigated Area Distribution in Pokhara"
         />
         <meta
           itemProp="description"
-          content="Distribution of irrigated and unirrigated area across wards in Khajura metropolitan city"
+          content="Distribution of irrigated and unirrigated area across wards in Pokhara Metropolitan City"
         />
 
         <div className="border-b px-4 py-3">

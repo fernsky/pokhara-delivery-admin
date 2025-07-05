@@ -62,7 +62,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const skillsData =
       await api.profile.economics.wardWiseMajorSkills.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalPopulation = skillsData.reduce(
@@ -96,20 +96,20 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city skills and abilities",
-      "Khajura local skills",
-      `Khajura ${SKILL_NAMES_EN[topSkills[0]]} population`,
-      ...topSkills.map((s) => `${SKILL_NAMES_EN[s]} in Khajura`),
+      "Pokhara Metropolitan City skills and abilities",
+      "Pokhara local skills",
+      `Pokhara ${SKILL_NAMES_EN[topSkills[0]]} population`,
+      ...topSkills.map((s) => `${SKILL_NAMES_EN[s]} in Pokhara`),
       "Ward-wise skills distribution",
       "Economic skills statistics",
-      "Skills survey Khajura",
-      `Khajura total skilled population ${totalPopulation}`,
+      "Skills survey Pokhara",
+      `Pokhara total skilled population ${totalPopulation}`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकाको वडा अनुसार प्रमुख सीप र दक्षताहरूको वितरण, प्रवृत्ति र विश्लेषण। कुल दक्ष जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")} मध्ये ${skillLabels[topSkills[0]]} (${localizeNumber(skillCounts[topSkills[0]].toString(), "ne")}) सबैभन्दा ठूलो समूह हो, त्यसपछि ${skillLabels[topSkills[1]]} (${localizeNumber(skillCounts[topSkills[1]].toString(), "ne")}) र ${skillLabels[topSkills[2]]} (${localizeNumber(skillCounts[topSkills[2]].toString(), "ne")})। विभिन्न सीपहरूको विस्तृत तथ्याङ्क र विजुअलाइजेसन।`;
 
-    const descriptionEN = `Ward-wise major skills distribution, trends and analysis for Khajura metropolitan city. Out of a total skilled population of ${totalPopulation}, ${SKILL_NAMES_EN[topSkills[0]]} (${skillCounts[topSkills[0]]}) is the largest group, followed by ${SKILL_NAMES_EN[topSkills[1]]} (${skillCounts[topSkills[1]]}) and ${SKILL_NAMES_EN[topSkills[2]]} (${skillCounts[topSkills[2]]})। Detailed statistics and visualizations of various skills.`;
+    const descriptionEN = `Ward-wise major skills distribution, trends and analysis for Pokhara Metropolitan City. Out of a total skilled population of ${totalPopulation}, ${SKILL_NAMES_EN[topSkills[0]]} (${skillCounts[topSkills[0]]}) is the largest group, followed by ${SKILL_NAMES_EN[topSkills[1]]} (${skillCounts[topSkills[1]]}) and ${SKILL_NAMES_EN[topSkills[2]]} (${skillCounts[topSkills[2]]})। Detailed statistics and visualizations of various skills.`;
 
     return {
       title: `प्रमुख सीप र दक्षता | ${municipalityName} पालिका प्रोफाइल`,
@@ -268,7 +268,7 @@ export default async function WardMainSkillsPage() {
               src="/images/skills-diversity.svg"
               width={1200}
               height={400}
-              alt="प्रमुख सीप र दक्षता - पोखरा महानगरपालिका (Major Skills - Khajura metropolitan city)"
+              alt="प्रमुख सीप र दक्षता - पोखरा महानगरपालिका (Major Skills - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

@@ -71,7 +71,7 @@ export default function TimeToFinancialOrganizationAnalysisSection({
 
   // SEO attributes to include directly in JSX
   const seoAttributes = {
-    "data-municipality": "Khajura metropolitan city / पोखरा महानगरपालिका",
+    "data-municipality": "Pokhara Metropolitan City / पोखरा महानगरपालिका",
     "data-total-households": totalHouseholds.toString(),
     "data-quick-access-percentage": quickAccessPercentage.toFixed(2),
     "data-best-access-ward": bestAccessWard?.wardNumber.toString() || "",
@@ -206,7 +206,7 @@ export default function TimeToFinancialOrganizationAnalysisSection({
         <h3 className="text-xl font-medium mb-6">
           वित्तीय पहुँच विस्तृत विश्लेषण
           <span className="sr-only">
-            Detailed Financial Access Analysis of Khajura
+            Detailed Financial Access Analysis of Pokhara
           </span>
         </h3>
 
@@ -220,7 +220,7 @@ export default function TimeToFinancialOrganizationAnalysisSection({
             <h4 className="font-medium mb-2">
               सर्वोत्तम वित्तीय पहुँच भएको वडा
               <span className="sr-only">
-                Ward with Best Financial Access in Khajura metropolitan city
+                Ward with Best Financial Access in Pokhara Metropolitan City
               </span>
             </h4>
             {bestAccessWard && (
@@ -315,7 +315,7 @@ export default function TimeToFinancialOrganizationAnalysisSection({
             <h4 className="font-medium mb-2">
               न्यून वित्तीय पहुँच भएको वडा
               <span className="sr-only">
-                Ward with Poor Financial Access in Khajura
+                Ward with Poor Financial Access in Pokhara
               </span>
             </h4>
             {worstAccessWard && (

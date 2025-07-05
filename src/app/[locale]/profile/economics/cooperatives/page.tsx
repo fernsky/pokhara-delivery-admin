@@ -75,7 +75,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const cooperativesData =
       await api.profile.economics.cooperatives.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalCooperatives = cooperativesData.length;
@@ -133,20 +133,20 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city cooperatives",
-      "Khajura cooperative institutions",
+      "Pokhara Metropolitan City cooperatives",
+      "Pokhara cooperative institutions",
       "Municipality-wide cooperatives",
-      "Savings and credit cooperatives in Khajura",
-      `${COOPERATIVE_TYPES_EN[mostCommonCooperativeType] || "Cooperatives"} in Khajura`,
+      "Savings and credit cooperatives in Pokhara",
+      `${COOPERATIVE_TYPES_EN[mostCommonCooperativeType] || "Cooperatives"} in Pokhara`,
       `Ward ${wardWithMostCooperatives} cooperatives`,
-      `Khajura ${totalCooperatives} cooperative institutions`,
+      `Pokhara ${totalCooperatives} cooperative institutions`,
       "Women's cooperatives",
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकामा संचालित ${localizeNumber(totalCooperatives.toString(), "ne")} सहकारी संस्थाहरूको विस्तृत विश्लेषण। सबैभन्दा बढी ${COOPERATIVE_TYPES[mostCommonCooperativeType] || ""} संस्थाहरू (${localizeNumber(mostCommonCooperativeTypePercentage.toFixed(1), "ne")}%) रहेका छन्। वडा नं ${localizeNumber(wardWithMostCooperatives.toString(), "ne")} मा सबैभन्दा बढी ${localizeNumber(wardMaxCount.toString(), "ne")} सहकारी संस्थाहरू क्रियाशील छन्। पालिका स्तरीय सहकारी संस्थाहरूको विस्तृत जानकारी।`;
 
-    const descriptionEN = `Detailed analysis of ${totalCooperatives} cooperative institutions operating in Khajura metropolitan city. ${COOPERATIVE_TYPES_EN[mostCommonCooperativeType] || "Cooperatives"} are most common (${mostCommonCooperativeTypePercentage.toFixed(1)}%). Ward ${wardWithMostCooperatives} has the highest concentration with ${wardMaxCount} active cooperatives. Comprehensive information on municipality-wide cooperatives.`;
+    const descriptionEN = `Detailed analysis of ${totalCooperatives} cooperative institutions operating in Pokhara Metropolitan City. ${COOPERATIVE_TYPES_EN[mostCommonCooperativeType] || "Cooperatives"} are most common (${mostCommonCooperativeTypePercentage.toFixed(1)}%). Ward ${wardWithMostCooperatives} has the highest concentration with ${wardMaxCount} active cooperatives. Comprehensive information on municipality-wide cooperatives.`;
 
     return {
       title: `सहकारी संस्थाहरू | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -337,7 +337,7 @@ export default async function CooperativesPage() {
   const statistics = {
     totalCooperatives,
     totalWards: Object.keys(wardDistribution).length,
-    avgCooperativesPerWard: totalCooperatives / 9, // Khajura has 9 wards
+    avgCooperativesPerWard: totalCooperatives / 9, // Pokhara has 9 wards
     mostPopularCooperativeType:
       cooperativeSummary.length > 0 ? cooperativeSummary[0].type : "",
     mostPopularCooperativeTypeName:
@@ -374,7 +374,7 @@ export default async function CooperativesPage() {
               src="/images/cooperatives.svg"
               width={1200}
               height={400}
-              alt="सहकारी संस्थाहरू - पोखरा महानगरपालिका (Cooperative Institutions - Khajura metropolitan city)"
+              alt="सहकारी संस्थाहरू - पोखरा महानगरपालिका (Cooperative Institutions - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

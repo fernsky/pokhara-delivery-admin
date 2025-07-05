@@ -110,7 +110,7 @@ export default function WardWiseSEO({
       )} घरधुरी रहेका छन्।`,
       keywords: [
         "पोखरा महानगरपालिका",
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "वडागत जनसांख्यिकी",
         "पोखरा वडा जनसंख्या",
         "नेपाल जनगणना",
@@ -128,7 +128,7 @@ export default function WardWiseSEO({
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

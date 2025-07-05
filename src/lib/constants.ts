@@ -1,4 +1,4 @@
-export const APP_TITLE = "Khajura metropolitan city";
+export const APP_TITLE = "Pokhara Metropolitan City";
 export const DATABASE_PREFIX = "acme";
 export const TEST_DB_PREFIX = "test_acme";
 

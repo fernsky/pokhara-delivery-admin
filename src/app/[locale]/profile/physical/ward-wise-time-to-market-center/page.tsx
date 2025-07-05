@@ -49,7 +49,7 @@ export async function generateMetadata(): Promise<Metadata> {
   try {
     const timeToMarketCenterData =
       await api.profile.physical.wardWiseTimeToMarketCenter.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Group by ward number
     const wardGroups = timeToMarketCenterData.reduce((acc: any, curr: any) => {
@@ -96,7 +96,7 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city market center access",
+      "Pokhara Metropolitan City market center access",
       "Market center accessibility",
       "Ward-wise market center distance",
       "Time to reach market center",
@@ -107,7 +107,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create description
     const descriptionNP = `पोखरा महानगरपालिकामा बजार केन्द्रसम्म पुग्ने समय सम्बन्धी विश्लेषण। कुल ${localizeNumber(totalHouseholds.toLocaleString(), "ne")} घरधुरी मध्ये ${localizeNumber(under15MinPercentage, "ne")}% (${localizeNumber(under15MinHouseholds.toLocaleString(), "ne")}) घरधुरीले १५ मिनेटभित्र बजार केन्द्र पुग्न सक्छन्।`;
 
-    const descriptionEN = `Analysis of time taken to reach market centers in Khajura metropolitan city. Out of a total of ${totalHouseholds.toLocaleString()} households, ${under15MinPercentage}% (${under15MinHouseholds.toLocaleString()}) can reach a market center within 15 minutes.`;
+    const descriptionEN = `Analysis of time taken to reach market centers in Pokhara Metropolitan City. Out of a total of ${totalHouseholds.toLocaleString()} households, ${under15MinPercentage}% (${under15MinHouseholds.toLocaleString()}) can reach a market center within 15 minutes.`;
 
     return {
       title: `बजार केन्द्र पुग्न लाग्ने समय | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -323,7 +323,7 @@ export default async function WardWiseTimeToMarketCenterPage() {
               src="/images/market-access.svg"
               width={1200}
               height={400}
-              alt="बजार केन्द्र पुग्न लाग्ने समय - पोखरा महानगरपालिका (Time to Market Center - Khajura metropolitan city)"
+              alt="बजार केन्द्र पुग्न लाग्ने समय - पोखरा महानगरपालिका (Time to Market Center - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

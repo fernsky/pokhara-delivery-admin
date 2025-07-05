@@ -1,5 +1,5 @@
 """
-Demographics models for pokhara metropolitan city Digital Profile
+Demographics models for pokhara Metropolitan City Digital Profile
 
 This module contains models related to population, households, and demographic information
 as specified in the SQL schema files and report structure.

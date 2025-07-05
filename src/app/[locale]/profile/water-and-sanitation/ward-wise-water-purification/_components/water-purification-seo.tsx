@@ -39,7 +39,7 @@ export default function WaterPurificationSEO({
     // Create English descriptions for SEO
     const purificationTypeStats = overallSummary.map((item) => ({
       "@type": "Observation",
-      name: `${item.waterPurificationName} water purification method in Khajura metropolitan city`,
+      name: `${item.waterPurificationName} water purification method in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -47,7 +47,7 @@ export default function WaterPurificationSEO({
         unitText: "households",
       },
       measuredValue: item.households,
-      description: `${item.households.toLocaleString()} households in Khajura metropolitan city use ${item.waterPurificationName} method for water purification (${((item.households / totalHouseholds) * 100).toFixed(2)}% of total households)`,
+      description: `${item.households.toLocaleString()} households in Pokhara Metropolitan City use ${item.waterPurificationName} method for water purification (${((item.households / totalHouseholds) * 100).toFixed(2)}% of total households)`,
     }));
 
     // Find most common purification method
@@ -74,10 +74,10 @@ export default function WaterPurificationSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Water Purification Methods in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Analysis of water purification methods across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalHouseholds.toLocaleString()} households. ${treatingPercentage}% of households treat their water before drinking. The most common method is ${mostCommonTypeName} with ${mostCommonMethod?.households.toLocaleString()} households (${mostCommonTypePercentage}%).`,
+      name: "Water Purification Methods in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Analysis of water purification methods across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalHouseholds.toLocaleString()} households. ${treatingPercentage}% of households treat their water before drinking. The most common method is ${mostCommonTypeName} with ${mostCommonMethod?.households.toLocaleString()} households (${mostCommonTypePercentage}%).`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Water purification",
         "Safe drinking water",
@@ -93,13 +93,13 @@ export default function WaterPurificationSEO({
       url: "https://digital.pokharamun.gov.np/profile/water-and-sanitation/ward-wise-water-purification",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",
@@ -148,7 +148,7 @@ export default function WaterPurificationSEO({
       isAccessibleForFree: true,
       isPartOf: {
         "@type": "WebSite",
-        name: "Khajura metropolitan city Digital Profile",
+        name: "Pokhara Metropolitan City Digital Profile",
         url: "https://digital.pokharamun.gov.np",
       },
     };

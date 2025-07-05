@@ -39,7 +39,7 @@ END
 $$;
 
 -- Add comments for documentation
-COMMENT ON TABLE acme_ward_wise_households_in_agriculture IS 'Stores ward-wise data on households involved in agriculture for Khajura metropolitan city';
+COMMENT ON TABLE acme_ward_wise_households_in_agriculture IS 'Stores ward-wise data on households involved in agriculture for Pokhara Metropolitan City';
 COMMENT ON COLUMN acme_ward_wise_households_in_agriculture.ward_number IS 'Ward number (1-8)';
 COMMENT ON COLUMN acme_ward_wise_households_in_agriculture.involved_in_agriculture IS 'Number of households involved in agriculture or animal husbandry in the ward';
 COMMENT ON COLUMN acme_ward_wise_households_in_agriculture.non_involved_in_agriculture IS 'Number of households not involved in agriculture or animal husbandry in the ward';

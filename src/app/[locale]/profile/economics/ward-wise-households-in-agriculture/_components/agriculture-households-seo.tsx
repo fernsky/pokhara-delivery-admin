@@ -49,7 +49,7 @@ export default function AgricultureHouseholdsSEO({
 
         return {
           "@type": "Observation",
-          name: `Agriculture Households in Ward ${wardNumber} of Khajura metropolitan city`,
+          name: `Agriculture Households in Ward ${wardNumber} of Pokhara Metropolitan City`,
           observationDate: new Date().toISOString().split("T")[0],
           measuredProperty: {
             "@type": "PropertyValue",
@@ -57,7 +57,7 @@ export default function AgricultureHouseholdsSEO({
             unitText: "percentage",
           },
           measuredValue: parseFloat(involvedPercentage),
-          description: `In Ward ${wardNumber} of Khajura metropolitan city, ${wardData.involvedInAgriculture.toLocaleString()} households (${involvedPercentage}%) are involved in agriculture or animal husbandry out of a total of ${total.toLocaleString()} households.`,
+          description: `In Ward ${wardNumber} of Pokhara Metropolitan City, ${wardData.involvedInAgriculture.toLocaleString()} households (${involvedPercentage}%) are involved in agriculture or animal husbandry out of a total of ${total.toLocaleString()} households.`,
         };
       })
       .filter(Boolean);
@@ -65,10 +65,10 @@ export default function AgricultureHouseholdsSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Agricultural Households Distribution in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Distribution of households involved in agriculture or animal husbandry across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalHouseholds.toLocaleString()} households. ${totalInvolved.toLocaleString()} households (${involvedPercentage.toFixed(2)}%) are involved in agriculture or animal husbandry. The highest agricultural involvement is in Ward ${highestInvolvementWard?.wardNumber || ""} with ${highestInvolvementWard?.involvedPercentage.toFixed(2) || ""}% involvement rate.`,
+      name: "Agricultural Households Distribution in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Distribution of households involved in agriculture or animal husbandry across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalHouseholds.toLocaleString()} households. ${totalInvolved.toLocaleString()} households (${involvedPercentage.toFixed(2)}%) are involved in agriculture or animal husbandry. The highest agricultural involvement is in Ward ${highestInvolvementWard?.wardNumber || ""} with ${highestInvolvementWard?.involvedPercentage.toFixed(2) || ""}% involvement rate.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Agricultural households",
         "Farming families",
@@ -78,19 +78,19 @@ export default function AgricultureHouseholdsSEO({
         "Rural economy statistics",
         "Agricultural involvement",
         "Non-agricultural households",
-        "Khajura farming statistics",
+        "Pokhara farming statistics",
         "Ward-wise farming distribution",
       ],
       url: "https://digital.pokharamun.gov.np/profile/economics/ward-wise-households-in-agriculture",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

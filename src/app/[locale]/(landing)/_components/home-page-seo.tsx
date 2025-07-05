@@ -91,7 +91,7 @@ export default function HomePageSEO({
     url: "https://digital.pokharamun.gov.np/profile/demographics",
     keywords: [
       "पोखरा महानगरपालिका जनसंख्या",
-      "Khajura metropolitan city demographics",
+      "Pokhara Metropolitan City demographics",
       "पोखरा जनगणना",
       "कास्की जनसंख्या",
       "नेपालको जनसंख्या",

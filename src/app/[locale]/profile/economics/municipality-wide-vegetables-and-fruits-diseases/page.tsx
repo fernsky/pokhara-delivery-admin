@@ -55,7 +55,7 @@ export async function generateMetadata(): Promise<Metadata> {
   try {
     const vegetableFruitDiseaseData =
       await api.profile.economics.municipalityWideVegetablesAndFruitsDiseases.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalVegetableFruits = vegetableFruitDiseaseData.length;
@@ -92,21 +92,21 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city vegetables fruits diseases pests",
-      "Khajura vegetable production problems",
+      "Pokhara Metropolitan City vegetables fruits diseases pests",
+      "Pokhara vegetable production problems",
       "Municipality-wide vegetable protection",
       "Tomato diseases pests",
       "Cauliflower diseases pests",
       "Cabbage diseases pests",
       "Potato diseases pests",
       "Mustard diseases pests",
-      `Khajura vegetable protection ${totalVegetableFruits} types`,
+      `Pokhara vegetable protection ${totalVegetableFruits} types`,
     ];
 
     // Create description
     const descriptionNP = `पोखरा महानगरपालिकाको तरकारी र फलफूलमा देखिने रोग र कीटको विश्लेषण। ${localizeNumber(totalVegetableFruits.toString(), "ne")} प्रकारका तरकारी फलफूलमा देखिने प्रमुख रोग र कीटहरूको विस्तृत अध्ययन। सबैभन्दा प्रभावित ${VEGETABLE_FRUIT_TYPES[mostAffectedVegetableFruit] || mostAffectedVegetableFruit} रहेको छ। पालिका स्तरीय तरकारी संरक्षण योजना र रणनीतिको विश्लेषण।`;
 
-    const descriptionEN = `Analysis of diseases and pests affecting vegetables and fruits in Khajura metropolitan city. Detailed study of major diseases and pests affecting ${totalVegetableFruits} types of vegetables and fruits. Most affected crop is ${VEGETABLE_FRUIT_TYPES_EN[mostAffectedVegetableFruit] || mostAffectedVegetableFruit}. Municipality-wide vegetable and fruit protection planning and strategy analysis.`;
+    const descriptionEN = `Analysis of diseases and pests affecting vegetables and fruits in Pokhara Metropolitan City. Detailed study of major diseases and pests affecting ${totalVegetableFruits} types of vegetables and fruits. Most affected crop is ${VEGETABLE_FRUIT_TYPES_EN[mostAffectedVegetableFruit] || mostAffectedVegetableFruit}. Municipality-wide vegetable and fruit protection planning and strategy analysis.`;
 
     return {
       title: `तरकारी र फलफूलमा रोग कीटपतंग | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -239,7 +239,7 @@ export default async function MunicipalityWideVegetablesAndFruitsDiseasesPage() 
               src="/images/vegetable-diseases.svg"
               width={1200}
               height={400}
-              alt="तरकारी र फलफूलमा रोग कीटपतंग - पोखरा महानगरपालिका (Vegetable and Fruit Diseases and Pests - Khajura metropolitan city)"
+              alt="तरकारी र फलफूलमा रोग कीटपतंग - पोखरा महानगरपालिका (Vegetable and Fruit Diseases and Pests - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

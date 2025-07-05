@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const householdChoresData =
       await api.profile.economics.wardTimeWiseHouseholdChores.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalPopulation = householdChoresData.reduce(
@@ -80,22 +80,22 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city household chores",
+      "Pokhara Metropolitan City household chores",
       "Household chores time distribution",
-      `Khajura ${TIME_SPENT_NAMES_EN[topTimeCategories[0]]} household work`,
+      `Pokhara ${TIME_SPENT_NAMES_EN[topTimeCategories[0]]} household work`,
       ...topTimeCategories.map(
-        (t) => `${TIME_SPENT_NAMES_EN[t]} spent on household chores in Khajura`,
+        (t) => `${TIME_SPENT_NAMES_EN[t]} spent on household chores in Pokhara`,
       ),
       "Ward-wise household chores",
       "Time distribution for household work",
       "Household chores statistics",
-      `Khajura population household work ${totalPopulation}`,
+      `Pokhara population household work ${totalPopulation}`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकाको वडा अनुसार घरायसी कामकाजमा बिताइने समयको वितरण र विश्लेषण। कुल ${totalPopulation} जनसंख्या मध्ये ${TIME_SPENT_NAMES_NP[topTimeCategories[0]]} (${timeSpentCounts[topTimeCategories[0]]}) सबैभन्दा धेरै अपनाइएको समय अवधि हो, त्यसपछि ${TIME_SPENT_NAMES_NP[topTimeCategories[1]]} (${timeSpentCounts[topTimeCategories[1]]}) र ${TIME_SPENT_NAMES_NP[topTimeCategories[2]]} (${timeSpentCounts[topTimeCategories[2]]})। घरायसी कामकाजमा खर्चिने समय सम्बन्धी विस्तृत तथ्याङ्क र विश्लेषण।`;
 
-    const descriptionEN = `Ward-wise time distribution and analysis of household chores in Khajura metropolitan city. Out of total ${totalPopulation} population, ${TIME_SPENT_NAMES_EN[topTimeCategories[0]]} (${timeSpentCounts[topTimeCategories[0]]}) is the most common time spent, followed by ${TIME_SPENT_NAMES_EN[topTimeCategories[1]]} (${timeSpentCounts[topTimeCategories[1]]}) and ${TIME_SPENT_NAMES_EN[topTimeCategories[2]]} (${timeSpentCounts[topTimeCategories[2]]})। Detailed statistics and analysis on time spent on household chores.`;
+    const descriptionEN = `Ward-wise time distribution and analysis of household chores in Pokhara Metropolitan City. Out of total ${totalPopulation} population, ${TIME_SPENT_NAMES_EN[topTimeCategories[0]]} (${timeSpentCounts[topTimeCategories[0]]}) is the most common time spent, followed by ${TIME_SPENT_NAMES_EN[topTimeCategories[1]]} (${timeSpentCounts[topTimeCategories[1]]}) and ${TIME_SPENT_NAMES_EN[topTimeCategories[2]]} (${timeSpentCounts[topTimeCategories[2]]})। Detailed statistics and analysis on time spent on household chores.`;
 
     return {
       title: `घरायसी कामकाजमा खर्चिने समय | ${municipalityName} पालिका प्रोफाइल`,
@@ -248,7 +248,7 @@ export default async function WardHouseholdChoresPage() {
               src="/images/household-chores.svg"
               width={1200}
               height={400}
-              alt="घरायसी कामकाज - पोखरा महानगरपालिका (Household Chores - Khajura metropolitan city)"
+              alt="घरायसी कामकाज - पोखरा महानगरपालिका (Household Chores - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

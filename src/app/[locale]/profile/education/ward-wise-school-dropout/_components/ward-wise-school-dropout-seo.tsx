@@ -65,7 +65,7 @@ export default function WardWiseSchoolDropoutSEO({
 
         return {
           "@type": "Observation",
-          name: `School Dropout Statistics in Ward ${wardNumber} of Khajura metropolitan city`,
+          name: `School Dropout Statistics in Ward ${wardNumber} of Pokhara Metropolitan City`,
           observationDate: new Date().toISOString().split("T")[0],
           measuredProperty: {
             "@type": "PropertyValue",
@@ -73,7 +73,7 @@ export default function WardWiseSchoolDropoutSEO({
             unitText: "percentage",
           },
           measuredValue: parseFloat(economicDropoutPercent),
-          description: `In Ward ${wardNumber} of Khajura metropolitan city, ${economicDropouts.toLocaleString()} students (${economicDropoutPercent}%) have dropped out of school due to economic-related reasons out of a total of ${totalWardDropouts.toLocaleString()} dropouts.`,
+          description: `In Ward ${wardNumber} of Pokhara Metropolitan City, ${economicDropouts.toLocaleString()} students (${economicDropoutPercent}%) have dropped out of school due to economic-related reasons out of a total of ${totalWardDropouts.toLocaleString()} dropouts.`,
         };
       })
       .filter(Boolean);
@@ -90,10 +90,10 @@ export default function WardWiseSchoolDropoutSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "School Dropout Causes in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Analysis of school dropout causes across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalDropouts.toLocaleString()} dropouts. ${dropoutGroupTotals.ECONOMIC.toLocaleString()} students (${dropoutGroupPercentages.ECONOMIC.toFixed(2)}%) have left school due to economic-related reasons. The highest economic-related dropout rate is in Ward ${highestEconomicDropoutWard?.wardNumber || ""} with ${highestEconomicDropoutWard?.percentage.toFixed(2) || ""}%.`,
+      name: "School Dropout Causes in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Analysis of school dropout causes across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalDropouts.toLocaleString()} dropouts. ${dropoutGroupTotals.ECONOMIC.toLocaleString()} students (${dropoutGroupPercentages.ECONOMIC.toFixed(2)}%) have left school due to economic-related reasons. The highest economic-related dropout rate is in Ward ${highestEconomicDropoutWard?.wardNumber || ""} with ${highestEconomicDropoutWard?.percentage.toFixed(2) || ""}%.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "School dropout",
         "Employment-related dropouts",
@@ -110,13 +110,13 @@ export default function WardWiseSchoolDropoutSEO({
       url: "https://digital.pokharamun.gov.np/profile/education/ward-wise-school-dropout",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",
@@ -179,10 +179,10 @@ export default function WardWiseSchoolDropoutSEO({
         name: "Municipality Education Survey",
         provider: {
           "@type": "GovernmentOrganization",
-          name: "Khajura metropolitan city",
+          name: "Pokhara Metropolitan City",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Khajura",
+            addressLocality: "Pokhara",
             addressRegion: "Banke",
             addressCountry: "Nepal",
           },

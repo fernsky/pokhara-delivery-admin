@@ -73,11 +73,11 @@ export default function LandOwnershipCharts({
       >
         <meta
           itemProp="name"
-          content="Land Ownership Types in Khajura metropolitan city"
+          content="Land Ownership Types in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content={`Land ownership types of Khajura with a total of ${totalHouseholds} households`}
+          content={`Land ownership types of Pokhara with a total of ${totalHouseholds} households`}
         />
 
         <div className="border-b px-4 py-3">
@@ -224,11 +224,11 @@ export default function LandOwnershipCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Land Ownership in Khajura metropolitan city"
+          content="Ward-wise Land Ownership in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Land ownership distribution across wards in Khajura"
+          content="Land ownership distribution across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -260,11 +260,11 @@ export default function LandOwnershipCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Land Ownership Analysis in Khajura metropolitan city"
+          content="Ward-wise Land Ownership Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Land ownership patterns by ward in Khajura"
+          content="Land ownership patterns by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

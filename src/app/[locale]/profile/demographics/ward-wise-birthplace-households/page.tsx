@@ -42,7 +42,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const birthplaceData =
       await api.profile.demographics.wardWiseBirthplaceHouseholds.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalHouseholds = birthplaceData.reduce(
@@ -85,19 +85,19 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city birthplace households",
-      "Khajura household birthplace distribution",
+      "Pokhara Metropolitan City birthplace households",
+      "Pokhara household birthplace distribution",
       "Ward-wise birthplace data",
       "Household birthplace analysis",
-      "Local households in Khajura",
+      "Local households in Pokhara",
       "Inter-district migration",
-      `Khajura total households ${totalHouseholds}`,
+      `Pokhara total households ${totalHouseholds}`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकाको वडा अनुसार घरपरिवारको जन्मस्थानको वितरण र विश्लेषण। कुल घरपरिवार संख्या ${localizeNumber(totalHouseholds.toString(), "ne")} मध्ये ${localizeNumber(mostCommonPercentage, "ne")}% (${localizeNumber(mostCommonCount.toString(), "ne")}) ${BIRTH_PLACE_NAMES[mostCommonBirthplace] || mostCommonBirthplace} बाट आएका देखिन्छ। विभिन्न वडाहरूमा घरपरिवारको जन्मस्थानको विस्तृत विश्लेषण।`;
 
-    const descriptionEN = `Ward-wise distribution and analysis of household birthplaces in Khajura metropolitan city. Out of a total of ${totalHouseholds} households, ${mostCommonPercentage}% (${mostCommonCount}) are from ${BIRTH_PLACE_NAMES_EN[mostCommonBirthplace] || mostCommonBirthplace}. Detailed analysis of household birthplaces across various wards.`;
+    const descriptionEN = `Ward-wise distribution and analysis of household birthplaces in Pokhara Metropolitan City. Out of a total of ${totalHouseholds} households, ${mostCommonPercentage}% (${mostCommonCount}) are from ${BIRTH_PLACE_NAMES_EN[mostCommonBirthplace] || mostCommonBirthplace}. Detailed analysis of household birthplaces across various wards.`;
 
     return {
       title: `घरपरिवारको जन्मस्थान | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -261,7 +261,7 @@ export default async function WardWiseBirthplaceHouseholdsPage() {
               src="/images/birthplace-households.svg"
               width={1200}
               height={400}
-              alt="घरपरिवारको जन्मस्थान - पोखरा महानगरपालिका (Household Birthplaces - Khajura metropolitan city)"
+              alt="घरपरिवारको जन्मस्थान - पोखरा महानगरपालिका (Household Birthplaces - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

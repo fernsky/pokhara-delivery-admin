@@ -1,5 +1,5 @@
 """
-Economics models for pokhara metropolitan city Digital Profile
+Economics models for pokhara Metropolitan City Digital Profile
 
 This module contains models related to agriculture, livestock, employment, income,
 cooperatives, and economic activities as specified in the SQL schema files.

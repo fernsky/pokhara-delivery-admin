@@ -68,7 +68,7 @@ export default function WardWiseEducationalLevelSEO({
 
         return {
           "@type": "Observation",
-          name: `Educational Level Statistics in Ward ${wardNumber} of Khajura metropolitan city`,
+          name: `Educational Level Statistics in Ward ${wardNumber} of Pokhara Metropolitan City`,
           observationDate: new Date().toISOString().split("T")[0],
           measuredProperty: {
             "@type": "PropertyValue",
@@ -76,7 +76,7 @@ export default function WardWiseEducationalLevelSEO({
             unitText: "percentage",
           },
           measuredValue: parseFloat(higherEducationPercent),
-          description: `In Ward ${wardNumber} of Khajura metropolitan city, ${higherEducation.toLocaleString()} people (${higherEducationPercent}%) have attained higher education out of a total of ${totalWardPopulation.toLocaleString()} people.`,
+          description: `In Ward ${wardNumber} of Pokhara Metropolitan City, ${higherEducation.toLocaleString()} people (${higherEducationPercent}%) have attained higher education out of a total of ${totalWardPopulation.toLocaleString()} people.`,
         };
       })
       .filter(Boolean);
@@ -94,10 +94,10 @@ export default function WardWiseEducationalLevelSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Educational Level Distribution in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Analysis of educational levels across ${wardNumbers.length} wards of Khajura metropolitan city with a total population of ${totalPopulation.toLocaleString()}. ${educationGroupTotals.HIGHER_EDUCATION.toLocaleString()} people (${educationGroupPercentages.HIGHER_EDUCATION.toFixed(2)}%) have attained higher education. The highest educational level is in Ward ${bestEducatedWard?.wardNumber || ""} with ${bestEducatedWard?.percentage.toFixed(2) || ""}% of people having higher education.`,
+      name: "Educational Level Distribution in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Analysis of educational levels across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total population of ${totalPopulation.toLocaleString()}. ${educationGroupTotals.HIGHER_EDUCATION.toLocaleString()} people (${educationGroupPercentages.HIGHER_EDUCATION.toFixed(2)}%) have attained higher education. The highest educational level is in Ward ${bestEducatedWard?.wardNumber || ""} with ${bestEducatedWard?.percentage.toFixed(2) || ""}% of people having higher education.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Educational level",
         "Higher education rate",
@@ -115,13 +115,13 @@ export default function WardWiseEducationalLevelSEO({
       url: "https://digital.pokharamun.gov.np/profile/education/ward-wise-educational-level",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",
@@ -192,10 +192,10 @@ export default function WardWiseEducationalLevelSEO({
         name: "Municipality Education Survey",
         provider: {
           "@type": "GovernmentOrganization",
-          name: "Khajura metropolitan city",
+          name: "Pokhara Metropolitan City",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Khajura",
+            addressLocality: "Pokhara",
             addressRegion: "Banke",
             addressCountry: "Nepal",
           },

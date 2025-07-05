@@ -63,11 +63,11 @@ export default function BirthplaceHouseholdCharts({
       >
         <meta
           itemProp="name"
-          content="Household Birthplaces in Khajura metropolitan city"
+          content="Household Birthplaces in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content={`Household birthplace distribution of Khajura with a total of ${totalHouseholds} households`}
+          content={`Household birthplace distribution of Pokhara with a total of ${totalHouseholds} households`}
         />
 
         <div className="border-b px-4 py-3">
@@ -201,11 +201,11 @@ export default function BirthplaceHouseholdCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Household Birthplaces in Khajura metropolitan city"
+          content="Ward-wise Household Birthplaces in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Household birthplace distribution across wards in Khajura"
+          content="Household birthplace distribution across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -236,11 +236,11 @@ export default function BirthplaceHouseholdCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Birthplace Analysis in Khajura metropolitan city"
+          content="Ward-wise Birthplace Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Most common household birthplaces by ward in Khajura"
+          content="Most common household birthplaces by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

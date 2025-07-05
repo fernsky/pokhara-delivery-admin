@@ -73,11 +73,11 @@ export default function WaterPurificationCharts({
       >
         <meta
           itemProp="name"
-          content="Water Purification Methods in Khajura metropolitan city"
+          content="Water Purification Methods in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content={`Water purification method distribution of Khajura with a total of ${totalHouseholds} households`}
+          content={`Water purification method distribution of Pokhara with a total of ${totalHouseholds} households`}
         />
 
         <div className="border-b px-4 py-3">
@@ -215,11 +215,11 @@ export default function WaterPurificationCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Water Purification in Khajura metropolitan city"
+          content="Ward-wise Water Purification in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Water purification methods distribution across wards in Khajura"
+          content="Water purification methods distribution across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -250,11 +250,11 @@ export default function WaterPurificationCharts({
       >
         <meta
           itemProp="name"
-          content="Water Treatment Rate Comparison Across Wards in Khajura metropolitan city"
+          content="Water Treatment Rate Comparison Across Wards in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Comparison of water treatment rates across wards in Khajura"
+          content="Comparison of water treatment rates across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -286,11 +286,11 @@ export default function WaterPurificationCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Water Purification Analysis in Khajura metropolitan city"
+          content="Ward-wise Water Purification Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Most common water purification methods by ward in Khajura"
+          content="Most common water purification methods by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

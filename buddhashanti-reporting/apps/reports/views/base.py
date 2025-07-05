@@ -62,7 +62,7 @@ class ReportContextMixin:
 
         # Municipality name - make dynamic
         municipality_name = "पोखरा महानगरपालिका"
-        municipality_name_english = "pokhara metropolitan city"
+        municipality_name_english = "pokhara Metropolitan City"
 
         # Get publication settings
         publication_settings = PublicationSettings.objects.first()

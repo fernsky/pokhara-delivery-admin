@@ -59,7 +59,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const languageData =
       await api.profile.demographics.wardWiseMotherTonguePopulation.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalPopulation = languageData.reduce(
@@ -115,20 +115,20 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city mother tongue population",
-      "Khajura linguistic diversity",
-      `Khajura ${LANGUAGE_NAMES_EN[topLanguages[0]]} speakers population`,
-      ...topLanguages.map((l) => `${LANGUAGE_NAMES_EN[l]} speakers in Khajura`),
+      "Pokhara Metropolitan City mother tongue population",
+      "Pokhara linguistic diversity",
+      `Pokhara ${LANGUAGE_NAMES_EN[topLanguages[0]]} speakers population`,
+      ...topLanguages.map((l) => `${LANGUAGE_NAMES_EN[l]} speakers in Pokhara`),
       "Ward-wise mother tongue demographics",
       "Linguistic diversity statistics",
-      "Language census Khajura",
-      `Khajura total population ${totalPopulation}`,
+      "Language census Pokhara",
+      `Pokhara total population ${totalPopulation}`,
     ];
 
     // Create detailed description with actual data using localized numbers
     const descriptionNP = `पोखरा महानगरपालिकाको वडा अनुसार मातृभाषा जनसंख्या वितरण, प्रवृत्ति र विश्लेषण। कुल जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")} मध्ये ${LANGUAGE_NAMES[topLanguages[0]]} (${localizeNumber(languageCounts[topLanguages[0]].toString(), "ne")}) सबैभन्दा ठूलो भाषिक समूह हो, त्यसपछि ${LANGUAGE_NAMES[topLanguages[1]]} (${localizeNumber(languageCounts[topLanguages[1]].toString(), "ne")}) र ${LANGUAGE_NAMES[topLanguages[2]]} (${localizeNumber(languageCounts[topLanguages[2]].toString(), "ne")})। विभिन्न भाषाभाषीहरूको विस्तृत तथ्याङ्क र विजुअलाइजेसन।`;
 
-    const descriptionEN = `Ward-wise mother tongue population distribution, trends and analysis for Khajura metropolitan city. Out of a total population of ${totalPopulation}, ${LANGUAGE_NAMES_EN[topLanguages[0]]} (${languageCounts[topLanguages[0]]}) is the largest language group, followed by ${LANGUAGE_NAMES_EN[topLanguages[1]]} (${languageCounts[topLanguages[1]]}) and ${LANGUAGE_NAMES_EN[topLanguages[2]]} (${languageCounts[topLanguages[2]]})। Detailed statistics and visualizations of various linguistic communities.`;
+    const descriptionEN = `Ward-wise mother tongue population distribution, trends and analysis for Pokhara Metropolitan City. Out of a total population of ${totalPopulation}, ${LANGUAGE_NAMES_EN[topLanguages[0]]} (${languageCounts[topLanguages[0]]}) is the largest language group, followed by ${LANGUAGE_NAMES_EN[topLanguages[1]]} (${languageCounts[topLanguages[1]]}) and ${LANGUAGE_NAMES_EN[topLanguages[2]]} (${languageCounts[topLanguages[2]]})। Detailed statistics and visualizations of various linguistic communities.`;
 
     return {
       title: "पोखरा महानगरपालिकामा मातृभाषा अनुसार जनसंख्या | पालिका प्रोफाइल",
@@ -286,7 +286,7 @@ export default async function WardWiseMotherTonguePopulationPage() {
               src="/images/language-diversity.svg"
               width={1200}
               height={400}
-              alt="भाषिक विविधता - पोखरा महानगरपालिका (Linguistic Diversity - Khajura metropolitan city)"
+              alt="भाषिक विविधता - पोखरा महानगरपालिका (Linguistic Diversity - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

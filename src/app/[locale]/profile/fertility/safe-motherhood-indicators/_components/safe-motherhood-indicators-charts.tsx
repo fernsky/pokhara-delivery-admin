@@ -141,7 +141,7 @@ export default function SafeMotherhoodIndicatorsCharts({
       >
         <meta
           itemProp="name"
-          content="Safe Motherhood Trends in Khajura metropolitan city"
+          content="Safe Motherhood Trends in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
@@ -176,7 +176,7 @@ export default function SafeMotherhoodIndicatorsCharts({
       >
         <meta
           itemProp="name"
-          content={`Antenatal Care Indicators in Khajura for ${latestYear}`}
+          content={`Antenatal Care Indicators in Pokhara for ${latestYear}`}
         />
         <meta
           itemProp="description"
@@ -253,7 +253,7 @@ export default function SafeMotherhoodIndicatorsCharts({
       >
         <meta
           itemProp="name"
-          content={`Delivery Services in Khajura for ${latestYear}`}
+          content={`Delivery Services in Pokhara for ${latestYear}`}
         />
         <meta
           itemProp="description"
@@ -332,7 +332,7 @@ export default function SafeMotherhoodIndicatorsCharts({
         >
           <meta
             itemProp="name"
-            content="Postnatal Care Indicators in Khajura"
+            content="Postnatal Care Indicators in Pokhara"
           />
 
           <div className="border-b px-4 py-3">
@@ -363,7 +363,7 @@ export default function SafeMotherhoodIndicatorsCharts({
         >
           <meta
             itemProp="name"
-            content="Newborn Health Indicators in Khajura"
+            content="Newborn Health Indicators in Pokhara"
           />
 
           <div className="border-b px-4 py-3">

@@ -111,7 +111,7 @@ export default function DeathCauseAnalysisSection({
     if (document && document.body) {
       document.body.setAttribute(
         "data-municipality",
-        "Khajura metropolitan city / पोखरा महानगरपालिका",
+        "Pokhara Metropolitan City / पोखरा महानगरपालिका",
       );
       document.body.setAttribute("data-total-deaths", totalDeaths.toString());
 
@@ -222,7 +222,7 @@ export default function DeathCauseAnalysisSection({
       <div className="bg-muted/50 p-4 rounded-lg mt-8">
         <h3 className="text-xl font-medium mb-4">
           मृत्युका कारणहरूको विश्लेषण
-          <span className="sr-only">Death Cause Analysis of Khajura</span>
+          <span className="sr-only">Death Cause Analysis of Pokhara</span>
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div
@@ -233,7 +233,7 @@ export default function DeathCauseAnalysisSection({
             <h4 className="font-medium mb-2">
               दीर्घ रोगहरू
               <span className="sr-only">
-                Chronic Diseases in Khajura metropolitan city
+                Chronic Diseases in Pokhara Metropolitan City
               </span>
             </h4>
             <p className="text-3xl font-bold">
@@ -256,7 +256,7 @@ export default function DeathCauseAnalysisSection({
             <h4 className="font-medium mb-2">
               संक्रामक रोगहरू
               <span className="sr-only">
-                Infectious Diseases in Khajura metropolitan city
+                Infectious Diseases in Pokhara Metropolitan City
               </span>
             </h4>
             <p className="text-3xl font-bold">
@@ -280,7 +280,7 @@ export default function DeathCauseAnalysisSection({
             <h4 className="font-medium mb-2">
               दुर्घटना/आत्महत्या
               <span className="sr-only">
-                Accidents/Suicide in Khajura metropolitan city
+                Accidents/Suicide in Pokhara Metropolitan City
               </span>
             </h4>
             <p className="text-3xl font-bold">

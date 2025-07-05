@@ -65,11 +65,11 @@ export default function HouseOwnershipCharts({
       >
         <meta
           itemProp="name"
-          content="House Ownership Types in Khajura metropolitan city"
+          content="House Ownership Types in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content={`House ownership distribution of Khajura with a total of ${totalHouseholds} households`}
+          content={`House ownership distribution of Pokhara with a total of ${totalHouseholds} households`}
         />
 
         <div className="border-b px-4 py-3">
@@ -205,11 +205,11 @@ export default function HouseOwnershipCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise House Ownership in Khajura metropolitan city"
+          content="Ward-wise House Ownership in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="House ownership distribution across wards in Khajura"
+          content="House ownership distribution across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -240,11 +240,11 @@ export default function HouseOwnershipCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise House Ownership Analysis in Khajura metropolitan city"
+          content="Ward-wise House Ownership Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Most common house ownership types by ward in Khajura"
+          content="Most common house ownership types by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

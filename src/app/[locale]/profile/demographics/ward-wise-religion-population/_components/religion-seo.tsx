@@ -37,7 +37,7 @@ export default function ReligionSEO({
     // Convert religion stats to structured data format
     const religionStats = overallSummary.map((item) => ({
       "@type": "Observation",
-      name: `${RELIGION_NAMES_EN[item.religion] || item.religion} population in Khajura metropolitan city`,
+      name: `${RELIGION_NAMES_EN[item.religion] || item.religion} population in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -45,16 +45,16 @@ export default function ReligionSEO({
         unitText: "people",
       },
       measuredValue: item.population,
-      description: `${item.population.toLocaleString()} people in Khajura metropolitan city follow ${RELIGION_NAMES_EN[item.religion] || item.religion} religion (${((item.population / totalPopulation) * 100).toFixed(2)}% of total population)`,
+      description: `${item.population.toLocaleString()} people in Pokhara Metropolitan City follow ${RELIGION_NAMES_EN[item.religion] || item.religion} religion (${((item.population / totalPopulation) * 100).toFixed(2)}% of total population)`,
     }));
 
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Religious Demographics of Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Religious population distribution data across ${wardNumbers.length} wards of Khajura metropolitan city with a total population of ${totalPopulation.toLocaleString()} people.`,
+      name: "Religious Demographics of Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Religious population distribution data across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total population of ${totalPopulation.toLocaleString()} people.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Religious demographics",
         "Ward-wise religion data",
@@ -65,13 +65,13 @@ export default function ReligionSEO({
       url: "https://digital.pokharamun.gov.np/profile/demographics/ward-wise-religion-population",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

@@ -93,7 +93,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const fruitData =
       await api.profile.economics.municipalityWideFruits.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalProduction = fruitData.reduce(
@@ -144,20 +144,20 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city fruits",
-      "Khajura fruit production",
+      "Pokhara Metropolitan City fruits",
+      "Pokhara fruit production",
       "Municipality-wide fruit statistics",
-      "Mango production in Khajura",
+      "Mango production in Pokhara",
       "Jackfruit cultivation statistics",
       "Litchi production data",
-      `Khajura fruit sales ${totalSales.toFixed(2)} tonnes`,
-      `Khajura fruit revenue ${(totalRevenue / 1000000).toFixed(2)} million rupees`,
+      `Pokhara fruit sales ${totalSales.toFixed(2)} tonnes`,
+      `Pokhara fruit revenue ${(totalRevenue / 1000000).toFixed(2)} million rupees`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकाको फलफूल बाली उत्पादन र बिक्री विश्लेषण। कुल ${localizeNumber(totalProduction.toFixed(2), "ne")} मेट्रिक टन फलफूल बाली उत्पादन मध्ये ${localizeNumber(mostProducedPercentage, "ne")}% (${localizeNumber(mostProducedAmount.toFixed(2), "ne")} टन) ${FRUIT_TYPES[mostProducedFruit] || mostProducedFruit} रहेको छ। पालिका स्तरीय फलफूल बालीको विस्तृत विश्लेषण।`;
 
-    const descriptionEN = `Analysis of fruit production and sales in Khajura metropolitan city. Out of total ${totalProduction.toFixed(2)} metric tonnes of fruit production, ${mostProducedPercentage}% (${mostProducedAmount.toFixed(2)} tonnes) is ${FRUIT_TYPES_EN[mostProducedFruit] || mostProducedFruit}. Detailed analysis of municipality-wide fruit patterns.`;
+    const descriptionEN = `Analysis of fruit production and sales in Pokhara Metropolitan City. Out of total ${totalProduction.toFixed(2)} metric tonnes of fruit production, ${mostProducedPercentage}% (${mostProducedAmount.toFixed(2)} tonnes) is ${FRUIT_TYPES_EN[mostProducedFruit] || mostProducedFruit}. Detailed analysis of municipality-wide fruit patterns.`;
 
     return {
       title: `फलफूल बालीको प्रकार अनुसार उत्पादन र बिक्री | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -364,7 +364,7 @@ export default async function MunicipalityWideFruitsPage() {
               src="/images/fruits.svg"
               width={1200}
               height={400}
-              alt="फलफूल बालीको प्रकार अनुसार उत्पादन र बिक्री - पोखरा महानगरपालिका (Fruits by Production and Sales - Khajura metropolitan city)"
+              alt="फलफूल बालीको प्रकार अनुसार उत्पादन र बिक्री - पोखरा महानगरपालिका (Fruits by Production and Sales - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

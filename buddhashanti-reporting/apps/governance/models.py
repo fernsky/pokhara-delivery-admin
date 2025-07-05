@@ -1,5 +1,5 @@
 """
-Governance models for pokhara metropolitan city Digital Profile
+Governance models for pokhara Metropolitan City Digital Profile
 
 This module contains models related to organizational structure, human resources,
 service delivery, civil organizations, and policies as specified in Chapter 8

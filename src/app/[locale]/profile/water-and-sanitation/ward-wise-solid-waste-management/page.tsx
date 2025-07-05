@@ -37,7 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
   try {
     const wardWiseSolidWasteManagementData =
       await api.profile.waterAndSanitation.wardWiseSolidWasteManagement.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Group by ward number
     const wardGroups = wardWiseSolidWasteManagementData.reduce(
@@ -78,7 +78,7 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city solid waste management",
+      "Pokhara Metropolitan City solid waste management",
       "Ward-wise solid waste management",
       "Home waste collection",
       `Home waste collection ${homeCollectionPercentage}%`,
@@ -88,7 +88,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create description
     const descriptionNP = `पोखरा महानगरपालिकामा फोहोरमैला व्यवस्थापनको वडागत विश्लेषण। कुल ${localizeNumber(totalHouseholds.toLocaleString(), "ne")} घरधुरी मध्ये ${localizeNumber(homeCollectionPercentage, "ne")}% (${localizeNumber(homeCollectionHouseholds.toLocaleString(), "ne")}) घरधुरीले घरमै फोहोर संकलन विधि प्रयोग गर्दछन्।`;
 
-    const descriptionEN = `Ward-wise analysis of solid waste management in Khajura metropolitan city. Out of a total of ${totalHouseholds.toLocaleString()} households, ${homeCollectionPercentage}% (${homeCollectionHouseholds.toLocaleString()}) households use home waste collection methods.`;
+    const descriptionEN = `Ward-wise analysis of solid waste management in Pokhara Metropolitan City. Out of a total of ${totalHouseholds.toLocaleString()} households, ${homeCollectionPercentage}% (${homeCollectionHouseholds.toLocaleString()}) households use home waste collection methods.`;
 
     return {
       title: `फोहोरमैला व्यवस्थापन | ${municipalityName} डिजिटल प्रोफाइल`,
@@ -296,7 +296,7 @@ export default async function WardWiseSolidWasteManagementPage() {
               src="/images/solid-waste-management.svg"
               width={1200}
               height={400}
-              alt="फोहोरमैला व्यवस्थापन - पोखरा महानगरपालिका (Solid Waste Management - Khajura metropolitan city)"
+              alt="फोहोरमैला व्यवस्थापन - पोखरा महानगरपालिका (Solid Waste Management - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

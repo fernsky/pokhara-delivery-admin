@@ -67,11 +67,11 @@ export default function DeceasedPopulationCharts({
       >
         <meta
           itemProp="name"
-          content="Gender-wise Deceased Population in Khajura metropolitan city"
+          content="Gender-wise Deceased Population in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content={`Gender-wise distribution of deceased population in Khajura with a total of ${totalDeceasedPopulation}`}
+          content={`Gender-wise distribution of deceased population in Pokhara with a total of ${totalDeceasedPopulation}`}
         />
 
         <div className="border-b px-4 py-3">
@@ -206,11 +206,11 @@ export default function DeceasedPopulationCharts({
       >
         <meta
           itemProp="name"
-          content="Age Group-wise Deceased Population in Khajura metropolitan city"
+          content="Age Group-wise Deceased Population in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Distribution of deceased population by age groups in Khajura"
+          content="Distribution of deceased population by age groups in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -354,11 +354,11 @@ export default function DeceasedPopulationCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Deceased Population in Khajura metropolitan city"
+          content="Ward-wise Deceased Population in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Distribution of deceased population across wards in Khajura"
+          content="Distribution of deceased population across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -502,11 +502,11 @@ export default function DeceasedPopulationCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Age-Gender Mortality Analysis in Khajura metropolitan city"
+          content="Ward-wise Age-Gender Mortality Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Detailed age and gender mortality distribution by ward in Khajura"
+          content="Detailed age and gender mortality distribution by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

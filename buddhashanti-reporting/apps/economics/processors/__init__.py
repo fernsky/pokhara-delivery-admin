@@ -1,5 +1,5 @@
 """
-Economics processors package for pokhara metropolitan city.
+Economics processors package for pokhara Metropolitan City.
 """
 
 from .remittance_expenses import RemittanceExpensesProcessor

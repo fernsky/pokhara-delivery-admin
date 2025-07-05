@@ -20,7 +20,7 @@ export default function TrainedPopulationSEO({
     // Convert trained population stats to structured data format
     const wardStats = trainedPopulationData.map((item) => ({
       "@type": "Observation",
-      name: `Ward ${item.wardNumber} trained population in Khajura metropolitan city`,
+      name: `Ward ${item.wardNumber} trained population in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -28,16 +28,16 @@ export default function TrainedPopulationSEO({
         unitText: "people",
       },
       measuredValue: item.trainedPopulation,
-      description: `${item.trainedPopulation.toLocaleString()} people in Ward ${item.wardNumber} of Khajura metropolitan city have received vocational or skills training (${((item.trainedPopulation / totalTrainedPopulation) * 100).toFixed(2)}% of total trained population)`,
+      description: `${item.trainedPopulation.toLocaleString()} people in Ward ${item.wardNumber} of Pokhara Metropolitan City have received vocational or skills training (${((item.trainedPopulation / totalTrainedPopulation) * 100).toFixed(2)}% of total trained population)`,
     }));
 
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Trained Population Distribution of Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Trained population distribution data across ${wardNumbers.length} wards of Khajura metropolitan city with a total of ${totalTrainedPopulation.toLocaleString()} trained individuals.`,
+      name: "Trained Population Distribution of Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Trained population distribution data across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total of ${totalTrainedPopulation.toLocaleString()} trained individuals.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Trained population",
         "Skills development",
@@ -50,13 +50,13 @@ export default function TrainedPopulationSEO({
       url: "https://pokhara-rm.gov.np/profile/economics/ward-trained-population",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://pokhara-rm.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

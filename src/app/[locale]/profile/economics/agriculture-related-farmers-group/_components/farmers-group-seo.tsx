@@ -43,12 +43,12 @@ export default function FarmersGroupSEO({
     // Convert group stats to structured data format
     const groupTypeStats = groupSummary.map((item) => ({
       "@type": "Dataset",
-      name: `${item.type} in Khajura metropolitan city`,
-      description: `There are ${item.count} ${item.type} groups operating in Khajura metropolitan city, representing ${item.percentage.toFixed(2)}% of total agricultural groups.`,
-      keywords: [item.type, "agriculture", "farming groups", "Khajura"],
+      name: `${item.type} in Pokhara Metropolitan City`,
+      description: `There are ${item.count} ${item.type} groups operating in Pokhara Metropolitan City, representing ${item.percentage.toFixed(2)}% of total agricultural groups.`,
+      keywords: [item.type, "agriculture", "farming groups", "Pokhara"],
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
       },
       variableMeasured: [
         {
@@ -76,7 +76,7 @@ export default function FarmersGroupSEO({
         .join(", ")}${ward.farms.length > 3 ? " and others" : ""}.`,
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
       },
       variableMeasured: {
         "@type": "PropertyValue",
@@ -92,10 +92,10 @@ export default function FarmersGroupSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Agriculture Related Farmers Groups in Khajura metropolitan city",
-      description: `Comprehensive analysis of ${totalGroups} agriculture related farmers groups in Khajura metropolitan city. The most common type is ${mostCommonGroupType} (${statistics.mostPopularGroupTypePercentage.toFixed(1)}%), and Ward ${statistics.wardWithMostGroups} has the highest concentration with ${statistics.maximumGroupsInAWard} groups. This dataset covers all 9 wards of the municipality.`,
+      name: "Agriculture Related Farmers Groups in Pokhara Metropolitan City",
+      description: `Comprehensive analysis of ${totalGroups} agriculture related farmers groups in Pokhara Metropolitan City. The most common type is ${mostCommonGroupType} (${statistics.mostPopularGroupTypePercentage.toFixed(1)}%), and Ward ${statistics.wardWithMostGroups} has the highest concentration with ${statistics.maximumGroupsInAWard} groups. This dataset covers all 9 wards of the municipality.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Agriculture",
         "Farmers Groups",
@@ -108,13 +108,13 @@ export default function FarmersGroupSEO({
       url: "https://digital.pokharamun.gov.np/profile/economics/agriculture-related-farmers-group",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",
@@ -169,7 +169,7 @@ export default function FarmersGroupSEO({
       ],
       isPartOf: {
         "@type": "Dataset",
-        name: "Khajura metropolitan city Digital Profile",
+        name: "Pokhara Metropolitan City Digital Profile",
         url: "https://digital.pokharamun.gov.np",
       },
     };

@@ -41,7 +41,7 @@ export default function WardWiseHealthInsuredHouseholdsSEO({
     const insuranceStats = wardInsuredPercentages.map((wardData) => {
       return {
         "@type": "Observation",
-        name: `Health Insurance Statistics in Ward ${wardData.wardNumber} of Khajura metropolitan city`,
+        name: `Health Insurance Statistics in Ward ${wardData.wardNumber} of Pokhara Metropolitan City`,
         observationDate: new Date().toISOString().split("T")[0],
         measuredProperty: {
           "@type": "PropertyValue",
@@ -49,17 +49,17 @@ export default function WardWiseHealthInsuredHouseholdsSEO({
           unitText: "percentage",
         },
         measuredValue: parseFloat(wardData.percentage.toFixed(2)),
-        description: `In Ward ${wardData.wardNumber} of Khajura metropolitan city, ${wardData.percentage.toFixed(2)}% of households have health insurance.`,
+        description: `In Ward ${wardData.wardNumber} of Pokhara Metropolitan City, ${wardData.percentage.toFixed(2)}% of households have health insurance.`,
       };
     });
 
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Health Insurance Coverage in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Analysis of health insurance coverage across wards of Khajura metropolitan city with a total of ${totalHouseholds.toLocaleString()} households. ${totalInsuredHouseholds.toLocaleString()} households (${insuredPercentage.toFixed(2)}%) have health insurance coverage. The highest coverage is in Ward ${bestInsuranceWard?.wardNumber || ""} with ${bestInsuranceWard?.percentage.toFixed(2) || ""}% insurance rate.`,
+      name: "Health Insurance Coverage in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Analysis of health insurance coverage across wards of Pokhara Metropolitan City with a total of ${totalHouseholds.toLocaleString()} households. ${totalInsuredHouseholds.toLocaleString()} households (${insuredPercentage.toFixed(2)}%) have health insurance coverage. The highest coverage is in Ward ${bestInsuranceWard?.wardNumber || ""} with ${bestInsuranceWard?.percentage.toFixed(2) || ""}% insurance rate.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Health insurance",
         "स्वास्थ्य बीमा",
@@ -74,13 +74,13 @@ export default function WardWiseHealthInsuredHouseholdsSEO({
       url: "https://digital.pokharamun.gov.np/profile/health/ward-wise-health-insured-households",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",
@@ -131,10 +131,10 @@ export default function WardWiseHealthInsuredHouseholdsSEO({
         name: "Municipality Health Survey",
         provider: {
           "@type": "GovernmentOrganization",
-          name: "Khajura metropolitan city",
+          name: "Pokhara Metropolitan City",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Khajura",
+            addressLocality: "Pokhara",
             addressRegion: "Banke",
             addressCountry: "Nepal",
           },

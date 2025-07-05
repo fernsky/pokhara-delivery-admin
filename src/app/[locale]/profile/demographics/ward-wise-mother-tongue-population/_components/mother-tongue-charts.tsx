@@ -76,11 +76,11 @@ export default function MotherTongueCharts({
       >
         <meta
           itemProp="name"
-          content="Mother Tongue Distribution in Khajura metropolitan city"
+          content="Mother Tongue Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content={`Linguistic composition of Khajura with a total population of ${totalPopulation}`}
+          content={`Linguistic composition of Pokhara with a total population of ${totalPopulation}`}
         />
 
         <div className="border-b px-4 py-3">
@@ -246,11 +246,11 @@ export default function MotherTongueCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Mother Tongue Distribution in Khajura metropolitan city"
+          content="Ward-wise Mother Tongue Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Mother tongue distribution across wards in Khajura"
+          content="Mother tongue distribution across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -281,11 +281,11 @@ export default function MotherTongueCharts({
       >
         <meta
           itemProp="name"
-          content="Detailed Linguistic Analysis by Ward in Khajura metropolitan city"
+          content="Detailed Linguistic Analysis by Ward in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Detailed linguistic composition of each ward in Khajura"
+          content="Detailed linguistic composition of each ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

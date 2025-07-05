@@ -63,7 +63,7 @@ export default function WardWiseTimeToHealthOrganizationCharts({
       >
         <meta
           itemProp="name"
-          content="Time to Health Organization Distribution in Khajura metropolitan city"
+          content="Time to Health Organization Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
@@ -186,11 +186,11 @@ export default function WardWiseTimeToHealthOrganizationCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Time to Health Organization in Khajura metropolitan city"
+          content="Ward-wise Time to Health Organization in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Distribution of time to health organization across wards in Khajura"
+          content="Distribution of time to health organization across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -220,11 +220,11 @@ export default function WardWiseTimeToHealthOrganizationCharts({
       >
         <meta
           itemProp="name"
-          content="Quick Access to Health Facilities Comparison Across Wards in Khajura metropolitan city"
+          content="Quick Access to Health Facilities Comparison Across Wards in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Comparison of quick access to health facilities across wards in Khajura"
+          content="Comparison of quick access to health facilities across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -257,11 +257,11 @@ export default function WardWiseTimeToHealthOrganizationCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Health Organization Access Analysis in Khajura metropolitan city"
+          content="Ward-wise Health Organization Access Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Detailed analysis of time to health organization by ward in Khajura"
+          content="Detailed analysis of time to health organization by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

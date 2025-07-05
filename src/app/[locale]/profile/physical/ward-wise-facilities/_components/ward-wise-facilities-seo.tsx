@@ -85,7 +85,7 @@ export default function WardWiseFacilitiesSEO({
 
         return {
           "@type": "Observation",
-          name: `Household Facilities Statistics in Ward ${wardNumber} of Khajura metropolitan city`,
+          name: `Household Facilities Statistics in Ward ${wardNumber} of Pokhara Metropolitan City`,
           observationDate: new Date().toISOString().split("T")[0],
           measuredProperty: {
             "@type": "PropertyValue",
@@ -93,7 +93,7 @@ export default function WardWiseFacilitiesSEO({
             unitText: "percentage",
           },
           measuredValue: parseFloat(internetPercentage),
-          description: `In Ward ${wardNumber} of Khajura metropolitan city, ${internetItem?.households || 0} households (${internetPercentage}%) have internet access out of approximately ${totalWardHouseholds} households.`,
+          description: `In Ward ${wardNumber} of Pokhara Metropolitan City, ${internetItem?.households || 0} households (${internetPercentage}%) have internet access out of approximately ${totalWardHouseholds} households.`,
         };
       })
       .filter(Boolean);
@@ -111,10 +111,10 @@ export default function WardWiseFacilitiesSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Household Facilities Usage in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Analysis of household facilities usage across ${wardNumbers.length} wards of Khajura metropolitan city with approximately ${approximateUniqueHouseholds.toLocaleString()} households. ${facilityTypeTotals.MOBILE_PHONE?.toLocaleString() || 0} households (${mobilePercentage}%) have mobile phones, ${facilityTypeTotals.INTERNET?.toLocaleString() || 0} households (${internetPercentage}%) have internet access. The best digital access is in Ward ${bestDigitalWard?.wardNumber || ""} with ${bestDigitalWard?.score.toFixed(2) || ""}% digital access score.`,
+      name: "Household Facilities Usage in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Analysis of household facilities usage across ${wardNumbers.length} wards of Pokhara Metropolitan City with approximately ${approximateUniqueHouseholds.toLocaleString()} households. ${facilityTypeTotals.MOBILE_PHONE?.toLocaleString() || 0} households (${mobilePercentage}%) have mobile phones, ${facilityTypeTotals.INTERNET?.toLocaleString() || 0} households (${internetPercentage}%) have internet access. The best digital access is in Ward ${bestDigitalWard?.wardNumber || ""} with ${bestDigitalWard?.score.toFixed(2) || ""}% digital access score.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Household facilities",
         "Mobile phone access",
@@ -130,13 +130,13 @@ export default function WardWiseFacilitiesSEO({
       url: "https://digital.pokharamun.gov.np/profile/physical/ward-wise-facilities",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",
@@ -207,10 +207,10 @@ export default function WardWiseFacilitiesSEO({
         name: "Municipality Household Survey",
         provider: {
           "@type": "GovernmentOrganization",
-          name: "Khajura metropolitan city",
+          name: "Pokhara Metropolitan City",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Khajura",
+            addressLocality: "Pokhara",
             addressRegion: "Banke",
             addressCountry: "Nepal",
           },

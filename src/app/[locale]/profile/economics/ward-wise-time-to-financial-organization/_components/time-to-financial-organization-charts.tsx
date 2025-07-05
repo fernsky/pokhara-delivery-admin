@@ -73,7 +73,7 @@ export default function TimeToFinancialOrganizationCharts({
       >
         <meta
           itemProp="name"
-          content="Time to Financial Organizations Distribution in Khajura metropolitan city"
+          content="Time to Financial Organizations Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
@@ -311,11 +311,11 @@ export default function TimeToFinancialOrganizationCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Time to Financial Organizations in Khajura metropolitan city"
+          content="Ward-wise Time to Financial Organizations in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Time to reach financial organizations across wards in Khajura"
+          content="Time to reach financial organizations across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -345,11 +345,11 @@ export default function TimeToFinancialOrganizationCharts({
       >
         <meta
           itemProp="name"
-          content="Financial Access Rate Comparison Across Wards in Khajura metropolitan city"
+          content="Financial Access Rate Comparison Across Wards in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Comparison of financial access rates across wards in Khajura"
+          content="Comparison of financial access rates across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -379,11 +379,11 @@ export default function TimeToFinancialOrganizationCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Financial Access Analysis in Khajura metropolitan city"
+          content="Ward-wise Financial Access Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Detailed analysis of time to reach financial organizations by ward in Khajura"
+          content="Detailed analysis of time to reach financial organizations by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

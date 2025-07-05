@@ -60,7 +60,7 @@ export default function WardWiseLiteracyStatusSEO({
 
         return {
           "@type": "Observation",
-          name: `Literacy Statistics in Ward ${wardNumber} of Khajura metropolitan city`,
+          name: `Literacy Statistics in Ward ${wardNumber} of Pokhara Metropolitan City`,
           observationDate: new Date().toISOString().split("T")[0],
           measuredProperty: {
             "@type": "PropertyValue",
@@ -68,7 +68,7 @@ export default function WardWiseLiteracyStatusSEO({
             unitText: "percentage",
           },
           measuredValue: parseFloat(bothReadingWritingPercent),
-          description: `In Ward ${wardNumber} of Khajura metropolitan city, ${bothReadingWriting.toLocaleString()} people (${bothReadingWritingPercent}%) can read and write out of a total of ${totalWardPopulation.toLocaleString()} people.`,
+          description: `In Ward ${wardNumber} of Pokhara Metropolitan City, ${bothReadingWriting.toLocaleString()} people (${bothReadingWritingPercent}%) can read and write out of a total of ${totalWardPopulation.toLocaleString()} people.`,
         };
       })
       .filter(Boolean);
@@ -88,10 +88,10 @@ export default function WardWiseLiteracyStatusSEO({
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Literacy Status Distribution in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Analysis of literacy status across ${wardNumbers.length} wards of Khajura metropolitan city with a total population of ${totalPopulation.toLocaleString()}. ${bothReadingWritingTotal.toLocaleString()} people (${bothReadingWritingPercentage.toFixed(2)}%) can both read and write, while ${illiterateTotal.toLocaleString()} people (${illiteratePercentage.toFixed(2)}%) are illiterate. The best literacy is in Ward ${bestLiteracyWard?.wardNumber || ""} with ${bestLiteracyWard?.bothReadingWritingPercent.toFixed(2) || ""}% of people who can read and write.`,
+      name: "Literacy Status Distribution in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Analysis of literacy status across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total population of ${totalPopulation.toLocaleString()}. ${bothReadingWritingTotal.toLocaleString()} people (${bothReadingWritingPercentage.toFixed(2)}%) can both read and write, while ${illiterateTotal.toLocaleString()} people (${illiteratePercentage.toFixed(2)}%) are illiterate. The best literacy is in Ward ${bestLiteracyWard?.wardNumber || ""} with ${bestLiteracyWard?.bothReadingWritingPercent.toFixed(2) || ""}% of people who can read and write.`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Literacy status",
         "Literacy rate",
@@ -107,13 +107,13 @@ export default function WardWiseLiteracyStatusSEO({
       url: "https://digital.pokharamun.gov.np/profile/education/ward-wise-literacy-status",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",
@@ -171,10 +171,10 @@ export default function WardWiseLiteracyStatusSEO({
         name: "Municipality Literacy Survey",
         provider: {
           "@type": "GovernmentOrganization",
-          name: "Khajura metropolitan city",
+          name: "Pokhara Metropolitan City",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Khajura",
+            addressLocality: "Pokhara",
             addressRegion: "Banke",
             addressCountry: "Nepal",
           },

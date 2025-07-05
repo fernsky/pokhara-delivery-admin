@@ -81,11 +81,11 @@ export default function SkillsCharts({
       >
         <meta
           itemProp="name"
-          content="Skills Distribution in Khajura metropolitan city"
+          content="Skills Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content={`Distribution of skills in Khajura with a total of ${totalPopulation} skilled population`}
+          content={`Distribution of skills in Pokhara with a total of ${totalPopulation} skilled population`}
         />
 
         <div className="border-b px-4 py-3">
@@ -222,11 +222,11 @@ export default function SkillsCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Skills Distribution in Khajura metropolitan city"
+          content="Ward-wise Skills Distribution in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Skills distribution across wards in Khajura"
+          content="Skills distribution across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -257,11 +257,11 @@ export default function SkillsCharts({
       >
         <meta
           itemProp="name"
-          content="Detailed Skills Analysis by Ward in Khajura metropolitan city"
+          content="Detailed Skills Analysis by Ward in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Detailed skills composition of each ward in Khajura"
+          content="Detailed skills composition of each ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

@@ -62,11 +62,11 @@ export default function MigratedHouseholdCharts({
       >
         <meta
           itemProp="name"
-          content="Migrated Households in Khajura metropolitan city"
+          content="Migrated Households in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content={`Migrated household distribution of Khajura with a total of ${totalHouseholds} households`}
+          content={`Migrated household distribution of Pokhara with a total of ${totalHouseholds} households`}
         />
 
         <div className="border-b px-4 py-3">
@@ -200,11 +200,11 @@ export default function MigratedHouseholdCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Migrated Households in Khajura metropolitan city"
+          content="Ward-wise Migrated Households in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Migrated household distribution across wards in Khajura"
+          content="Migrated household distribution across wards in Pokhara"
         />
 
         <div className="border-b px-4 py-3">
@@ -235,11 +235,11 @@ export default function MigratedHouseholdCharts({
       >
         <meta
           itemProp="name"
-          content="Ward-wise Migration Analysis in Khajura metropolitan city"
+          content="Ward-wise Migration Analysis in Pokhara Metropolitan City"
         />
         <meta
           itemProp="description"
-          content="Most common household migration origins by ward in Khajura"
+          content="Most common household migration origins by ward in Pokhara"
         />
 
         <div className="border-b px-4 py-3">

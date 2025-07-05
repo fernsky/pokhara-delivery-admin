@@ -66,7 +66,7 @@ export default function DeceasedPopulationSEO({
     const ageGroupStats = Object.entries(ageGroupData).map(
       ([ageGroup, data]) => ({
         "@type": "Observation",
-        name: `${AGE_GROUP_NAMES_EN[ageGroup] || ageGroup} deceased population in Khajura metropolitan city`,
+        name: `${AGE_GROUP_NAMES_EN[ageGroup] || ageGroup} deceased population in Pokhara Metropolitan City`,
         observationDate: new Date().toISOString().split("T")[0],
         measuredProperty: {
           "@type": "PropertyValue",
@@ -74,7 +74,7 @@ export default function DeceasedPopulationSEO({
           unitText: "people",
         },
         measuredValue: data.total,
-        description: `${data.total.toLocaleString()} deceased people in Khajura metropolitan city in the age group ${AGE_GROUP_NAMES_EN[ageGroup] || ageGroup} (${((data.total / totalDeceasedPopulation) * 100).toFixed(2)}% of total deceased population)`,
+        description: `${data.total.toLocaleString()} deceased people in Pokhara Metropolitan City in the age group ${AGE_GROUP_NAMES_EN[ageGroup] || ageGroup} (${((data.total / totalDeceasedPopulation) * 100).toFixed(2)}% of total deceased population)`,
       }),
     );
 
@@ -82,7 +82,7 @@ export default function DeceasedPopulationSEO({
     const genderStats = [
       {
         "@type": "Observation",
-        name: `${GENDER_NAMES_EN.MALE} deceased population in Khajura metropolitan city`,
+        name: `${GENDER_NAMES_EN.MALE} deceased population in Pokhara Metropolitan City`,
         observationDate: new Date().toISOString().split("T")[0],
         measuredProperty: {
           "@type": "PropertyValue",
@@ -90,11 +90,11 @@ export default function DeceasedPopulationSEO({
           unitText: "people",
         },
         measuredValue: genderTotals.male,
-        description: `${genderTotals.male.toLocaleString()} deceased ${GENDER_NAMES_EN.MALE} in Khajura metropolitan city (${((genderTotals.male / totalDeceasedPopulation) * 100).toFixed(2)}% of total deceased population)`,
+        description: `${genderTotals.male.toLocaleString()} deceased ${GENDER_NAMES_EN.MALE} in Pokhara Metropolitan City (${((genderTotals.male / totalDeceasedPopulation) * 100).toFixed(2)}% of total deceased population)`,
       },
       {
         "@type": "Observation",
-        name: `${GENDER_NAMES_EN.FEMALE} deceased population in Khajura metropolitan city`,
+        name: `${GENDER_NAMES_EN.FEMALE} deceased population in Pokhara Metropolitan City`,
         observationDate: new Date().toISOString().split("T")[0],
         measuredProperty: {
           "@type": "PropertyValue",
@@ -102,11 +102,11 @@ export default function DeceasedPopulationSEO({
           unitText: "people",
         },
         measuredValue: genderTotals.female,
-        description: `${genderTotals.female.toLocaleString()} deceased ${GENDER_NAMES_EN.FEMALE} in Khajura metropolitan city (${((genderTotals.female / totalDeceasedPopulation) * 100).toFixed(2)}% of total deceased population)`,
+        description: `${genderTotals.female.toLocaleString()} deceased ${GENDER_NAMES_EN.FEMALE} in Pokhara Metropolitan City (${((genderTotals.female / totalDeceasedPopulation) * 100).toFixed(2)}% of total deceased population)`,
       },
       {
         "@type": "Observation",
-        name: `${GENDER_NAMES_EN.OTHER} deceased population in Khajura metropolitan city`,
+        name: `${GENDER_NAMES_EN.OTHER} deceased population in Pokhara Metropolitan City`,
         observationDate: new Date().toISOString().split("T")[0],
         measuredProperty: {
           "@type": "PropertyValue",
@@ -114,14 +114,14 @@ export default function DeceasedPopulationSEO({
           unitText: "people",
         },
         measuredValue: genderTotals.other,
-        description: `${genderTotals.other.toLocaleString()} deceased ${GENDER_NAMES_EN.OTHER} in Khajura metropolitan city (${((genderTotals.other / totalDeceasedPopulation) * 100).toFixed(2)}% of total deceased population)`,
+        description: `${genderTotals.other.toLocaleString()} deceased ${GENDER_NAMES_EN.OTHER} in Pokhara Metropolitan City (${((genderTotals.other / totalDeceasedPopulation) * 100).toFixed(2)}% of total deceased population)`,
       },
     ].filter((item) => item.measuredValue > 0); // Only include non-zero values
 
     // Convert ward stats to structured data
     const wardStats = Object.entries(wardData).map(([ward, data]) => ({
       "@type": "Observation",
-      name: `Ward ${ward} deceased population in Khajura metropolitan city`,
+      name: `Ward ${ward} deceased population in Pokhara Metropolitan City`,
       observationDate: new Date().toISOString().split("T")[0],
       measuredProperty: {
         "@type": "PropertyValue",
@@ -129,16 +129,16 @@ export default function DeceasedPopulationSEO({
         unitText: "people",
       },
       measuredValue: data.total,
-      description: `${data.total.toLocaleString()} deceased people in Ward ${ward} of Khajura metropolitan city (${((data.total / totalDeceasedPopulation) * 100).toFixed(2)}% of total deceased population)`,
+      description: `${data.total.toLocaleString()} deceased people in Ward ${ward} of Pokhara Metropolitan City (${((data.total / totalDeceasedPopulation) * 100).toFixed(2)}% of total deceased population)`,
     }));
 
     return {
       "@context": "https://schema.org",
       "@type": "Dataset",
-      name: "Age and Gender Wise Deceased Population in Khajura metropolitan city (पोखरा महानगरपालिका)",
-      description: `Mortality data across ${wardNumbers.length} wards of Khajura metropolitan city with a total deceased population of ${totalDeceasedPopulation.toLocaleString()}. The most affected age group is ${AGE_GROUP_NAMES_EN[mostAffectedAgeGroupKey] || mostAffectedAgeGroupKey} with ${mostAffectedAgeGroupTotal.toLocaleString()} deceased (${mostAffectedAgeGroupPercentage}%), and the most affected ward is Ward ${mostAffectedWardNumber} with ${mostAffectedWardTotal.toLocaleString()} deceased (${mostAffectedWardPercentage}%).`,
+      name: "Age and Gender Wise Deceased Population in Pokhara Metropolitan City (पोखरा महानगरपालिका)",
+      description: `Mortality data across ${wardNumbers.length} wards of Pokhara Metropolitan City with a total deceased population of ${totalDeceasedPopulation.toLocaleString()}. The most affected age group is ${AGE_GROUP_NAMES_EN[mostAffectedAgeGroupKey] || mostAffectedAgeGroupKey} with ${mostAffectedAgeGroupTotal.toLocaleString()} deceased (${mostAffectedAgeGroupPercentage}%), and the most affected ward is Ward ${mostAffectedWardNumber} with ${mostAffectedWardTotal.toLocaleString()} deceased (${mostAffectedWardPercentage}%).`,
       keywords: [
-        "Khajura metropolitan city",
+        "Pokhara Metropolitan City",
         "पोखरा महानगरपालिका",
         "Mortality statistics",
         "Age-gender wise mortality",
@@ -155,13 +155,13 @@ export default function DeceasedPopulationSEO({
       url: "https://digital.pokharamun.gov.np/profile/demographics/ward-age-gender-wise-deceased-population",
       creator: {
         "@type": "Organization",
-        name: "Khajura metropolitan city",
+        name: "Pokhara Metropolitan City",
         url: "https://digital.pokharamun.gov.np",
       },
       temporalCoverage: "2021/2023",
       spatialCoverage: {
         "@type": "Place",
-        name: "Khajura metropolitan city, Banke, Nepal",
+        name: "Pokhara Metropolitan City, Banke, Nepal",
         geo: {
           "@type": "GeoCoordinates",
           latitude: "28.1356",

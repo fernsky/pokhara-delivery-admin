@@ -24,7 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const exportedProductsData =
       await api.profile.economics.exportedProducts.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalProducts = exportedProductsData.length;
@@ -42,20 +42,20 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city exported products",
-      "Khajura exported goods",
-      "Exported items Khajura",
-      "Khajura export catalog",
-      "Economic profile Khajura",
+      "Pokhara Metropolitan City exported products",
+      "Pokhara exported goods",
+      "Exported items Pokhara",
+      "Pokhara export catalog",
+      "Economic profile Pokhara",
       "Exported goods analysis",
       "Exported products trends",
-      `Khajura ${totalProducts} exported products`,
+      `Pokhara ${totalProducts} exported products`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकाको निर्यातित उत्पादनहरूको विस्तृत सूची, प्रवृत्ति र विश्लेषण। कुल ${totalProducts} निर्यातित उत्पादनहरू पालिकाबाट निर्यात गरिएका छन्। यी निर्यातित वस्तुहरूको विस्तृत तथ्याङ्क र विजुअलाइजेसन।`;
 
-    const descriptionEN = `Detailed catalog, trends and analysis of exported products from Khajura metropolitan city. A total of ${totalProducts} exported products are registered from the municipality. Detailed statistics and visualizations of various exported goods.`;
+    const descriptionEN = `Detailed catalog, trends and analysis of exported products from Pokhara Metropolitan City. A total of ${totalProducts} exported products are registered from the municipality. Detailed statistics and visualizations of various exported goods.`;
 
     return {
       title: `निर्यातित उत्पादनहरू | ${municipalityName} पालिका प्रोफाइल`,
@@ -195,7 +195,7 @@ export default async function ExportedProductsPage() {
               src="/images/exported-products.svg"
               width={1200}
               height={400}
-              alt="निर्यातित उत्पादनहरू - पोखरा महानगरपालिका (Exported Products - Khajura metropolitan city)"
+              alt="निर्यातित उत्पादनहरू - पोखरा महानगरपालिका (Exported Products - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

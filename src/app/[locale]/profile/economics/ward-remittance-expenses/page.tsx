@@ -46,7 +46,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const expensesData =
       await api.profile.economics.wardWiseRemittanceExpenses.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalHouseholds = expensesData.reduce(
@@ -84,23 +84,23 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city remittance expenses",
-      "Khajura remittance utilization",
-      `Khajura ${EXPENSE_NAMES_EN[topExpenses[0] as RemittanceExpenseType]} expenses`,
+      "Pokhara Metropolitan City remittance expenses",
+      "Pokhara remittance utilization",
+      `Pokhara ${EXPENSE_NAMES_EN[topExpenses[0] as RemittanceExpenseType]} expenses`,
       ...topExpenses.map(
         (r) =>
-          `${EXPENSE_NAMES_EN[r as RemittanceExpenseType]} expenses in Khajura`,
+          `${EXPENSE_NAMES_EN[r as RemittanceExpenseType]} expenses in Pokhara`,
       ),
       "Ward-wise remittance expenses",
       "Remittance utilization statistics",
-      "Remittance survey Khajura",
-      `Khajura households receiving remittance ${totalHouseholds}`,
+      "Remittance survey Pokhara",
+      `Pokhara households receiving remittance ${totalHouseholds}`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकाको वडा अनुसार रेमिट्यान्स (विप्रेषण) खर्च वितरण, प्रवृत्ति र विश्लेषण। कुल विप्रेषण प्राप्त घरपरिवार संख्या ${totalHouseholds} मध्ये ${remittanceExpenseLabels[topExpenses[0] as RemittanceExpenseType]} (${expenseCounts[topExpenses[0]]}) सबैभन्दा ठूलो समूह हो, त्यसपछि ${remittanceExpenseLabels[topExpenses[1] as RemittanceExpenseType]} (${expenseCounts[topExpenses[1]]}) र ${remittanceExpenseLabels[topExpenses[2] as RemittanceExpenseType]} (${expenseCounts[topExpenses[2]]})। विभिन्न विप्रेषण खर्च प्रकारहरूको विस्तृत तथ्याङ्क र विजुअलाइजेसन।`;
 
-    const descriptionEN = `Ward-wise remittance expense distribution, trends and analysis for Khajura metropolitan city. Out of ${totalHouseholds} households receiving remittances, ${EXPENSE_NAMES_EN[topExpenses[0] as RemittanceExpenseType]} (${expenseCounts[topExpenses[0]]}) is the largest expense category, followed by ${EXPENSE_NAMES_EN[topExpenses[1] as RemittanceExpenseType]} (${expenseCounts[topExpenses[1]]}) and ${EXPENSE_NAMES_EN[topExpenses[2] as RemittanceExpenseType]} (${expenseCounts[topExpenses[2]]})। Detailed statistics and visualizations of various remittance expense patterns.`;
+    const descriptionEN = `Ward-wise remittance expense distribution, trends and analysis for Pokhara Metropolitan City. Out of ${totalHouseholds} households receiving remittances, ${EXPENSE_NAMES_EN[topExpenses[0] as RemittanceExpenseType]} (${expenseCounts[topExpenses[0]]}) is the largest expense category, followed by ${EXPENSE_NAMES_EN[topExpenses[1] as RemittanceExpenseType]} (${expenseCounts[topExpenses[1]]}) and ${EXPENSE_NAMES_EN[topExpenses[2] as RemittanceExpenseType]} (${expenseCounts[topExpenses[2]]})। Detailed statistics and visualizations of various remittance expense patterns.`;
 
     return {
       title: `रेमिटेन्स खर्च | ${municipalityName} पालिका प्रोफाइल`,
@@ -276,7 +276,7 @@ export default async function WardRemittanceExpensesPage() {
               src="/images/remittance-expenses.svg"
               width={1200}
               height={400}
-              alt="रेमिट्यान्स खर्च - पोखरा महानगरपालिका (Remittance Expenses - Khajura metropolitan city)"
+              alt="रेमिट्यान्स खर्च - पोखरा महानगरपालिका (Remittance Expenses - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

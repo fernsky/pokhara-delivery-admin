@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Fetch data for SEO using tRPC
     const loanData =
       await api.profile.economics.wardWiseHouseholdsOnLoan.getAll.query();
-    const municipalityName = "पोखरा महानगरपालिका"; // Khajura metropolitan city
+    const municipalityName = "पोखरा महानगरपालिका"; // Pokhara Metropolitan City
 
     // Process data for SEO
     const totalHouseholdsOnLoan = loanData.reduce(
@@ -51,20 +51,20 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     const keywordsEN = [
-      "Khajura metropolitan city households in debt",
-      "Khajura loan taking households",
-      "Khajura economic condition",
-      `Khajura ward ${wardsWithHighestLoans[0]?.wardNumber || ""} loans`,
+      "Pokhara Metropolitan City households in debt",
+      "Pokhara loan taking households",
+      "Pokhara economic condition",
+      `Pokhara ward ${wardsWithHighestLoans[0]?.wardNumber || ""} loans`,
       "Ward-wise loan distribution",
-      "metropolitan city debt statistics",
-      "Economic survey Khajura",
-      `Khajura total households with loans ${totalHouseholdsOnLoan}`,
+      "Metropolitan City debt statistics",
+      "Economic survey Pokhara",
+      `Pokhara total households with loans ${totalHouseholdsOnLoan}`,
     ];
 
     // Create detailed description with actual data
     const descriptionNP = `पोखरा महानगरपालिकाको वडा अनुसार ऋण लिएका घरपरिवारहरूको वितरण, प्रवृत्ति र विश्लेषण। कुल ${totalHouseholdsOnLoan} घरपरिवारले कुनै न कुनै प्रकारको कर्जा लिएका छन्। सबैभन्दा बढी ऋणी घरपरिवार भएका वडाहरू: वडा ${wardsWithHighestLoans[0]?.wardNumber || "N/A"} (${wardsWithHighestLoans[0]?.households || 0} घरपरिवार), वडा ${wardsWithHighestLoans[1]?.wardNumber || "N/A"} (${wardsWithHighestLoans[1]?.households || 0} घरपरिवार)। विस्तृत तथ्याङ्क र विजुअलाइजेसन यहाँ पेश गरिएको छ।`;
 
-    const descriptionEN = `Ward-wise distribution, trends and analysis of households with loans in Khajura metropolitan city. A total of ${totalHouseholdsOnLoan} households have taken some form of loans. Wards with most households in debt: Ward ${wardsWithHighestLoans[0]?.wardNumber || "N/A"} (${wardsWithHighestLoans[0]?.households || 0} households), Ward ${wardsWithHighestLoans[1]?.wardNumber || "N/A"} (${wardsWithHighestLoans[1]?.households || 0} households). Detailed statistics and visualizations presented here.`;
+    const descriptionEN = `Ward-wise distribution, trends and analysis of households with loans in Pokhara Metropolitan City. A total of ${totalHouseholdsOnLoan} households have taken some form of loans. Wards with most households in debt: Ward ${wardsWithHighestLoans[0]?.wardNumber || "N/A"} (${wardsWithHighestLoans[0]?.households || 0} households), Ward ${wardsWithHighestLoans[1]?.wardNumber || "N/A"} (${wardsWithHighestLoans[1]?.households || 0} households). Detailed statistics and visualizations presented here.`;
 
     return {
       title: `ऋण लिएका घरपरिवार | ${municipalityName} पालिका प्रोफाइल`,
@@ -170,7 +170,7 @@ export default async function WardHouseholdsInLoanPage() {
               src="/images/loan-households.svg"
               width={1200}
               height={400}
-              alt="ऋण लिएका घरपरिवार - पोखरा महानगरपालिका (Households With Loans - Khajura metropolitan city)"
+              alt="ऋण लिएका घरपरिवार - पोखरा महानगरपालिका (Households With Loans - Pokhara Metropolitan City)"
               className="w-full h-[250px] object-cover rounded-sm"
               priority
             />

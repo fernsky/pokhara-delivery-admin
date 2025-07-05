@@ -205,7 +205,7 @@ class PublicationSettings(models.Model):
 
     municipality_name = models.CharField(max_length=200, default="पोखरा महानगरपालिका")
     municipality_name_english = models.CharField(
-        max_length=200, default="pokhara metropolitan city"
+        max_length=200, default="pokhara Metropolitan City"
     )
     report_title = models.CharField(max_length=300, default="डिजिटल प्रोफाइल प्रतिवेदन")
     report_title_english = models.CharField(
