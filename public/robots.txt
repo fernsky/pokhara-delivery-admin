@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://digital.pokharamun.gov.np
+
+# Sitemaps
+Sitemap: https://digital.pokharamun.gov.np/sitemap.xml
+Sitemap: https://digital.pokharamun.gov.np/sitemap-index.xml
