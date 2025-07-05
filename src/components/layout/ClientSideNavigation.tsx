@@ -39,7 +39,7 @@ export function ClientSideNavigation() {
               <Info className="w-4 h-4" />
             </div>
             <Link href="/profile" className="font-semibold text-[#123772]">
-              लिखु पिके प्रोफाइल
+              पोखरा प्रोफाइल
             </Link>
           </div>
           <SidebarNav />

@@ -78,12 +78,12 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data
     const keywordsNP = [
       "पोखरा महानगरपालिका घरको जग",
-      "लिखु पिके घरको जग वितरण",
+      "पोखरा घरको जग वितरण",
       "वडा अनुसार घरको जग",
       "घरको जग विवरण",
       "ढलान पिल्लरसहितको घर",
       "माटोको जोडाइ भएको घरहरू",
-      `लिखु पिके घरको जग संख्या ${localizeNumber(totalHouseholds.toString(), "ne")}`,
+      `पोखरा घरको जग संख्या ${localizeNumber(totalHouseholds.toString(), "ne")}`,
     ];
 
     const keywordsEN = [

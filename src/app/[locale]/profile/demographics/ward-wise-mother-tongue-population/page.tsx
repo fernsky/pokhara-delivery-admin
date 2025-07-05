@@ -47,6 +47,10 @@ const LANGUAGE_NAMES: Record<string, string> = {
   DHIMAL: "धिमाल",
   BHUJEL: "भुजेल",
   THAMI: "थामी",
+  BANGALA: "बंगला",
+  CHANTYAL: "चण्टियल",
+  ENGLISH: "इंग्लिश",
+  GHALE: "घले",
 };
 
 // This function will generate metadata dynamically based on the actual data
@@ -101,13 +105,13 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data using localized numbers
     const keywordsNP = [
       "पोखरा महानगरपालिका मातृभाषा जनसंख्या",
-      "लिखु पिके भाषिक विविधता",
-      `लिखु पिके ${LANGUAGE_NAMES[topLanguages[0]]} भाषी जनसंख्या`,
-      ...topLanguages.map((l) => `${LANGUAGE_NAMES[l]} भाषी लिखु पिके`),
+      "पोखरा भाषिक विविधता",
+      `पोखरा ${LANGUAGE_NAMES[topLanguages[0]]} भाषी जनसंख्या`,
+      ...topLanguages.map((l) => `${LANGUAGE_NAMES[l]} भाषी पोखरा`),
       "वडा अनुसार मातृभाषा जनसंख्या",
       "भाषिक विविधता तथ्याङ्क",
-      "मातृभाषा जनगणना लिखु पिके",
-      `लिखु पिके कुल जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")}`,
+      "मातृभाषा जनगणना पोखरा",
+      `पोखरा कुल जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")}`,
     ];
 
     const keywordsEN = [

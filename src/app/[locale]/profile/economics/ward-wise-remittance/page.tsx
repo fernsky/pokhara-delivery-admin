@@ -148,7 +148,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data
     const keywordsNP = [
       "पोखरा महानगरपालिका रेमिट्यान्स",
-      "लिखु पिके वडा अनुसार रेमिट्यान्स",
+      "पोखरा वडा अनुसार रेमिट्यान्स",
       "वैदेशिक रोजगारीबाट प्राप्त रेमिट्यान्स",
       `वार्षिक रेमिट्यान्स रु. ${localizeNumber(estimatedRemittanceCrores, "ne")} करोड`,
       mostCommonAmountGroupLabel,

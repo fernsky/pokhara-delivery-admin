@@ -132,7 +132,7 @@ export default function CooperativesAnalysisSection({
             {cooperativeSummary[0]?.typeName || ""}
           </h3>
           <p className="text-muted-foreground text-sm mb-4">
-            लिखु पिकेमा सबैभन्दा लोकप्रिय सहकारी प्रकार, जुन कुल सहकारीको
+            पोखरामा सबैभन्दा लोकप्रिय सहकारी प्रकार, जुन कुल सहकारीको
             {localizeNumber(
               cooperativeSummary[0]?.percentage.toFixed(1) || "0",
               "ne",

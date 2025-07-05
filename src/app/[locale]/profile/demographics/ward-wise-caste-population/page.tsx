@@ -119,13 +119,13 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data using localized numbers
     const keywordsNP = [
       "पोखरा महानगरपालिका जातिगत जनसंख्या",
-      "लिखु पिके जातिगत विविधता",
-      `लिखु पिके ${CASTE_NAMES_NP[topCastes[0]]} जनसंख्या`,
-      ...topCastes.map((c) => `${CASTE_NAMES_NP[c]} जातिगत विवरण लिखु पिके`),
+      "पोखरा जातिगत विविधता",
+      `पोखरा ${CASTE_NAMES_NP[topCastes[0]]} जनसंख्या`,
+      ...topCastes.map((c) => `${CASTE_NAMES_NP[c]} जातिगत विवरण पोखरा`),
       "वडा अनुसार जातिगत जनसंख्या",
       "जातिगत विविधता तथ्याङ्क",
-      "जातिगत जनगणना लिखु पिके",
-      `लिखु पिके कुल जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")}`,
+      "जातिगत जनगणना पोखरा",
+      `पोखरा कुल जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")}`,
     ];
 
     const keywordsEN = [

@@ -120,11 +120,11 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data
     const keywordsNP = [
       "पोखरा महानगरपालिका मृत्यु विवरण",
-      "लिखु पिके मृत्यु दर",
+      "पोखरा मृत्यु दर",
       "वडा अनुसार उमेर लिङ्ग मृत्यु विवरण",
       "उमेर लिङ्ग अनुसार मृत्यु",
-      "लिखु पिके जनसांख्यिकी विश्लेषण",
-      `लिखु पिके मृत्यु संख्या ${localizeNumber(totalDeceasedPopulation.toString(), "ne")}`,
+      "पोखरा जनसांख्यिकी विश्लेषण",
+      `पोखरा मृत्यु संख्या ${localizeNumber(totalDeceasedPopulation.toString(), "ne")}`,
     ];
 
     const keywordsEN = [

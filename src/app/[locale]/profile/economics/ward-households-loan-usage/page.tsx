@@ -52,15 +52,15 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data
     const keywordsNP = [
       "पोखरा महानगरपालिका कर्जा उपयोग",
-      "लिखु पिके ऋण प्रयोजन",
-      `लिखु पिके ${loanUseLabels[topLoanUses[0]]} कर्जा`,
+      "पोखरा ऋण प्रयोजन",
+      `पोखरा ${loanUseLabels[topLoanUses[0]]} कर्जा`,
       ...topLoanUses.map(
-        (r) => `${loanUseLabels[r]} उद्देश्यका लागि कर्जा लिखु पिके`,
+        (r) => `${loanUseLabels[r]} उद्देश्यका लागि कर्जा पोखरा`,
       ),
       "वडा अनुसार कर्जा उपयोग",
       "ऋण प्रयोजन तथ्याङ्क",
-      "कर्जा प्रयोजन सर्वेक्षण लिखु पिके",
-      `लिखु पिके कुल ऋणी घरपरिवार संख्या ${totalHouseholds}`,
+      "कर्जा प्रयोजन सर्वेक्षण पोखरा",
+      `पोखरा कुल ऋणी घरपरिवार संख्या ${totalHouseholds}`,
     ];
 
     const keywordsEN = [

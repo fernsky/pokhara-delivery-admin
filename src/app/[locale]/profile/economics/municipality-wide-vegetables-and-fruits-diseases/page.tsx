@@ -81,14 +81,14 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords
     const keywordsNP = [
       "पोखरा महानगरपालिका तरकारी फलफूल रोग कीट",
-      "लिखु पिके तरकारी उत्पादन समस्या",
+      "पोखरा तरकारी उत्पादन समस्या",
       "पालिका स्तरीय तरकारी संरक्षण",
       "गोलभेडा रोग कीट",
       "काउली रोग कीट",
       "बन्दा रोग कीट",
       "आलु रोग कीट",
       "रायो रोग कीट",
-      `लिखु पिके तरकारी संरक्षण ${localizeNumber(totalVegetableFruits.toString(), "ne")} प्रकार`,
+      `पोखरा तरकारी संरक्षण ${localizeNumber(totalVegetableFruits.toString(), "ne")} प्रकार`,
     ];
 
     const keywordsEN = [

@@ -77,7 +77,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "पानी उमाल्ने परिवार संख्या",
       "पानी फिल्टर प्रयोग दर",
       "पियूष प्रयोग गर्ने घरधुरी",
-      `लिखु पिके पानी शुद्धिकरण तथ्याङ्क ${localizeNumber(totalHouseholds.toString(), "ne")}`,
+      `पोखरा पानी शुद्धिकरण तथ्याङ्क ${localizeNumber(totalHouseholds.toString(), "ne")}`,
     ];
 
     const keywordsEN = [

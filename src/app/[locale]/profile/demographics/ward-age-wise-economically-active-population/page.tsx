@@ -65,13 +65,13 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data
     const keywordsNP = [
       "पोखरा महानगरपालिका आर्थिक रूपमा सक्रिय जनसंख्या",
-      "लिखु पिके उमेर अनुसार जनसंख्या वितरण",
+      "पोखरा उमेर अनुसार जनसंख्या वितरण",
       "वडा अनुसार आर्थिक रूपमा सक्रिय जनसंख्या",
       "आर्थिक सक्रिय उमेर समूह विवरण",
       "१५-५९ वर्षका आर्थिक सक्रिय जनसंख्या",
-      "वृद्ध जनसंख्या लिखु पिके",
-      "बाल जनसंख्या लिखु पिके",
-      `लिखु पिके कुल जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")}`,
+      "वृद्ध जनसंख्या पोखरा",
+      "बाल जनसंख्या पोखरा",
+      `पोखरा कुल जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")}`,
     ];
 
     const keywordsEN = [

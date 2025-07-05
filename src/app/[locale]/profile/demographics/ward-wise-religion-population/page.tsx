@@ -71,15 +71,15 @@ export async function generateMetadata(): Promise<Metadata> {
 
     const keywordsNP = [
       "पोखरा महानगरपालिका धार्मिक जनसंख्या",
-      "लिखु पिके धार्मिक विविधता",
-      `लिखु पिके ${RELIGION_NAMES_NP[topReligions[0] as string]} जनसंख्या`,
+      "पोखरा धार्मिक विविधता",
+      `पोखरा ${RELIGION_NAMES_NP[topReligions[0] as string]} जनसंख्या`,
       ...topReligions.map(
-        (r) => `${RELIGION_NAMES_NP[r as string]} धर्मावलम्बी लिखु पिके`,
+        (r) => `${RELIGION_NAMES_NP[r as string]} धर्मावलम्बी पोखरा`,
       ),
       "वडा अनुसार धार्मिक जनसंख्या",
       "धार्मिक विविधता तथ्याङ्क",
-      "धार्मिक जनगणना लिखु पिके",
-      `लिखु पिके कुल जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")}`,
+      "धार्मिक जनगणना पोखरा",
+      `पोखरा कुल जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")}`,
     ];
 
     const keywordsEN = [

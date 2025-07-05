@@ -78,7 +78,7 @@ This document outlines the approach for generating beautiful, professional A4 PD
   }
 
   @bottom-center {
-    content: "लिखु पिके नगरपालिका";
+    content: "पोखरा नगरपालिका";
     font-size: 8pt;
     color: #666;
     font-family: "Mukti", serif;

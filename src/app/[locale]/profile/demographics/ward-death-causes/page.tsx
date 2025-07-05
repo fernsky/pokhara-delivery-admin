@@ -98,16 +98,15 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data
     const keywordsNP = [
       "पोखरा महानगरपालिका मृत्युका कारणहरू",
-      "लिखु पिके मृत्युदर विश्लेषण",
-      `लिखु पिके ${deathCauseLabels[topDeathCauses[0] as DeathCauseType]} मृत्यु संख्या`,
+      "पोखरा मृत्युदर विश्लेषण",
+      `पोखरा ${deathCauseLabels[topDeathCauses[0] as DeathCauseType]} मृत्यु संख्या`,
       ...topDeathCauses.map(
-        (r) =>
-          `${deathCauseLabels[r as DeathCauseType]} मृत्युको कारण लिखु पिके`,
+        (r) => `${deathCauseLabels[r as DeathCauseType]} मृत्युको कारण पोखरा`,
       ),
       "वडा अनुसार मृत्युका कारणहरू",
-      "स्वास्थ्य तथ्याङ्क लिखु पिके",
-      "मृत्यु कारण सर्वेक्षण लिखु पिके",
-      `लिखु पिके कुल मृत्यु संख्या ${localizeNumber(totalDeaths.toString(), "ne")}`,
+      "स्वास्थ्य तथ्याङ्क पोखरा",
+      "मृत्यु कारण सर्वेक्षण पोखरा",
+      `पोखरा कुल मृत्यु संख्या ${localizeNumber(totalDeaths.toString(), "ne")}`,
     ];
 
     const keywordsEN = [

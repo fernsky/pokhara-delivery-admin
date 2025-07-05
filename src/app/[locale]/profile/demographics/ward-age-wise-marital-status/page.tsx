@@ -70,15 +70,15 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data
     const keywordsNP = [
       "पोखरा महानगरपालिका वैवाहिक जनसंख्या",
-      "लिखु पिके वैवाहिक स्थिति",
-      `लिखु पिके ${MARITAL_STATUS_NAMES_NP[topMaritalStatuses[0]]} जनसंख्या`,
+      "पोखरा वैवाहिक स्थिति",
+      `पोखरा ${MARITAL_STATUS_NAMES_NP[topMaritalStatuses[0]]} जनसंख्या`,
       ...topMaritalStatuses.map(
-        (r) => `${MARITAL_STATUS_NAMES_NP[r]} जनसंख्या लिखु पिके`,
+        (r) => `${MARITAL_STATUS_NAMES_NP[r]} जनसंख्या पोखरा`,
       ),
       "वडा अनुसार वैवाहिक स्थिति",
       "उमेर अनुसार वैवाहिक स्थिति",
       "वैवाहिक स्थिति तथ्याङ्क",
-      `लिखु पिके कुल जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")}`,
+      `पोखरा कुल जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")}`,
     ];
 
     const keywordsEN = [

@@ -457,7 +457,7 @@ class Migration(migrations.Migration):
                             ("JONGKHA", "जोङ्खा"),
                             ("BANKARIYA", "बनकरिया"),
                             ("KAIKE", "काइके"),
-                            ("GADHWALI", "लिखु पिकेली"),
+                            ("GADHWALI", "पोखराली"),
                             ("FRECHN", "फ्रेन्च/फ्रान्सेली"),
                             ("MIJO", "मिजो"),
                             ("KUKI", "कुकी"),

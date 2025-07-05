@@ -90,7 +90,7 @@ export default function ForeignEmploymentSEO({
           .map((name) => `${name} Nepali workers statistics`),
         ...Object.values(COUNTRY_NAMES)
           .slice(0, 10)
-          .map((name) => `${name} मा कार्यरत लिखु पिकेवासी`),
+          .map((name) => `${name} मा कार्यरत पोखरावासी`),
       ],
       url: "https://digital.pokharamun.gov.np/profile/economics/ward-wise-foreign-employment-countries",
       creator: {

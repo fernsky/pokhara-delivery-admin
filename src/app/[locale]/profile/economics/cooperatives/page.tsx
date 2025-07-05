@@ -123,12 +123,12 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data
     const keywordsNP = [
       "पोखरा महानगरपालिका सहकारी",
-      "लिखु पिके सहकारी संस्था",
+      "पोखरा सहकारी संस्था",
       "पालिका स्तरीय सहकारी",
-      "लिखु पिके बचत तथा ऋण सहकारी",
-      `लिखु पिके ${COOPERATIVE_TYPES[mostCommonCooperativeType] || "सहकारी संस्था"}`,
+      "पोखरा बचत तथा ऋण सहकारी",
+      `पोखरा ${COOPERATIVE_TYPES[mostCommonCooperativeType] || "सहकारी संस्था"}`,
       `वडा ${localizeNumber(wardWithMostCooperatives.toString(), "ne")} सहकारी`,
-      `लिखु पिके ${localizeNumber(totalCooperatives.toString(), "ne")} सहकारी संस्था`,
+      `पोखरा ${localizeNumber(totalCooperatives.toString(), "ne")} सहकारी संस्था`,
       "महिला सहकारी संस्था",
     ];
 

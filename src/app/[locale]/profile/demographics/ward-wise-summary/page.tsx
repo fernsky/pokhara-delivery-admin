@@ -107,9 +107,9 @@ export async function generateMetadata(): Promise<Metadata> {
       "पोखरा महानगरपालिका लैङ्गिक अनुपात",
       "पोखरा महानगरपालिका वडागत विश्लेषण",
       `पोखरा महानगरपालिका वडा ${localizeNumber(highestWardNumber, "ne")} जनसंख्या ${localizeNumber(highestPopulation, "ne")}`,
-      `लिखु पिके पुरुष जनसंख्या ${localizeNumber(malePopulation, "ne")}`,
-      `लिखु पिके महिला जनसंख्या ${localizeNumber(femalePopulation, "ne")}`,
-      `लिखु पिके औसत परिवार संख्या ${localizeNumber(averageHouseholdSize, "ne")}`,
+      `पोखरा पुरुष जनसंख्या ${localizeNumber(malePopulation, "ne")}`,
+      `पोखरा महिला जनसंख्या ${localizeNumber(femalePopulation, "ne")}`,
+      `पोखरा औसत परिवार संख्या ${localizeNumber(averageHouseholdSize, "ne")}`,
     ];
 
     const keywordsEN = [

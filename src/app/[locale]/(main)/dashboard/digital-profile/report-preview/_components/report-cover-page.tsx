@@ -70,7 +70,7 @@ export function ReportCoverPage() {
                 background: "white",
               }}
             >
-              लिखु पिके, कास्की, गण्डकी प्रदेश
+              पोखरा, कास्की, गण्डकी प्रदेश
             </div>
           </div>
           <div style={{ width: "80px", height: "80px", background: "white" }}>

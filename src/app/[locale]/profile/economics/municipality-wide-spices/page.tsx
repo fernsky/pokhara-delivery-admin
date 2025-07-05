@@ -110,13 +110,13 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data
     const keywordsNP = [
       "पोखरा महानगरपालिका मसलाबाली",
-      "लिखु पिके मसलाको उत्पादन",
+      "पोखरा मसलाको उत्पादन",
       "पालिका स्तरीय मसलाबाली तथ्याङ्क",
-      "लसुन उत्पादन लिखु पिके",
+      "लसुन उत्पादन पोखरा",
       "खुर्सानी उत्पादन तथ्याङ्क",
       "धनिया उत्पादन",
-      `लिखु पिके मसलाबाली बिक्री ${localizeNumber(totalSales.toFixed(2), "ne")} टन`,
-      `लिखु पिके मसलाबाली आय ${localizeNumber(
+      `पोखरा मसलाबाली बिक्री ${localizeNumber(totalSales.toFixed(2), "ne")} टन`,
+      `पोखरा मसलाबाली आय ${localizeNumber(
         (totalRevenue / 1000).toFixed(2),
         "ne",
       )} हजार`,

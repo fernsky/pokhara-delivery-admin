@@ -97,7 +97,7 @@ const Statistics = ({
     keywords: [
       "पोखरा महानगरपालिका जनसंख्या",
       "Khajura metropolitan city demographics",
-      "लिखु पिके जनगणना",
+      "पोखरा जनगणना",
       "कास्की जनसंख्या",
       "नेपालको जनसंख्या",
     ],

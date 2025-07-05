@@ -233,8 +233,7 @@ export default function ExportedProductsAnalysisSection({
               <span className="ml-3 text-sm font-medium">75%</span>
             </div>
             <p className="text-sm text-muted-foreground mt-2">
-              अन्तरराष्ट्रिय र राष्ट्रिय बजारमा लिखु पिके निर्यातको सम्भावना
-              उच्च छ
+              अन्तरराष्ट्रिय र राष्ट्रिय बजारमा पोखरा निर्यातको सम्भावना उच्च छ
             </p>
           </div>
 
@@ -250,7 +249,7 @@ export default function ExportedProductsAnalysisSection({
               <span className="ml-3 text-sm font-medium">62%</span>
             </div>
             <p className="text-sm text-muted-foreground mt-2">
-              लिखु पिकेका उत्पादनहरू गुणस्तर र मूल्यमा प्रतिस्पर्धी छन्
+              पोखराका उत्पादनहरू गुणस्तर र मूल्यमा प्रतिस्पर्धी छन्
             </p>
           </div>
         </div>

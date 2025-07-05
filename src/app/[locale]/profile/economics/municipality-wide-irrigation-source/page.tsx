@@ -103,13 +103,13 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data
     const keywordsNP = [
       "पोखरा महानगरपालिका सिंचाई स्रोत",
-      "लिखु पिके सिंचाई स्रोत प्रकार",
+      "पोखरा सिंचाई स्रोत प्रकार",
       "पालिका स्तरीय सिंचाई स्रोत",
       "ताल वा जलाशय सिंचाई",
       "सिंचाई नहर",
       "वर्षाको पानी संकलन",
       "विद्युतीय लिफ्ट सिंचाई",
-      `लिखु पिके सिंचाई क्षेत्रफल ${localizeNumber(totalCoverage.toFixed(2), "ne")} हेक्टर`,
+      `पोखरा सिंचाई क्षेत्रफल ${localizeNumber(totalCoverage.toFixed(2), "ne")} हेक्टर`,
     ];
 
     const keywordsEN = [

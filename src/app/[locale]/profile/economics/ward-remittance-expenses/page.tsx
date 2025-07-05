@@ -71,16 +71,16 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data
     const keywordsNP = [
       "पोखरा महानगरपालिका रेमिट्यान्स खर्च",
-      "लिखु पिके विप्रेषण उपयोग",
-      `लिखु पिके ${remittanceExpenseLabels[topExpenses[0] as RemittanceExpenseType]} खर्च`,
+      "पोखरा विप्रेषण उपयोग",
+      `पोखरा ${remittanceExpenseLabels[topExpenses[0] as RemittanceExpenseType]} खर्च`,
       ...topExpenses.map(
         (r) =>
-          `${remittanceExpenseLabels[r as RemittanceExpenseType]} लिखु पिके विप्रेषण`,
+          `${remittanceExpenseLabels[r as RemittanceExpenseType]} पोखरा विप्रेषण`,
       ),
       "वडा अनुसार रेमिटेन्स खर्च",
       "विप्रेषण उपयोग तथ्याङ्क",
-      "रेमिट्यान्स सर्वेक्षण लिखु पिके",
-      `लिखु पिके विप्रेषण प्राप्त घरपरिवार संख्या ${totalHouseholds}`,
+      "रेमिट्यान्स सर्वेक्षण पोखरा",
+      `पोखरा विप्रेषण प्राप्त घरपरिवार संख्या ${totalHouseholds}`,
     ];
 
     const keywordsEN = [

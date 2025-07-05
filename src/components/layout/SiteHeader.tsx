@@ -41,14 +41,14 @@ export function SiteHeader() {
             </div>
             <div className="flex flex-col">
               <span className="font-bold tracking-tight text-gray-900">
-                लिखु पिके
+                पोखरा
               </span>
               <Badge
                 variant="outline"
                 className="hidden sm:flex items-center gap-1 mt-1 border-gray-200"
               >
                 <Sparkles className="w-3 h-3" />
-                <span className="text-[10px]">गाउँपालिका</span>
+                <span className="text-[10px]">महानगरपालिका</span>
               </Badge>
             </div>
           </Link>

@@ -3,9 +3,9 @@ block title %} {{ category.name_nepali|default:category.name }} - {{
 municipality_name|default:"पोखरा महानगरपालिका" }} {% endblock %} {% block
 description %} {{
 category.description_nepali|default:category.description|default:category.name_nepali
-}} - {{ municipality_name|default:"लिखु पिकेँपालिका" }}को डिजिटल प्रोफाइल र
+}} - {{ municipality_name|default:"पोखराँपालिका" }}को डिजिटल प्रोफाइल र
 वार्षिक प्रतिवेदन। {% endblock %} {% block keywords %} {{
-category.name_nepali|default:category.name }}, लिखु पिकेउँपालिका, नेपाल,
+category.name_nepali|default:category.name }}, पोखराउँपालिका, नेपाल,
 प्रतिवेदन {% endblock %} {% block breadcrumb %}
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -27,14 +27,14 @@ category.name_nepali|default:category.name }}, लिखु पिकेउँ�
     "url": "{{ request.build_absolute_uri }}",
     "isPartOf": {
       "@type": "WebSite",
-      "name": "{{ municipality_name|default:'लिखु पिकेँपालिका' }}",
+      "name": "{{ municipality_name|default:'पोखराँपालिका' }}",
       "url": "{% url 'reports:home' %}"
     },
     "datePublished": "{{ category.created_at|date:'c' }}",
     "dateModified": "{{ category.updated_at|date:'c' }}",
     "publisher": {
       "@type": "GovernmentOrganization",
-      "name": "{{ municipality_name|default:'लिखु पिकेँपालिका' }}"
+      "name": "{{ municipality_name|default:'पोखराँपालिका' }}"
     }
   }
 </script>

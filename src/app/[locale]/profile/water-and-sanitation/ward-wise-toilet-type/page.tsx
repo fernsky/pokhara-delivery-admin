@@ -77,7 +77,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "फ्लस शौचालय भएका घरधुरी",
       "सार्वजनिक शौचालय प्रयोग",
       "शौचालय नभएका घरधुरी",
-      `लिखु पिके शौचालय तथ्याङ्क ${localizeNumber(
+      `पोखरा शौचालय तथ्याङ्क ${localizeNumber(
         totalHouseholds.toString(),
         "ne",
       )}`,

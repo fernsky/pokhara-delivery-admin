@@ -90,13 +90,13 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data
     const keywordsNP = [
       "पोखरा महानगरपालिका जग्गा स्वामित्व",
-      "लिखु पिके जग्गा स्वामित्व प्रकार",
+      "पोखरा जग्गा स्वामित्व प्रकार",
       "वडा अनुसार जग्गा स्वामित्व",
       "निजी जग्गा स्वामित्व",
       "सार्वजनिक जग्गा स्वामित्व",
       "गुठी जग्गा स्वामित्व",
       "गाउँ ब्लक जग्गा स्वामित्व",
-      `लिखु पिके घरपरिवार संख्या ${localizeNumber(totalHouseholds.toString(), "ne")}`,
+      `पोखरा घरपरिवार संख्या ${localizeNumber(totalHouseholds.toString(), "ne")}`,
     ];
 
     const keywordsEN = [

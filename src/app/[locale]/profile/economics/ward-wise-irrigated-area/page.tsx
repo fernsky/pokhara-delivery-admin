@@ -63,7 +63,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "पोखरा महानगरपालिका वडा अनुसार सिंचित क्षेत्रफल",
       "वडा अनुसार सिंचित र असिंचित क्षेत्रफल",
       "सिंचाई क्षेत्र विश्लेषण",
-      `लिखु पिके सिंचित क्षेत्रफल ${localizeNumber(totalIrrigatedArea.toFixed(2), "ne")} हेक्टर`,
+      `पोखरा सिंचित क्षेत्रफल ${localizeNumber(totalIrrigatedArea.toFixed(2), "ne")} हेक्टर`,
       "वडागत सिंचाई विवरण",
       "कृषि सिंचाई",
     ];

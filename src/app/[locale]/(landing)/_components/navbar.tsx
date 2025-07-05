@@ -68,7 +68,7 @@ const Navbar: React.FC<NavbarProps> = ({ lng }) => {
                 <div className="p-2.5 rounded-xl bg-gradient-to-br  text-white group-hover:shadow-lg group-hover:shadow-[#123772]/25 transition-all duration-300 flex items-center justify-center">
                   {/* <TreePalm className="w-5 h-5" /> */}
                   <Image
-                    src="/images/pokhara-logo.png"
+                    src="/images/pokhara_logo.png"
                     alt="logo"
                     width={70}
                     height={70}
@@ -80,7 +80,7 @@ const Navbar: React.FC<NavbarProps> = ({ lng }) => {
                       scrolled ? "text-gray-800" : "text-white"
                     }`}
                   >
-                    लिखु पिके
+                    पोखरा
                   </span>
                   <Badge
                     variant="outline"
@@ -88,7 +88,7 @@ const Navbar: React.FC<NavbarProps> = ({ lng }) => {
                   >
                     <Sparkles className="w-3 h-3 text-black-500" />
                     <span className="text-[10px] text-black-500">
-                      गाउँपालिका
+                      महानगरपालिका
                     </span>
                   </Badge>
                 </div>

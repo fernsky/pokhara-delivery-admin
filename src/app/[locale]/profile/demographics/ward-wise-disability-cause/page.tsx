@@ -81,12 +81,12 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data
     const keywordsNP = [
       "पोखरा महानगरपालिका अपाङ्गताको कारण",
-      "लिखु पिके अपाङ्गता वितरण",
+      "पोखरा अपाङ्गता वितरण",
       "वडा अनुसार अपाङ्गताको कारण",
       "अपाङ्गताको कारण विवरण",
-      "जन्मजात अपाङ्गता लिखु पिके",
+      "जन्मजात अपाङ्गता पोखरा",
       "दुर्घटनाको कारण अपाङ्गता",
-      `लिखु पिके अपाङ्गता जनसंख्या ${localizeNumber(totalPopulationWithDisability.toString(), "ne")}`,
+      `पोखरा अपाङ्गता जनसंख्या ${localizeNumber(totalPopulationWithDisability.toString(), "ne")}`,
     ];
 
     const keywordsEN = [

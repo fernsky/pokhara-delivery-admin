@@ -69,14 +69,14 @@ export async function generateMetadata(): Promise<Metadata> {
     const keywordsNP = [
       "पोखरा महानगरपालिका घरायसी कामकाज",
       "घरायसी कामकाजमा समय वितरण",
-      `लिखु पिके ${TIME_SPENT_NAMES_NP[topTimeCategories[0]]} घरायसी काम`,
+      `पोखरा ${TIME_SPENT_NAMES_NP[topTimeCategories[0]]} घरायसी काम`,
       ...topTimeCategories.map(
         (t) => `${TIME_SPENT_NAMES_NP[t]} घरायसी कामकाज`,
       ),
       "वडा अनुसार घरायसी काम",
       "घरायसी काममा समय वितरण",
       "घरायसी काम सम्बन्धी तथ्याङ्क",
-      `लिखु पिके जनसंख्या घरायसी काम ${totalPopulation}`,
+      `पोखरा जनसंख्या घरायसी काम ${totalPopulation}`,
     ];
 
     const keywordsEN = [

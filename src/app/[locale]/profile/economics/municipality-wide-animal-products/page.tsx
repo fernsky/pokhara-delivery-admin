@@ -97,13 +97,13 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data
     const keywordsNP = [
       "पोखरा महानगरपालिका पशुपन्छीजन्य उत्पादन",
-      "लिखु पिके दुध उत्पादन",
+      "पोखरा दुध उत्पादन",
       "पालिका स्तरीय पशुजन्य उत्पादन तथ्याङ्क",
-      "दुध उत्पादन लिखु पिके",
+      "दुध उत्पादन पोखरा",
       "मासु उत्पादन तथ्याङ्क",
       "अण्डा उत्पादन",
-      `लिखु पिके पशुजन्य उत्पादन बिक्री ${localizeNumber(totalSales.toFixed(2), "ne")} टन`,
-      `लिखु पिके पशुजन्य उत्पादन आय ${localizeNumber(
+      `पोखरा पशुजन्य उत्पादन बिक्री ${localizeNumber(totalSales.toFixed(2), "ne")} टन`,
+      `पोखरा पशुजन्य उत्पादन आय ${localizeNumber(
         (totalRevenue / 1000).toFixed(2),
         "ne",
       )} हजार`,
@@ -428,8 +428,8 @@ export default async function MunicipalityWideAnimalProductsPage() {
             </ul>
 
             <p>
-              पशुपन्छीजन्य वस्तु उत्पादनको विश्लेषण गर्दा, लिखु पिके
-              गाउँपालिकामा उत्पादित कुल पशुपन्छीजन्य वस्तु मध्ये{" "}
+              पशुपन्छीजन्य वस्तु उत्पादनको विश्लेषण गर्दा, पोखरा गाउँपालिकामा
+              उत्पादित कुल पशुपन्छीजन्य वस्तु मध्ये{" "}
               {localizeNumber(soldPercentage, "ne")}% बिक्रीका लागि बजारमा
               जान्छ, जबकि {localizeNumber(selfConsumptionPercentage, "ne")}%
               घरायसी उपभोगमा खर्च हुन्छ। यसबाट वार्षिक रु.{" "}

@@ -76,12 +76,12 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords
     const keywordsNP = [
       "पोखरा महानगरपालिका कृषि परिवार",
-      "लिखु पिके कृषि पशुपालन घरधुरी",
+      "पोखरा कृषि पशुपालन घरधुरी",
       "वडा अनुसार कृषि परिवार",
       "कृषि पशुपालनमा संलग्न परिवार",
       "कृषि जनसंख्या वितरण",
-      `लिखु पिके कृषि परिवार संख्या ${localizeNumber(totalInvolved.toString(), "ne")}`,
-      "लिखु पिके गैरकृषि परिवार संख्या",
+      `पोखरा कृषि परिवार संख्या ${localizeNumber(totalInvolved.toString(), "ne")}`,
+      "पोखरा गैरकृषि परिवार संख्या",
     ];
 
     const keywordsEN = [

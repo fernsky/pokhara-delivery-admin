@@ -86,8 +86,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "वडा अनुसार जन्मदर्ता विवरण",
       "बालबालिका जन्मदर्ता विश्लेषण",
       "जन्मदर्ता प्रमाणपत्र धारक बालबालिका",
-      `लिखु पिके जन्मदर्ताको स्थिति: जन्मदर्ता भएका ${localizeNumber(totalWithCertificate.toString(), "ne")}, नभएका ${localizeNumber(totalWithoutCertificate.toString(), "ne")}`,
-      `लिखु पिके पाँच वर्षमुनिका कुल बालबालिका संख्या ${localizeNumber(totalPopulation.toString(), "ne")}`,
+      `पोखरा जन्मदर्ताको स्थिति: जन्मदर्ता भएका ${localizeNumber(totalWithCertificate.toString(), "ne")}, नभएका ${localizeNumber(totalWithoutCertificate.toString(), "ne")}`,
+      `पोखरा पाँच वर्षमुनिका कुल बालबालिका संख्या ${localizeNumber(totalPopulation.toString(), "ne")}`,
     ];
 
     const keywordsEN = [

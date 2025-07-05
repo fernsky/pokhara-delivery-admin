@@ -111,7 +111,7 @@ export default function FarmersGroupAnalysisSection({
             {groupSummary[0]?.type || ""}
           </h3>
           <p className="text-muted-foreground text-sm mb-4">
-            लिखु पिकेमा सबैभन्दा लोकप्रिय कृषि समूह प्रकार, जुन कुल समूहको
+            पोखरामा सबैभन्दा लोकप्रिय कृषि समूह प्रकार, जुन कुल समूहको
             {localizeNumber(
               groupSummary[0]?.percentage.toFixed(1) || "0",
               "ne",

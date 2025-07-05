@@ -86,13 +86,13 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data
     const keywordsNP = [
       "पोखरा महानगरपालिका सीप र दक्षता",
-      "लिखु पिके स्थानीय सीप",
-      `लिखु पिके ${skillLabels[topSkills[0]]} जनसंख्या`,
-      ...topSkills.map((s) => `${skillLabels[s]} सीप लिखु पिके`),
+      "पोखरा स्थानीय सीप",
+      `पोखरा ${skillLabels[topSkills[0]]} जनसंख्या`,
+      ...topSkills.map((s) => `${skillLabels[s]} सीप पोखरा`),
       "वडा अनुसार सीप वितरण",
       "आर्थिक दक्षता तथ्याङ्क",
-      "सीप सर्वेक्षण लिखु पिके",
-      `लिखु पिके कुल दक्ष जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")}`,
+      "सीप सर्वेक्षण पोखरा",
+      `पोखरा कुल दक्ष जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")}`,
     ];
 
     const keywordsEN = [

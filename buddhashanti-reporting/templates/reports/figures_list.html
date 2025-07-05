@@ -1,8 +1,8 @@
 {% extends 'reports/base.html' %} {% load static %} {% load nepali_filters %} {%
 block title %} चित्रहरूको सूची - पोखरा महानगरपालिका {% endblock %} {% block
-description %} लिखु पिकेँपालिका डिजिटल प्रोफाइल र वार्षिक प्रतिवेदनमा प्रयोग
+description %} पोखराँपालिका डिजिटल प्रोफाइल र वार्षिक प्रतिवेदनमा प्रयोग
 गरिएका सबै चित्रहरू, आंकडाहरू र ग्राफहरूको सूची। {% endblock %} {% block
-keywords %} चित्रहरू, आंकडाहरू, ग्राफ, लिखु पिकेउँपालिका, प्रतिवेदन {%
+keywords %} चित्रहरू, आंकडाहरू, ग्राफ, पोखराउँपालिका, प्रतिवेदन {%
 endblock %} {% block breadcrumb %}
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -18,16 +18,16 @@ endblock %} {% block breadcrumb %}
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "चित्रहरूको सूची",
-    "description": "लिखु पिकेँपालिका डिजिटल प्रोफाइल र वार्षिक प्रतिवेदनमा प्रयोग गरिएका सबै चित्रहरूको सूची।",
+    "description": "पोखराँपालिका डिजिटल प्रोफाइल र वार्षिक प्रतिवेदनमा प्रयोग गरिएका सबै चित्रहरूको सूची।",
     "url": "{{ request.build_absolute_uri }}",
     "isPartOf": {
       "@type": "WebSite",
-      "name": "लिखु पिकेँपालिका",
+      "name": "पोखराँपालिका",
       "url": "{% url 'reports:home' %}"
     },
     "publisher": {
       "@type": "GovernmentOrganization",
-      "name": "लिखु पिकेँपालिका"
+      "name": "पोखराँपालिका"
     }
   }
 </script>
@@ -37,7 +37,7 @@ endblock %} {% block breadcrumb %}
     <div>
       <h1><i class="fas fa-images me-3"></i>चित्रहरूको सूची</h1>
       <p class="lead text-muted">
-        लिखु पिकेँपालिका डिजिटल प्रोफाइल र वार्षिक प्रतिवेदन
+        पोखराँपालिका डिजिटल प्रोफाइल र वार्षिक प्रतिवेदन
       </p>
     </div>
     <div class="no-print">

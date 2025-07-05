@@ -45,7 +45,7 @@ const Footer: React.FC<FooterProps> = ({ lng }) => {
         <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Column */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900">लिखु पिके</h3>
+            <h3 className="text-lg font-semibold text-gray-900">पोखरा</h3>
 
             <div className="pt-2">
               <Link
@@ -79,7 +79,7 @@ const Footer: React.FC<FooterProps> = ({ lng }) => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-gray-900">सम्पर्क</h3>
             <div className="space-y-3 text-sm text-gray-600">
-              <p>लिखु पिके, कास्की</p>
+              <p>पोखरा, कास्की</p>
               <p>नेपाल</p>
             </div>
           </div>
@@ -110,7 +110,7 @@ const Footer: React.FC<FooterProps> = ({ lng }) => {
             <div className="flex items-center gap-2">
               <Copyright className="w-4 h-4" />
               <span>
-                {localizeNumber(new Date().getFullYear(), "ne")} लिखु पिके
+                {localizeNumber(new Date().getFullYear(), "ne")} पोखरा
                 गाउँपालिका । सर्वाधिकार सुरक्षित
               </span>
             </div>

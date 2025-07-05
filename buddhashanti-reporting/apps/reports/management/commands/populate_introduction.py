@@ -239,7 +239,7 @@ class Command(BaseCommand):
                         "is_published": True,
                         "meta_title": f"{section_data['title']} - {category.name}",
                         "meta_description": section_data["summary_nepali"][:200],
-                        "meta_keywords": f"लिखु पिके, {section_data['title_nepali']}, वस्तुस्थिति विवरण",
+                        "meta_keywords": f"पोखरा, {section_data['title_nepali']}, वस्तुस्थिति विवरण",
                     },
                 )
 
@@ -270,7 +270,7 @@ class Command(BaseCommand):
                         "is_published": True,
                         "meta_title": f"{section_data['title']} - {category.name}",
                         "meta_description": section_data["summary_nepali"][:200],
-                        "meta_keywords": f"लिखु पिके, {section_data['title_nepali']}, वस्तुस्थिति विवरण",
+                        "meta_keywords": f"पोखरा, {section_data['title_nepali']}, वस्तुस्थिति विवरण",
                     },
                 )
 

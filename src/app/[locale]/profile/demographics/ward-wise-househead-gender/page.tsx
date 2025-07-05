@@ -44,11 +44,11 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data using localized numbers
     const keywordsNP = [
       "पोखरा महानगरपालिका घरमूली लिङ्ग वितरण",
-      "लिखु पिके वडागत घरमूली विश्लेषण",
-      "घरमूली महिला पुरुष अनुपात लिखु पिके",
+      "पोखरा वडागत घरमूली विश्लेषण",
+      "घरमूली महिला पुरुष अनुपात पोखरा",
       "वडा अनुसार घरमूली संख्या",
       "घरमूली लैङ्गिक विविधता",
-      `लिखु पिके कुल जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")}`,
+      `पोखरा कुल जनसंख्या ${localizeNumber(totalPopulation.toString(), "ne")}`,
     ];
 
     // Create detailed description with actual data using localized numbers

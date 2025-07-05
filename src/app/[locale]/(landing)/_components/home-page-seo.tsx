@@ -53,7 +53,7 @@ export default function HomePageSEO({
     logo: "https://digital.pokharamun.gov.np/images/municipality-logo.png",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "लिखु पिके",
+      addressLocality: "पोखरा",
       addressRegion: provinceName,
       addressCountry: "नेपाल",
     },
@@ -92,7 +92,7 @@ export default function HomePageSEO({
     keywords: [
       "पोखरा महानगरपालिका जनसंख्या",
       "Khajura metropolitan city demographics",
-      "लिखु पिके जनगणना",
+      "पोखरा जनगणना",
       "कास्की जनसंख्या",
       "नेपालको जनसंख्या",
     ],

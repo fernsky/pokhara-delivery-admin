@@ -76,12 +76,12 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data
     const keywordsNP = [
       "पोखरा महानगरपालिका घरपरिवारको जन्मस्थान",
-      "लिखु पिके परिवार जन्मस्थान वितरण",
+      "पोखरा परिवार जन्मस्थान वितरण",
       "वडा अनुसार जन्मस्थान विवरण",
       "घरपरिवारको जन्मस्थान विश्लेषण",
-      "स्थानीय घरपरिवार लिखु पिके",
+      "स्थानीय घरपरिवार पोखरा",
       "जिल्ला बाहिरका घर परिवार",
-      `लिखु पिके घरपरिवार संख्या ${localizeNumber(totalHouseholds.toString(), "ne")}`,
+      `पोखरा घरपरिवार संख्या ${localizeNumber(totalHouseholds.toString(), "ne")}`,
     ];
 
     const keywordsEN = [

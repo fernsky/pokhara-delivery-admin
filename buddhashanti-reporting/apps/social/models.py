@@ -1059,7 +1059,7 @@ class WardWiseTeacherStaffing(BaseModel):
     @property
     def school_display_name(self):
         """Return shortened school name for display"""
-        return self.school_name.replace("लिखु पिके-", "").replace("लुग्री-", "")
+        return self.school_name.replace("पोखरा-", "").replace("लुग्री-", "")
 
 
 class WardWiseTeacherSummary(BaseModel):

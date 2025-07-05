@@ -481,7 +481,7 @@ export default function FarmersGroupAnalysisSection({
             {businessSummary[0]?.typeName || ""}
           </h3>
           <p className="text-muted-foreground text-sm mb-4">
-            लिखु पिकेमा सबैभन्दा लोकप्रिय व्यावसायिक समूह, जुन कुल समूहको
+            पोखरामा सबैभन्दा लोकप्रिय व्यावसायिक समूह, जुन कुल समूहको
             {localizeNumber(
               businessSummary[0]?.percentage.toFixed(1) || "0",
               "ne",

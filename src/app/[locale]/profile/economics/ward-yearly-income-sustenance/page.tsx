@@ -75,14 +75,14 @@ export async function generateMetadata(): Promise<Metadata> {
     const keywordsNP = [
       "पोखरा महानगरपालिका वार्षिक आय",
       "वार्षिक उत्पादनको पर्याप्तता",
-      `लिखु पिके ${MONTHS_SUSTAINED_NAMES[sortedMonthsSustained[0]]} आय पर्याप्तता`,
+      `पोखरा ${MONTHS_SUSTAINED_NAMES[sortedMonthsSustained[0]]} आय पर्याप्तता`,
       ...sortedMonthsSustained.map(
-        (r) => `${MONTHS_SUSTAINED_NAMES[r]} आय पर्याप्तता लिखु पिके`,
+        (r) => `${MONTHS_SUSTAINED_NAMES[r]} आय पर्याप्तता पोखरा`,
       ),
       "वडा अनुसार वार्षिक आय",
       "आर्थिक स्वावलम्बन तथ्याङ्क",
-      "आय पर्याप्तता सर्वेक्षण लिखु पिके",
-      `लिखु पिके कुल घरपरिवार संख्या ${totalHouseholds}`,
+      "आय पर्याप्तता सर्वेक्षण पोखरा",
+      `पोखरा कुल घरपरिवार संख्या ${totalHouseholds}`,
     ];
 
     const keywordsEN = [
@@ -360,7 +360,7 @@ export default async function WardYearlyIncomeSustenancePage() {
                       totalHouseholds) *
                     100
                   ).toFixed(1)}
-                  %) मात्र रहेको देखिन्छ। यसले लिखु पिकेमा खाद्य सुरक्षा, आर्थिक
+                  %) मात्र रहेको देखिन्छ। यसले पोखरामा खाद्य सुरक्षा, आर्थिक
                   स्वावलम्बन र गरीबीको स्थितिलाई संकेत गर्दछ。
                 </p>
 

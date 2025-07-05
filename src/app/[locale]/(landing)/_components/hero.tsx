@@ -102,7 +102,7 @@ const Hero: React.FC<HeroProps> = ({
         {/* Pattern Background */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/pokhara-bg.jpg"
+            src="/images/pokhara_background.png"
             alt="pokhara Municipality Background"
             fill
             priority={true}

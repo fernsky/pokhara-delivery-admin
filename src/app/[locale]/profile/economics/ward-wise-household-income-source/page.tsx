@@ -55,16 +55,16 @@ export async function generateMetadata(): Promise<Metadata> {
     // Create rich keywords with actual data
     const keywordsNP = [
       "पोखरा महानगरपालिका घरपरिवार आय स्रोत",
-      "लिखु पिके आर्थिक गतिविधि",
-      `लिखु पिके ${incomeSourceLabels[topIncomeSources[0] as keyof typeof incomeSourceLabels]}`,
+      "पोखरा आर्थिक गतिविधि",
+      `पोखरा ${incomeSourceLabels[topIncomeSources[0] as keyof typeof incomeSourceLabels]}`,
       ...topIncomeSources.map(
         (r) =>
-          `${incomeSourceLabels[r as keyof typeof incomeSourceLabels]} लिखु पिके`,
+          `${incomeSourceLabels[r as keyof typeof incomeSourceLabels]} पोखरा`,
       ),
       "वडा अनुसार आय स्रोत",
       "आर्थिक गतिविधि तथ्याङ्क",
-      "आय स्रोत सर्वेक्षण लिखु पिके",
-      `लिखु पिके कुल घरपरिवार संख्या ${localizeNumber(totalHouseholds.toString(), "ne")}`,
+      "आय स्रोत सर्वेक्षण पोखरा",
+      `पोखरा कुल घरपरिवार संख्या ${localizeNumber(totalHouseholds.toString(), "ne")}`,
     ];
     const keywordsEN = [
       "Khajura metropolitan city household income sources",
