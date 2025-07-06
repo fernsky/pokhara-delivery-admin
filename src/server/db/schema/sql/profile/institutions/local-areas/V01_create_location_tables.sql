@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS acme_location (
     
     point_geometry GEOMETRY(Point, 4326),
     polygon_geometry GEOMETRY(Polygon, 4326),
-    parent_id VARCHAR(36) REFERENCES acme_location(id), -- Fixed reference to acme_location
+    household_id VARCHAR(36) REFERENCES acme_location(id), -- Fixed reference to acme_location
     is_active BOOLEAN DEFAULT true,
     created_at TIMESTAMP DEFAULT NOW(),
     updated_at TIMESTAMP DEFAULT NOW(),
@@ -44,7 +44,7 @@ CREATE INDEX IF NOT EXISTS idx_location_polygon_geometry ON acme_location USING 
 -- Create indexes for other common lookups
 CREATE INDEX IF NOT EXISTS idx_location_type ON acme_location(type);
 CREATE INDEX IF NOT EXISTS idx_location_name ON acme_location(name);
-CREATE INDEX IF NOT EXISTS idx_location_parent ON acme_location(parent_id);
+CREATE INDEX IF NOT EXISTS idx_location_parent ON acme_location(household_id);
 
 -- Add index for the slug for faster lookups when accessing via SEO-friendly URLs
 CREATE INDEX IF NOT EXISTS idx_location_slug ON acme_location(slug);

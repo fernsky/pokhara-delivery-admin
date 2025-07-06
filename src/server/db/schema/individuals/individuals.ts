@@ -22,11 +22,11 @@ export const educationLevelEnum = pgEnum("education_level_enum", [
 ]);
 
 // Main individuals table
-export const individuals = pgTable("acme_pokhara_individuals", {
+export const individuals = pgTable("synth_pokhara_individual", {
   // Primary identification
   id: text("id").primaryKey().notNull(),
   tenantId: text("tenant_id"),
-  parentId: text("parent_id")
+  familyId: text("household_id")
     .notNull()
     .references(() => households.id),
   wardNo: integer("ward_no").notNull(),
@@ -127,11 +127,11 @@ export const individuals = pgTable("acme_pokhara_individuals", {
 });
 
 // Staging table for data validation
-export const stagingIndividuals = pgTable("staging_acme_pokhara_individuals", {
+export const stagingIndividuals = pgTable("staging_synth_pokhara_individual", {
   // Copy the same structure as the main individuals table
   id: text("id").primaryKey().notNull(),
   tenantId: text("tenant_id"),
-  parentId: text("parent_id").notNull(),
+  parentId: text("household_id").notNull(),
   wardNo: integer("ward_no").notNull(),
   deviceId: text("device_id"),
 

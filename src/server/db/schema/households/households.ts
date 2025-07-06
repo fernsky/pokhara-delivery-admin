@@ -18,10 +18,10 @@ export const householdStatusEnum = pgEnum("household_status_enum", [
 ]);
 
 // Main household table
-export const households = pgTable("acme_pokhara_households", {
+export const households = pgTable("synth_pokhara_household", {
   // Primary identification
   id: text("id").primaryKey().notNull(),
-  profileId: text("profile_id"),
+  tenantId: text("tenant_id"),
 
   // Location information
   province: text("province"),
@@ -168,7 +168,7 @@ export const households = pgTable("acme_pokhara_households", {
 export const stagingHouseholds = pgTable("staging_acme_pokhara_household", {
   // Copy the same structure as the main households table
   id: text("id").primaryKey().notNull(),
-  profileId: text("profile_id"),
+  tenantId: text("tenant_id"),
 
   // Location information
   province: text("province"),

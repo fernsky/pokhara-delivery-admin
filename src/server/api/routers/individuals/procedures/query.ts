@@ -34,7 +34,7 @@ export const getIndividualsProcedure = protectedProcedure
         SELECT 
           id,
           tenant_id,
-          parent_id,
+          household_id,
           ward_no,
           name,
           gender,
@@ -44,7 +44,7 @@ export const getIndividualsProcedure = protectedProcedure
           educational_level,
           is_disabled,
           marital_status
-        FROM acme_pokhara_individuals
+        FROM synth_pokhara_individual
         WHERE 1=1
       `;
 
@@ -89,10 +89,10 @@ export const getIndividualsProcedure = protectedProcedure
           query = sql`${query} AND is_disabled = ${filters.isDisabled}`;
         }
 
-        // Filter by parent_id (household ID)
+        // Filter by household_id (household ID)
         if (filters.parentId) {
           const formattedParentId = formatDbUuid(filters.parentId);
-          query = sql`${query} AND parent_id = ${formattedParentId}`;
+          query = sql`${query} AND household_id = ${formattedParentId}`;
         }
       }
 
@@ -132,7 +132,7 @@ export const getIndividualsProcedure = protectedProcedure
       const individualsList = result.map((row) => ({
         id: row.id,
         tenantId: row.tenant_id || "",
-        parentId: row.parent_id,
+        parentId: row.household_id,
         wardNo: typeof row.ward_no === "number" ? row.ward_no : null,
         name: row.name || "",
         gender: row.gender || "",
@@ -147,7 +147,7 @@ export const getIndividualsProcedure = protectedProcedure
       // Build count query with the same filters
       let countQuery = sql`
         SELECT COUNT(*) as total 
-        FROM acme_pokhara_individuals
+        FROM synth_pokhara_individual
         WHERE 1=1
       `;
 
@@ -193,7 +193,7 @@ export const getIndividualsProcedure = protectedProcedure
 
         if (filters.parentId) {
           const formattedParentId = formatDbUuid(filters.parentId);
-          countQuery = sql`${countQuery} AND parent_id = ${formattedParentId}`;
+          countQuery = sql`${countQuery} AND household_id = ${formattedParentId}`;
         }
       }
 
@@ -365,7 +365,7 @@ export const getIndividualByIdProcedure = protectedProcedure
     }
   });
 
-// Procedure to get individuals by household ID (parent_id)
+// Procedure to get individuals by household ID (household_id)
 export const getIndividualsByHouseholdIdProcedure = protectedProcedure
   .input(
     z.object({
@@ -381,10 +381,10 @@ export const getIndividualsByHouseholdIdProcedure = protectedProcedure
       // Format the household ID correctly for the database
       const formattedHouseholdId = formatDbUuid(householdId);
 
-      // Query to get individuals with the specified parent_id
+      // Query to get individuals with the specified household_id
       const query = sql`
-        SELECT * FROM acme_pokhara_individuals
-        WHERE parent_id = ${formattedHouseholdId}
+        SELECT * FROM synth_pokhara_individual 
+        WHERE household_id = ${formattedHouseholdId}
         ORDER BY 
           CASE 
             WHEN family_role = 'head' THEN 1
@@ -400,8 +400,8 @@ export const getIndividualsByHouseholdIdProcedure = protectedProcedure
       // Get count for pagination
       const countQuery = sql`
         SELECT COUNT(*) as total 
-        FROM acme_pokhara_individuals
-        WHERE parent_id = ${formattedHouseholdId}
+        FROM synth_pokhara_individual 
+        WHERE household_id = ${formattedHouseholdId}
       `;
 
       const countResult = await ctx.db.execute(countQuery);
@@ -411,7 +411,7 @@ export const getIndividualsByHouseholdIdProcedure = protectedProcedure
       const individuals = result.map((row) => ({
         id: row.id,
         tenantId: row.tenant_id || "",
-        parentId: row.parent_id,
+        parentId: row.household_id,
         wardNo: typeof row.ward_no === "number" ? row.ward_no : null,
         name: row.name || "",
         gender: row.gender || "",

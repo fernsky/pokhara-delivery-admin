@@ -42,7 +42,7 @@ export const location = pgTable("location", {
   polygonGeometry: geometry("polygon_geometry", { type: "Polygon" }),
 
   // Optional parent location (for hierarchical relationships)
-  parentId: varchar("parent_id", { length: 36 }),
+  parentId: varchar("household_id", { length: 36 }),
 
   // Status and metadata
   isActive: boolean("is_active").default(true),

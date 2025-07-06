@@ -47,8 +47,8 @@ export const getHouseholdsProcedure = protectedProcedure
           locality,
           house_symbol_no,
           date_of_interview
-        FROM acme_pokhara_households
-        WHERE profile_id = 'pokhara'
+        FROM synth_pokhara_household
+        WHERE tenant_id = 'pokhara_metro'
       `;
 
       if (input.search) {
@@ -132,8 +132,8 @@ export const getHouseholdsProcedure = protectedProcedure
 
       let countQuery = sql`
         SELECT COUNT(*) as total 
-        FROM acme_pokhara_households
-        WHERE profile_id = 'pokhara'
+        FROM synth_pokhara_household
+        WHERE tenant_id = 'pokhara_metro'
       `;
 
       if (input.search) {
@@ -209,7 +209,7 @@ export const getHouseholdByIdProcedure = protectedProcedure
       const formattedId = formatDbUuid(normalizedId);
 
       let query = sql`
-        SELECT * FROM acme_pokhara_households
+        SELECT * FROM synth_pokhara_household
         WHERE id = ${formattedId}
       `;
 
@@ -217,7 +217,7 @@ export const getHouseholdByIdProcedure = protectedProcedure
 
       if (!result || result.length === 0) {
         query = sql`
-          SELECT * FROM acme_pokhara_households
+          SELECT * FROM synth_pokhara_household
           WHERE id = ${normalizedId}
         `;
         result = await ctx.db.execute(query);
@@ -260,7 +260,7 @@ export const getHouseholdByIdProcedure = protectedProcedure
 
       return {
         id: household.id,
-        profileId: household.profile_id || "",
+        profileId: household.tenant_id || "",
         province: household.province || "",
         district: household.district || "",
         localLevel: household.local_level || "",
@@ -537,7 +537,7 @@ export const getHouseholdEditRequestsProcedure = protectedProcedure
           h.ward_no,
           h.locality
         FROM acme_pokhara_household_edit_requests e
-        JOIN acme_pokhara_households h ON h.id = e.household_id
+        JOIN synth_pokhara_household h ON h.id = e.household_id
         ORDER BY e.requested_at DESC
         LIMIT ${limit} OFFSET ${offset}
       `;
