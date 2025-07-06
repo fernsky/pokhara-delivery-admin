@@ -225,7 +225,7 @@ export default async function WardWiseIrrigatedAreaPage() {
             />
           </div>
 
-          <div className="prose prose-slate dark:prose-invert max-w-none">
+          <div className="prose prose-slate  max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा वडा अनुसार सिंचित र असिंचित क्षेत्रफल
             </h1>
@@ -348,7 +348,7 @@ export default async function WardWiseIrrigatedAreaPage() {
             irrigationSustainabilityScore={irrigationSustainabilityScore}
           />
 
-          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
+          <div className="prose prose-slate  max-w-none mt-8">
             <h2
               id="irrigation-gap-and-challenges"
               className="scroll-m-20 border-b pb-2"

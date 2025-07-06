@@ -271,7 +271,7 @@ export default function HouseholdOuterWallCharts({
         </div>
 
         <div className="p-6">
-          <div className="prose prose-slate dark:prose-invert max-w-none mb-6">
+          <div className="prose prose-slate  max-w-none mb-6">
             <p>गारोको प्रकारका आधारमा निम्न गुणस्तर वर्गीकरण गरिएको छ:</p>
             <ul>
               <li>

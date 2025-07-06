@@ -207,7 +207,7 @@ export default function RemittanceExpensesAnalysisSection({
           </span>
         </h3>
 
-        <div className="prose prose-slate dark:prose-invert max-w-none space-y-6">
+        <div className="prose prose-slate  max-w-none space-y-6">
           <p className="text-justify leading-relaxed">
             गढवा गाउँपालिकाको रेमिटेन्स खर्च विश्लेषणले स्थानीय अर्थतन्त्रको गहन
             अध्ययन प्रस्तुत गर्दैछ, जसमा कुल {totalHouseholds.toLocaleString()}{" "}

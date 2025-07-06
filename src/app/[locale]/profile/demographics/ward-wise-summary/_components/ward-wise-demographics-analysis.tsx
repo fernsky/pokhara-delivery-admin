@@ -409,7 +409,7 @@ export default function WardWiseDemographicsAnalysis({
           पोखरा महानगरपालिकाको वडागत विश्लेषण
           <span className="sr-only">Ward-wise Analysis of Pokhara</span>
         </h3>
-        <div className="prose prose-slate dark:prose-invert max-w-none">
+        <div className="prose prose-slate  max-w-none">
           <p>
             पोखरा महानगरपालिकाको वडागत जनसंख्या वितरण विश्लेषणबाट निम्न
             निष्कर्षहरू निकाल्न सकिन्छ:
@@ -513,7 +513,7 @@ export default function WardWiseDemographicsAnalysis({
           पोखरा महानगरपालिकाको नीतिगत सुझाव
           <span className="sr-only">Policy Recommendations for Pokhara</span>
         </h3>
-        <div className="prose prose-slate dark:prose-invert max-w-none">
+        <div className="prose prose-slate  max-w-none">
           <p>
             पोखरा महानगरपालिकाको वडागत विश्लेषणका आधारमा निम्न नीतिगत सुझावहरू
             प्रस्तुत गरिएका छन्:

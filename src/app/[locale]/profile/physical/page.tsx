@@ -210,7 +210,7 @@ export default async function PhysicalInfrastructurePage() {
 
         {/* Introduction Section */}
         <section id="introduction">
-          <div className="prose prose-lg dark:prose-invert max-w-none">
+          <div className="prose prose-lg  max-w-none">
             <p>
               भौतिक पूर्वाधार सम्बन्धी तथ्याङ्कहरू पालिकाको विकास, जनताको
               जीवनस्तर र सेवा सुविधाको पहुँचको महत्त्वपूर्ण सूचकहरू हुन्। पोखरा
@@ -226,7 +226,7 @@ export default async function PhysicalInfrastructurePage() {
 
         {/* Key Facts Section */}
         <section id="key-facts">
-          <div className="prose prose-lg dark:prose-invert max-w-none">
+          <div className="prose prose-lg  max-w-none">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2 mb-6">
               प्रमुख तथ्यहरू
             </h2>
@@ -285,7 +285,7 @@ export default async function PhysicalInfrastructurePage() {
 
         {/* Physical Infrastructure Categories Section */}
         <section id="physical-infrastructure-categories" className="my-8">
-          <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
+          <div className="prose prose-lg  max-w-none mb-6">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2">
               भौतिक पूर्वाधार श्रेणीहरू
             </h2>
@@ -330,7 +330,7 @@ export default async function PhysicalInfrastructurePage() {
 
         {/* Improvement Strategies Section */}
         <section id="improvement-strategies" className="my-8">
-          <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
+          <div className="prose prose-lg  max-w-none mb-6">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2">
               सुधारका रणनीतिहरू
             </h2>

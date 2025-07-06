@@ -193,7 +193,7 @@ export function ClientRoadDetailDisplay({
                       {road.hasStreetLights ? (
                         <Badge
                           variant="default"
-                          className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
+                          className="bg-green-100 text-green-800  
                         >
                           <CheckIcon className="h-3.5 w-3.5 mr-1" /> छ
                         </Badge>
@@ -213,7 +213,7 @@ export function ClientRoadDetailDisplay({
                       {road.hasDivider ? (
                         <Badge
                           variant="default"
-                          className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
+                          className="bg-green-100 text-green-800  
                         >
                           <CheckIcon className="h-3.5 w-3.5 mr-1" /> छ
                         </Badge>
@@ -233,7 +233,7 @@ export function ClientRoadDetailDisplay({
                       {road.hasPedestrian ? (
                         <Badge
                           variant="default"
-                          className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
+                          className="bg-green-100 text-green-800  
                         >
                           <CheckIcon className="h-3.5 w-3.5 mr-1" /> छ
                         </Badge>
@@ -253,7 +253,7 @@ export function ClientRoadDetailDisplay({
                       {road.hasBicycleLane ? (
                         <Badge
                           variant="default"
-                          className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
+                          className="bg-green-100 text-green-800  
                         >
                           <CheckIcon className="h-3.5 w-3.5 mr-1" /> छ
                         </Badge>

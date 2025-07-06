@@ -274,7 +274,7 @@ export default async function WardMainSkillsPage() {
             />
           </div>
 
-          <div className="prose prose-slate dark:prose-invert max-w-none">
+          <div className="prose prose-slate  max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा प्रमुख सीप र दक्षता
             </h1>
@@ -325,7 +325,7 @@ export default async function WardMainSkillsPage() {
             SKILL_NAMES_EN={SKILL_NAMES_EN}
           />
 
-          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
+          <div className="prose prose-slate  max-w-none mt-8">
             <h2 id="major-skills" className="scroll-m-20 border-b pb-2">
               प्रमुख सीपहरूको विश्लेषण
             </h2>

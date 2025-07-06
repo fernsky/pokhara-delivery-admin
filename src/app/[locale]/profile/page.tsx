@@ -54,16 +54,16 @@ const categories = [
       "जनसंख्या, उमेर, लिङ्ग, जात, धर्म र भाषा सम्बन्धी विस्तृत तथ्याङ्क।",
     href: "/profile/demographics",
     icon: <Users className="h-6 w-6" />,
-    color: "bg-blue-100 dark:bg-blue-900",
-    textColor: "text-blue-700 dark:text-blue-300",
+    color: "bg-blue-100",
+    textColor: "text-blue-700",
   },
   {
     title: "आर्थिक अवस्था",
     description: "रोजगारी, आर्थिक गतिविधि र व्यापार सम्बन्धी तथ्याङ्क।",
     href: "/profile/economics",
     icon: <PieChart className="h-6 w-6" />,
-    color: "bg-purple-100 dark:bg-purple-900",
-    textColor: "text-purple-700 dark:text-purple-300",
+    color: "bg-purple-100",
+    textColor: "text-purple-700",
   },
   {
     title: "खानेपानी तथा सरसफाइ",
@@ -71,8 +71,8 @@ const categories = [
       "खानेपानीको श्रोत, पानी शुद्धीकरण, शौचालयको प्रकार र फोहोरमैला व्यवस्थापन सम्बन्धी तथ्याङ्क।",
     href: "/profile/water-and-sanitation",
     icon: <Droplet className="h-6 w-6" />,
-    color: "bg-cyan-100 dark:bg-cyan-900",
-    textColor: "text-cyan-700 dark:text-cyan-300",
+    color: "bg-cyan-100",
+    textColor: "text-cyan-700",
   },
   {
     title: "शैक्षिक स्थिति",
@@ -80,8 +80,8 @@ const categories = [
       "साक्षरता दर, विद्यालयहरू, शैक्षिक स्थिति र अन्य शिक्षा सम्बन्धी तथ्याङ्क।",
     href: "/profile/education",
     icon: <GraduationCap className="h-6 w-6" />,
-    color: "bg-green-100 dark:bg-green-900",
-    textColor: "text-green-700 dark:text-green-300",
+    color: "bg-green-100",
+    textColor: "text-green-700",
   },
 
   {
@@ -90,16 +90,16 @@ const categories = [
       "स्वास्थ्य सुविधाहरू, स्वास्थ्य सूचकांकहरू र सेवा पहुँच सम्बन्धी तथ्याङ्क।",
     href: "/profile/health",
     icon: <Activity className="h-6 w-6" />,
-    color: "bg-red-100 dark:bg-red-900",
-    textColor: "text-red-700 dark:text-red-300",
+    color: "bg-red-100",
+    textColor: "text-red-700",
   },
   {
     title: "भौतिक पूर्वाधार",
     description: "सडक, बिजुली, खानेपानी र अन्य पूर्वाधार सम्बन्धी जानकारी।",
     href: "/profile/physical",
     icon: <Building className="h-6 w-6" />,
-    color: "bg-yellow-100 dark:bg-yellow-900",
-    textColor: "text-yellow-700 dark:text-yellow-300",
+    color: "bg-yellow-100",
+    textColor: "text-yellow-700",
   },
   {
     title: "प्रजनन् स्वास्थ्य",
@@ -107,23 +107,23 @@ const categories = [
       "मातृशिशु स्वास्थ्य, परिवार नियोजन, गर्भावस्था सेवा र प्रजनन् स्वास्थ्य सम्बन्धी जानकारी।",
     href: "/profile/fertility",
     icon: <Baby className="h-6 w-6" />,
-    color: "bg-yellow-100 dark:bg-yellow-900",
-    textColor: "text-yellow-700 dark:text-yellow-300",
+    color: "bg-yellow-100",
+    textColor: "text-yellow-700",
   },
   // {
   //   title: "सामाजिक",
   //   description: "भौगोलिक नक्सा, स्थानीय सीमाना र अन्य स्थानिक जानकारी।",
   //   href: "/profile/maps",
   //   icon: <MapPin className="h-6 w-6" />,
-  //   color: "bg-indigo-100 dark:bg-indigo-900",
-  //   textColor: "text-indigo-700 dark:text-indigo-300",
+  //   color: "bg-indigo-100 
+  //   textColor: "text-indigo-700 
   // },
 ];
 
 export default function ProfilePage() {
   return (
     <div className="relative py-4 lg:py-6 pb-16">
-      <article className="prose prose-slate dark:prose-invert max-w-none">
+      <article className="prose prose-slate max-w-none">
         <div className="flex flex-col gap-8">
           <section className="py-6">
             <div className="mb-8">
@@ -144,7 +144,7 @@ export default function ProfilePage() {
               </h1>
             </div>
             {/* Content with responsive max-width */}
-            <div className="prose prose-slate dark:prose-invert max-w-4xl">
+            <div className="prose prose-slate max-w-4xl">
               <p>
                 पोखरा महानगरपालिकाको प्रोफाइलमा स्वागत छ! यहाँ तपाईंले पोखरा
                 महानगरपालिकाको विस्तृत तथ्याङ्क र विश्लेषणहरू पाउनुहुनेछ। यो
@@ -188,7 +188,7 @@ export default function ProfilePage() {
 
           <section className="py-6">
             {/* Content with responsive max-width */}
-            <div className="prose prose-slate dark:prose-invert max-w-4xl">
+            <div className="prose prose-slate max-w-4xl">
               <h2 id="how-to-use" className="scroll-m-20">
                 प्रोफाइलको प्रयोग विधि
               </h2>

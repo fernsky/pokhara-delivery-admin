@@ -139,7 +139,7 @@ export default async function FertilityPage() {
 
         {/* Introduction Section */}
         <section id="introduction">
-          <div className="prose prose-lg dark:prose-invert max-w-none">
+          <div className="prose prose-lg  max-w-none">
             <p>
               प्रजनन् स्वास्थ्य, विशेषगरी मातृ तथा शिशु स्वास्थ्य सम्बन्धी
               तथ्याङ्कहरू पालिकाको स्वास्थ्य सेवा र जनस्वास्थ्यको महत्त्वपूर्ण
@@ -155,7 +155,7 @@ export default async function FertilityPage() {
 
         {/* Key Facts Section */}
         <section id="key-facts">
-          <div className="prose prose-lg dark:prose-invert max-w-none">
+          <div className="prose prose-lg  max-w-none">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2 mb-6">
               प्रमुख तथ्यहरू
             </h2>
@@ -215,7 +215,7 @@ export default async function FertilityPage() {
 
         {/* Fertility Categories Section */}
         <section id="fertility-categories" className="my-8">
-          <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
+          <div className="prose prose-lg  max-w-none mb-6">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2">
               प्रजनन् स्वास्थ्य श्रेणीहरू
             </h2>
@@ -260,7 +260,7 @@ export default async function FertilityPage() {
 
         {/* Improvement Strategies Section */}
         <section id="improvement-strategies" className="my-8">
-          <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
+          <div className="prose prose-lg  max-w-none mb-6">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2">
               सुधारका रणनीतिहरू
             </h2>

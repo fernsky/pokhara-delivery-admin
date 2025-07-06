@@ -356,7 +356,7 @@ export default async function MunicipalityWideAnimalProductsPage() {
             />
           </div>
 
-          <div className="prose prose-slate dark:prose-invert max-w-none">
+          <div className="prose prose-slate  max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा पशुपन्छीजन्य वस्तुको प्रकार अनुसार उत्पादन र
               बिक्री
@@ -466,7 +466,7 @@ export default async function MunicipalityWideAnimalProductsPage() {
             }
           />
 
-          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
+          <div className="prose prose-slate  max-w-none mt-8">
             <h2
               id="animal-products-and-local-economy"
               className="scroll-m-20 border-b pb-2"

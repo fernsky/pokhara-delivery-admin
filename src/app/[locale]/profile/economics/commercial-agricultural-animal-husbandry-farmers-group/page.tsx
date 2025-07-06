@@ -387,7 +387,7 @@ export default async function CommercialAgriculturalAnimalHusbandryFarmersGroupP
             />
           </div>
 
-          <div className="prose prose-slate dark:prose-invert max-w-none">
+          <div className="prose prose-slate  max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा व्यावसायिक कृषि तथा पशुपालन समूहहरू
             </h1>
@@ -478,7 +478,7 @@ export default async function CommercialAgriculturalAnimalHusbandryFarmersGroupP
             statistics={statistics}
           />
 
-          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
+          <div className="prose prose-slate  max-w-none mt-8">
             <h2 id="ward-distribution" className="scroll-m-20 border-b pb-2">
               वडागत वितरण
             </h2>
@@ -513,7 +513,7 @@ export default async function CommercialAgriculturalAnimalHusbandryFarmersGroupP
             popularBusinessByWard={popularBusinessByWard}
           />
 
-          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
+          <div className="prose prose-slate  max-w-none mt-8">
             <FarmersGroupAnalysisSection
               businessSummary={businessSummary}
               totalGroups={totalGroups}

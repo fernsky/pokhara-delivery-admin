@@ -230,7 +230,7 @@ export default async function SafeMotherhoodIndicatorsPage() {
             />
           </div>
 
-          <div className="prose prose-slate dark:prose-invert max-w-none">
+          <div className="prose prose-slate  max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा सुरक्षित मातृत्व सेवाको अवस्था
             </h1>
@@ -288,7 +288,7 @@ export default async function SafeMotherhoodIndicatorsPage() {
             maternalHealthIndex={maternalHealthIndex}
           />
 
-          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
+          <div className="prose prose-slate  max-w-none mt-8">
             <h2
               id="service-improvement-strategy"
               className="scroll-m-20 border-b pb-2 mt-12"

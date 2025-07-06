@@ -54,23 +54,23 @@ export default function RoadsListDisplay({
   const getBadgeColor = (type: string) => {
     switch (type) {
       case "HIGHWAY":
-        return "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200";
+        return "bg-red-100 text-red-800  
       case "URBAN":
-        return "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200";
+        return "bg-blue-100 text-blue-800  
       case "RURAL":
-        return "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200";
+        return "bg-green-100 text-green-800  
       case "GRAVEL":
-        return "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200";
+        return "bg-amber-100 text-amber-800  
       case "EARTHEN":
-        return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200";
+        return "bg-yellow-100 text-yellow-800  
       case "AGRICULTURAL":
-        return "bg-lime-100 text-lime-800 dark:bg-lime-900 dark:text-lime-200";
+        return "bg-lime-100 text-lime-800  
       case "ALLEY":
-        return "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200";
+        return "bg-indigo-100 text-indigo-800  
       case "BRIDGE":
-        return "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200";
+        return "bg-purple-100 text-purple-800  
       default:
-        return "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200";
+        return "bg-gray-100 text-gray-800  
     }
   };
 

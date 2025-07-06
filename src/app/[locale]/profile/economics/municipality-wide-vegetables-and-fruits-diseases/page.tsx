@@ -245,7 +245,7 @@ export default async function MunicipalityWideVegetablesAndFruitsDiseasesPage() 
             />
           </div>
 
-          <div className="prose prose-slate dark:prose-invert max-w-none">
+          <div className="prose prose-slate  max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा तरकारी र फलफूलमा रोग र कीटपतंग
             </h1>
@@ -337,7 +337,7 @@ export default async function MunicipalityWideVegetablesAndFruitsDiseasesPage() 
             avgIssuesPerCrop={avgIssuesPerCrop}
           />
 
-          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
+          <div className="prose prose-slate  max-w-none mt-8">
             <h2
               id="vegetable-protection-strategy"
               className="scroll-m-20 border-b pb-2"

@@ -171,7 +171,7 @@ export default async function WaterAndSanitationPage() {
 
         {/* Introduction Section */}
         <section id="introduction">
-          <div className="prose prose-lg dark:prose-invert max-w-none">
+          <div className="prose prose-lg  max-w-none">
             <p>
               खानेपानी तथा सरसफाइ सम्बन्धी तथ्याङ्कहरू स्वास्थ्य, वातावरण र
               जीवनस्तरको महत्त्वपूर्ण सूचकहरू हुन्। पोखरा महानगरपालिकाको
@@ -187,7 +187,7 @@ export default async function WaterAndSanitationPage() {
 
         {/* Key Facts Section */}
         <section id="key-facts">
-          <div className="prose prose-lg dark:prose-invert max-w-none">
+          <div className="prose prose-lg  max-w-none">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2 mb-6">
               प्रमुख तथ्यहरू
             </h2>
@@ -249,7 +249,7 @@ export default async function WaterAndSanitationPage() {
 
         {/* Water and Sanitation Categories Section */}
         <section id="water-sanitation-categories" className="my-8">
-          <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
+          <div className="prose prose-lg  max-w-none mb-6">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2">
               खानेपानी तथा सरसफाइ श्रेणीहरू
             </h2>
@@ -294,7 +294,7 @@ export default async function WaterAndSanitationPage() {
 
         {/* Improvement Strategies Section */}
         <section id="improvement-strategies" className="my-8">
-          <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
+          <div className="prose prose-lg  max-w-none mb-6">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2">
               सुधारका रणनीतिहरू
             </h2>

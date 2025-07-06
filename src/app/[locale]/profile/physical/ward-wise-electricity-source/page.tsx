@@ -358,7 +358,7 @@ export default async function WardWiseElectricitySourcePage() {
             />
           </div>
 
-          <div className="prose prose-slate dark:prose-invert max-w-none">
+          <div className="prose prose-slate  max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा विद्युतको स्रोतको प्रयोगको अवस्था
             </h1>
@@ -425,7 +425,7 @@ export default async function WardWiseElectricitySourcePage() {
             modernSourcePercentage={modernSourcePercentage}
           />
 
-          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
+          <div className="prose prose-slate  max-w-none mt-8">
             <h2
               id="electricity-usage-analysis"
               className="scroll-m-20 border-b pb-2"

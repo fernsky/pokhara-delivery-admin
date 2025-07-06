@@ -329,7 +329,7 @@ export default async function WardWiseTimeToMarketCenterPage() {
             />
           </div>
 
-          <div className="prose prose-slate dark:prose-invert max-w-none">
+          <div className="prose prose-slate  max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा बजार केन्द्र पुग्न लाग्ने समयको अवस्था
             </h1>
@@ -392,7 +392,7 @@ export default async function WardWiseTimeToMarketCenterPage() {
             accessibilityIndex={accessibilityIndex}
           />
 
-          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
+          <div className="prose prose-slate  max-w-none mt-8">
             <h2
               id="market-center-access-analysis"
               className="scroll-m-20 border-b pb-2"

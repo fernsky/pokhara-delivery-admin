@@ -249,7 +249,7 @@ export default async function WardHouseholdsLoanUsagePage() {
             />
           </div>
 
-          <div className="prose prose-slate dark:prose-invert max-w-none">
+          <div className="prose prose-slate  max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा कर्जाको उपयोग प्रयोजन
             </h1>
@@ -293,7 +293,7 @@ export default async function WardHouseholdsLoanUsagePage() {
             loanUseLabels={loanUseLabels}
           />
 
-          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
+          <div className="prose prose-slate  max-w-none mt-8">
             <h2 id="major-loan-usage" className="scroll-m-20 border-b pb-2">
               प्रमुख कर्जा प्रयोजनहरूको विश्लेषण
             </h2>
