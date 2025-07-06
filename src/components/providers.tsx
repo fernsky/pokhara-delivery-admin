@@ -13,7 +13,7 @@ interface ProvidersProps {
 
 export function Providers({ children, user }: ProvidersProps) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
       <UserHydration user={user} />
       <TRPCReactProvider>{children}</TRPCReactProvider>
       <Toaster />
