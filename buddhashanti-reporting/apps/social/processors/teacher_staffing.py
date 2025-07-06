@@ -346,7 +346,7 @@ class TeacherStaffingProcessor(BaseSocialProcessor):
                 rm_count = rm_grant["teacher_count"]
                 rm_percent = rm_grant["percentage"]
                 content.append(
-                    f"गाउँपालिका अनुदानमा {format_nepali_number(rm_count)} जना शिक्षक/शिक्षिका "
+                    f"महानगरपालिकाअनुदानमा {format_nepali_number(rm_count)} जना शिक्षक/शिक्षिका "
                     f"({format_nepali_percentage(rm_percent)}) कार्यरत छन्। यसले स्थानीय सरकारको शिक्षाप्रतिको "
                     f"प्रतिबद्धता र स्थानीय शैक्षिक आवश्यकताहरूको पहिचान गर्ने क्षमतालाई देखाउँछ।"
                 )

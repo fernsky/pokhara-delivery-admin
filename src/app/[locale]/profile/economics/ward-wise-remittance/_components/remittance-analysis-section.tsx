@@ -241,7 +241,7 @@ export default function RemittanceAnalysisSection({
                 <div>
                   <h5 className="font-medium mb-1">प्रमुख रेमिट्यान्स समूह</h5>
                   <p className="text-sm text-muted-foreground">
-                    गाउँपालिका भरि
+                    महानगरपालिकाभरि
                   </p>
                 </div>
                 <div className="text-right">

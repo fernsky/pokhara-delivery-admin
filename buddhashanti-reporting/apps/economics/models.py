@@ -825,8 +825,8 @@ class MunicipalityWideIrrigationSource(BaseModel):
     )
 
     class Meta:
-        verbose_name = _("गाउँपालिका व्यापी सिंचाइ स्रोत")
-        verbose_name_plural = _("गाउँपालिका व्यापी सिंचाइ स्रोत")
+        verbose_name = _("महानगरपालिकाव्यापी सिंचाइ स्रोत")
+        verbose_name_plural = _("महानगरपालिकाव्यापी सिंचाइ स्रोत")
         unique_together = ["irrigation_source"]
 
     def __str__(self):
@@ -855,8 +855,8 @@ class MunicipalityWideFoodCrops(BaseModel):
     )
 
     class Meta:
-        verbose_name = _("गाउँपालिका व्यापी खाद्यान्न बाली")
-        verbose_name_plural = _("गाउँपालिका व्यापी खाद्यान्न बाली")
+        verbose_name = _("महानगरपालिकाव्यापी खाद्यान्न बाली")
+        verbose_name_plural = _("महानगरपालिकाव्यापी खाद्यान्न बाली")
         unique_together = ["food_crop"]
 
     def __str__(self):
@@ -880,8 +880,8 @@ class MunicipalityWideFruits(BaseModel):
     )
 
     class Meta:
-        verbose_name = _("गाउँपालिका व्यापी फलफूल")
-        verbose_name_plural = _("गाउँपालिका व्यापी फलफूल")
+        verbose_name = _("महानगरपालिकाव्यापी फलफूल")
+        verbose_name_plural = _("महानगरपालिकाव्यापी फलफूल")
         unique_together = ["fruit_type"]
 
     def __str__(self):
@@ -905,8 +905,8 @@ class MunicipalityWideOilSeeds(BaseModel):
     )
 
     class Meta:
-        verbose_name = _("गाउँपालिका व्यापी तेलहन बाली")
-        verbose_name_plural = _("गाउँपालिका व्यापी तेलहन बाली")
+        verbose_name = _("महानगरपालिकाव्यापी तेलहन बाली")
+        verbose_name_plural = _("महानगरपालिकाव्यापी तेलहन बाली")
         unique_together = ["oil_seed"]
 
     def __str__(self):
@@ -930,8 +930,8 @@ class MunicipalityWidePulses(BaseModel):
     )
 
     class Meta:
-        verbose_name = _("गाउँपालिका व्यापी दलहन बाली")
-        verbose_name_plural = _("गाउँपालिका व्यापी दलहन बाली")
+        verbose_name = _("महानगरपालिकाव्यापी दलहन बाली")
+        verbose_name_plural = _("महानगरपालिकाव्यापी दलहन बाली")
         unique_together = ["pulse"]
 
     def __str__(self):
@@ -955,8 +955,8 @@ class MunicipalityWideSpices(BaseModel):
     )
 
     class Meta:
-        verbose_name = _("गाउँपालिका व्यापी मसला")
-        verbose_name_plural = _("गाउँपालिका व्यापी मसला")
+        verbose_name = _("महानगरपालिकाव्यापी मसला")
+        verbose_name_plural = _("महानगरपालिकाव्यापी मसला")
         unique_together = ["spice_type"]
 
     def __str__(self):
@@ -980,8 +980,8 @@ class MunicipalityWideVegetables(BaseModel):
     )
 
     class Meta:
-        verbose_name = _("गाउँपालिका व्यापी तरकारी")
-        verbose_name_plural = _("गाउँपालिका व्यापी तरकारी")
+        verbose_name = _("महानगरपालिकाव्यापी तरकारी")
+        verbose_name_plural = _("महानगरपालिकाव्यापी तरकारी")
         unique_together = ["vegetable_type"]
 
     def __str__(self):
@@ -1012,8 +1012,8 @@ class MunicipalityWideAnimalProducts(BaseModel):
     )
 
     class Meta:
-        verbose_name = _("गाउँपालिका व्यापी पशु उत्पादन")
-        verbose_name_plural = _("गाउँपालिका व्यापी पशु उत्पादन")
+        verbose_name = _("महानगरपालिकाव्यापी पशु उत्पादन")
+        verbose_name_plural = _("महानगरपालिकाव्यापी पशु उत्पादन")
         unique_together = ["animal_product_type", "measurement_unit"]
 
     def __str__(self):
@@ -1033,8 +1033,8 @@ class MunicipalityWideCropDiseases(BaseModel):
     major_diseases = models.TextField(verbose_name=_("प्रमुख रोग"))
 
     class Meta:
-        verbose_name = _("गाउँपालिका व्यापी बालीको रोग")
-        verbose_name_plural = _("गाउँपालिका व्यापी बालीको रोग")
+        verbose_name = _("महानगरपालिकाव्यापी बालीको रोग")
+        verbose_name_plural = _("महानगरपालिकाव्यापी बालीको रोग")
         unique_together = ["crop"]
 
     def __str__(self):
@@ -1056,8 +1056,8 @@ class MunicipalityWideVegetablesAndFruitsDiseases(BaseModel):
     major_diseases = models.TextField(verbose_name=_("प्रमुख रोग"))
 
     class Meta:
-        verbose_name = _("गाउँपालिका व्यापी तरकारी र फलफूलको रोग")
-        verbose_name_plural = _("गाउँपालिका व्यापी तरकारी र फलफूलको रोग")
+        verbose_name = _("महानगरपालिकाव्यापी तरकारी र फलफूलको रोग")
+        verbose_name_plural = _("महानगरपालिकाव्यापी तरकारी र फलफूलको रोग")
         unique_together = ["crop"]
 
     def __str__(self):
@@ -1078,8 +1078,8 @@ class MunicipalityWideAnimalDiseases(BaseModel):
     )
 
     class Meta:
-        verbose_name = _("गाउँपालिका व्यापी पशु रोग")
-        verbose_name_plural = _("गाउँपालिका व्यापी पशु रोगहरू")
+        verbose_name = _("महानगरपालिकाव्यापी पशु रोग")
+        verbose_name_plural = _("महानगरपालिकाव्यापी पशु रोगहरू")
         unique_together = ["animal_type"]
 
     def __str__(self):
@@ -1104,8 +1104,8 @@ class MunicipalityWideCommercialAgriculturalAnimalHusbandryFarmersGroup(BaseMode
     )
 
     class Meta:
-        verbose_name = _("गाउँपालिका व्यापी व्यापारिक कृषि पशुपालन किसान समूह")
-        verbose_name_plural = _("गाउँपालिका व्यापी व्यापारिक कृषि पशुपालन किसान समूह")
+        verbose_name = _("महानगरपालिकाव्यापी व्यापारिक कृषि पशुपालन किसान समूह")
+        verbose_name_plural = _("महानगरपालिकाव्यापी व्यापारिक कृषि पशुपालन किसान समूह")
 
     def __str__(self):
         return f"{self.name} - {self.get_type_display()}"
@@ -1121,8 +1121,8 @@ class MunicipalityWideAgricultureRelatedFarmersGroup(BaseModel):
     )
 
     class Meta:
-        verbose_name = _("गाउँपालिका व्यापी कृषि सम्बन्धी किसान समूह")
-        verbose_name_plural = _("गाउँपालिका व्यापी कृषि सम्बन्धी किसान समूह")
+        verbose_name = _("महानगरपालिकाव्यापी कृषि सम्बन्धी किसान समूह")
+        verbose_name_plural = _("महानगरपालिकाव्यापी कृषि सम्बन्धी किसान समूह")
 
     def __str__(self):
         return f"{self.name} - वडा {self.ward_number}"
@@ -1152,8 +1152,8 @@ class MunicipalityWideAgriculturalExperts(BaseModel):
     contact_number = models.CharField(max_length=20, verbose_name=_("सम्पर्क न."))
 
     class Meta:
-        verbose_name = _("गाउँपालिका व्यापी कृषि विज्ञ")
-        verbose_name_plural = _("गाउँपालिका व्यापी कृषि विज्ञ")
+        verbose_name = _("महानगरपालिकाव्यापी कृषि विज्ञ")
+        verbose_name_plural = _("महानगरपालिकाव्यापी कृषि विज्ञ")
         ordering = ["name"]
 
     def __str__(self):
@@ -1245,8 +1245,8 @@ class MunicipalityWideCooperatives(BaseModel):
     )
 
     class Meta:
-        verbose_name = _("गाउँपालिका व्यापी सहकारी")
-        verbose_name_plural = _("गाउँपालिका व्यापी सहकारीहरू")
+        verbose_name = _("महानगरपालिकाव्यापी सहकारी")
+        verbose_name_plural = _("महानगरपालिकाव्यापी सहकारीहरू")
         ordering = ["ward_number", "name"]
 
     def __str__(self):

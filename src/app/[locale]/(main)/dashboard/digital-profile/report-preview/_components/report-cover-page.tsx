@@ -105,7 +105,7 @@ export function ReportCoverPage() {
             background: "white",
           }}
         >
-          गाउँपालिका पार्श्वचित्र
+          महानगरपालिकापार्श्वचित्र
         </div>
 
         {/* Subtitle */}

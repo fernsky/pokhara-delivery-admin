@@ -882,7 +882,7 @@ export default async function WardWiseRemittancePage() {
               <div className="flex">
                 <span className="font-bold mr-2">५.</span>
                 <div>
-                  <strong>गाउँपालिका रेमिट्यान्स बोण्ड:</strong> रेमिट्यान्सलाई
+                  <strong>महानगरपालिकारेमिट्यान्स बोण्ड:</strong> रेमिट्यान्सलाई
                   पूर्वाधार विकासमा लगानी गर्न गाउँपालिकाले रेमिट्यान्स बोण्ड
                   जारी गर्न सक्ने।
                 </div>

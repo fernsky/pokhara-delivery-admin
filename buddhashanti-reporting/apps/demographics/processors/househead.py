@@ -383,4 +383,4 @@ class HouseheadProcessor(BaseDemographicsProcessor, SimpleChartProcessor):
 
         def generate_harmony_conclusion(self):
             """Generate harmony conclusion text"""
-            return """घरमूलीको लिङ्गीय विविधताले समुदायमा लिङ्गीय समानताको वातावरण सिर्जना गरेको छ । यसले सामाजिक न्याय र समानताको दिशामा गाउँपालिका अगाडि बढेको संकेत गर्छ ।"""
+            return """घरमूलीको लिङ्गीय विविधताले समुदायमा लिङ्गीय समानताको वातावरण सिर्जना गरेको छ । यसले सामाजिक न्याय र समानताको दिशामा महानगरपालिकाअगाडि बढेको संकेत गर्छ ।"""

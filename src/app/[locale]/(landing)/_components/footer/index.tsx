@@ -111,7 +111,7 @@ const Footer: React.FC<FooterProps> = ({ lng }) => {
               <Copyright className="w-4 h-4" />
               <span>
                 {localizeNumber(new Date().getFullYear(), "ne")} पोखरा
-                गाउँपालिका । सर्वाधिकार सुरक्षित
+                महानगरपालिका। सर्वाधिकार सुरक्षित
               </span>
             </div>
             <div className="flex items-center gap-6">

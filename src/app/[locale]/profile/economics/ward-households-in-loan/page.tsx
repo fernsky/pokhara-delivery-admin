@@ -45,7 +45,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "पोखरा आर्थिक स्थिति",
       `पोखरा वडा ${wardsWithHighestLoans[0]?.wardNumber || ""} ऋण`,
       "वडा अनुसार ऋण वितरण",
-      "गाउँपालिका कर्जा तथ्याङ्क",
+      "महानगरपालिकाकर्जा तथ्याङ्क",
       "आर्थिक सर्वेक्षण पोखरा",
       `पोखरा कुल ऋणी घरपरिवार संख्या ${totalHouseholdsOnLoan}`,
     ];

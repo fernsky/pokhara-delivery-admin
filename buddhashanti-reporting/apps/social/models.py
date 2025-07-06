@@ -994,7 +994,7 @@ class TeacherPositionTypeChoice(models.TextChoices):
     APPROVED_QUOTA = "APPROVED_QUOTA", _("स्वीकृत दरबन्दी")
     RELIEF = "RELIEF", _("राहत")
     FEDERAL_GRANT = "FEDERAL_GRANT", _("संघीय अनुदान")
-    RM_GRANT = "RM_GRANT", _("गाउँपालिका अनुदान")
+    RM_GRANT = "RM_GRANT", _("महानगरपालिकाअनुदान")
     PRIVATE_SOURCE = "PRIVATE_SOURCE", _("निजी स्रोत")
 
 

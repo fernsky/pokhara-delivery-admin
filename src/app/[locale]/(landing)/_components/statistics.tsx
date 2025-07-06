@@ -192,7 +192,7 @@ const Statistics = ({
             >
               <TrendingUp className="w-3 h-3 mr-1 text-[#1a4894]" />
               <span className="text-xs text-[#0b1f42] font-medium">
-                गाउँपालिका अवलोकन
+                महानगरपालिकाअवलोकन
               </span>
             </Badge>
 
