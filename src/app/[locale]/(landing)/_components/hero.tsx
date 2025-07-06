@@ -55,10 +55,7 @@ const Hero: React.FC<HeroProps> = ({
       {/* SEO Structured Data */}
       <Head>
         <meta name="description" content={seoDescription} />
-        <meta
-          property="og:title"
-          content={`${municipalityName} | आधिकारिक वेबसाइट`}
-        />
+        <meta property="og:title" content={`${municipalityName}`} />
         <meta property="og:description" content={seoDescription} />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">

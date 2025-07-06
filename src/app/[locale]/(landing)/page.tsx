@@ -64,12 +64,12 @@ export async function generateMetadata(): Promise<Metadata> {
     ];
 
     // Create detailed description with actual data
-    const descriptionNP = `${municipalityName} कास्की जिल्लाको एक प्रमुख स्थानीय तह हो। यहाँको कुल जनसंख्या ${totalPopulation.toLocaleString()} र कुल घरधुरी संख्या ${totalHouseholds.toLocaleString()} छ।  यस पालिकामा पुरुष जनसंख्या ${malePopulation.toLocaleString()}, महिला जनसंख्या ${femalePopulation.toLocaleString()} र साक्षरता दर ${literacyRate}% रहेको छ। ${municipalityName}को आधिकारिक वेबसाइटमा स्वागत छ।`;
+    const descriptionNP = `${municipalityName} कास्की जिल्लाको एक प्रमुख स्थानीय तह हो। यहाँको कुल जनसंख्या ${totalPopulation.toLocaleString()} र कुल घरधुरी संख्या ${totalHouseholds.toLocaleString()} छ।  यस पालिकामा पुरुष जनसंख्या ${malePopulation.toLocaleString()}, महिला जनसंख्या ${femalePopulation.toLocaleString()} र साक्षरता दर ${literacyRate}% रहेको छ।`;
 
     const descriptionEN = `${municipalityNameEn} is a major local body of ${districtNameEn} district. It has a total population of ${totalPopulation.toLocaleString()} and ${totalHouseholds.toLocaleString()} households. The municipality has ${malePopulation.toLocaleString()} male population, ${femalePopulation.toLocaleString()} female population, and a literacy rate of ${literacyRate}%. Welcome to the official website of ${municipalityNameEn}.`;
 
     return {
-      title: `${municipalityName} | आधिकारिक वेबसाइट (${municipalityNameEn} Official Website)`,
+      title: `${municipalityName}`,
       description: descriptionNP,
       keywords: [...keywordsNP, ...keywordsEN],
       alternates: {
@@ -80,7 +80,7 @@ export async function generateMetadata(): Promise<Metadata> {
         },
       },
       openGraph: {
-        title: `${municipalityName} | आधिकारिक वेबसाइट`,
+        title: `${municipalityName}`,
         description: descriptionNP,
         type: "website",
         locale: "ne_NP",
@@ -97,7 +97,7 @@ export async function generateMetadata(): Promise<Metadata> {
       },
       twitter: {
         card: "summary_large_image",
-        title: `${municipalityName} | आधिकारिक वेबसाइट`,
+        title: `${municipalityName} `,
         description: descriptionNP,
         images: [
           "https://digital.pokharamun.gov.np/images/municipality-logo.png",
@@ -107,7 +107,7 @@ export async function generateMetadata(): Promise<Metadata> {
   } catch (error) {
     // Fallback metadata if data fetching fails
     return {
-      title: "पोखरा महानगरपालिका | आधिकारिक वेबसाइट",
+      title: "पोखरा महानगरपालिका",
       description:
         "पोखरा महानगरपालिका कास्की जिल्लाको एक प्रमुख स्थानीय तह हो। पालिकाको आधिकारिक वेबसाइटमा स्वागत छ।",
     };
