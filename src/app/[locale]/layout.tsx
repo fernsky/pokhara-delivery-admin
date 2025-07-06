@@ -209,6 +209,7 @@ export default async function RootLayout(props: {
       lang={locale}
       dir={locale === "ne" ? "ltr" : "ltr"}
       className={fontVariables}
+      data-theme="light"
       suppressHydrationWarning
     >
       <head>
