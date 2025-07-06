@@ -412,7 +412,7 @@ export default function MaritalStatusAnalysisSection({
         <h3 className="text-xl font-medium mb-2">
           वैवाहिक स्थिति सम्बन्धि प्रवृत्ति र तात्पर्य
         </h3>
-        <div className="prose prose-slate  max-w-none">
+        <div className="prose prose-slate dark:prose-invert max-w-none">
           <p>
             पालिकाको वैवाहिक स्थितिको तथ्याङ्कले निम्न महत्त्वपूर्ण प्रवृत्तिहरू
             देखाउँछन्:
@@ -453,7 +453,7 @@ export default function MaritalStatusAnalysisSection({
 
       <div className="bg-muted/50 p-4 rounded-lg mt-6">
         <h3 className="text-xl font-medium mb-2">नीतिगत सिफारिसहरू</h3>
-        <div className="prose prose-slate  max-w-none">
+        <div className="prose prose-slate dark:prose-invert max-w-none">
           <ul>
             <li>
               {indicators.childMarriageCount > 0 && (

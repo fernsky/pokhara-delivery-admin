@@ -256,7 +256,7 @@ export default async function IncomeSourcesPage() {
             />
           </div>
 
-          <div className="prose prose-slate  max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा घरपरिवारको आयस्रोत
             </h1>
@@ -306,7 +306,7 @@ export default async function IncomeSourcesPage() {
             INCOME_SOURCE_NAMES={INCOME_SOURCE_NAMES}
           />
 
-          <div className="prose prose-slate  max-w-none mt-8">
+          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
             <h2 id="major-income-sources" className="scroll-m-20 border-b pb-2">
               प्रमुख आयस्रोतहरूको विश्लेषण
             </h2>

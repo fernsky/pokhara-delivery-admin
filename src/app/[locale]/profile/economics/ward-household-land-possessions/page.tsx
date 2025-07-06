@@ -189,7 +189,7 @@ export default async function WardHouseholdLandPossessionsPage() {
     <div className="relative py-4 lg:py-6">
       <div className="flex gap-8 max-w-none">
         {/* Main content - let it expand to fill available space */}
-        <article className="prose prose-slate  flex-1 min-w-0 max-w-none">
+        <article className="prose prose-slate dark:prose-invert flex-1 min-w-0 max-w-none">
           {/* Add structured data for SEO */}
           <LandPossessionSEO
             landPossessionData={landPossessionData}
@@ -212,7 +212,7 @@ export default async function WardHouseholdLandPossessionsPage() {
               </div>
 
               {/* Content with responsive max-width for readability */}
-              <div className="prose prose-slate  max-w-4xl">
+              <div className="prose prose-slate dark:prose-invert max-w-4xl">
                 <h1 className="scroll-m-20 tracking-tight mb-6">
                   पोखरा महानगरपालिकामा घरपरिवारको जग्गा स्वामित्व
                 </h1>
@@ -264,7 +264,7 @@ export default async function WardHouseholdLandPossessionsPage() {
               </div>
 
               {/* Content with responsive max-width for readability */}
-              <div className="prose prose-slate  max-w-4xl mt-8">
+              <div className="prose prose-slate dark:prose-invert max-w-4xl mt-8">
                 <h2
                   id="land-ownership-analysis"
                   className="scroll-m-20 border-b pb-2"

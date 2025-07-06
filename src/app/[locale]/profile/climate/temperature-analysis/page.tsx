@@ -206,7 +206,7 @@ export default async function TemperatureAnalysisPage() {
             />
           </div>
 
-          <div className="prose prose-slate  max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकाको तापक्रम विश्लेषण
             </h1>

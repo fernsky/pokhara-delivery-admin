@@ -115,7 +115,7 @@ export default async function RoadsPage() {
             </div>
           </div>
 
-          <div className="prose prose-slate  max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             <h2 id="introduction" className="scroll-m-20">
               परिचय
             </h2>
@@ -233,7 +233,7 @@ export default async function RoadsPage() {
             ROAD_TYPE_NAMES={ROAD_TYPE_NAMES}
           />
 
-          <div className="prose prose-slate  max-w-none mt-8">
+          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
             <h2 id="data-source" className="scroll-m-20 border-b pb-2">
               तथ्याङ्कको स्रोत
             </h2>

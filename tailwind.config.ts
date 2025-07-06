@@ -3,6 +3,7 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 import { withUt } from "uploadthing/tw";
 
 export default withUt({
+  darkMode: ["class"],
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     container: {

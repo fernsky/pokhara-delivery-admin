@@ -302,7 +302,7 @@ export default async function WardWiseSolidWasteManagementPage() {
             />
           </div>
 
-          <div className="prose prose-slate  max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा फोहोरमैला व्यवस्थापनको अवस्था
             </h1>
@@ -357,7 +357,7 @@ export default async function WardWiseSolidWasteManagementPage() {
             WASTE_MANAGEMENT_COLORS={WASTE_MANAGEMENT_COLORS}
           />
 
-          <div className="prose prose-slate  max-w-none mt-8">
+          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
             <h2
               id="solid-waste-management-analysis"
               className="scroll-m-20 border-b pb-2"

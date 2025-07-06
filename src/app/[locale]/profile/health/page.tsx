@@ -175,7 +175,7 @@ export default async function HealthPage() {
 
         {/* Introduction Section */}
         <section id="introduction">
-          <div className="prose prose-lg  max-w-none">
+          <div className="prose prose-lg dark:prose-invert max-w-none">
             <p>
               स्वास्थ्य सम्बन्धी तथ्याङ्कहरू कुनै पनि समुदायको विकास र कल्याणका
               महत्वपूर्ण सूचकहरू हुन्। पोखरा महानगरपालिकाको स्वास्थ्य सम्बन्धी
@@ -191,7 +191,7 @@ export default async function HealthPage() {
 
         {/* Key Facts Section */}
         <section id="key-facts">
-          <div className="prose prose-lg  max-w-none">
+          <div className="prose prose-lg dark:prose-invert max-w-none">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2 mb-6">
               प्रमुख तथ्यहरू
             </h2>
@@ -241,7 +241,7 @@ export default async function HealthPage() {
 
         {/* Health Service Categories Section */}
         <section id="health-service-categories" className="my-8">
-          <div className="prose prose-lg  max-w-none mb-6">
+          <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2">
               स्वास्थ्य सेवा श्रेणीहरू
             </h2>
@@ -286,7 +286,7 @@ export default async function HealthPage() {
 
         {/* Improvement Strategies Section */}
         <section id="improvement-strategies" className="my-8">
-          <div className="prose prose-lg  max-w-none mb-6">
+          <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2">
               सुधारका रणनीतिहरू
             </h2>

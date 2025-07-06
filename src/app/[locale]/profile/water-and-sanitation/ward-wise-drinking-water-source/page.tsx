@@ -342,7 +342,7 @@ export default async function WardWiseDrinkingWaterSourcePage() {
             />
           </div>
 
-          <div className="prose prose-slate  max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा खानेपानीका स्रोतहरूको अवस्था
             </h1>
@@ -403,7 +403,7 @@ export default async function WardWiseDrinkingWaterSourcePage() {
             WATER_SOURCE_GROUPS={WATER_SOURCE_GROUPS}
           />
 
-          <div className="prose prose-slate  max-w-none mt-8">
+          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
             <h2
               id="drinking-water-sources-analysis"
               className="scroll-m-20 border-b pb-2"

@@ -151,7 +151,7 @@ export default function ExportedProductsCharts({
       {/* Product visualization and market indicators */}
       <div
         id="exported-products-categories"
-        className="mt-8 prose prose-slate  max-w-none"
+        className="mt-8 prose prose-slate dark:prose-invert max-w-none"
       >
         <h2 className="scroll-m-20 border-b pb-2">
           निर्यातित उत्पादनहरूको वर्गीकरण

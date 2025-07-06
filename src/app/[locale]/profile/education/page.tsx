@@ -198,7 +198,7 @@ export default async function EducationPage() {
 
         {/* Introduction Section */}
         <section id="introduction">
-          <div className="prose prose-lg  max-w-none">
+          <div className="prose prose-lg dark:prose-invert max-w-none">
             <p>
               शिक्षा एक समाजको विकास र प्रगतिको महत्वपूर्ण मापदण्ड हो। शैक्षिक
               अवस्थाको अध्ययन र विश्लेषणले समुदायको साक्षरता, शिक्षामा पहुँच र
@@ -214,7 +214,7 @@ export default async function EducationPage() {
 
         {/* Key Facts Section */}
         <section id="key-facts">
-          <div className="prose prose-lg  max-w-none">
+          <div className="prose prose-lg dark:prose-invert max-w-none">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2 mb-6">
               प्रमुख तथ्यहरू
             </h2>
@@ -266,7 +266,7 @@ export default async function EducationPage() {
 
         {/* Education Categories Section */}
         <section id="education-categories" className="my-8">
-          <div className="prose prose-lg  max-w-none mb-6">
+          <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2">
               शैक्षिक श्रेणीहरू
             </h2>
@@ -311,7 +311,7 @@ export default async function EducationPage() {
 
         {/* Improvement Strategies Section */}
         <section id="improvement-strategies" className="my-8">
-          <div className="prose prose-lg  max-w-none mb-6">
+          <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2">
               सुधारका रणनीतिहरू
             </h2>

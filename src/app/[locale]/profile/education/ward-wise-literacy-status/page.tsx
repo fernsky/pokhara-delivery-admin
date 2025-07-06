@@ -389,7 +389,7 @@ export default async function WardWiseLiteracyStatusPage() {
             />
           </div>
 
-          <div className="prose prose-slate  max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा साक्षरताको अवस्था
             </h1>
@@ -448,7 +448,7 @@ export default async function WardWiseLiteracyStatusPage() {
             LITERACY_STATUS_TYPES={LITERACY_STATUS_TYPES}
           />
 
-          <div className="prose prose-slate  max-w-none mt-8">
+          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
             <h2 id="literacy-analysis" className="scroll-m-20 border-b pb-2">
               साक्षरता विश्लेषण
             </h2>

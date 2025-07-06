@@ -332,7 +332,7 @@ export default async function WardWiseTimeToPublicTransportPage() {
             />
           </div>
 
-          <div className="prose prose-slate  max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा सार्वजनिक यातायात पुग्न लाग्ने समयको अवस्था
             </h1>
@@ -396,7 +396,7 @@ export default async function WardWiseTimeToPublicTransportPage() {
             accessibilityIndex={accessibilityIndex}
           />
 
-          <div className="prose prose-slate  max-w-none mt-8">
+          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
             <h2
               id="public-transport-access-analysis"
               className="scroll-m-20 border-b pb-2"

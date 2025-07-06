@@ -335,7 +335,7 @@ export default async function WardWiseSchoolDropoutPage() {
             />
           </div>
 
-          <div className="prose prose-slate  max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा विद्यालय छाड्ने कारणहरूको अवस्था
             </h1>
@@ -395,7 +395,7 @@ export default async function WardWiseSchoolDropoutPage() {
             DROPOUT_CAUSE_GROUPS={DROPOUT_CAUSE_GROUPS}
           />
 
-          <div className="prose prose-slate  max-w-none mt-8">
+          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
             <h2
               id="school-dropout-analysis"
               className="scroll-m-20 border-b pb-2"

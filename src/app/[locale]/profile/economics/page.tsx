@@ -277,7 +277,7 @@ export default async function EconomicsPage() {
 
         {/* Introduction Section */}
         <section id="introduction">
-          <div className="prose prose-lg  max-w-none">
+          <div className="prose prose-lg dark:prose-invert max-w-none">
             <p>
               पोखरा महानगरपालिकाको आर्थिक प्रोफाइलमा यहाँका नागरिकहरूको आय
               स्रोत, रोजगारीको अवस्था, कृषि तथा पशुपालनको स्थिति, वैदेशिक
@@ -298,7 +298,7 @@ export default async function EconomicsPage() {
 
         {/* Key Economics Section */}
         <section id="key-economics">
-          <div className="prose prose-lg  max-w-none">
+          <div className="prose prose-lg dark:prose-invert max-w-none">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2 mb-6">
               प्रमुख आर्थिक तथ्यहरू
             </h2>
@@ -354,7 +354,7 @@ export default async function EconomicsPage() {
 
         {/* Economic Categories Section */}
         <section id="economic-categories" className="my-8">
-          <div className="prose prose-lg  max-w-none mb-6">
+          <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2">
               आर्थिक श्रेणीहरू
             </h2>
@@ -399,7 +399,7 @@ export default async function EconomicsPage() {
 
         {/* Agriculture and Livestock Section */}
         <section id="agriculture-livestock" className="my-8">
-          <div className="prose prose-lg  max-w-none mb-6">
+          <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2">
               कृषि तथा पशुपालन
             </h2>

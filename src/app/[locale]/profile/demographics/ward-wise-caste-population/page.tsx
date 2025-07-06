@@ -342,7 +342,7 @@ export default async function WardWiseCastePopulationPage() {
             />
           </div>
 
-          <div className="prose prose-slate  max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               <span className="font-bold">पोखरा महानगरपालिका</span> | जाति
               अनुसार जनसंख्या विश्लेषण
@@ -395,7 +395,7 @@ export default async function WardWiseCastePopulationPage() {
             CASTE_NAMES={CASTE_NAMES}
           />
 
-          <div className="prose prose-slate  max-w-none mt-8">
+          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
             <h2 id="major-castes" className="scroll-m-20 border-b pb-2">
               प्रमुख जातिहरूको विश्लेषण
             </h2>

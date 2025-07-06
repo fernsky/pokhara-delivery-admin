@@ -270,7 +270,7 @@ export default function GenderAnalysisSection({
             Ward-wise Household Head Gender Diversity in Pokhara
           </span>
         </h3>
-        <div className="prose prose-slate  max-w-none">
+        <div className="prose prose-slate dark:prose-invert max-w-none">
           <p>
             <strong>पोखरा महानगरपालिका</strong>को वडागत घरमूली लिङ्ग विश्लेषणबाट
             निम्न निष्कर्षहरू निकाल्न सकिन्छ:
@@ -373,7 +373,7 @@ export default function GenderAnalysisSection({
           नीतिगत सुझाव
           <span className="sr-only">Policy Recommendations for Pokhara</span>
         </h3>
-        <div className="prose prose-slate  max-w-none">
+        <div className="prose prose-slate dark:prose-invert max-w-none">
           <p>
             <strong>पोखरा महानगरपालिका</strong>को घरमूली लिङ्ग विश्लेषणका आधारमा
             निम्न नीतिगत सुझावहरू प्रस्तुत गरिएका छन्:

@@ -356,7 +356,7 @@ export default async function AgeWiseMaritalStatusPage({
             />
           </div>
 
-          <div className="prose prose-slate  max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा उमेर अनुसार वैवाहिक स्थिति
             </h1>
@@ -416,7 +416,7 @@ export default async function AgeWiseMaritalStatusPage({
             maritalData={maritalData}
           />
 
-          <div className="prose prose-slate  max-w-none mt-8">
+          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
             <h2 id="social-indicators" className="scroll-m-20 border-b pb-2">
               सामाजिक सुचकांक र विश्लेषण
             </h2>

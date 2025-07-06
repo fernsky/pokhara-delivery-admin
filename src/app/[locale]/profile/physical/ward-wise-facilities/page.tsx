@@ -470,7 +470,7 @@ export default async function WardWiseFacilitiesPage() {
             />
           </div>
 
-          <div className="prose prose-slate  max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा घरायसी सुविधाको प्रयोगको अवस्था
             </h1>
@@ -537,7 +537,7 @@ export default async function WardWiseFacilitiesPage() {
             categoryStats={categoryStats}
           />
 
-          <div className="prose prose-slate  max-w-none mt-8">
+          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
             <h2
               id="facilities-usage-analysis"
               className="scroll-m-20 border-b pb-2"

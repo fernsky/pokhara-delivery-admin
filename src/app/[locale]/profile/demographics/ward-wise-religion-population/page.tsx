@@ -276,7 +276,7 @@ export default async function WardWiseReligionPopulationPage() {
             />
           </div>
 
-          <div className="prose prose-slate  max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिका | धर्म अनुसार जनसंख्या विश्लेषण
             </h1>
@@ -331,7 +331,7 @@ export default async function WardWiseReligionPopulationPage() {
             RELIGION_NAMES={RELIGION_NAMES}
           />
 
-          <div className="prose prose-slate  max-w-none mt-8">
+          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
             <h2 id="major-religions" className="scroll-m-20 border-b pb-2">
               पोखरा महानगरपालिकाको प्रमुख धर्महरूको विश्लेषण
             </h2>

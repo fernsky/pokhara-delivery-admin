@@ -197,7 +197,7 @@ export default async function ImportedProductsPage() {
             />
           </div>
 
-          <div className="prose prose-slate  max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा आयातित उत्पादनहरू
             </h1>
@@ -236,7 +236,7 @@ export default async function ImportedProductsPage() {
             categoryDistribution={categoryDistribution}
           />
 
-          <div className="prose prose-slate  max-w-none mt-8">
+          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
             <h2
               id="import-trend-analysis"
               className="scroll-m-20 border-b pb-2"

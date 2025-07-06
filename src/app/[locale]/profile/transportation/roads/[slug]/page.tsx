@@ -149,45 +149,45 @@ export default async function RoadDetailPage({
 
     // Determine background color based on road condition
     const getConditionColor = (condition: string | undefined) => {
-      if (!condition) return "bg-gray-100 
+      if (!condition) return "bg-gray-100 dark:bg-gray-800";
 
       switch (condition) {
         case "EXCELLENT":
-          return "bg-green-100 
+          return "bg-green-100 dark:bg-green-900";
         case "GOOD":
-          return "bg-emerald-100 
+          return "bg-emerald-100 dark:bg-emerald-900";
         case "FAIR":
-          return "bg-yellow-100 
+          return "bg-yellow-100 dark:bg-yellow-900";
         case "POOR":
-          return "bg-orange-100 
+          return "bg-orange-100 dark:bg-orange-900";
         case "VERY_POOR":
-          return "bg-red-100 
+          return "bg-red-100 dark:bg-red-900";
         case "UNDER_CONSTRUCTION":
-          return "bg-blue-100 
+          return "bg-blue-100 dark:bg-blue-900";
         default:
-          return "bg-gray-100 
+          return "bg-gray-100 dark:bg-gray-800";
       }
     };
 
     // Determine text color based on road condition
     const getConditionTextColor = (condition: string | undefined) => {
-      if (!condition) return "text-gray-800 
+      if (!condition) return "text-gray-800 dark:text-gray-200";
 
       switch (condition) {
         case "EXCELLENT":
-          return "text-green-800 
+          return "text-green-800 dark:text-green-200";
         case "GOOD":
-          return "text-emerald-800 
+          return "text-emerald-800 dark:text-emerald-200";
         case "FAIR":
-          return "text-yellow-800 
+          return "text-yellow-800 dark:text-yellow-200";
         case "POOR":
-          return "text-orange-800 
+          return "text-orange-800 dark:text-orange-200";
         case "VERY_POOR":
-          return "text-red-800 
+          return "text-red-800 dark:text-red-200";
         case "UNDER_CONSTRUCTION":
-          return "text-blue-800 
+          return "text-blue-800 dark:text-blue-200";
         default:
-          return "text-gray-800 
+          return "text-gray-800 dark:text-gray-200";
       }
     };
 
@@ -218,7 +218,7 @@ export default async function RoadDetailPage({
               </div>
             </div>
 
-            <div className="prose prose-slate  max-w-none">
+            <div className="prose prose-slate dark:prose-invert max-w-none">
               <h2 id="introduction" className="scroll-m-20">
                 परिचय
               </h2>
@@ -245,8 +245,8 @@ export default async function RoadDetailPage({
               <CardContent className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {/* Road Type */}
-                  <div className="bg-blue-50  p-4 rounded-lg flex flex-col items-center justify-center text-center">
-                    <Route className="h-8 w-8 text-blue-500  mb-2" />
+                  <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg flex flex-col items-center justify-center text-center">
+                    <Route className="h-8 w-8 text-blue-500 dark:text-blue-400 mb-2" />
                     <h3 className="text-sm font-medium text-muted-foreground">
                       सडक प्रकार
                     </h3>
@@ -255,8 +255,8 @@ export default async function RoadDetailPage({
 
                   {/* Road Length - Show only if available */}
                   {road.length && (
-                    <div className="bg-green-50  p-4 rounded-lg flex flex-col items-center justify-center text-center">
-                      <RulerIcon className="h-8 w-8 text-green-500  mb-2" />
+                    <div className="bg-green-50 dark:bg-green-900/30 p-4 rounded-lg flex flex-col items-center justify-center text-center">
+                      <RulerIcon className="h-8 w-8 text-green-500 dark:text-green-400 mb-2" />
                       <h3 className="text-sm font-medium text-muted-foreground">
                         सडक लम्बाई
                       </h3>
@@ -305,7 +305,7 @@ export default async function RoadDetailPage({
                     <div className="flex flex-col md:flex-row justify-between gap-4">
                       {road.startPoint && (
                         <div className="flex items-start space-x-2">
-                          <MapPinIcon className="h-5 w-5 text-green-600  flex-shrink-0 mt-0.5" />
+                          <MapPinIcon className="h-5 w-5 text-green-600 dark:text-green-500 flex-shrink-0 mt-0.5" />
                           <div>
                             <p className="text-sm text-muted-foreground">
                               सुरु बिन्दु
@@ -317,7 +317,7 @@ export default async function RoadDetailPage({
 
                       {road.endPoint && (
                         <div className="flex items-start space-x-2">
-                          <MapPinIcon className="h-5 w-5 text-red-600  flex-shrink-0 mt-0.5" />
+                          <MapPinIcon className="h-5 w-5 text-red-600 dark:text-red-500 flex-shrink-0 mt-0.5" />
                           <div>
                             <p className="text-sm text-muted-foreground">
                               अन्तिम बिन्दु
@@ -342,8 +342,8 @@ export default async function RoadDetailPage({
                       {/* Width - Show only if available */}
                       {road.widthInMeters && (
                         <div className="flex items-start space-x-3">
-                          <div className="p-2 bg-blue-100  rounded-md">
-                            <RulerIcon className="h-5 w-5 text-blue-600  />
+                          <div className="p-2 bg-blue-100 dark:bg-blue-900/50 rounded-md">
+                            <RulerIcon className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                           </div>
                           <div>
                             <h4 className="text-sm font-medium text-muted-foreground">
@@ -359,8 +359,8 @@ export default async function RoadDetailPage({
                       {/* Maintenance Year - Show only if available */}
                       {road.maintenanceYear && (
                         <div className="flex items-start space-x-3">
-                          <div className="p-2 bg-amber-100  rounded-md">
-                            <CalendarIcon className="h-5 w-5 text-amber-600  />
+                          <div className="p-2 bg-amber-100 dark:bg-amber-900/50 rounded-md">
+                            <CalendarIcon className="h-5 w-5 text-amber-600 dark:text-amber-400" />
                           </div>
                           <div>
                             <h4 className="text-sm font-medium text-muted-foreground">
@@ -376,8 +376,8 @@ export default async function RoadDetailPage({
                       {/* Drainage System - Show only if available */}
                       {road.drainageSystem && (
                         <div className="flex items-start space-x-3">
-                          <div className="p-2 bg-cyan-100  rounded-md">
-                            <DropletIcon className="h-5 w-5 text-cyan-600  />
+                          <div className="p-2 bg-cyan-100 dark:bg-cyan-900/50 rounded-md">
+                            <DropletIcon className="h-5 w-5 text-cyan-600 dark:text-cyan-400" />
                           </div>
                           <div>
                             <h4 className="text-sm font-medium text-muted-foreground">

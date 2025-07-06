@@ -380,7 +380,7 @@ export default async function CooperativesPage() {
             />
           </div>
 
-          <div className="prose prose-slate  max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा सहकारी संस्थाहरू
             </h1>
@@ -476,7 +476,7 @@ export default async function CooperativesPage() {
             statistics={statistics}
           />
 
-          <div className="prose prose-slate  max-w-none mt-8">
+          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
             <h2 id="ward-distribution" className="scroll-m-20 border-b pb-2">
               वडागत वितरण
             </h2>
@@ -521,7 +521,7 @@ export default async function CooperativesPage() {
             popularCooperativeByWard={popularCooperativeByWard}
           />
 
-          <div className="prose prose-slate  max-w-none mt-8">
+          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
             <CooperativesAnalysisSection
               cooperativeSummary={cooperativeSummary}
               totalCooperatives={totalCooperatives}

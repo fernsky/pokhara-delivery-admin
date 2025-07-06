@@ -1,3 +1,4 @@
+import { ModeToggle } from "@/components/mode-toggle";
 import { UserNav } from "@/components/admin-panel/user-nav";
 import { SheetMenu } from "@/components/admin-panel/sheet-menu";
 
@@ -25,6 +26,7 @@ export function Navbar({ title, subtitle, actions }: NavbarProps) {
           {actions && (
             <div className="hidden sm:flex items-center gap-2">{actions}</div>
           )}
+          <ModeToggle />
           <UserNav />
         </div>
       </div>

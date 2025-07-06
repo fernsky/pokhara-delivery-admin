@@ -489,7 +489,7 @@ export default function AgeAnalysisSection({
             Demographic Trends and Recommendations
           </span>
         </h3>
-        <div className="prose prose-slate  max-w-none">
+        <div className="prose prose-slate dark:prose-invert max-w-none">
           <p>
             पोखरा महानगरपालिकाको जनसंख्या संरचनाले निम्न नीतिगत निर्देशन गर्दछ:
           </p>

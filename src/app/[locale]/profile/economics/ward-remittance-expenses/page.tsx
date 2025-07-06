@@ -282,7 +282,7 @@ export default async function WardRemittanceExpensesPage() {
             />
           </div>
 
-          <div className="prose prose-slate  max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा रेमिट्यान्स खर्च
             </h1>
@@ -335,7 +335,7 @@ export default async function WardRemittanceExpensesPage() {
             EXPENSE_NAMES_EN={EXPENSE_NAMES_EN}
           />
 
-          <div className="prose prose-slate  max-w-none mt-8">
+          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
             <h2 id="major-expenses" className="scroll-m-20 border-b pb-2">
               प्रमुख खर्च प्रकारहरूको विश्लेषण
             </h2>

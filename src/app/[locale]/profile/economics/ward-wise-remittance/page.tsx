@@ -644,7 +644,7 @@ export default async function WardWiseRemittancePage() {
             />
           </div>
 
-          <div className="prose prose-slate  max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा वडा अनुसार रेमिट्यान्स वितरण
             </h1>
@@ -777,7 +777,7 @@ export default async function WardWiseRemittancePage() {
             totalData={totalData}
           />
 
-          <div className="prose prose-slate  max-w-none mt-8">
+          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
             <h2 id="economic-impact" className="scroll-m-20 border-b pb-2">
               आर्थिक प्रभाव
             </h2>

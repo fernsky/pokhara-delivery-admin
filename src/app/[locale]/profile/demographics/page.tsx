@@ -216,7 +216,7 @@ export default async function DemographicsPage() {
         </div>
         {/* Introduction Section */}
         <section id="introduction">
-          <div className="prose prose-lg  max-w-none">
+          <div className="prose prose-lg dark:prose-invert max-w-none">
             <p>
               जनसांख्यिकी तथ्याङ्क गाउँपालिका विकास, योजना र नीति निर्माणका लागि
               अत्यन्त महत्त्वपूर्ण हुन्छ। पोखरा महानगरपालिकाको जनसांख्यिकी
@@ -230,7 +230,7 @@ export default async function DemographicsPage() {
 
         {/* Key Demographics Section */}
         <section id="key-demographics">
-          <div className="prose prose-lg  max-w-none">
+          <div className="prose prose-lg dark:prose-invert max-w-none">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2 mb-6">
               प्रमुख जनसांख्यिकी तथ्यहरू
             </h2>
@@ -285,7 +285,7 @@ export default async function DemographicsPage() {
 
         {/* Demographic Categories Section */}
         <section id="demographic-categories" className="my-8">
-          <div className="prose prose-lg  max-w-none mb-6">
+          <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2">
               जनसांख्यिकी श्रेणीहरू
             </h2>
@@ -330,7 +330,7 @@ export default async function DemographicsPage() {
 
         {/* Population Distribution Section */}
         <section id="population-distribution" className="my-8">
-          <div className="prose prose-lg  max-w-none mb-6">
+          <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2">
               जनसंख्या वितरण
             </h2>

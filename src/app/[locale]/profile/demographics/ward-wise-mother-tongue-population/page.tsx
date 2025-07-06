@@ -292,7 +292,7 @@ export default async function WardWiseMotherTonguePopulationPage() {
             />
           </div>
 
-          <div className="prose prose-slate  max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               <span className="font-bold">पोखरा महानगरपालिकामा</span> मातृभाषा
               अनुसार जनसंख्या
@@ -347,7 +347,7 @@ export default async function WardWiseMotherTonguePopulationPage() {
             LANGUAGE_NAMES={LANGUAGE_NAMES}
           />
 
-          <div className="prose prose-slate  max-w-none mt-8">
+          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
             <h2 id="major-languages" className="scroll-m-20 border-b pb-2">
               प्रमुख भाषाहरूको विश्लेषण
             </h2>

@@ -427,7 +427,7 @@ export default async function WardAgeGenderWiseDeceasedPopulationPage() {
             />
           </div>
 
-          <div className="prose prose-slate  max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             <h1 className="scroll-m-20 tracking-tight mb-6">
               पोखरा महानगरपालिकामा उमेर तथा लिङ्ग अनुसार मृत्यु विवरण
             </h1>
@@ -486,7 +486,7 @@ export default async function WardAgeGenderWiseDeceasedPopulationPage() {
             GENDER_NAMES={GENDER_NAMES}
           />
 
-          <div className="prose prose-slate  max-w-none mt-8">
+          <div className="prose prose-slate dark:prose-invert max-w-none mt-8">
             <h2 id="mortality-analysis" className="scroll-m-20 border-b pb-2">
               उमेर र लिङ्ग अनुसार मृत्यु विश्लेषण
             </h2>
