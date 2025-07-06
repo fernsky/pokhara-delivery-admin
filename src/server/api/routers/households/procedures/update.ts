@@ -18,7 +18,7 @@ export const updateHouseholdProcedure = protectedProcedure
     const checkQuery = sql`
       SELECT COUNT(*) as count 
       FROM synth_pokhara_household
-      WHERE id = ${id} AND profile_id = ${"pokhara_metro"}
+      WHERE id = ${id} AND tenant_id = ${"pokhara_metro"}
     `;
 
     const checkResult = await ctx.db.execute(checkQuery);
@@ -43,7 +43,7 @@ export const updateHouseholdProcedure = protectedProcedure
     };
 
     // Add all fields that need updating
-    if (data.profileId !== undefined) addField("profile_id", data.profileId);
+    if (data.tenantId !== undefined) addField("tenant_id", data.tenantId);
     if (data.province !== undefined) addField("province", data.province);
     if (data.district !== undefined) addField("district", data.district);
     if (data.localLevel !== undefined) addField("local_level", data.localLevel);
@@ -94,21 +94,48 @@ export const updateHouseholdProcedure = protectedProcedure
     if (data.houseFloor !== undefined) addField("house_floor", data.houseFloor);
     if (data.houseFloorOther !== undefined)
       addField("house_floor_other", data.houseFloorOther);
+    if (data.houseBuiltDate !== undefined)
+      addField("house_built_date", data.houseBuiltDate);
+    if (data.houseStorey !== undefined)
+      addField("house_storey", data.houseStorey);
+    if (data.houseHasUnderground !== undefined)
+      addField("house_has_underground", data.houseHasUnderground);
+    if (data.rentAmount !== undefined)
+      addField("rent_amount", data.rentAmount);
 
     // Safety information
     if (data.isHousePassed !== undefined)
       addField("is_house_passed", data.isHousePassed);
-    if (data.isMapArchived !== undefined)
-      addField("is_map_archived", data.isMapArchived);
+    if (data.housePassedStories !== undefined)
+      addField("house_passed_stories", data.housePassedStories);
     if (data.naturalDisasters !== undefined)
       addField("natural_disasters", data.naturalDisasters);
-    if (data.isSafe !== undefined) addField("is_safe", data.isSafe);
+    if (data.naturalDisastersOther !== undefined)
+      addField("natural_disasters_other", data.naturalDisastersOther);
 
     // Water, sanitation and energy
     if (data.waterSource !== undefined)
       addField("water_source", data.waterSource);
+    if (data.waterSourceOther !== undefined)
+      addField("water_source_other", data.waterSourceOther);
     if (data.waterPurificationMethods !== undefined)
       addField("water_purification_methods", data.waterPurificationMethods);
+    if (data.categorizesWaste !== undefined)
+      addField("categorizes_waste", data.categorizesWaste);
+    if (data.decomposesWaste !== undefined)
+      addField("decomposes_waste", data.decomposesWaste);
+    if (data.hasVehicularWasteCollection !== undefined)
+      addField("has_vehicular_waste_collection", data.hasVehicularWasteCollection);
+    if (data.solidWasteManagementOther !== undefined)
+      addField("solid_waste_management_other", data.solidWasteManagementOther);
+    if (data.secondaryCookingFuels !== undefined)
+      addField("secondary_cooking_fuels", data.secondaryCookingFuels);
+    if (data.primaryEnergySourceOther !== undefined)
+      addField("primary_energy_source_other", data.primaryEnergySourceOther);
+    if (data.secondaryEnergySources !== undefined)
+      addField("secondary_energy_sources", data.secondaryEnergySources);
+    if (data.secondaryEnergySourcesOther !== undefined)
+      addField("secondary_energy_sources_other", data.secondaryEnergySourcesOther);
     if (data.toiletType !== undefined) addField("toilet_type", data.toiletType);
     if (data.solidWasteManagement !== undefined)
       addField("solid_waste_management", data.solidWasteManagement);
@@ -119,8 +146,11 @@ export const updateHouseholdProcedure = protectedProcedure
 
     // Accessibility
     if (data.roadStatus !== undefined) addField("road_status", data.roadStatus);
+    if (data.roadStatusOther !== undefined) addField("road_status_other", data.roadStatusOther);
     if (data.timeToPublicBus !== undefined)
       addField("time_to_public_bus", data.timeToPublicBus);
+    if (data.publicBusInterval !== undefined)
+      addField("public_bus_interval", data.publicBusInterval);
     if (data.timeToMarket !== undefined)
       addField("time_to_market", data.timeToMarket);
     if (data.distanceToActiveRoad !== undefined)
@@ -132,8 +162,12 @@ export const updateHouseholdProcedure = protectedProcedure
       addField("has_properties_elsewhere", data.hasPropertiesElsewhere);
     if (data.hasFemaleNamedProperties !== undefined)
       addField("has_female_named_properties", data.hasFemaleNamedProperties);
+    if (data.monthsSustainedFromIncome !== undefined)
+      addField("months_sustained_from_income", data.monthsSustainedFromIncome);
     if (data.organizationsLoanedFrom !== undefined)
       addField("organizations_loaned_from", data.organizationsLoanedFrom);
+    if (data.timeToCooperative !== undefined)
+      addField("time_to_cooperative", data.timeToCooperative);
     if (data.loanUses !== undefined) addField("loan_uses", data.loanUses);
     if (data.timeToBank !== undefined)
       addField("time_to_bank", data.timeToBank);
@@ -149,17 +183,46 @@ export const updateHouseholdProcedure = protectedProcedure
     // Health
     if (data.haveHealthInsurance !== undefined)
       addField("have_health_insurance", data.haveHealthInsurance);
+    if (data.haveLifeInsurance !== undefined)
+      addField("have_life_insurance", data.haveLifeInsurance);
+    if (data.lifeInsuredFamilyMembers !== undefined)
+      addField("life_insured_family_members", data.lifeInsuredFamilyMembers);
     if (data.consultingHealthOrganization !== undefined)
       addField(
         "consulting_health_organization",
         data.consultingHealthOrganization,
       );
+    if (data.consultingHealthOrganizationOther !== undefined)
+      addField(
+        "consulting_health_organization_other",
+        data.consultingHealthOrganizationOther,
+      );
     if (data.timeToHealthOrganization !== undefined)
       addField("time_to_health_organization", data.timeToHealthOrganization);
+    if (data.maxExpense !== undefined)
+      addField("max_expense", data.maxExpense);
+    if (data.maxExpenseExcess !== undefined)
+      addField("max_expense_excess", data.maxExpenseExcess);
+    if (data.maxIncome !== undefined)
+      addField("max_income", data.maxIncome);
+    if (data.maxIncomeExcess !== undefined)
+      addField("max_income_excess", data.maxIncomeExcess);
+    if (data.otherIncomeSources !== undefined)
+      addField("other_income_sources", data.otherIncomeSources);
+    if (data.haveDog !== undefined)
+      addField("have_dog", data.haveDog);
+    if (data.dogNumber !== undefined)
+      addField("dog_number", data.dogNumber);
+    if (data.isDogRegistered !== undefined)
+      addField("is_dog_registered", data.isDogRegistered);
+    if (data.isDogVaccinated !== undefined)
+      addField("is_dog_vaccinated", data.isDogVaccinated);
 
     // Municipal & Suggestions
     if (data.municipalSuggestions !== undefined)
       addField("municipal_suggestions", data.municipalSuggestions);
+    if (data.municipalSuggestionsOther !== undefined)
+      addField("municipal_suggestions_other", data.municipalSuggestionsOther);
 
     // Agriculture & Livestock
     if (data.haveAgriculturalLand !== undefined)
@@ -175,6 +238,10 @@ export const updateHouseholdProcedure = protectedProcedure
     if (data.fruits !== undefined) addField("fruits", data.fruits);
     if (data.spices !== undefined) addField("spices", data.spices);
     if (data.cashCrops !== undefined) addField("cash_crops", data.cashCrops);
+    if (data.haveCultivatedGrass !== undefined)
+      addField("have_cultivated_grass", data.haveCultivatedGrass);
+    if (data.monthSustainedFromAgriculture !== undefined)
+      addField("month_sustained_from_agriculture", data.monthSustainedFromAgriculture);
     if (data.areInvolvedInHusbandry !== undefined)
       addField("are_involved_in_husbandry", data.areInvolvedInHusbandry);
     if (data.animals !== undefined) addField("animals", data.animals);
@@ -188,6 +255,10 @@ export const updateHouseholdProcedure = protectedProcedure
     if (data.pondArea !== undefined) addField("pond_area", data.pondArea);
     if (data.fishProduction !== undefined)
       addField("fish_production", data.fishProduction);
+    if (data.fishSales !== undefined)
+      addField("fish_sales", data.fishSales);
+    if (data.fishRevenue !== undefined)
+      addField("fish_revenue", data.fishRevenue);
     if (data.haveApiary !== undefined) addField("have_apiary", data.haveApiary);
     if (data.hiveNumber !== undefined) addField("hive_number", data.hiveNumber);
     if (data.honeyProduction !== undefined)
@@ -196,39 +267,38 @@ export const updateHouseholdProcedure = protectedProcedure
     if (data.honeyRevenue !== undefined)
       addField("honey_revenue", data.honeyRevenue);
 
+    // Barren land
+    if (data.isLandBarren !== undefined)
+      addField("is_land_barren", data.isLandBarren);
+    if (data.barrenLandArea !== undefined)
+      addField("barren_land_area", data.barrenLandArea);
+    if (data.barrenLandFoodCropPossibilities !== undefined)
+      addField("barren_land_food_crop_possibilities", data.barrenLandFoodCropPossibilities);
+    if (data.barrenLandFoodCropPossibilitiesOther !== undefined)
+      addField("barren_land_food_crop_possibilities_other", data.barrenLandFoodCropPossibilitiesOther);
+    if (data.wantsToRentBarrenLand !== undefined)
+      addField("wants_to_rent_barren_land", data.wantsToRentBarrenLand);
+
     // Agricultural operations
     if (data.hasAgriculturalInsurance !== undefined)
       addField("has_agricultural_insurance", data.hasAgriculturalInsurance);
+    if (data.monthsSustainedFromAgriculture !== undefined)
+      addField("months_sustained_from_agriculture", data.monthsSustainedFromAgriculture);
     if (data.monthsInvolvedInAgriculture !== undefined)
       addField(
         "months_involved_in_agriculture",
         data.monthsInvolvedInAgriculture,
       );
+    if (data.agricultureInvestment !== undefined)
+      addField("agriculture_investment", data.agricultureInvestment);
     if (data.agriculturalMachines !== undefined)
       addField("agricultural_machines", data.agriculturalMachines);
+    if (data.salesAndDistribution !== undefined)
+      addField("sales_and_distribution", data.salesAndDistribution);
+    if (data.isFarmerRegistered !== undefined)
+      addField("is_farmer_registered", data.isFarmerRegistered);
 
-    // Migration details
-    if (data.birthPlace !== undefined) addField("birth_place", data.birthPlace);
-    if (data.birthProvince !== undefined)
-      addField("birth_province", data.birthProvince);
-    if (data.birthDistrict !== undefined)
-      addField("birth_district", data.birthDistrict);
-    if (data.birthCountry !== undefined)
-      addField("birth_country", data.birthCountry);
-    if (data.priorLocation !== undefined)
-      addField("prior_location", data.priorLocation);
-    if (data.priorProvince !== undefined)
-      addField("prior_province", data.priorProvince);
-    if (data.priorDistrict !== undefined)
-      addField("prior_district", data.priorDistrict);
-    if (data.priorCountry !== undefined)
-      addField("prior_country", data.priorCountry);
-    if (data.residenceReason !== undefined)
-      addField("residence_reason", data.residenceReason);
 
-    // Business
-    if (data.hasBusiness !== undefined)
-      addField("has_business", data.hasBusiness);
 
     // Update timestamp
     addField("updated_at", new Date());
@@ -255,7 +325,7 @@ export const updateHouseholdProcedure = protectedProcedure
       const updateQuery = sql`
         UPDATE synth_pokhara_household
         SET ${setClause}
-        WHERE id = ${id} AND profile_id = ${"pokhara"}
+        WHERE id = ${id} AND tenant_id = ${"pokhara_metro"}
         RETURNING id
       `;
 

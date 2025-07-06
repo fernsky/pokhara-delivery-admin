@@ -5,6 +5,7 @@ import {
   timestamp,
   varchar,
   pgEnum,
+  bigint,
 } from "drizzle-orm/pg-core";
 import { postgis } from "../../postgis";
 import { households } from "../households/households";
@@ -34,8 +35,10 @@ export const individuals = pgTable("synth_pokhara_individual", {
 
   // Personal information
   name: text("name").notNull(),
+  phoneNo: text("phone_no"),
   gender: text("gender").notNull(),
-  age: integer("age"),
+  ageAtSurvey: integer("age_at_survey"),
+  dateOfBirth: timestamp("date_of_birth"),
   familyRole: text("family_role"),
 
   // Citizenship and demographics
@@ -49,16 +52,24 @@ export const individuals = pgTable("synth_pokhara_individual", {
   ancestorLanguageOther: text("ancestor_language_other"),
   primaryMotherTongue: text("primary_mother_tongue"),
   primaryMotherTongueOther: text("primary_mother_tongue_other"),
+  secondaryMotherTongue: text("secondary_mother_tongue"),
+  secondaryMotherTongueOther: text("secondary_mother_tongue_other"),
   religion: text("religion"),
   religionOther: text("religion_other"),
+
+  // Health and vaccination
+  hasCoronaBooster: text("has_corona_booster"),
+  hasRegularVaccination: text("has_regular_vaccination"),
 
   // Marital status
   maritalStatus: text("marital_status"),
   marriedAge: integer("married_age"),
+  hasMarriageCertificate: text("has_marriage_certificate"),
 
   // Health information
   hasChronicDisease: text("has_chronic_disease"),
   primaryChronicDisease: text("primary_chronic_disease"),
+  secondaryChronicDiseases: text("secondary_chronic_diseases").array(),
   isSanitized: text("is_sanitized"),
 
   // Disability information
@@ -66,17 +77,17 @@ export const individuals = pgTable("synth_pokhara_individual", {
   disabilityType: text("disability_type"),
   disabilityTypeOther: text("disability_type_other"),
   disabilityCause: text("disability_cause"),
+  disabilityId: text("disability_id"),
+  hasSpecialDisabilityEducation: text("has_special_disability_education"),
 
   // Birth and children information
   hasBirthCertificate: text("has_birth_certificate"),
+  isPregnant: text("is_pregnant"),
+  monthsPregnant: integer("months_pregnant"),
   gaveLiveBirth: text("gave_live_birth"),
   aliveSons: integer("alive_sons"),
   aliveDaughters: integer("alive_daughters"),
   totalBornChildren: integer("total_born_children"),
-  hasDeadChildren: text("has_dead_children"),
-  deadSons: integer("dead_sons"),
-  deadDaughters: integer("dead_daughters"),
-  totalDeadChildren: integer("total_dead_children"),
 
   // Recent childbirth information
   gaveRecentLiveBirth: text("gave_recent_live_birth"),
@@ -86,17 +97,21 @@ export const individuals = pgTable("synth_pokhara_individual", {
   recentDeliveryLocation: text("recent_delivery_location"),
   prenatalCheckups: integer("prenatal_checkups"),
   firstDeliveryAge: integer("first_delivery_age"),
+  recentGovernmentDeliveryInstitute: text("recent_government_delivery_institute"),
+  recentPrivateDeliveryInstitute: text("recent_private_delivery_institute"),
 
   // Presence and absence information
   isPresent: text("is_present"),
   absenteeAge: integer("absentee_age"),
   absenteeEducationalLevel: text("absentee_educational_level"),
+  absencePeriod: integer("absence_period"),
   absenceReason: text("absence_reason"),
   absenteeLocation: text("absentee_location"),
   absenteeProvince: text("absentee_province"),
   absenteeDistrict: text("absentee_district"),
   absenteeCountry: text("absentee_country"),
   absenteeHasSentCash: text("absentee_has_sent_cash"),
+  absenteeIsLost: text("absentee_is_lost"),
   absenteeCashAmount: integer("absentee_cash_amount"),
 
   // Education information
@@ -116,11 +131,30 @@ export const individuals = pgTable("synth_pokhara_individual", {
   // Internet access
   hasInternetAccess: text("has_internet_access"),
 
+  // Birth and prior location information
+  birthPlace: text("birth_place"),
+  birthProvince: text("birth_province"),
+  birthDistrict: text("birth_district"),
+  birthCountry: text("birth_country"),
+  priorLocation: text("prior_location"),
+  priorProvince: text("prior_province"),
+  priorDistrict: text("prior_district"),
+  priorCountry: text("prior_country"),
+  priorUrbanityStatus: text("prior_urbanity_status"),
+  priorResidenceTime: bigint("prior_residence_time", { mode: "number" }),
+  residenceReason: text("residence_reason"),
+
   // Employment information
   financialWorkDuration: text("financial_work_duration"),
   primaryOccupation: text("primary_occupation"),
   workBarrier: text("work_barrier"),
   workAvailability: text("work_availability"),
+  hoursOnHouseholdChores: integer("hours_on_household_chores"),
+  isInvolvedInOrganization: text("is_involved_in_organization"),
+  involvedOrganizations: text("involved_organizations").array(),
+
+  // Additional age field (bigint)
+  age: bigint("age", { mode: "number" }),
 
   // GIS data
   geom: postgis("geom"),
@@ -169,10 +203,6 @@ export const stagingIndividuals = pgTable("staging_synth_pokhara_individual", {
   aliveSons: integer("alive_sons"),
   aliveDaughters: integer("alive_daughters"),
   totalBornChildren: integer("total_born_children"),
-  hasDeadChildren: text("has_dead_children"),
-  deadSons: integer("dead_sons"),
-  deadDaughters: integer("dead_daughters"),
-  totalDeadChildren: integer("total_dead_children"),
 
   gaveRecentLiveBirth: text("gave_recent_live_birth"),
   recentBornSons: integer("recent_born_sons"),

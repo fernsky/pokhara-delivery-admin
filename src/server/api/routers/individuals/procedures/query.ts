@@ -38,7 +38,7 @@ export const getIndividualsProcedure = protectedProcedure
           ward_no,
           name,
           gender,
-          age,
+          age_at_survey,
           family_role,
           is_present,
           educational_level,
@@ -70,7 +70,7 @@ export const getIndividualsProcedure = protectedProcedure
         }
 
         if (filters.age !== undefined) {
-          query = sql`${query} AND age = ${filters.age}`;
+          query = sql`${query} AND age_at_survey = ${filters.age}`;
         }
 
         if (filters.familyRole) {
@@ -105,8 +105,8 @@ export const getIndividualsProcedure = protectedProcedure
       } else if (sortBy === "age") {
         query =
           sortOrder === "asc"
-            ? sql`${query} ORDER BY age ASC NULLS LAST`
-            : sql`${query} ORDER BY age DESC NULLS LAST`;
+            ? sql`${query} ORDER BY age_at_survey ASC NULLS LAST`
+            : sql`${query} ORDER BY age_at_survey DESC NULLS LAST`;
       } else if (sortBy === "gender") {
         query =
           sortOrder === "asc"
@@ -132,11 +132,11 @@ export const getIndividualsProcedure = protectedProcedure
       const individualsList = result.map((row) => ({
         id: row.id,
         tenantId: row.tenant_id || "",
-        parentId: row.household_id,
+        householdId: row.household_id,
         wardNo: typeof row.ward_no === "number" ? row.ward_no : null,
         name: row.name || "",
         gender: row.gender || "",
-        age: typeof row.age === "number" ? row.age : null,
+        age: typeof row.age_at_survey === "number" ? row.age_at_survey : null,
         familyRole: row.family_role || "",
         isPresent: row.is_present || "",
         educationalLevel: row.educational_level || "",
@@ -172,7 +172,7 @@ export const getIndividualsProcedure = protectedProcedure
         }
 
         if (filters.age !== undefined) {
-          countQuery = sql`${countQuery} AND age = ${filters.age}`;
+          countQuery = sql`${countQuery} AND age_at_survey = ${filters.age}`;
         }
 
         if (filters.familyRole) {
@@ -259,14 +259,14 @@ export const getIndividualByIdProcedure = protectedProcedure
       return {
         id: individual.id,
         tenantId: individual.tenantId || "",
-        parentId: individual.parentId,
+        householdId: individual.familyId,
         wardNo: individual.wardNo,
         deviceId: individual.deviceId || "",
 
         // Personal information
         name: individual.name,
         gender: individual.gender,
-        age: individual.age,
+        age: individual.ageAtSurvey,
         familyRole: individual.familyRole || "",
 
         // Citizenship and demographics
@@ -304,10 +304,6 @@ export const getIndividualByIdProcedure = protectedProcedure
         aliveSons: individual.aliveSons,
         aliveDaughters: individual.aliveDaughters,
         totalBornChildren: individual.totalBornChildren,
-        hasDeadChildren: individual.hasDeadChildren || "",
-        deadSons: individual.deadSons,
-        deadDaughters: individual.deadDaughters,
-        totalDeadChildren: individual.totalDeadChildren,
 
         // Recent childbirth information
         gaveRecentLiveBirth: individual.gaveRecentLiveBirth || "",
@@ -391,7 +387,7 @@ export const getIndividualsByHouseholdIdProcedure = protectedProcedure
             WHEN family_role = 'spouse' THEN 2
             ELSE 3
           END,
-          age DESC NULLS LAST
+          age_at_survey DESC NULLS LAST
         LIMIT ${limit} OFFSET ${offset}
       `;
 
@@ -411,15 +407,15 @@ export const getIndividualsByHouseholdIdProcedure = protectedProcedure
       const individuals = result.map((row) => ({
         id: row.id,
         tenantId: row.tenant_id || "",
-        parentId: row.household_id,
+        householdId: row.household_id,
         wardNo: typeof row.ward_no === "number" ? row.ward_no : null,
         name: row.name || "",
         gender: row.gender || "",
-        age: typeof row.age === "number" ? row.age : null,
+        age: typeof row.age_at_survey === "number" ? row.age_at_survey : null,
         familyRole: row.family_role || "",
         isPresent: row.is_present || "",
         maritalStatus: row.marital_status || "",
-        citizenOf: row.citizen_of || "",
+        citizenOf: row.citizen_of || "", 
         caste: row.caste || "",
         educationalLevel: row.educational_level || "",
         isDisabled: row.is_disabled || "",

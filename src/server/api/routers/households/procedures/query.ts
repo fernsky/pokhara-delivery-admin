@@ -260,7 +260,7 @@ export const getHouseholdByIdProcedure = protectedProcedure
 
       return {
         id: household.id,
-        profileId: household.tenant_id || "",
+        tenantId: household.tenant_id || "",
         province: household.province || "",
         district: household.district || "",
         localLevel: household.local_level || "",
@@ -269,7 +269,9 @@ export const getHouseholdByIdProcedure = protectedProcedure
         houseSymbolNo: household.house_symbol_no || "",
         familySymbolNo: household.family_symbol_no || "",
         dateOfInterview: parseDate(household.date_of_interview),
-        householdLocation: parseArrayField(household.household_location),
+        householdLocation: Array.isArray(household.household_location) 
+          ? household.household_location.map(item => String(item))
+          : [],
         locality: household.locality || "",
         developmentOrganization: household.development_organization || "",
         familyHeadName: household.family_head_name || "",

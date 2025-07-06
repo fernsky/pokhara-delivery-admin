@@ -10,8 +10,10 @@ export const individualSchema = z.object({
   
   // Personal information
   name: z.string(),
+  phoneNo: z.string().nullable(),
   gender: z.string(),
-  age: z.number().nullable(),
+  ageAtSurvey: z.number().nullable(),
+  dateOfBirth: z.date().nullable(),
   familyRole: z.string().nullable(),
   
   // Citizenship and demographics
@@ -25,16 +27,24 @@ export const individualSchema = z.object({
   ancestorLanguageOther: z.string().nullable(),
   primaryMotherTongue: z.string().nullable(),
   primaryMotherTongueOther: z.string().nullable(),
+  secondaryMotherTongue: z.string().nullable(),
+  secondaryMotherTongueOther: z.string().nullable(),
   religion: z.string().nullable(),
   religionOther: z.string().nullable(),
+  
+  // Health and vaccination
+  hasCoronaBooster: z.string().nullable(),
+  hasRegularVaccination: z.string().nullable(),
   
   // Marital status
   maritalStatus: z.string().nullable(),
   marriedAge: z.number().nullable(),
+  hasMarriageCertificate: z.string().nullable(),
   
   // Health information
   hasChronicDisease: z.string().nullable(),
   primaryChronicDisease: z.string().nullable(),
+  secondaryChronicDiseases: z.array(z.string()).nullable(),
   isSanitized: z.string().nullable(),
   
   // Disability information
@@ -42,17 +52,17 @@ export const individualSchema = z.object({
   disabilityType: z.string().nullable(),
   disabilityTypeOther: z.string().nullable(),
   disabilityCause: z.string().nullable(),
+  disabilityId: z.string().nullable(),
+  hasSpecialDisabilityEducation: z.string().nullable(),
   
   // Birth and children information
   hasBirthCertificate: z.string().nullable(),
+  isPregnant: z.string().nullable(),
+  monthsPregnant: z.number().nullable(),
   gaveLiveBirth: z.string().nullable(),
   aliveSons: z.number().nullable(),
   aliveDaughters: z.number().nullable(),
   totalBornChildren: z.number().nullable(),
-  hasDeadChildren: z.string().nullable(),
-  deadSons: z.number().nullable(),
-  deadDaughters: z.number().nullable(),
-  totalDeadChildren: z.number().nullable(),
   
   // Recent childbirth information
   gaveRecentLiveBirth: z.string().nullable(),
@@ -62,17 +72,21 @@ export const individualSchema = z.object({
   recentDeliveryLocation: z.string().nullable(),
   prenatalCheckups: z.number().nullable(),
   firstDeliveryAge: z.number().nullable(),
+  recentGovernmentDeliveryInstitute: z.string().nullable(),
+  recentPrivateDeliveryInstitute: z.string().nullable(),
   
   // Presence and absence information
   isPresent: z.string().nullable(),
   absenteeAge: z.number().nullable(),
   absenteeEducationalLevel: z.string().nullable(),
+  absencePeriod: z.number().nullable(),
   absenceReason: z.string().nullable(),
   absenteeLocation: z.string().nullable(),
   absenteeProvince: z.string().nullable(),
   absenteeDistrict: z.string().nullable(),
   absenteeCountry: z.string().nullable(),
   absenteeHasSentCash: z.string().nullable(),
+  absenteeIsLost: z.string().nullable(),
   absenteeCashAmount: z.number().nullable(),
   
   // Education information
@@ -92,11 +106,30 @@ export const individualSchema = z.object({
   // Internet access
   hasInternetAccess: z.string().nullable(),
   
+  // Birth and prior location information
+  birthPlace: z.string().nullable(),
+  birthProvince: z.string().nullable(),
+  birthDistrict: z.string().nullable(),
+  birthCountry: z.string().nullable(),
+  priorLocation: z.string().nullable(),
+  priorProvince: z.string().nullable(),
+  priorDistrict: z.string().nullable(),
+  priorCountry: z.string().nullable(),
+  priorUrbanityStatus: z.string().nullable(),
+  priorResidenceTime: z.number().nullable(),
+  residenceReason: z.string().nullable(),
+  
   // Employment information
   financialWorkDuration: z.string().nullable(),
   primaryOccupation: z.string().nullable(),
   workBarrier: z.string().nullable(),
   workAvailability: z.string().nullable(),
+  hoursOnHouseholdChores: z.number().nullable(),
+  isInvolvedInOrganization: z.string().nullable(),
+  involvedOrganizations: z.array(z.string()).nullable(),
+  
+  // Additional age field (bigint)
+  age: z.number().nullable(),
 });
 
 export const createIndividualSchema = individualSchema.omit({ id: true });

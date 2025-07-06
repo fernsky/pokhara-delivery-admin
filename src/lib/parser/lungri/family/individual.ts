@@ -166,13 +166,6 @@ export async function parseIndividuals(r: RawFamily, ctx: any) {
             individual.total_born_children =
               fertilityRecord.ftd.total_born_children;
           }
-          // Add deceased children details if available
-          if (fertilityRecord.ftd.has_dead_children === "yes") {
-            individual.dead_sons = fertilityRecord.ftd.dead_sons;
-            individual.dead_daughters = fertilityRecord.ftd.dead_daughters;
-          }
-
-          // Add recent birth details if available
           if (fertilityRecord.ftd.frcb?.gave_recent_live_birth === "yes") {
             individual.recent_born_sons =
               fertilityRecord.ftd.frcb.recent_alive_sons;

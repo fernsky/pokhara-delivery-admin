@@ -3,89 +3,118 @@ import { z } from "zod";
 export const householdSchema = z.object({
   // Primary identification
   id: z.string(),
-  profileId: z.string(),
+  tenantId: z.string(),
   
   // Location information
-  province: z.string(),
-  district: z.string(),
-  localLevel: z.string(),
-  wardNo: z.number(),
-  houseSymbolNo: z.string(),
-  familySymbolNo: z.string(),
+  province: z.string().nullable(),
+  district: z.string().nullable(),
+  localLevel: z.string().nullable(),
+  wardNo: z.number().nullable(),
+  houseSymbolNo: z.number().nullable(),
+  familySymbolNo: z.number().nullable(),
   dateOfInterview: z.date().nullable(),
-  householdLocation: z.array(z.string()).nullable(),
-  locality: z.string(),
-  developmentOrganization: z.string(),
+  householdLocation: z.array(z.number()).nullable(),
+  locality: z.string().nullable(),
+  developmentOrganization: z.string().nullable(),
   
   // Family information
-  familyHeadName: z.string(),
-  familyHeadPhoneNo: z.string(),
-  totalMembers: z.number(),
+  familyHeadName: z.string().nullable(),
+  familyHeadPhoneNo: z.string().nullable(),
+  totalMembers: z.number().nullable(),
+  maleMembers: z.number().nullable(),
+  femaleMembers: z.number().nullable(),
+  thirdGenderMembers: z.number().nullable(),
   areMembersElsewhere: z.string().nullable(),
   totalElsewhereMembers: z.number().nullable(),
   
   // House details
-  houseOwnership: z.string(),
+  houseOwnership: z.string().nullable(),
   houseOwnershipOther: z.string().nullable(),
-  landOwnership: z.string(),
+  rentAmount: z.number().nullable(),
+  landOwnership: z.string().nullable(),
   landOwnershipOther: z.string().nullable(),
-  houseBase: z.string(),
+  houseBase: z.string().nullable(),
   houseBaseOther: z.string().nullable(),
-  houseOuterWall: z.string(),
+  houseOuterWall: z.string().nullable(),
   houseOuterWallOther: z.string().nullable(),
-  houseRoof: z.string(),
+  houseRoof: z.string().nullable(),
   houseRoofOther: z.string().nullable(),
-  houseFloor: z.string(),
+  houseFloor: z.string().nullable(),
   houseFloorOther: z.string().nullable(),
+  houseBuiltDate: z.date().nullable(),
+  houseStorey: z.number().nullable(),
+  houseHasUnderground: z.string().nullable(),
   
   // Safety information
-  isHousePassed: z.string(),
-  isMapArchived: z.string().nullable(),
+  isHousePassed: z.string().nullable(),
+  housePassedStories: z.number().nullable(),
   naturalDisasters: z.array(z.string()).nullable(),
-  isSafe: z.string().nullable(),
+  naturalDisastersOther: z.array(z.string()).nullable(),
   
   // Water, sanitation and energy
-  waterSource: z.string(),
-  // Changed from array to string to match schema
-  waterPurificationMethods: z.string().nullable(),
-  toiletType: z.string(),
-  solidWasteManagement: z.string(),
-  primaryCookingFuel: z.string(),
-  primaryEnergySource: z.string(),
+  waterSource: z.string().nullable(),
+  waterSourceOther: z.array(z.string()).nullable(),
+  waterPurificationMethods: z.array(z.string()).nullable(),
+  toiletType: z.string().nullable(),
+  categorizesWaste: z.string().nullable(),
+  decomposesWaste: z.string().nullable(),
+  hasVehicularWasteCollection: z.string().nullable(),
+  solidWasteManagement: z.string().nullable(),
+  solidWasteManagementOther: z.array(z.string()).nullable(),
+  primaryCookingFuel: z.string().nullable(),
+  secondaryCookingFuels: z.array(z.string()).nullable(),
+  primaryEnergySource: z.string().nullable(),
+  primaryEnergySourceOther: z.string().nullable(),
+  secondaryEnergySources: z.array(z.string()).nullable(),
+  secondaryEnergySourcesOther: z.array(z.string()).nullable(),
   
   // Accessibility
-  roadStatus: z.string(),
-  timeToPublicBus: z.string(),
-  timeToMarket: z.string(),
+  roadStatus: z.string().nullable(),
+  roadStatusOther: z.string().nullable(),
+  timeToPublicBus: z.string().nullable(),
+  publicBusInterval: z.string().nullable(),
+  timeToMarket: z.string().nullable(),
   distanceToActiveRoad: z.string().nullable(),
   facilities: z.array(z.string()).nullable(),
   
   // Economic details
-  hasPropertiesElsewhere: z.string(),
-  hasFemaleNamedProperties: z.string(),
+  hasPropertiesElsewhere: z.string().nullable(),
+  hasFemaleNamedProperties: z.string().nullable(),
+  monthsSustainedFromIncome: z.string().nullable(),
   organizationsLoanedFrom: z.array(z.string()).nullable(),
   loanUses: z.array(z.string()).nullable(),
-  timeToBank: z.string(),
+  timeToBank: z.string().nullable(),
+  timeToCooperative: z.string().nullable(),
   financialAccounts: z.array(z.string()).nullable(),
-  // Added income sources to match schema
-  incomeSources: z.array(z.string()).nullable(),
-  
-  // Remittance (moved to match schema order)
-  haveRemittance: z.string(),
-  remittanceExpenses: z.array(z.string()).nullable(),
   
   // Health
-  haveHealthInsurance: z.string(),
-  consultingHealthOrganization: z.string(),
-  timeToHealthOrganization: z.string(),
+  haveHealthInsurance: z.string().nullable(),
+  haveLifeInsurance: z.string().nullable(),
+  lifeInsuredFamilyMembers: z.number().nullable(),
+  consultingHealthOrganization: z.string().nullable(),
+  consultingHealthOrganizationOther: z.string().nullable(),
+  timeToHealthOrganization: z.string().nullable(),
+  maxExpense: z.string().nullable(),
+  maxExpenseExcess: z.number().nullable(),
+  maxIncome: z.string().nullable(),
+  maxIncomeExcess: z.number().nullable(),
+  incomeSources: z.array(z.string()).nullable(),
+  otherIncomeSources: z.array(z.string()).nullable(),
+  
+  // Pets
+  haveDog: z.string().nullable(),
+  dogNumber: z.number().nullable(),
+  isDogRegistered: z.string().nullable(),
+  isDogVaccinated: z.string().nullable(),
   
   // Municipal & Suggestions
   municipalSuggestions: z.array(z.string()).nullable(),
+  municipalSuggestionsOther: z.array(z.string()).nullable(),
   
   // Agriculture & Livestock
-  haveAgriculturalLand: z.string(),
+  haveAgriculturalLand: z.string().nullable(),
   agriculturalLands: z.array(z.string()).nullable(),
-  areInvolvedInAgriculture: z.string(),
+  areInvolvedInAgriculture: z.string().nullable(),
   foodCrops: z.array(z.string()).nullable(),
   pulses: z.array(z.string()).nullable(),
   oilSeeds: z.array(z.string()).nullable(),
@@ -93,42 +122,49 @@ export const householdSchema = z.object({
   fruits: z.array(z.string()).nullable(),
   spices: z.array(z.string()).nullable(),
   cashCrops: z.array(z.string()).nullable(),
-  areInvolvedInHusbandry: z.string(),
+  haveCultivatedGrass: z.string().nullable(),
+  monthSustainedFromAgriculture: z.string().nullable(),
+  areInvolvedInHusbandry: z.string().nullable(),
   animals: z.array(z.string()).nullable(),
   animalProducts: z.array(z.string()).nullable(),
   
   // Aquaculture & Apiary
-  haveAquaculture: z.string(),
+  haveAquaculture: z.string().nullable(),
   pondNumber: z.number().nullable(),
   pondArea: z.number().nullable(),
   fishProduction: z.number().nullable(),
-  haveApiary: z.string(),
+  fishSales: z.number().nullable(),
+  fishRevenue: z.number().nullable(),
+  haveApiary: z.string().nullable(),
   hiveNumber: z.number().nullable(),
   honeyProduction: z.number().nullable(),
   honeySales: z.number().nullable(),
   honeyRevenue: z.number().nullable(),
   
+  // Barren land
+  isLandBarren: z.string().nullable(),
+  barrenLandArea: z.number().nullable(),
+  barrenLandFoodCropPossibilities: z.array(z.string()).nullable(),
+  barrenLandFoodCropPossibilitiesOther: z.array(z.string()).nullable(),
+  wantsToRentBarrenLand: z.string().nullable(),
+  
   // Agricultural operations
-  hasAgriculturalInsurance: z.string(),
-  monthsInvolvedInAgriculture: z.string(),
+  hasAgriculturalInsurance: z.string().nullable(),
+  monthsSustainedFromAgriculture: z.number().nullable(),
+  monthsInvolvedInAgriculture: z.string().nullable(),
+  agricultureInvestment: z.number().nullable(),
   agriculturalMachines: z.array(z.string()).nullable(),
+  salesAndDistribution: z.string().nullable(),
+  isFarmerRegistered: z.string().nullable(),
   
-  // Migration details
-  birthPlace: z.string().nullable(),
-  birthProvince: z.string().nullable(),
-  birthDistrict: z.string().nullable(),
-  birthCountry: z.string().nullable(),
-  priorLocation: z.string().nullable(),
-  priorProvince: z.string().nullable(),
-  priorDistrict: z.string().nullable(),
-  priorCountry: z.string().nullable(),
-  residenceReason: z.string().nullable(),
-  
-  // Business
-  hasBusiness: z.string().nullable(),
+  // Remittance
+  haveRemittance: z.string().nullable(),
+  remittanceExpenses: z.array(z.string()).nullable(),
   
   // System fields
+  houseImage: z.string().nullable(),
   deviceId: z.string().nullable(),
+  name: z.string().nullable(),
 });
 
 export const createHouseholdSchema = householdSchema.omit({ id: true });

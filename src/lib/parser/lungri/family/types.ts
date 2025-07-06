@@ -534,8 +534,7 @@ interface FertilityDetails {
     alive_sons: number | null;
     alive_daughters: number | null;
     total_born_children: number | null;
-    NFTBRTH: string | null;
-    has_dead_children: string | null;
+    NFTBRTH: string | null;   
     dead_sons: number | null;
     dead_daughters: number | null;
     total_dead_children: number | null;

@@ -18,7 +18,7 @@ export const createHouseholdProcedure = publicProcedure
       // Prepare household data
       const householdData = {
         id,
-        profileId: input.profileId || "pokhara",
+        tenantId: input.tenantId || "pokhara_metro",
 
         // Location information
         province: input.province || null,
@@ -36,12 +36,16 @@ export const createHouseholdProcedure = publicProcedure
         familyHeadName: input.familyHeadName,
         familyHeadPhoneNo: input.familyHeadPhoneNo || null,
         totalMembers: input.totalMembers || null,
+        maleMembers: input.maleMembers || null,
+        femaleMembers: input.femaleMembers || null,
+        thirdGenderMembers: input.thirdGenderMembers || null,
         areMembersElsewhere: input.areMembersElsewhere || null,
         totalElsewhereMembers: input.totalElsewhereMembers || null,
 
         // House details
         houseOwnership: input.houseOwnership || null,
         houseOwnershipOther: input.houseOwnershipOther || null,
+        rentAmount: input.rentAmount || null,
         landOwnership: input.landOwnership || null,
         landOwnershipOther: input.landOwnershipOther || null,
         houseBase: input.houseBase || null,
@@ -52,24 +56,38 @@ export const createHouseholdProcedure = publicProcedure
         houseRoofOther: input.houseRoofOther || null,
         houseFloor: input.houseFloor || null,
         houseFloorOther: input.houseFloorOther || null,
+        houseBuiltDate: input.houseBuiltDate || null,
+        houseStorey: input.houseStorey || null,
+        houseHasUnderground: input.houseHasUnderground || null,
 
         // Safety information
         isHousePassed: input.isHousePassed || null,
-        isMapArchived: input.isMapArchived || null,
+        housePassedStories: input.housePassedStories || null,
         naturalDisasters: input.naturalDisasters || null,
-        isSafe: input.isSafe || null,
+        naturalDisastersOther: input.naturalDisastersOther || null,
 
         // Water, sanitation and energy
         waterSource: input.waterSource || null,
+        waterSourceOther: input.waterSourceOther || null,
         waterPurificationMethods: input.waterPurificationMethods || null,
         toiletType: input.toiletType || null,
+        categorizesWaste: input.categorizesWaste || null,
+        decomposesWaste: input.decomposesWaste || null,
+        hasVehicularWasteCollection: input.hasVehicularWasteCollection || null,
         solidWasteManagement: input.solidWasteManagement || null,
+        solidWasteManagementOther: input.solidWasteManagementOther || null,
         primaryCookingFuel: input.primaryCookingFuel || null,
+        secondaryCookingFuels: input.secondaryCookingFuels || null,
         primaryEnergySource: input.primaryEnergySource || null,
+        primaryEnergySourceOther: input.primaryEnergySourceOther || null,
+        secondaryEnergySources: input.secondaryEnergySources || null,
+        secondaryEnergySourcesOther: input.secondaryEnergySourcesOther || null,
 
         // Accessibility
         roadStatus: input.roadStatus || null,
+        roadStatusOther: input.roadStatusOther || null,
         timeToPublicBus: input.timeToPublicBus || null,
+        publicBusInterval: input.publicBusInterval || null,
         timeToMarket: input.timeToMarket || null,
         distanceToActiveRoad: input.distanceToActiveRoad || null,
         facilities: input.facilities || null,
@@ -77,24 +95,36 @@ export const createHouseholdProcedure = publicProcedure
         // Economic details
         hasPropertiesElsewhere: input.hasPropertiesElsewhere || null,
         hasFemaleNamedProperties: input.hasFemaleNamedProperties || null,
+        monthsSustainedFromIncome: input.monthsSustainedFromIncome || null,
         organizationsLoanedFrom: input.organizationsLoanedFrom || null,
         loanUses: input.loanUses || null,
         timeToBank: input.timeToBank || null,
+        timeToCooperative: input.timeToCooperative || null,
         financialAccounts: input.financialAccounts || null,
-        incomeSources: input.incomeSources || null,
-
-        // Remittance fields
-        haveRemittance: input.haveRemittance || null,
-        remittanceExpenses: input.remittanceExpenses || null,
 
         // Health
         haveHealthInsurance: input.haveHealthInsurance || null,
-        consultingHealthOrganization:
-          input.consultingHealthOrganization || null,
+        haveLifeInsurance: input.haveLifeInsurance || null,
+        lifeInsuredFamilyMembers: input.lifeInsuredFamilyMembers || null,
+        consultingHealthOrganization: input.consultingHealthOrganization || null,
+        consultingHealthOrganizationOther: input.consultingHealthOrganizationOther || null,
         timeToHealthOrganization: input.timeToHealthOrganization || null,
+        maxExpense: input.maxExpense || null,
+        maxExpenseExcess: input.maxExpenseExcess || null,
+        maxIncome: input.maxIncome || null,
+        maxIncomeExcess: input.maxIncomeExcess || null,
+        incomeSources: input.incomeSources || null,
+        otherIncomeSources: input.otherIncomeSources || null,
+
+        // Pets
+        haveDog: input.haveDog || null,
+        dogNumber: input.dogNumber || null,
+        isDogRegistered: input.isDogRegistered || null,
+        isDogVaccinated: input.isDogVaccinated || null,
 
         // Municipal & Suggestions
         municipalSuggestions: input.municipalSuggestions || null,
+        municipalSuggestionsOther: input.municipalSuggestionsOther || null,
 
         // Agriculture & Livestock
         haveAgriculturalLand: input.haveAgriculturalLand || null,
@@ -107,6 +137,8 @@ export const createHouseholdProcedure = publicProcedure
         fruits: input.fruits || null,
         spices: input.spices || null,
         cashCrops: input.cashCrops || null,
+        haveCultivatedGrass: input.haveCultivatedGrass || null,
+        monthSustainedFromAgriculture: input.monthSustainedFromAgriculture || null,
         areInvolvedInHusbandry: input.areInvolvedInHusbandry || null,
         animals: input.animals || null,
         animalProducts: input.animalProducts || null,
@@ -116,33 +148,38 @@ export const createHouseholdProcedure = publicProcedure
         pondNumber: input.pondNumber || null,
         pondArea: input.pondArea || null,
         fishProduction: input.fishProduction || null,
+        fishSales: input.fishSales || null,
+        fishRevenue: input.fishRevenue || null,
         haveApiary: input.haveApiary || null,
         hiveNumber: input.hiveNumber || null,
         honeyProduction: input.honeyProduction || null,
         honeySales: input.honeySales || null,
         honeyRevenue: input.honeyRevenue || null,
 
+        // Barren land
+        isLandBarren: input.isLandBarren || null,
+        barrenLandArea: input.barrenLandArea || null,
+        barrenLandFoodCropPossibilities: input.barrenLandFoodCropPossibilities || null,
+        barrenLandFoodCropPossibilitiesOther: input.barrenLandFoodCropPossibilitiesOther || null,
+        wantsToRentBarrenLand: input.wantsToRentBarrenLand || null,
+
         // Agricultural operations
         hasAgriculturalInsurance: input.hasAgriculturalInsurance || null,
+        monthsSustainedFromAgriculture: input.monthsSustainedFromAgriculture || null,
         monthsInvolvedInAgriculture: input.monthsInvolvedInAgriculture || null,
+        agricultureInvestment: input.agricultureInvestment || null,
         agriculturalMachines: input.agriculturalMachines || null,
+        salesAndDistribution: input.salesAndDistribution || null,
+        isFarmerRegistered: input.isFarmerRegistered || null,
 
-        // Migration details
-        birthPlace: input.birthPlace || null,
-        birthProvince: input.birthProvince || null,
-        birthDistrict: input.birthDistrict || null,
-        birthCountry: input.birthCountry || null,
-        priorLocation: input.priorLocation || null,
-        priorProvince: input.priorProvince || null,
-        priorDistrict: input.priorDistrict || null,
-        priorCountry: input.priorCountry || null,
-        residenceReason: input.residenceReason || null,
-
-        // Business
-        hasBusiness: input.hasBusiness || null,
+        // Remittance
+        haveRemittance: input.haveRemittance || null,
+        remittanceExpenses: input.remittanceExpenses || null,
 
         // System fields
+        houseImage: input.houseImage || null,
         deviceId: input.deviceId || null,
+        name: input.name || null,
       };
 
       // Insert household into database
