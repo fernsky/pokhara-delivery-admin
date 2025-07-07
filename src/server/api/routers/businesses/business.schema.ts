@@ -3,8 +3,8 @@ import { z } from "zod";
 export const businessSchema = z.object({
   // Primary identification - required fields
   id: z.string(),
-  wardNo: z.number(),
-  tenantId: z.string().nullable(),
+  wardNo: z.number().nullable(),
+  tenantId: z.string(),
   deviceId: z.string(),
 
   // Location and basic information
@@ -49,6 +49,13 @@ export const businessSchema = z.object({
   hotelRoomNumbers: z.number().nullable(),
   hotelBedNumbers: z.number().nullable(),
   hotelRoomTypes: z.array(z.string()).nullable(),
+  hotelHasHall: z.string().nullable(),
+  hotelHallCapacity: z.number().nullable(),
+
+  // Dog business information
+  dogProduction: z.number().nullable(),
+  dogSales: z.number().nullable(),
+  dogRevenue: z.number().nullable(),
 
   // Agricultural business details
   agriculturalBusinesses: z.array(z.string()).nullable(),
@@ -62,8 +69,21 @@ export const businessSchema = z.object({
   businessAnimals: z.array(z.string()).nullable(),
   businessAnimalProducts: z.array(z.string()).nullable(),
 
+  // Agricultural infrastructure
+  hasPlasticHouse: z.string().nullable(),
+  plasticHouseLength: z.number().nullable(),
+  plasticHouseBreadth: z.number().nullable(),
+  plasticHouseNumber: z.number().nullable(),
+  salesAndDistribution: z.string().nullable(),
+  hasAgriculturalLoan: z.string().nullable(),
+  isInvolvedInAgriculturalOrganization: z.string().nullable(),
+  isFarmerRegistered: z.string().nullable(),
+
   // Financial information
   businessInvestment: z.number().nullable(),
+  rentAmount: z.number().nullable(),
+  businessLocationOwnerName: z.string().nullable(),
+  businessLocationOwnerPhone: z.string().nullable(),
   businessProfit: z.number().nullable(),
   businessPastYearInvestment: z.number().nullable(),
 
@@ -96,20 +116,18 @@ export const businessSchema = z.object({
   hasTemporaryEmployees: z.string().nullable(),
   totalTemporaryEmployees: z.number().nullable(),
   nepaliMaleTemporaryEmployees: z.number().nullable(),
-  nepaliTemporaryFemaleEmployees: z.number().nullable(),
+  nepaliFemaleTemporaryEmployees: z.number().nullable(),
   hasForeignTemporaryEmployees: z.string().nullable(),
   foreignMaleTemporaryEmployees: z.number().nullable(),
   foreignFemaleTemporaryEmployees: z.number().nullable(),
   foreignTemporaryEmployeeCountries: z.array(z.string()).nullable(),
 
+  // Additional fields
+  businessImage: z.string().nullable(),
+
   // Geospatial data and name
   geom: z.any().nullable(), // Using any for geometry type since it's complex
   name: z.string().nullable(),
-
-  // Status field
-  status: z
-    .enum(["approved", "pending", "requested_for_edit", "rejected"])
-    .default("pending"),
 });
 
 // Schema for creating a new business (omits id)
@@ -124,38 +142,25 @@ export const businessQuerySchema = z.object({
   offset: z.number().min(0).default(0),
   sortBy: z
     .enum([
+      "businessName",
       "business_name",
+      "wardNo",
       "ward_no",
+      "businessDistrict",
       "business_district",
+      "operatorName",
       "operator_name",
-      "status",
     ])
-    .default("ward_no"),
+    .default("businessName"),
   sortOrder: z.enum(["asc", "desc"]).default("asc"),
   filters: z
     .object({
       wardNo: z.number().optional(),
       businessDistrict: z.string().optional(),
       businessProvince: z.string().optional(),
-      status: z
-        .enum(["all", "pending", "approved", "rejected", "requested_for_edit"])
-        .optional(),
     })
     .optional(),
-  search: z.string().optional(),
 });
 
-// Schema for business status updates
-export const businessStatusSchema = z.object({
-  businessId: z.string(),
-  status: z.enum([
-    "approved",
-    "pending",
-    "requested_for_edit",
-    "rejected",
-  ]),
-  message: z.string().optional(),
-});
 
-export type BusinessStatusUpdate = z.infer<typeof businessStatusSchema>;
 export type Business = z.infer<typeof businessSchema>;

@@ -57,7 +57,7 @@ type Group = {
 
 const menuConfig: Menu[] = [
   {
-    href: "/",
+    href: "/dashboard",
     label: "होम",
     icon: LayoutGrid,
     roles: ["admin", "superadmin", "enumerator"],
@@ -167,7 +167,7 @@ const menuConfig: Menu[] = [
 
   {
     href: "#",
-    label: "अर्थशास्त्र",
+    label: "आर्थिक",
     icon: LineChart,
     roles: ["admin", "superadmin"],
     submenus: [
@@ -240,102 +240,102 @@ const menuConfig: Menu[] = [
   },
 
   // Agricultural menu with submenus
-  {
-    href: "#",
-    label: "कृषिगत क्षेत्र",
-    icon: Wheat,
-    roles: ["admin", "superadmin"],
-    submenus: [
-      {
-        href: "/dashboard/digital-profile/institutions/agricultural/agric-zones",
-        label: "कृषि क्षेत्रहरू",
-        roles: ["admin", "superadmin"],
-      },
-      {
-        href: "/dashboard/digital-profile/institutions/agricultural/farms",
-        label: "फार्महरू",
-        roles: ["admin", "superadmin"],
-      },
-      {
-        href: "/dashboard/digital-profile/institutions/agricultural/fish-farms",
-        label: "माछा फार्महरू",
-        roles: ["admin", "superadmin"],
-      },
-      {
-        href: "/dashboard/digital-profile/institutions/agricultural/grasslands",
-        label: "चरन क्षेत्रहरू",
-        roles: ["admin", "superadmin"],
-      },
-      {
-        href: "/dashboard/digital-profile/institutions/agricultural/grazing-areas",
-        label: "चरन खर्क क्षेत्रहरू",
-        roles: ["admin", "superadmin"],
-      },
-      {
-        href: "/dashboard/digital-profile/institutions/agricultural/processing-centers",
-        label: "प्रशोधन केन्द्रहरू",
-        roles: ["admin", "superadmin"],
-      },
-    ],
-  },
+  // {
+  //   href: "#",
+  //   label: "कृषिगत क्षेत्र",
+  //   icon: Wheat,
+  //   roles: ["admin", "superadmin"],
+  //   submenus: [
+  //     {
+  //       href: "/dashboard/digital-profile/institutions/agricultural/agric-zones",
+  //       label: "कृषि क्षेत्रहरू",
+  //       roles: ["admin", "superadmin"],
+  //     },
+  //     {
+  //       href: "/dashboard/digital-profile/institutions/agricultural/farms",
+  //       label: "फार्महरू",
+  //       roles: ["admin", "superadmin"],
+  //     },
+  //     {
+  //       href: "/dashboard/digital-profile/institutions/agricultural/fish-farms",
+  //       label: "माछा फार्महरू",
+  //       roles: ["admin", "superadmin"],
+  //     },
+  //     {
+  //       href: "/dashboard/digital-profile/institutions/agricultural/grasslands",
+  //       label: "चरन क्षेत्रहरू",
+  //       roles: ["admin", "superadmin"],
+  //     },
+  //     {
+  //       href: "/dashboard/digital-profile/institutions/agricultural/grazing-areas",
+  //       label: "चरन खर्क क्षेत्रहरू",
+  //       roles: ["admin", "superadmin"],
+  //     },
+  //     {
+  //       href: "/dashboard/digital-profile/institutions/agricultural/processing-centers",
+  //       label: "प्रशोधन केन्द्रहरू",
+  //       roles: ["admin", "superadmin"],
+  //     },
+  //   ],
+  // },
 
-  // Local Areas menu
-  {
-    href: "/dashboard/digital-profile/institutions/local-areas",
-    label: "स्थानीय क्षेत्रहरू",
-    icon: MapPin,
-    roles: ["admin", "superadmin"],
-  },
+  // // Local Areas menu
+  // {
+  //   href: "/dashboard/digital-profile/institutions/local-areas",
+  //   label: "स्थानीय क्षेत्रहरू",
+  //   icon: MapPin,
+  //   roles: ["admin", "superadmin"],
+  // },
 
-  // Transportation menu with submenus
-  {
-    href: "#",
-    label: "यातायात",
-    icon: Route,
-    roles: ["admin", "superadmin"],
-    submenus: [
-      {
-        href: "/dashboard/digital-profile/institutions/transportation/roads",
-        label: "सडकहरू",
-        roles: ["admin", "superadmin"],
-      },
-      {
-        href: "/dashboard/digital-profile/institutions/transportation/parking-facilities",
-        label: "पार्किङ सुविधाहरू",
-        roles: ["admin", "superadmin"],
-      },
-      {
-        href: "/dashboard/digital-profile/institutions/transportation/public-transports",
-        label: "सार्वजनिक यातायात",
-        roles: ["admin", "superadmin"],
-      },
-      {
-        href: "/dashboard/digital-profile/institutions/transportation/petrol-pumps",
-        label: "पेट्रोल पम्पहरू",
-        roles: ["admin", "superadmin"],
-      },
-    ],
-  },
+  // // Transportation menu with submenus
+  // {
+  //   href: "#",
+  //   label: "यातायात",
+  //   icon: Route,
+  //   roles: ["admin", "superadmin"],
+  //   submenus: [
+  //     {
+  //       href: "/dashboard/digital-profile/institutions/transportation/roads",
+  //       label: "सडकहरू",
+  //       roles: ["admin", "superadmin"],
+  //     },
+  //     {
+  //       href: "/dashboard/digital-profile/institutions/transportation/parking-facilities",
+  //       label: "पार्किङ सुविधाहरू",
+  //       roles: ["admin", "superadmin"],
+  //     },
+  //     {
+  //       href: "/dashboard/digital-profile/institutions/transportation/public-transports",
+  //       label: "सार्वजनिक यातायात",
+  //       roles: ["admin", "superadmin"],
+  //     },
+  //     {
+  //       href: "/dashboard/digital-profile/institutions/transportation/petrol-pumps",
+  //       label: "पेट्रोल पम्पहरू",
+  //       roles: ["admin", "superadmin"],
+  //     },
+  //   ],
+  // },
 
-  // Cultural menu with submenus
-  {
-    href: "#",
-    label: "सांस्कृतिक",
-    icon: Building,
-    roles: ["admin", "superadmin"],
-    submenus: [
-      {
-        href: "/dashboard/digital-profile/institutions/cultural/religious-places",
-        label: "धार्मिक स्थलहरू",
-        roles: ["admin", "superadmin"],
-      },
-      {
-        href: "/dashboard/digital-profile/institutions/cultural/historical-sites",
-        label: "ऐतिहासिक स्थलहरू",
-        roles: ["admin", "superadmin"],
-      },
-    ],
-  },
+  // // Cultural menu with submenus
+  // {
+  //   href: "#",
+  //   label: "सांस्कृतिक",
+  //   icon: Building,
+  //   roles: ["admin", "superadmin"],
+  //   submenus: [
+  //     {
+  //       href: "/dashboard/digital-profile/institutions/cultural/religious-places",
+  //       label: "धार्मिक स्थलहरू",
+  //       roles: ["admin", "superadmin"],
+  //     },
+  //     {
+  //       href: "/dashboard/digital-profile/institutions/cultural/historical-sites",
+  //       label: "ऐतिहासिक स्थलहरू",
+  //       roles: ["admin", "superadmin"],
+  //     },
+  //   ],
+  // },
 
   // Digital Profile main menu with submenus
   {
@@ -349,21 +349,21 @@ const menuConfig: Menu[] = [
         label: "प्रतिवेदन पूर्वावलोकन",
         roles: ["admin", "superadmin"],
       },
-      {
-        href: "/dashboard/digital-profile/demographics",
-        label: "जनसांख्यिकी",
-        roles: ["admin", "superadmin"],
-      },
-      {
-        href: "/dashboard/digital-profile/economics",
-        label: "आर्थिक",
-        roles: ["admin", "superadmin"],
-      },
-      {
-        href: "/dashboard/digital-profile/institutions",
-        label: "संस्थाहरू",
-        roles: ["admin", "superadmin"],
-      },
+      // {
+      //   href: "/dashboard/digital-profile/demographics",
+      //   label: "जनसांख्यिकी",
+      //   roles: ["admin", "superadmin"],
+      // },
+      // {
+      //   href: "/dashboard/digital-profile/economics",
+      //   label: "आर्थिक",
+      //   roles: ["admin", "superadmin"],
+      // },
+      // {
+      //   href: "/dashboard/digital-profile/institutions",
+      //   label: "संस्थाहरू",
+      //   roles: ["admin", "superadmin"],
+      // },
     ],
   },
 

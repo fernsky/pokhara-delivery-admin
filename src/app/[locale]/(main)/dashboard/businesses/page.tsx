@@ -43,7 +43,6 @@ type Business = {
   operatorPhone?: string;
   isBusinessRegistered?: string;
   businessInvestment?: number;
-  status: string;
 };
 
 export default function BusinessesPage() {
@@ -52,17 +51,9 @@ export default function BusinessesPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(25);
   const [wardFilter, setWardFilter] = useState<number | undefined>(undefined);
-  const [statusFilter, setStatusFilter] = useState<string | undefined>(
-    undefined,
-  );
-  // Fix the sortBy to use the correct enum values from schema
   const [sortBy, setSortBy] = useState<
-    | "business_name"
-    | "ward_no"
-    | "business_district"
-    | "operator_name"
-    | "status"
-  >("business_name"); // Changed from businessName to business_name
+    "business_name" | "ward_no" | "business_district" | "operator_name"
+  >("business_name");
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
 
   // Fetch businesses data with pagination
@@ -73,15 +64,9 @@ export default function BusinessesPage() {
     sortOrder: sortOrder,
     filters: {
       wardNo: wardFilter,
-      status: statusFilter as
-        | "all"
-        | "pending"
-        | "approved"
-        | "rejected"
-        | "requested_for_edit"
-        | undefined,
     },
-    search: searchQuery.length > 2 ? searchQuery : undefined,
+    //@ts-expect-error - search is not in the schema
+    search: searchQuery.length > 2 ? searchQuery : undefined, // Only search if query has at least 3 characters
   });
 
   const totalPages = data?.pagination?.total
@@ -90,12 +75,7 @@ export default function BusinessesPage() {
 
   // Handle sort toggle - update to use correct schema field names
   const toggleSort = (
-    column:
-      | "business_name"
-      | "ward_no"
-      | "business_district"
-      | "operator_name"
-      | "status",
+    column: "business_name" | "ward_no" | "business_district" | "operator_name",
   ) => {
     if (sortBy === column) {
       setSortOrder(sortOrder === "asc" ? "desc" : "asc");
@@ -109,34 +89,6 @@ export default function BusinessesPage() {
   const handleSearch = (value: string) => {
     setSearchQuery(value);
     setCurrentPage(1);
-  };
-
-  const formatStatusLabel = (status: string) => {
-    switch (status) {
-      case "approved":
-        return "स्वीकृत";
-      case "rejected":
-        return "अस्वीकृत";
-      case "requested_for_edit":
-        return "संशोधन आवश्यक";
-      case "pending":
-      default:
-        return "प्रक्रियामा";
-    }
-  };
-
-  const formatStatusClass = (status: string) => {
-    switch (status) {
-      case "approved":
-        return "bg-green-100 text-green-800";
-      case "rejected":
-        return "bg-red-100 text-red-800";
-      case "requested_for_edit":
-        return "bg-yellow-100 text-yellow-800";
-      case "pending":
-      default:
-        return "bg-blue-100 text-blue-800";
-    }
   };
 
   return (
@@ -178,25 +130,6 @@ export default function BusinessesPage() {
                   वडा {ward}
                 </SelectItem>
               ))}
-            </SelectContent>
-          </Select>
-
-          <Select
-            value={statusFilter || ""}
-            onValueChange={(value) => {
-              setStatusFilter(value || undefined);
-              setCurrentPage(1);
-            }}
-          >
-            <SelectTrigger className="w-40">
-              <SelectValue placeholder="स्थिति" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="">सबै स्थिति</SelectItem>
-              <SelectItem value="approved">स्वीकृत</SelectItem>
-              <SelectItem value="pending">प्रक्रियामा</SelectItem>
-              <SelectItem value="rejected">अस्वीकृत</SelectItem>
-              <SelectItem value="requested_for_edit">संशोधन आवश्यक</SelectItem>
             </SelectContent>
           </Select>
 
@@ -286,21 +219,6 @@ export default function BusinessesPage() {
                   </TableHead>
                   <TableHead>प्रकृति</TableHead>
                   <TableHead>प्रकार</TableHead>
-                  <TableHead
-                    className="cursor-pointer"
-                    onClick={() => toggleSort("status")}
-                  >
-                    <div className="flex items-center">
-                      स्थिति
-                      {sortBy === "status" && (
-                        <ArrowUpDown
-                          className={`ml-2 h-4 w-4 ${
-                            sortOrder === "asc" ? "transform rotate-180" : ""
-                          }`}
-                        />
-                      )}
-                    </div>
-                  </TableHead>
                   <TableHead className="text-right">कार्य</TableHead>
                 </TableRow>
               </TableHeader>
@@ -324,13 +242,6 @@ export default function BusinessesPage() {
                       <TableCell>{business.wardNo || ""}</TableCell>
                       <TableCell>{business.businessNature || ""}</TableCell>
                       <TableCell>{business.businessType || ""}</TableCell>
-                      <TableCell>
-                        <div
-                          className={`px-2 py-1 rounded-full text-xs font-medium inline-block ${formatStatusClass(business.status)}`}
-                        >
-                          {formatStatusLabel(business.status)}
-                        </div>
-                      </TableCell>
                       <TableCell className="text-right">
                         <Button
                           variant="ghost"

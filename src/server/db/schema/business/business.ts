@@ -10,19 +10,13 @@ import {
 } from "drizzle-orm/pg-core";
 import { postgis } from "../../postgis";
 
-export const businessStatusEnum = pgEnum("business_status_enum", [
-  "approved",
-  "pending",
-  "requested_for_edit",
-  "rejected",
-]);
 
-// Main business table based on the JSON schema
-export const business = pgTable("acme_pokhara_business", {
+// Main business table based on the actual database schema
+export const business = pgTable("pokhara_business", {
   // Primary identification
   id: text("id").primaryKey().notNull(),
-  wardNo: integer("ward_no").notNull(),
-  tenantId: text("tenant_id"),
+  wardNo: integer("ward_no"),
+  tenantId: text("tenant_id").notNull(),
   deviceId: text("device_id").notNull(),
 
   // Location and basic information
@@ -67,6 +61,13 @@ export const business = pgTable("acme_pokhara_business", {
   hotelRoomNumbers: integer("hotel_room_numbers"),
   hotelBedNumbers: integer("hotel_bed_numbers"),
   hotelRoomTypes: text("hotel_room_types").array(),
+  hotelHasHall: text("hotel_has_hall"),
+  hotelHallCapacity: integer("hotel_hall_capacity"),
+
+  // Dog business information
+  dogProduction: integer("dog_production"),
+  dogSales: integer("dog_sales"),
+  dogRevenue: real("dog_revenue"),
 
   // Agricultural business details
   agriculturalBusinesses: text("agricultural_businesses").array(),
@@ -80,8 +81,21 @@ export const business = pgTable("acme_pokhara_business", {
   businessAnimals: text("business_animals").array(),
   businessAnimalProducts: text("business_animal_products").array(),
 
+  // Agricultural infrastructure
+  hasPlasticHouse: text("has_plastic_house"),
+  plasticHouseLength: integer("plastic_house_length"),
+  plasticHouseBreadth: integer("plastic_house_breadth"),
+  plasticHouseNumber: integer("plastic_house_number"),
+  salesAndDistribution: text("sales_and_distribution"),
+  hasAgriculturalLoan: text("has_agricultural_loan"),
+  isInvolvedInAgriculturalOrganization: text("is_involved_in_agricultural_organization"),
+  isFarmerRegistered: text("is_farmer_registered"),
+
   // Financial information
   businessInvestment: real("business_investment"),
+  rentAmount: real("rent_amount"),
+  businessLocationOwnerName: text("business_location_owner_name"),
+  businessLocationOwnerPhone: text("business_location_owner_phone"),
   businessProfit: real("business_profit"),
   businessPastYearInvestment: real("business_past_year_investment"),
 
@@ -107,41 +121,34 @@ export const business = pgTable("acme_pokhara_business", {
   nepaliFemalePermanentEmployees: integer("nepali_female_permanent_employees"),
   hasForeignPermanentEmployees: text("has_foreign_permanent_employees"),
   foreignMalePermanentEmployees: integer("foreign_male_permanent_employees"),
-  foreignFemalePermanentEmployees: integer(
-    "foreign_female_permanent_employees",
-  ),
-  foreignPermanentEmployeeCountries: text(
-    "foreign_permanent_employee_countries",
-  ).array(),
+  foreignFemalePermanentEmployees: integer("foreign_female_permanent_employees"),
+  foreignPermanentEmployeeCountries: text("foreign_permanent_employee_countries").array(),
 
   // Temporary employee information
   hasTemporaryEmployees: text("has_temporary_employees"),
   totalTemporaryEmployees: integer("total_temporary_employees"),
   nepaliMaleTemporaryEmployees: integer("nepali_male_temporary_employees"),
-  nepaliTemporaryFemaleEmployees: integer("nepali_female_temporary_employees"),
+  nepaliFemaleTemporaryEmployees: integer("nepali_female_temporary_employees"),
   hasForeignTemporaryEmployees: text("has_foreign_temporary_employees"),
   foreignMaleTemporaryEmployees: integer("foreign_male_temporary_employees"),
-  foreignFemaleTemporaryEmployees: integer(
-    "foreign_female_temporary_employees",
-  ),
-  foreignTemporaryEmployeeCountries: text(
-    "foreign_temporary_employee_countries",
-  ).array(),
+  foreignFemaleTemporaryEmployees: integer("foreign_female_temporary_employees"),
+  foreignTemporaryEmployeeCountries: text("foreign_temporary_employee_countries").array(),
+
+  // Additional fields
+  businessImage: text("business_image"),
 
   // Geospatial data
   geom: postgis("geom"),
   name: text("name"),
 
-  // Status field
-  status: businessStatusEnum("status").default("pending"),
 });
 
 // Staging table for business data validation
-export const stagingBusiness = pgTable("staging_acme_pokhara_businesses", {
+export const stagingBusiness = pgTable("staging_pokhara_businesses", {
   // Primary identification
   id: text("id").primaryKey().notNull(),
-  wardNo: integer("ward_no").notNull(),
-  tenantId: text("tenant_id"),
+  wardNo: integer("ward_no"), 
+  tenantId: text("tenant_id").notNull(),
   deviceId: text("device_id").notNull(),
 
   // Location and basic information
@@ -186,6 +193,13 @@ export const stagingBusiness = pgTable("staging_acme_pokhara_businesses", {
   hotelRoomNumbers: integer("hotel_room_numbers"),
   hotelBedNumbers: integer("hotel_bed_numbers"),
   hotelRoomTypes: text("hotel_room_types").array(),
+  hotelHasHall: text("hotel_has_hall"),
+  hotelHallCapacity: integer("hotel_hall_capacity"),
+
+  // Dog business information
+  dogProduction: integer("dog_production"),
+  dogSales: integer("dog_sales"),
+  dogRevenue: real("dog_revenue"),
 
   // Agricultural business details
   agriculturalBusinesses: text("agricultural_businesses").array(),
@@ -199,8 +213,21 @@ export const stagingBusiness = pgTable("staging_acme_pokhara_businesses", {
   businessAnimals: text("business_animals").array(),
   businessAnimalProducts: text("business_animal_products").array(),
 
+  // Agricultural infrastructure
+  hasPlasticHouse: text("has_plastic_house"),
+  plasticHouseLength: integer("plastic_house_length"),
+  plasticHouseBreadth: integer("plastic_house_breadth"),
+  plasticHouseNumber: integer("plastic_house_number"),
+  salesAndDistribution: text("sales_and_distribution"),
+  hasAgriculturalLoan: text("has_agricultural_loan"),
+  isInvolvedInAgriculturalOrganization: text("is_involved_in_agricultural_organization"),
+  isFarmerRegistered: text("is_farmer_registered"),
+
   // Financial information
   businessInvestment: real("business_investment"),
+  rentAmount: real("rent_amount"),
+  businessLocationOwnerName: text("business_location_owner_name"),
+  businessLocationOwnerPhone: text("business_location_owner_phone"),
   businessProfit: real("business_profit"),
   businessPastYearInvestment: real("business_past_year_investment"),
 
@@ -226,26 +253,21 @@ export const stagingBusiness = pgTable("staging_acme_pokhara_businesses", {
   nepaliFemalePermanentEmployees: integer("nepali_female_permanent_employees"),
   hasForeignPermanentEmployees: text("has_foreign_permanent_employees"),
   foreignMalePermanentEmployees: integer("foreign_male_permanent_employees"),
-  foreignFemalePermanentEmployees: integer(
-    "foreign_female_permanent_employees",
-  ),
-  foreignPermanentEmployeeCountries: text(
-    "foreign_permanent_employee_countries",
-  ).array(),
+  foreignFemalePermanentEmployees: integer("foreign_female_permanent_employees"),
+  foreignPermanentEmployeeCountries: text("foreign_permanent_employee_countries").array(),
 
   // Temporary employee information
   hasTemporaryEmployees: text("has_temporary_employees"),
   totalTemporaryEmployees: integer("total_temporary_employees"),
   nepaliMaleTemporaryEmployees: integer("nepali_male_temporary_employees"),
-  nepaliTemporaryFemaleEmployees: integer("nepali_female_temporary_employees"),
+  nepaliFemaleTemporaryEmployees: integer("nepali_female_temporary_employees"),
   hasForeignTemporaryEmployees: text("has_foreign_temporary_employees"),
   foreignMaleTemporaryEmployees: integer("foreign_male_temporary_employees"),
-  foreignFemaleTemporaryEmployees: integer(
-    "foreign_female_temporary_employees",
-  ),
-  foreignTemporaryEmployeeCountries: text(
-    "foreign_temporary_employee_countries",
-  ).array(),
+  foreignFemaleTemporaryEmployees: integer("foreign_female_temporary_employees"),
+  foreignTemporaryEmployeeCountries: text("foreign_temporary_employee_countries").array(),
+
+  // Additional fields
+  businessImage: text("business_image"),
 
   // Geospatial data
   geom: postgis("geom"),
@@ -254,7 +276,7 @@ export const stagingBusiness = pgTable("staging_acme_pokhara_businesses", {
 
 // Edit requests table for business
 export const businessEditRequests = pgTable(
-  "acme_pokhara_business_edit_requests",
+  "pokhara_business_edit_requests",
   {
     id: varchar("id", { length: 48 }).primaryKey(),
     businessId: varchar("business_id", { length: 48 }).references(

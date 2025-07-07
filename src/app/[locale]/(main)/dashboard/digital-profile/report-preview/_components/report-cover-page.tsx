@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function ReportCoverPage() {
   const currentYear = new Date().getFullYear();
   const nepaliYear = currentYear + 56; // Convert to Nepali year (BS)
@@ -20,25 +22,14 @@ export function ReportCoverPage() {
             background: "white",
           }}
         >
-          <div style={{ width: "80px", height: "80px", background: "white" }}>
-            {/* Nepal Government Logo placeholder */}
-            <div
-              style={{
-                width: "80px",
-                height: "80px",
-                border: "2px solid #ccc",
-                borderRadius: "50%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "8pt",
-                color: "#666",
-                background: "white",
-              }}
-            >
-              नेपाल सरकार
-            </div>
-          </div>
+          {/* Pokhara Logo (left) */}
+          <Image
+            src="/images/pokhara_logo.png"
+            alt="Pokhara Logo"
+            width={80}
+            height={80}
+            style={{ objectFit: "contain" }}
+          />
           <div style={{ flexGrow: 1, background: "white" }}>
             <div
               style={{
@@ -60,7 +51,7 @@ export function ReportCoverPage() {
                 background: "white",
               }}
             >
-              गाउँकार्यपालिकाको कार्यालय
+              पोखरा महानगरपालिकाको कार्यालय
             </div>
             <div
               style={{
@@ -73,25 +64,14 @@ export function ReportCoverPage() {
               पोखरा, कास्की, गण्डकी प्रदेश
             </div>
           </div>
-          <div style={{ width: "80px", height: "80px", background: "white" }}>
-            {/* Municipality Logo placeholder */}
-            <div
-              style={{
-                width: "80px",
-                height: "80px",
-                border: "2px solid #ccc",
-                borderRadius: "50%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "8pt",
-                color: "#666",
-                background: "white",
-              }}
-            >
-              गाउँपालिका
-            </div>
-          </div>
+          {/* Nepal Coat of Arms (right) */}
+          <Image
+            src="/images/coat_of_arms.png"
+            alt="Nepal Coat of Arms"
+            width={80}
+            height={80}
+            style={{ objectFit: "contain" }}
+          />
         </div>
 
         {/* Main Title Section */}
@@ -105,7 +85,7 @@ export function ReportCoverPage() {
             background: "white",
           }}
         >
-          महानगरपालिकापार्श्वचित्र
+          महानगरपालिकाको पार्श्वचित्र
         </div>
 
         {/* Subtitle */}

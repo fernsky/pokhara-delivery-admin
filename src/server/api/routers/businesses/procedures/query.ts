@@ -32,7 +32,6 @@ export const getAll = protectedProcedure
       sortBy = "businessName",
       sortOrder = "asc",
       filters,
-      search,
     } = input;
 
     let query = sql`
@@ -45,24 +44,12 @@ export const getAll = protectedProcedure
         business_type,
         operator_phone,
         is_business_registered,
-        business_investment,
-        status
-      FROM acme_pokhara_business
+        business_investment
+      FROM pokhara_business
       WHERE 1=1
     `;
 
-    // Add search functionality
-    if (search && search.length > 2) {
-      const searchTerm = `%${search}%`;
-      query = sql`
-        ${query} AND (
-          business_name ILIKE ${searchTerm} OR
-          operator_name ILIKE ${searchTerm} OR
-          business_nature ILIKE ${searchTerm} OR
-          business_type ILIKE ${searchTerm}
-        )
-      `;
-    }
+
 
     // Add filters
     if (filters) {
@@ -78,37 +65,30 @@ export const getAll = protectedProcedure
         query = sql`${query} AND business_province = ${filters.businessProvince}`;
       }
 
-      if (filters.status && filters.status !== "all") {
-        query = sql`${query} AND status = ${filters.status}`;
-      }
+
     }
 
     // Add sorting
-    if (sortBy === "businessName") {
+    if (sortBy === "businessName" || sortBy === "business_name") {
       query =
         sortOrder === "asc"
           ? sql`${query} ORDER BY business_name ASC NULLS LAST`
           : sql`${query} ORDER BY business_name DESC NULLS LAST`;
-    } else if (sortBy === "ward_no") {
+    } else if (sortBy === "wardNo" || sortBy === "ward_no") {
       query =
         sortOrder === "asc"
           ? sql`${query} ORDER BY ward_no ASC NULLS LAST`
           : sql`${query} ORDER BY ward_no DESC NULLS LAST`;
-    } else if (sortBy === "business_district") {
+    } else if (sortBy === "businessDistrict" || sortBy === "business_district") {
       query =
         sortOrder === "asc"
           ? sql`${query} ORDER BY business_district ASC NULLS LAST`
           : sql`${query} ORDER BY business_district DESC NULLS LAST`;
-    } else if (sortBy === "operator_name") {
+    } else if (sortBy === "operatorName" || sortBy === "operator_name") {
       query =
         sortOrder === "asc"
           ? sql`${query} ORDER BY operator_name ASC NULLS LAST`
           : sql`${query} ORDER BY operator_name DESC NULLS LAST`;
-    } else if (sortBy === "status") {
-      query =
-        sortOrder === "asc"
-          ? sql`${query} ORDER BY status ASC NULLS LAST`
-          : sql`${query} ORDER BY status DESC NULLS LAST`;
     } else {
       // Default sorting
       query = sql`${query} ORDER BY business_name ASC NULLS LAST`;
@@ -135,28 +115,16 @@ export const getAll = protectedProcedure
           typeof row.business_investment === "number"
             ? row.business_investment
             : 0,
-        status: row.status || "pending",
       }));
 
       // Build count query with the same filters
       let countQuery = sql`
         SELECT COUNT(*) as total 
-        FROM acme_pokhara_business
+        FROM pokhara_business
         WHERE 1=1
       `;
 
-      // Apply the same filters to the count query
-      if (search && search.length > 2) {
-        const searchTerm = `%${search}%`;
-        countQuery = sql`
-          ${countQuery} AND (
-            business_name ILIKE ${searchTerm} OR
-            operator_name ILIKE ${searchTerm} OR
-            business_nature ILIKE ${searchTerm} OR
-            business_type ILIKE ${searchTerm}
-          )
-        `;
-      }
+
 
       if (filters) {
         if (filters.wardNo !== undefined) {
@@ -171,9 +139,7 @@ export const getAll = protectedProcedure
           countQuery = sql`${countQuery} AND business_province = ${filters.businessProvince}`;
         }
 
-        if (filters.status && filters.status !== "all") {
-          countQuery = sql`${countQuery} AND status = ${filters.status}`;
-        }
+
       }
 
       const countResult = await ctx.db.execute(countQuery);
@@ -202,14 +168,16 @@ export const getById = protectedProcedure
   .input(z.object({ id: z.string() }))
   .query(async ({ ctx, input }) => {
     try {
-      const finalId = `uuid:${input.id}`;
+      // Format the business ID correctly for the database
+      const formattedId = formatDbUuid(input.id);
+      console.log("Unformatted ID:", input.id);
 
-      console.log(finalId);
+      console.log("Formatted ID:", formattedId);
 
       // Try to fetch with the formatted ID
       let query = sql`
-        SELECT * FROM acme_pokhara_business
-        WHERE id = ${finalId}
+        SELECT * FROM pokhara_business
+        WHERE id = ${`uuid:${formattedId}`}
       `;
 
       let result = await ctx.db.execute(query);
@@ -217,8 +185,8 @@ export const getById = protectedProcedure
       // If not found, try with just the normalized ID
       if (!result || result.length === 0) {
         query = sql`
-          SELECT * FROM acme_pokhara_business
-          WHERE id = ${finalId}
+        SELECT * FROM pokhara_business
+          WHERE id = ${input.id}
         `;
         result = await ctx.db.execute(query);
       }
@@ -359,6 +327,25 @@ export const getById = protectedProcedure
             ? businessData.hotel_bed_numbers
             : null,
         hotelRoomTypes: parseArrayField(businessData.hotel_room_types),
+        hotelHasHall: businessData.hotel_has_hall || "",
+        hotelHallCapacity:
+          typeof businessData.hotel_hall_capacity === "number"
+            ? businessData.hotel_hall_capacity
+            : null,
+
+        // Dog business information
+        dogProduction:
+          typeof businessData.dog_production === "number"
+            ? businessData.dog_production
+            : null,
+        dogSales:
+          typeof businessData.dog_sales === "number"
+            ? businessData.dog_sales
+            : null,
+        dogRevenue:
+          typeof businessData.dog_revenue === "number"
+            ? businessData.dog_revenue
+            : null,
 
         // Agricultural business details
         agriculturalBusinesses: parseArrayField(
@@ -376,11 +363,36 @@ export const getById = protectedProcedure
           businessData.business_animal_products,
         ),
 
+        // Agricultural infrastructure
+        hasPlasticHouse: businessData.has_plastic_house || "",
+        plasticHouseLength:
+          typeof businessData.plastic_house_length === "number"
+            ? businessData.plastic_house_length
+            : null,
+        plasticHouseBreadth:
+          typeof businessData.plastic_house_breadth === "number"
+            ? businessData.plastic_house_breadth
+            : null,
+        plasticHouseNumber:
+          typeof businessData.plastic_house_number === "number"
+            ? businessData.plastic_house_number
+            : null,
+        salesAndDistribution: businessData.sales_and_distribution || "",
+        hasAgriculturalLoan: businessData.has_agricultural_loan || "",
+        isInvolvedInAgriculturalOrganization: businessData.is_involved_in_agricultural_organization || "",
+        isFarmerRegistered: businessData.is_farmer_registered || "",
+
         // Financial information
         businessInvestment:
           typeof businessData.business_investment === "number"
             ? businessData.business_investment
             : null,
+        rentAmount:
+          typeof businessData.rent_amount === "number"
+            ? businessData.rent_amount
+            : null,
+        businessLocationOwnerName: businessData.business_location_owner_name || "",
+        businessLocationOwnerPhone: businessData.business_location_owner_phone || "",
         businessProfit:
           typeof businessData.business_profit === "number"
             ? businessData.business_profit
@@ -467,7 +479,7 @@ export const getById = protectedProcedure
           typeof businessData.nepali_male_temporary_employees === "number"
             ? businessData.nepali_male_temporary_employees
             : null,
-        nepaliTemporaryFemaleEmployees:
+        nepaliFemaleTemporaryEmployees:
           typeof businessData.nepali_female_temporary_employees === "number"
             ? businessData.nepali_female_temporary_employees
             : null,
@@ -485,6 +497,9 @@ export const getById = protectedProcedure
           businessData.foreign_temporary_employee_countries,
         ),
 
+        // Additional fields
+        businessImage: businessData.business_image || "",
+
         // Location data for mapping
         gps: {
           latitude,
@@ -492,8 +507,7 @@ export const getById = protectedProcedure
         },
         name: businessData.name || "",
 
-        // Status
-        status: businessData.status || "pending",
+
       };
 
       return formattedBusiness;
@@ -553,3 +567,25 @@ export const getBusinessProvinces = protectedProcedure.query(
     }
   },
 );
+
+// Procedure to get total business count
+export const getTotalBusinessCountProcedure = protectedProcedure
+  .query(async ({ ctx }) => {
+    try {
+      const query = sql`
+        SELECT COUNT(*) as total 
+        FROM pokhara_business
+      `;
+
+      const result = await ctx.db.execute(query);
+      const total = parseInt(result[0]?.total?.toString() || "0", 10);
+
+      return { total };
+    } catch (error) {
+      console.error("Error fetching total business count:", error);
+      throw new TRPCError({
+        code: "INTERNAL_SERVER_ERROR",
+        message: "Failed to fetch total business count",
+      });
+    }
+  });

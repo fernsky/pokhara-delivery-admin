@@ -138,11 +138,11 @@ export function WorkforceSection({ business }: WorkforceSectionProps) {
               value={business?.nepaliMaleTemporaryEmployees?.toString()}
             />
           )}
-          {hasValue(business?.nepaliTemporaryFemaleEmployees) && (
+          {hasValue(business?.nepaliFemaleTemporaryEmployees) && (
             <DetailRow
               icon={Users}
               label="Nepali Female Temporary"
-              value={business?.nepaliTemporaryFemaleEmployees?.toString()}
+              value={business?.nepaliFemaleTemporaryEmployees?.toString()}
             />
           )}
           {business?.hasForeignTemporaryEmployees === "छ" && (
