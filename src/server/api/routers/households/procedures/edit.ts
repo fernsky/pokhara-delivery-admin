@@ -51,6 +51,11 @@ export const requestHouseholdEditProcedure = protectedProcedure
 
       const { editRequestId: _, householdId: __, ...updateData } = input;
 
+      // Convert householdLocation from string[] to number[] if present (for database compatibility)
+      if (updateData.householdLocation && Array.isArray(updateData.householdLocation)) {
+        updateData.householdLocation = updateData.householdLocation.map(Number);
+      }
+
       // Check if the household exists
       const existingHousehold = await ctx.db.select()
         .from(households)
@@ -67,12 +72,20 @@ export const requestHouseholdEditProcedure = protectedProcedure
       
       // Update the household
       await ctx.db.update(households)
+        //@ts-ignore
         .set(updateData)
         .where(eq(households.id, formattedHouseholdId));
       
-      // Rest of your code remains the same...
+      return {
+        success: true,
+        message: "Household updated successfully"
+      };
     } catch (error) {
-      // Error handling remains the same
+      console.error("Error updating household:", error);
+      throw new TRPCError({
+        code: "INTERNAL_SERVER_ERROR",
+        message: "Failed to update household"
+      }); 
     }
   });
 /**
@@ -105,8 +118,12 @@ export const getHouseholdEditRequestsProcedure = protectedProcedure
       
       const editRequests = await ctx.db.execute(query);
       
-      // Rest of your code remains the same...
+      return editRequests;
     } catch (error) {
-      // Error handling remains the same
+      console.error("Error getting edit requests:", error);
+      throw new TRPCError({
+        code: "INTERNAL_SERVER_ERROR",
+        message: "Failed to get edit requests"
+      });
     }
   });

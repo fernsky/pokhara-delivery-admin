@@ -481,6 +481,7 @@ export const editHouseholdProcedure = protectedProcedure
 
       await ctx.db
         .update(households)
+        //@ts-ignore
         .set(updateData)
         .where(eq(households.id, formattedHouseholdId));
 

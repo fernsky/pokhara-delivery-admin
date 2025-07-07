@@ -119,8 +119,8 @@ export default function IndividualDetailsPage() {
 
   // Format the parent ID (household ID) for linking back
   let parentIdForLink = "";
-  if (individual?.parentId) {
-    parentIdForLink = formatUuid(individual.parentId);
+  if (individual?.householdId) {
+    parentIdForLink = formatUuid(individual.householdId);
   }
 
   // Derived data
@@ -179,7 +179,7 @@ export default function IndividualDetailsPage() {
           <Button variant="outline" onClick={() => router.back()}>
             <ArrowLeft className="mr-2 h-4 w-4" /> Back
           </Button>
-          {individual?.parentId && (
+          {individual?.householdId && (
             <Link
               href={`/dashboard/households/view/${encodeURIComponent(parentIdForLink)}`}
               passHref

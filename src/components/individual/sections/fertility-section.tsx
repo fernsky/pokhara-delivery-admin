@@ -30,23 +30,17 @@ export function FertilitySection({ individual }: { individual?: Individual }) {
             },
             {
               label: "Deceased Children",
-              value: individual.hasDeadChildren === "Yes" ? "Yes" : "No",
+              value:
+                individual.totalBornChildren &&
+                individual.aliveSons &&
+                individual.aliveDaughters
+                  ? (
+                      individual.totalBornChildren -
+                      (individual.aliveSons + individual.aliveDaughters)
+                    ).toString()
+                  : "N/A",
               icon: <Heart className="h-4 w-4" />,
             },
-            ...(individual.hasDeadChildren === "Yes"
-              ? [
-                  {
-                    label: "Deceased Sons",
-                    value: individual.deadSons?.toString(),
-                    icon: <Baby className="h-4 w-4" />,
-                  },
-                  {
-                    label: "Deceased Daughters",
-                    value: individual.deadDaughters?.toString(),
-                    icon: <Baby className="h-4 w-4" />,
-                  },
-                ]
-              : []),
           ]}
         />
       )}
@@ -64,6 +58,11 @@ export function FertilitySection({ individual }: { individual?: Individual }) {
             {
               label: "Recent Born Daughters",
               value: individual.recentBornDaughters?.toString(),
+              icon: <Baby className="h-4 w-4" />,
+            },
+            {
+              label: "Total Recent Children",
+              value: individual.totalRecentChildren?.toString(),
               icon: <Baby className="h-4 w-4" />,
             },
             {
