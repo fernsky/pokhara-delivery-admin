@@ -21,52 +21,52 @@ const DashboardPage = async () => {
     <>
       <ContentLayout title="Dashboard">
         {/* Header with logo, title, and coat of arms */}
-        <div className="flex items-center justify-between py-6 px-4 bg-white rounded-lg shadow-sm mb-8">
+        <div className="flex flex-col sm:flex-row items-center justify-between py-4 px-2 sm:py-6 sm:px-4 bg-white rounded-lg shadow-sm mb-8 gap-2 sm:gap-0">
           <Image
             src="/images/pokhara_logo.png"
             alt="Pokhara Logo"
-            width={100}
-            height={100}
-            className="h-20 w-auto"
+            width={80}
+            height={80}
+            className="h-16 w-auto sm:h-20"
           />
-          <h1 className="text-6xl font-bold text-center text-red-400 flex-1">
+          <h1 className="text-3xl sm:text-6xl font-bold text-center text-red-600 flex-1">
             पोखरा महानगरपालिका
           </h1>
           <Image
             src="/images/coat_of_arms.png"
             alt="Nepal Coat of Arms"
-            width={100}
-            height={100}
-            className="h-20 w-auto"
+            width={80}
+            height={80}
+            className="h-16 w-auto sm:h-20"
           />
         </div>
         <div className="container mx-auto py-6">
           {/* Welcome Section with SVG */}
-          <div className="flex flex-col md:flex-row items-center justify-between p-6 mb-8 bg-white rounded-lg shadow-sm border">
-            <div className="md:w-2/3 mb-6 md:mb-0">
-              <h1 className="text-3xl font-bold mb-2">
+          <div className="flex flex-col md:flex-row items-center justify-between p-4 sm:p-6 mb-8 bg-white rounded-lg shadow-sm border gap-4">
+            <div className="md:w-2/3 mb-4 md:mb-0">
+              <h1 className="text-2xl sm:text-3xl font-bold mb-2 text-center md:text-left">
                 प्रशासनिक ड्यासबोर्डमा स्वागत छ
               </h1>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600 mb-4 text-center md:text-left">
                 तपाईंको डाटा व्यवस्थापन गर्नुहोस्, तथ्यांक हेर्नुहोस्, र यो
                 केन्द्रीय ड्यासबोर्डबाट सबै प्रशासन सुविधाहरूमा पहुँच गर्नुहोस्।
               </p>
-              <div className="flex space-x-4">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full items-center md:items-start">
                 <Link
                   href="/dashboard/households"
-                  className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                  className="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-center"
                 >
                   घरधुरीहरू हेर्नुहोस्
                 </Link>
                 <Link
                   href="/dashboard/businesses"
-                  className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+                  className="w-full sm:w-auto px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors text-center"
                 >
                   व्यवसायहरू हेर्नुहोस्
                 </Link>
                 <Link
                   href="/dashboard/individuals"
-                  className="px-4 py-2 bg-blue-400 text-white rounded-md hover:bg-blue-500 transition-colors"
+                  className="w-full sm:w-auto px-4 py-2 bg-blue-400 text-white rounded-md hover:bg-blue-500 transition-colors text-center"
                 >
                   व्यक्तिहरू हेर्नुहोस्
                 </Link>
