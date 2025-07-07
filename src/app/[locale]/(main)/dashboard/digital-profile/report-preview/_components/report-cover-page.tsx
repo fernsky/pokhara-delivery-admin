@@ -5,12 +5,33 @@ export function ReportCoverPage() {
   const nepaliYear = currentYear + 56; // Convert to Nepali year (BS)
 
   return (
-    <div className="cover-page" style={{ background: "white" }}>
+    <div
+      className="cover-page"
+      style={{
+        width: "210mm",
+        height: "297mm",
+        minWidth: "210mm",
+        minHeight: "297mm",
+        maxWidth: "210mm",
+        maxHeight: "297mm",
+        background: "white",
+        margin: "0 auto",
+        boxSizing: "border-box",
+        overflow: "hidden",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+      }}
+    >
       <div
         style={{
           textAlign: "center",
-          marginBottom: "4cm",
           background: "white",
+          padding: "0 2cm",
+          flex: 1,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
         }}
       >
         <div
@@ -19,6 +40,7 @@ export function ReportCoverPage() {
             justifyContent: "space-between",
             alignItems: "center",
             marginBottom: "2cm",
+            marginTop: "2cm",
             background: "white",
           }}
         >
@@ -78,8 +100,8 @@ export function ReportCoverPage() {
         <div
           style={{
             color: "#dc2626",
-            padding: "1.5em",
-            margin: "2cm 0",
+            padding: "1em",
+            margin: "1.5cm 0 0.5cm 0",
             fontSize: "24pt",
             fontWeight: 700,
             background: "white",
@@ -101,13 +123,17 @@ export function ReportCoverPage() {
           डिजिटल प्रोफाइल प्रतिवेदन
         </div>
 
-        {/* Bottom Section */}
+        {/* Bottom Section with publication info */}
         <div
           style={{
             color: "#0f172a",
-            padding: "1em",
+            padding: "1em 0 0 0",
             marginTop: "1cm",
             background: "white",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "0.5em",
           }}
         >
           <div
@@ -120,26 +146,17 @@ export function ReportCoverPage() {
           >
             {nepaliYear}
           </div>
+          <div
+            style={{ fontSize: "10pt", color: "#64748b", background: "white" }}
+          >
+            प्रकाशन मिति: {nepaliYear} फागुन
+          </div>
+          <div
+            style={{ fontSize: "10pt", color: "#64748b", background: "white" }}
+          >
+            संस्करण: १.०
+          </div>
         </div>
-      </div>
-
-      {/* Publication Info */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: "2cm",
-          left: "50%",
-          transform: "translateX(-50%)",
-          textAlign: "center",
-          fontSize: "10pt",
-          color: "#64748b",
-          background: "white",
-        }}
-      >
-        <div style={{ background: "white" }}>
-          प्रकाशन मिति: {nepaliYear} फागुन
-        </div>
-        <div style={{ background: "white" }}>संस्करण: १.०</div>
       </div>
     </div>
   );
