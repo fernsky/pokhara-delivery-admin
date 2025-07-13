@@ -28,6 +28,9 @@ export const getIndividualsProcedure = protectedProcedure
   .query(async ({ ctx, input }) => {
     try {
       const { limit, offset, sortBy, sortOrder, filters } = input;
+      
+      // Debug: Log the filters received by backend
+      console.log("🔧 Individuals Backend received filters:", JSON.stringify(filters, null, 2));
 
       // Build the base query
       let query = sql`
@@ -82,7 +85,7 @@ export const getIndividualsProcedure = protectedProcedure
         }
 
         if (filters.educationalLevel) {
-          query = sql`${query} AND educational_level = ${filters.educationalLevel}`;
+          query = sql`${query} AND educational_level ILIKE ${`%${filters.educationalLevel}%`}`;
         }
 
         if (filters.isDisabled) {
@@ -125,9 +128,11 @@ export const getIndividualsProcedure = protectedProcedure
       // Add pagination
       query = sql`${query} LIMIT ${limit} OFFSET ${offset}`;
 
-      // Execute the query
+      // Debug: Log the final query and results
+      console.log("🔧 Individuals Final SQL query:", query);
       const result = await ctx.db.execute(query);
-
+      console.log("🔧 Individuals Query returned", result.length, "results");
+      
       // Transform the raw DB result to ensure proper field names
       const individualsList = result.map((row) => ({
         id: row.id,

@@ -239,7 +239,11 @@ const menuConfig: Menu[] = [
     ],
   },
 
+<<<<<<< HEAD
   // Agricultural menu with submenus
+=======
+  // // Agricultural menu with submenus
+>>>>>>> c5c146e (feat: implement proper filtering mechanism in business and individual as well)
   // {
   //   href: "#",
   //   label: "कृषिगत क्षेत्र",
@@ -336,6 +340,7 @@ const menuConfig: Menu[] = [
   //     },
   //   ],
   // },
+<<<<<<< HEAD
 
   // Digital Profile main menu with submenus
   {
@@ -366,6 +371,8 @@ const menuConfig: Menu[] = [
       // },
     ],
   },
+=======
+>>>>>>> c5c146e (feat: implement proper filtering mechanism in business and individual as well)
 
   //   {
   //     href: "/qr-code",

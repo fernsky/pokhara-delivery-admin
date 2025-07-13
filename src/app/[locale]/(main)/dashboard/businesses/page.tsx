@@ -133,6 +133,28 @@ export default function BusinessesPage() {
             </SelectContent>
           </Select>
 
+<<<<<<< HEAD
+=======
+          {/* <Select
+            value={statusFilter || ""}
+            onValueChange={(value) => {
+              setStatusFilter(value || undefined);
+              setCurrentPage(1);
+            }}
+          >
+            <SelectTrigger className="w-40">
+              <SelectValue placeholder="स्थिति" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="">सबै स्थिति</SelectItem>
+              <SelectItem value="approved">स्वीकृत</SelectItem>
+              <SelectItem value="pending">प्रक्रियामा</SelectItem>
+              <SelectItem value="rejected">अस्वीकृत</SelectItem>
+              <SelectItem value="requested_for_edit">संशोधन आवश्यक</SelectItem>
+            </SelectContent>
+          </Select> */}
+
+>>>>>>> c5c146e (feat: implement proper filtering mechanism in business and individual as well)
           <Select
             value={pageSize.toString()}
             onValueChange={(value) => {
