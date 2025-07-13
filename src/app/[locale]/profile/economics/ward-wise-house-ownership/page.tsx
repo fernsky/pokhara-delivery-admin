@@ -128,7 +128,11 @@ export async function generateMetadata(): Promise<Metadata> {
   } catch (error) {
     // Fallback metadata if data fetching fails
     return {
+<<<<<<< HEAD
       title: "घर स्वामित्वको वितरण | पोखरा महानगरपालिका डिजिटल प्रोफाइल",
+=======
+      title: "घर स्वामित्वको वितरण | खजुरा गाउँपालिका डिजिटल प्रोफाइल",
+>>>>>>> 1505686 (feat: add the comprehensive filtering in the khajura households table)
       description: "वडा अनुसार घर स्वामित्वको वितरण र विश्लेषण।",
     };
   }
@@ -297,12 +301,20 @@ export default async function WardWiseHouseOwnershipPage() {
             </h2>
             <p>
               घर स्वामित्वको आधारमा जनसंख्याको वर्गीकरण र विश्लेषण गर्दा थुप्रै
+<<<<<<< HEAD
               आर्थिक तथा सामाजिक सूचकहरू प्राप्त हुन्छन्। यस खण्डमा पोखरा
+=======
+              आर्थिक तथा सामाजिक सूचकहरू प्राप्त हुन्छन्। यस खण्डमा खजुरा
+>>>>>>> 1505686 (feat: add the comprehensive filtering in the khajura households table)
               गाउँपालिकामा घर स्वामित्वका प्रमुख प्रकारहरू र तिनको वडागत वितरणको
               विश्लेषण प्रस्तुत गरिएको छ।
             </p>
             <p>
+<<<<<<< HEAD
               पोखरा महानगरपालिकामा घर स्वामित्वको तथ्याङ्क हेर्दा, कुल घरधुरी{" "}
+=======
+              खजुरा गाउँपालिकामा घर स्वामित्वको तथ्याङ्क हेर्दा, कुल घरधुरी{" "}
+>>>>>>> 1505686 (feat: add the comprehensive filtering in the khajura households table)
               {localizeNumber(totalHouseholds.toLocaleString(), "ne")}
               मध्ये सबैभन्दा बढी {overallSummary[0]?.ownershipTypeName || ""}
               स्वामित्वमा{" "}
@@ -323,7 +335,11 @@ export default async function WardWiseHouseOwnershipPage() {
               घर स्वामित्वका प्रकार
             </h2>
             <p>
+<<<<<<< HEAD
               पोखरा महानगरपालिकामा घर स्वामित्वका प्रमुख प्रकारहरू र तिनको वितरण
+=======
+              खजुरा गाउँपालिकामा घर स्वामित्वका प्रमुख प्रकारहरू र तिनको वितरण
+>>>>>>> 1505686 (feat: add the comprehensive filtering in the khajura households table)
               निम्नानुसार रहेको छ:
             </p>
           </div>
@@ -348,7 +364,11 @@ export default async function WardWiseHouseOwnershipPage() {
               घर स्वामित्व विश्लेषण
             </h2>
             <p>
+<<<<<<< HEAD
               पोखरा महानगरपालिकामा घर स्वामित्वको विश्लेषण गर्दा,
+=======
+              खजुरा गाउँपालिकामा घर स्वामित्वको विश्लेषण गर्दा,
+>>>>>>> 1505686 (feat: add the comprehensive filtering in the khajura households table)
               {OWNERSHIP_TYPE_NAMES[overallSummary[0]?.ownershipType || ""] ||
                 overallSummary[0]?.ownershipType}
               स्वामित्वमा रहेका घरहरू सबैभन्दा बढी
