@@ -20,6 +20,7 @@ export const householdRouter = createTRPCRouter({
     createHousehold: createHouseholdProcedure,
     getHouseholds: getHouseholdsProcedure,
     getHouseholdById: getHouseholdByIdProcedure,
+    getTotalCount: getTotalHouseholdCountProcedure,
     downloadHouseholds: downloadHouseholdsProcedure,
     updateHousehold: updateHouseholdProcedure,
     requestHouseholdEdit: requestHouseholdEditProcedure,
