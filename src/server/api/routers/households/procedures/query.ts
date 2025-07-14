@@ -162,14 +162,6 @@ export const getHouseholdsProcedure = protectedProcedure
           query = sql`${query} AND is_house_passed = ${filters.isHousePassed}`;
         }
 
-        if (filters.isMapArchived) {
-          query = sql`${query} AND is_map_archived = ${filters.isMapArchived}`;
-        }
-
-        if (filters.isSafe) {
-          query = sql`${query} AND is_safe = ${filters.isSafe}`;
-        }
-
         // Water and sanitation filters
         if (filters.waterSource) {
           query = sql`${query} AND water_source ILIKE ${`%${filters.waterSource}%`}`;
@@ -272,17 +264,7 @@ export const getHouseholdsProcedure = protectedProcedure
           query = sql`${query} AND have_remittance = ${filters.haveRemittance}`;
         }
 
-        // Business filters
-        if (filters.hasBusiness) {
-          query = sql`${query} AND has_business = ${filters.hasBusiness}`;
-        }
-
-        // Migration filters
-        if (filters.birthProvince) {
-          query = sql`${query} AND birth_province = ${filters.birthProvince}`;
-        }
-
-        if (filters.birthDistrict) {
+              if (filters.birthDistrict) {
           query = sql`${query} AND birth_district = ${filters.birthDistrict}`;
         }
 
@@ -562,13 +544,6 @@ export const getHouseholdsProcedure = protectedProcedure
           countQuery = sql`${countQuery} AND is_house_passed = ${filters.isHousePassed}`;
         }
 
-        if (filters.isMapArchived) {
-          countQuery = sql`${countQuery} AND is_map_archived = ${filters.isMapArchived}`;
-        }
-
-        if (filters.isSafe) {
-          countQuery = sql`${countQuery} AND is_safe = ${filters.isSafe}`;
-        }
 
         // Water and sanitation filters
         if (filters.waterSource) {
@@ -672,17 +647,8 @@ export const getHouseholdsProcedure = protectedProcedure
           countQuery = sql`${countQuery} AND have_remittance = ${filters.haveRemittance}`;
         }
 
-        // Business filters
-        if (filters.hasBusiness) {
-          countQuery = sql`${countQuery} AND has_business = ${filters.hasBusiness}`;
-        }
 
-        // Migration filters
-        if (filters.birthProvince) {
-          countQuery = sql`${countQuery} AND birth_province = ${filters.birthProvince}`;
-        }
-
-        if (filters.birthDistrict) {
+               if (filters.birthDistrict) {
           countQuery = sql`${countQuery} AND birth_district = ${filters.birthDistrict}`;
         }
 
@@ -939,9 +905,7 @@ export const getHouseholdByIdProcedure = protectedProcedure
         houseFloor: household.house_floor || "",
         houseFloorOther: household.house_floor_other || "",
         isHousePassed: household.is_house_passed || "",
-        isMapArchived: household.is_map_archived || "",
         naturalDisasters: parseArrayField(household.natural_disasters),
-        isSafe: household.is_safe || "",
         waterSource: household.water_source || "",
         waterPurificationMethods: household.water_purification_methods || "",
         toiletType: household.toilet_type || "",
@@ -1015,15 +979,12 @@ export const getHouseholdByIdProcedure = protectedProcedure
           household.months_involved_in_agriculture || "",
         agriculturalMachines: parseArrayField(household.agricultural_machines),
         birthPlace: household.birth_place || "",
-        birthProvince: household.birth_province || "",
-        birthDistrict: household.birth_district || "",
         birthCountry: household.birth_country || "",
         priorLocation: household.prior_location || "",
         priorProvince: household.prior_province || "",
         priorDistrict: household.prior_district || "",
         priorCountry: household.prior_country || "",
         residenceReason: household.residence_reason || "",
-        hasBusiness: household.has_business || "",
         deviceId: household.device_id || "",
       };
     } catch (error) {
@@ -1287,8 +1248,6 @@ export const downloadHouseholdsProcedure = protectedProcedure
           house_roof,
           house_floor,
           is_house_passed,
-          is_map_archived,
-          is_safe,
           water_source,
           water_purification_methods,
           toilet_type,
@@ -1313,16 +1272,22 @@ export const downloadHouseholdsProcedure = protectedProcedure
           have_apiary,
           has_agricultural_insurance,
           months_involved_in_agriculture,
-          has_business,
-          birth_province,
-          birth_district,
-          birth_country,
-          prior_province,
-          prior_district,
-          prior_country,
-          residence_reason
-        FROM acme_khajura_households
-        WHERE profile_id = 'khajura'
+          natural_disasters,
+          facilities,
+          financial_accounts,
+          income_sources,
+          food_crops,
+          pulses,
+          oil_seeds,
+          vegetables,
+          fruits,
+          spices,
+          cash_crops,
+          animals,
+          animal_products,
+          agricultural_machines
+        FROM synth_pokhara_household
+        WHERE tenant_id = 'pokhara_metro'
       `;
 
       if (input.search) {
@@ -1422,15 +1387,8 @@ export const downloadHouseholdsProcedure = protectedProcedure
           query = sql`${query} AND is_house_passed = ${filters.isHousePassed}`;
         }
 
-        if (filters.isMapArchived) {
-          query = sql`${query} AND is_map_archived = ${filters.isMapArchived}`;
-        }
 
-        if (filters.isSafe) {
-          query = sql`${query} AND is_safe = ${filters.isSafe}`;
-        }
-
-        // Water and sanitation filters
+             // Water and sanitation filters
         if (filters.waterSource) {
           query = sql`${query} AND water_source ILIKE ${`%${filters.waterSource}%`}`;
         }
@@ -1530,40 +1488,6 @@ export const downloadHouseholdsProcedure = protectedProcedure
         // Remittance filters
         if (filters.haveRemittance) {
           query = sql`${query} AND have_remittance = ${filters.haveRemittance}`;
-        }
-
-        // Business filters
-        if (filters.hasBusiness) {
-          query = sql`${query} AND has_business = ${filters.hasBusiness}`;
-        }
-
-        // Migration filters
-        if (filters.birthProvince) {
-          query = sql`${query} AND birth_province = ${filters.birthProvince}`;
-        }
-
-        if (filters.birthDistrict) {
-          query = sql`${query} AND birth_district = ${filters.birthDistrict}`;
-        }
-
-        if (filters.birthCountry) {
-          query = sql`${query} AND birth_country = ${filters.birthCountry}`;
-        }
-
-        if (filters.priorProvince) {
-          query = sql`${query} AND prior_province = ${filters.priorProvince}`;
-        }
-
-        if (filters.priorDistrict) {
-          query = sql`${query} AND prior_district = ${filters.priorDistrict}`;
-        }
-
-        if (filters.priorCountry) {
-          query = sql`${query} AND prior_country = ${filters.priorCountry}`;
-        }
-
-        if (filters.residenceReason) {
-          query = sql`${query} AND residence_reason = ${filters.residenceReason}`;
         }
 
         // Date range filters
@@ -1705,8 +1629,6 @@ export const downloadHouseholdsProcedure = protectedProcedure
         "घरको छाना",
         "घरको भुइँ",
         "घर पास भएको",
-        "नक्सा संग्रहित",
-        "सुरक्षित छ",
         "पानीको स्रोत",
         "पानी शुद्धिकरण विधि",
         "शौचालयको प्रकार",
@@ -1731,14 +1653,20 @@ export const downloadHouseholdsProcedure = protectedProcedure
         "मौरीपालन छ",
         "कृषि बीमा छ",
         "कृषिमा संलग्न महिना",
-        "व्यवसाय छ",
-        "जन्म प्रान्त",
-        "जन्म जिल्ला",
-        "जन्म देश",
-        "पूर्व प्रान्त",
-        "पूर्व जिल्ला",
-        "पूर्व देश",
-        "बसोबासको कारण"
+        "प्राकृतिक विपदा",
+        "सुविधाहरू",
+        "वित्तीय खाताहरू",
+        "आय स्रोतहरू",
+        "खाद्यान्न बालीहरू",
+        "दालहरू",
+        "तेल बीउहरू",
+        "तरकारीहरू",
+        "फलफूलहरू",
+        "मसलाहरू",
+        "नगदे बालीहरू",
+        "पशुहरू",
+        "पशु उत्पादनहरू",
+        "कृषि मेशिनहरू"
       ];
 
       const csvRows = [headers];
@@ -1765,8 +1693,6 @@ export const downloadHouseholdsProcedure = protectedProcedure
           row.house_roof || "",
           row.house_floor || "",
           row.is_house_passed || "",
-          row.is_map_archived || "",
-          row.is_safe || "",
           row.water_source || "",
           row.water_purification_methods || "",
           row.toilet_type || "",
@@ -1791,14 +1717,20 @@ export const downloadHouseholdsProcedure = protectedProcedure
           row.have_apiary || "",
           row.has_agricultural_insurance || "",
           row.months_involved_in_agriculture || "",
-          row.has_business || "",
-          row.birth_province || "",
-          row.birth_district || "",
-          row.birth_country || "",
-          row.prior_province || "",
-          row.prior_district || "",
-          row.prior_country || "",
-          row.residence_reason || ""
+          Array.isArray(row.natural_disasters) ? row.natural_disasters.join(', ') : (row.natural_disasters || ""),
+          Array.isArray(row.facilities) ? row.facilities.join(', ') : (row.facilities || ""),
+          Array.isArray(row.financial_accounts) ? row.financial_accounts.join(', ') : (row.financial_accounts || ""),
+          Array.isArray(row.income_sources) ? row.income_sources.join(', ') : (row.income_sources || ""),
+          Array.isArray(row.food_crops) ? row.food_crops.join(', ') : (row.food_crops || ""),
+          Array.isArray(row.pulses) ? row.pulses.join(', ') : (row.pulses || ""),
+          Array.isArray(row.oil_seeds) ? row.oil_seeds.join(', ') : (row.oil_seeds || ""),
+          Array.isArray(row.vegetables) ? row.vegetables.join(', ') : (row.vegetables || ""),
+          Array.isArray(row.fruits) ? row.fruits.join(', ') : (row.fruits || ""),
+          Array.isArray(row.spices) ? row.spices.join(', ') : (row.spices || ""),
+          Array.isArray(row.cash_crops) ? row.cash_crops.join(', ') : (row.cash_crops || ""),
+          Array.isArray(row.animals) ? row.animals.join(', ') : (row.animals || ""),
+          Array.isArray(row.animal_products) ? row.animal_products.join(', ') : (row.animal_products || ""),
+          Array.isArray(row.agricultural_machines) ? row.agricultural_machines.join(', ') : (row.agricultural_machines || "")
         ];
         csvRows.push(csvRow);
       });
