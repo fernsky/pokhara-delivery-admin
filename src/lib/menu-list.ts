@@ -239,11 +239,7 @@ const menuConfig: Menu[] = [
     ],
   },
 
-<<<<<<< HEAD
-  // Agricultural menu with submenus
-=======
   // // Agricultural menu with submenus
->>>>>>> c5c146e (feat: implement proper filtering mechanism in business and individual as well)
   // {
   //   href: "#",
   //   label: "कृषिगत क्षेत्र",
@@ -340,39 +336,6 @@ const menuConfig: Menu[] = [
   //     },
   //   ],
   // },
-<<<<<<< HEAD
-
-  // Digital Profile main menu with submenus
-  {
-    href: "#",
-    label: "डिजिटल प्रोफाइल",
-    icon: FileText,
-    roles: ["admin", "superadmin"],
-    submenus: [
-      {
-        href: "/dashboard/digital-profile/report-preview",
-        label: "प्रतिवेदन पूर्वावलोकन",
-        roles: ["admin", "superadmin"],
-      },
-      // {
-      //   href: "/dashboard/digital-profile/demographics",
-      //   label: "जनसांख्यिकी",
-      //   roles: ["admin", "superadmin"],
-      // },
-      // {
-      //   href: "/dashboard/digital-profile/economics",
-      //   label: "आर्थिक",
-      //   roles: ["admin", "superadmin"],
-      // },
-      // {
-      //   href: "/dashboard/digital-profile/institutions",
-      //   label: "संस्थाहरू",
-      //   roles: ["admin", "superadmin"],
-      // },
-    ],
-  },
-=======
->>>>>>> c5c146e (feat: implement proper filtering mechanism in business and individual as well)
 
   //   {
   //     href: "/qr-code",

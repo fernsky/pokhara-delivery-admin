@@ -133,8 +133,6 @@ export default function BusinessesPage() {
             </SelectContent>
           </Select>
 
-<<<<<<< HEAD
-=======
           {/* <Select
             value={statusFilter || ""}
             onValueChange={(value) => {
@@ -154,7 +152,6 @@ export default function BusinessesPage() {
             </SelectContent>
           </Select> */}
 
->>>>>>> c5c146e (feat: implement proper filtering mechanism in business and individual as well)
           <Select
             value={pageSize.toString()}
             onValueChange={(value) => {
