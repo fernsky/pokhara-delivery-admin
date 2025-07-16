@@ -59,7 +59,7 @@ export const getHouseholdsProcedure = protectedProcedure
           locality,
           house_symbol_no,
           date_of_interview
-        FROM synth_pokhara_household
+        FROM pokhara_household
         WHERE tenant_id = 'pokhara_metro'
       `;
       
@@ -443,7 +443,7 @@ export const getHouseholdsProcedure = protectedProcedure
 
       let countQuery = sql`
         SELECT COUNT(*) as total 
-        FROM synth_pokhara_household
+        FROM pokhara_household
         WHERE tenant_id = 'pokhara_metro'
       `;
 
@@ -816,7 +816,7 @@ export const getHouseholdByIdProcedure = protectedProcedure
       const formattedId = formatDbUuid(normalizedId);
 
       let query = sql`
-        SELECT * FROM synth_pokhara_household
+        SELECT * FROM pokhara_household
         WHERE id = ${formattedId}
       `;
 
@@ -824,7 +824,7 @@ export const getHouseholdByIdProcedure = protectedProcedure
 
       if (!result || result.length === 0) {
         query = sql`
-          SELECT * FROM synth_pokhara_household
+          SELECT * FROM pokhara_household
           WHERE id = ${normalizedId}
         `;
         result = await ctx.db.execute(query);
@@ -1142,7 +1142,7 @@ export const getHouseholdEditRequestsProcedure = protectedProcedure
           h.ward_no,
           h.locality
         FROM acme_pokhara_household_edit_requests e
-        JOIN synth_pokhara_household h ON h.id = e.household_id
+        JOIN pokhara_household h ON h.id = e.household_id
         ORDER BY e.requested_at DESC
         LIMIT ${limit} OFFSET ${offset}
       `;
@@ -1198,7 +1198,7 @@ export const getTotalHouseholdCountProcedure = protectedProcedure
     try {
       const query = sql`
         SELECT COUNT(*) as total 
-        FROM synth_pokhara_household
+        FROM pokhara_household
         WHERE tenant_id = 'pokhara_metro'
       `;
 
@@ -1286,7 +1286,7 @@ export const downloadHouseholdsProcedure = protectedProcedure
           animals,
           animal_products,
           agricultural_machines
-        FROM synth_pokhara_household
+        FROM pokhara_household
         WHERE tenant_id = 'pokhara_metro'
       `;
 

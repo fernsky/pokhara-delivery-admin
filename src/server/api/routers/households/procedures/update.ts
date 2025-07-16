@@ -17,7 +17,7 @@ export const updateHouseholdProcedure = protectedProcedure
     // First check if the household exists and belongs to the right profile
     const checkQuery = sql`
       SELECT COUNT(*) as count 
-      FROM synth_pokhara_household
+      FROM pokhara_household
       WHERE id = ${id} AND tenant_id = ${"pokhara_metro"}
     `;
 
@@ -323,7 +323,7 @@ export const updateHouseholdProcedure = protectedProcedure
 
       // Build the complete update query with parameters
       const updateQuery = sql`
-        UPDATE synth_pokhara_household
+        UPDATE pokhara_household
         SET ${setClause}
         WHERE id = ${id} AND tenant_id = ${"pokhara_metro"}
         RETURNING id

@@ -34,7 +34,7 @@ export const getHouseholdLocationProcedure = protectedProcedure
           district,
           ward_no,
           family_head_name
-        FROM synth_pokhara_household
+        FROM pokhara_household
         WHERE id = ${formattedId}
       `;
 
@@ -136,7 +136,7 @@ export const getHouseholdsLocationsProcedure = protectedProcedure
           province,
           district,
           locality
-        FROM synth_pokhara_household
+        FROM pokhara_household
         WHERE household_location IS NOT NULL
       `;
 
@@ -204,7 +204,7 @@ export const getHouseholdsLocationsProcedure = protectedProcedure
       // Count query for total households with locations
       let countQuery = sql`
         SELECT COUNT(*) as total
-        FROM synth_pokhara_household 
+        FROM pokhara_household 
         WHERE household_location IS NOT NULL
       `;
 

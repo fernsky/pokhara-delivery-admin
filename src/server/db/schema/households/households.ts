@@ -19,7 +19,7 @@ export const householdStatusEnum = pgEnum("household_status_enum", [
 ]);
 
 // Main household table
-export const households = pgTable("synth_pokhara_household", {
+export const households = pgTable("pokhara_household", {
   // Primary identification
   id: text("id").primaryKey().notNull(),
   tenantId: text("tenant_id"),

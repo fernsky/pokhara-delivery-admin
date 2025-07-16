@@ -47,7 +47,7 @@ export const getIndividualsProcedure = protectedProcedure
           educational_level,
           is_disabled,
           marital_status
-        FROM synth_pokhara_individual
+        FROM pokhara_individual
         WHERE 1=1
       `;
 
@@ -152,7 +152,7 @@ export const getIndividualsProcedure = protectedProcedure
       // Build count query with the same filters
       let countQuery = sql`
         SELECT COUNT(*) as total 
-        FROM synth_pokhara_individual
+        FROM pokhara_individual
         WHERE 1=1
       `;
 
@@ -384,7 +384,7 @@ export const getIndividualsByHouseholdIdProcedure = protectedProcedure
 
       // Query to get individuals with the specified household_id
       const query = sql`
-        SELECT * FROM synth_pokhara_individual 
+        SELECT * FROM pokhara_individual 
         WHERE household_id = ${formattedHouseholdId}
         ORDER BY 
           CASE 
@@ -401,7 +401,7 @@ export const getIndividualsByHouseholdIdProcedure = protectedProcedure
       // Get count for pagination
       const countQuery = sql`
         SELECT COUNT(*) as total 
-        FROM synth_pokhara_individual 
+        FROM pokhara_individual 
         WHERE household_id = ${formattedHouseholdId}
       `;
 
@@ -454,7 +454,7 @@ export const getTotalIndividualCountProcedure = protectedProcedure
     try {
       const query = sql`
         SELECT COUNT(*) as total 
-        FROM synth_pokhara_individual
+        FROM pokhara_individual
       `;
 
       const result = await ctx.db.execute(query);
